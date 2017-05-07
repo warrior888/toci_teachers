@@ -1,10 +1,19 @@
+<!DOCTYPE html>
+
 <html>
 <head>
+<meta charset="utf-8">
 <title>Start przygody z kodzeniem</title>
 </head>
-<body>.
-<font color="#330000"><b>Mój pierwszy projekt PHP</b></font>
+<body>
+<center><b><font size="20">Mój pierwszy projekt PHP</font></b><br></center>
 <?php echo "Mam na imię Tomek";
+
+for ($i = -1; $i < 10; $i++)
+{
+	echo "<div>zabawa : " . $i . "</div>";
+}
+
 ?>
 </body>
 </html>
