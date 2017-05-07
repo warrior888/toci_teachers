@@ -1,0 +1,10 @@
+<html>
+<head>
+<title>Start przygody z kodzeniem</title>
+</head>
+<body>.
+<font color="#330000"><b>Mój pierwszy projekt PHP</b></font>
+<?php echo "Mam na imię Tomek";
+?>
+</body>
+</html>
