@@ -9,9 +9,9 @@
 <center><b><font size="20">Mój pierwszy projekt PHP</font></b><br></center>
 <?php echo "Mam na imię Tomek";
 
-for ($i = -1; $i < 10; $i++)
+for ($i = 0; $i < 12; $i++)
 {
-	echo "<div>zabawa : " . $i . "</div>";
+	echo "<div>Od zera do programera :D : " . $i . "</div>";
 }
 
 ?>
