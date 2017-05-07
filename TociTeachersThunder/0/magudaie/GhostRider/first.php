@@ -1,2 +1,2 @@
 <?php
-	echo 'Ten kod dziala';
+	echo 'Ten kod dziala, neobikedasdasdasds tu byl';
