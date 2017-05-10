@@ -7,3 +7,5 @@
 		
 		echo $komunikat[$i];
 	}
+
+	$zmienna = 4;
