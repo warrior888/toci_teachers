@@ -4,3 +4,6 @@ c:\users\arkad\onedrive\dokumenty\visual studio 2015\Projects\ConsoleApplication
 c:\users\arkad\onedrive\dokumenty\visual studio 2015\Projects\ConsoleApplication5\ConsoleApplication5\obj\Debug\ConsoleApplication5.exe
 c:\users\arkad\onedrive\dokumenty\visual studio 2015\Projects\ConsoleApplication5\ConsoleApplication5\obj\Debug\ConsoleApplication5.pdb
 c:\users\arkad\onedrive\dokumenty\visual studio 2015\Projects\ConsoleApplication5\ConsoleApplication5\obj\Debug\ConsoleApplication5.csprojResolveAssemblyReference.cache
+C:\Users\arkad\OneDrive\Dokumenty\szkolenie\TociTeachersThunder\0\paladyni\anaxagore78\ConsoleApplication5\ConsoleApplication5\bin\Debug\ConsoleApplication5.exe.config
+C:\Users\arkad\OneDrive\Dokumenty\szkolenie\TociTeachersThunder\0\paladyni\anaxagore78\ConsoleApplication5\ConsoleApplication5\obj\Debug\ConsoleApplication5.exe
+C:\Users\arkad\OneDrive\Dokumenty\szkolenie\TociTeachersThunder\0\paladyni\anaxagore78\ConsoleApplication5\ConsoleApplication5\obj\Debug\ConsoleApplication5.pdb
