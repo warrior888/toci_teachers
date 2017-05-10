@@ -1,0 +1,6 @@
+c:\users\arkad\onedrive\dokumenty\visual studio 2015\Projects\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe.config
+c:\users\arkad\onedrive\dokumenty\visual studio 2015\Projects\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
+c:\users\arkad\onedrive\dokumenty\visual studio 2015\Projects\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
+c:\users\arkad\onedrive\dokumenty\visual studio 2015\Projects\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.csprojResolveAssemblyReference.cache
+c:\users\arkad\onedrive\dokumenty\visual studio 2015\Projects\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.exe
+c:\users\arkad\onedrive\dokumenty\visual studio 2015\Projects\ConsoleApplication4\ConsoleApplication4\obj\Debug\ConsoleApplication4.pdb
