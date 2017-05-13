@@ -1,0 +1,5 @@
+diff a/TociTeachersThunder/0/katafrakci/KantRoar/cob.php b/TociTeachersThunder/0/katafrakci/KantRoar/cob.php	(rejected hunks)
+@@ -0,0 +1,2 @@
++<?php
++	echo'szyjemy !';
+\ No newline at end of file
