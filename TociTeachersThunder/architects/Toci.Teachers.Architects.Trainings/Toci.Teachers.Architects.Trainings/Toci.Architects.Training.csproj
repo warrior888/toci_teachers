@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GhostRider\Generics\" />
+    <Folder Include="Kafar\Generics\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Toci.Architects.Training.Interfaces\Toci.Architects.Training.Interfaces.csproj">
