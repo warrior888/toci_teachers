@@ -40,11 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GhostRider\BasicGenerics\Rubish.cs" />
+    <Compile Include="GhostRider\Generics\BankTransferBase.cs" />
+    <Compile Include="GhostRider\Generics\ComplexDictionaryExample.cs" />
+    <Compile Include="GhostRider\Generics\CoordinatesManipulations.cs" />
+    <Compile Include="GhostRider\Generics\MbankTransfer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GhostRider\Generics\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Toci.Architects.Training.Interfaces\Toci.Architects.Training.Interfaces.csproj">
       <Project>{db604286-cac7-43a8-a679-83d52d04ae14}</Project>

@@ -40,10 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GhostRider\Extending\BankBase.cs" />
+    <Compile Include="GhostRider\Extending\IBank.cs" />
+    <Compile Include="GhostRider\Extending\IMbank.cs" />
+    <Compile Include="GhostRider\Extending\MBank.cs" />
+    <Compile Include="GhostRider\Generics\IParseInput.cs" />
+    <Compile Include="GhostRider\Generics\IParser.cs" />
+    <Compile Include="GhostRider\Generics\IParseResult.cs" />
+    <Compile Include="GhostRider\Generics\ITextFileParseInput.cs" />
+    <Compile Include="GhostRider\Generics\ITextFileParser.cs" />
+    <Compile Include="GhostRider\Generics\ITextFileParseResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GhostRider\Generics\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
