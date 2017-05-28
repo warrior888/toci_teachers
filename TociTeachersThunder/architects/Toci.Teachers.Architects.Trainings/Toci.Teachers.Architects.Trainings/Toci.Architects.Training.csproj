@@ -47,14 +47,11 @@
     <Compile Include="GhostRider\Generics\MbankTransfer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-<<<<<<< HEAD
   <ItemGroup>
     <Folder Include="GhostRider\Generics\" />
     <Folder Include="Kafar\Generics\" />
   </ItemGroup>
-=======
   <ItemGroup />
->>>>>>> 9dd1bdb90663ec1b537d53baf9be249437144362
   <ItemGroup>
     <ProjectReference Include="..\Toci.Architects.Training.Interfaces\Toci.Architects.Training.Interfaces.csproj">
       <Project>{db604286-cac7-43a8-a679-83d52d04ae14}</Project>
