@@ -1,0 +1,21 @@
+//Czesc! Stwozylem klase i dodalem studenta, ktory ma miec 123 lata, ale jak wywodze na ekran to mi pokazuje 83 lata. 
+// Rozumiem, ze to jest przez zero na poczatku, ale nie rozumiem dla czego te zero tak wszystko miesza, i nie rozumiem jak komputer robi przeliczenia, 
+// bo mi rozne dziwne liczby wydaje, jak dodam 4 na koncu albo inne zmiany wprowadze. 
+
+<?php
+  class Person{
+    public $isAlive = true;
+    public $firstname;
+    public $lastname;
+    public $age;
+            
+    public function __construct($firstname, $lastname, $age) {
+      $this->firstname = $firstname;
+      $this->lastname = $lastname;
+      $this->age = $age;
+    }
+  }
+  $student = new Person("yong","0123",0123);
+          
+  echo $student->age;
+?>
