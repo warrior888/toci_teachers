@@ -45,12 +45,11 @@
     <Compile Include="GhostRider\Generics\ComplexDictionaryExample.cs" />
     <Compile Include="GhostRider\Generics\CoordinatesManipulations.cs" />
     <Compile Include="GhostRider\Generics\MbankTransfer.cs" />
+    <Compile Include="Kafar\Generics\BaseForBanks.cs" />
+    <Compile Include="Kafar\Generics\IBankBasic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GhostRider\Generics\" />
-    <Folder Include="Kafar\Generics\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Toci.Architects.Training.Interfaces\Toci.Architects.Training.Interfaces.csproj">
