@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace Toci.Architects.Training.Kafar.Generics
 {
@@ -8,7 +9,7 @@ namespace Toci.Architects.Training.Kafar.Generics
         {
             Dictionary<string, BankTransferKafar> transferDictionary = new Dictionary<string, BankTransferKafar>();
 
-            transferDictionary.Add("1060", new BankTransferKafar());
+            transferDictionary.Add("1160", new BankTransferKafar());
         }
     }
 }

@@ -6,6 +6,9 @@ namespace Toci.Architects.Training.Kafar.Generics
 {
     public class BankTransferBaseKafar : IBankKafarsBasic
     {
+        public string Name { get; set; }
+        public double Amount { get; set; }
+        
         public bool VerifyAccount(string account)
         {
             bool check = false;
@@ -34,17 +37,22 @@ namespace Toci.Architects.Training.Kafar.Generics
 
             string bankId = account.Substring(0, 4);
             foreach (string line in File.ReadAllLines(@"C:\Users\mlote\Documents\SourceTree\toci_teachers\TociTeachersThunder\architects\Toci.Teachers.Architects.Trainings\Toci.Teachers.Architects.Trainings\Kafar\Generics\banks.txt"))
-                if (!line.Contains(bankId))
+                if (line.Contains(bankId))
                 {
-                    check = false;
+                    Name = line.Substring(bankId.Length + 1);
+                    check = true;
+                    break;
                 }
+                else check = false;
 
             return check;
         }
 
         public bool VerifyAmount(double amount)
         {
-            return amount >= 0.0;
+            if (!(amount >= 0.0)) return false;
+            Amount = amount;
+            return true;
         }
     }
 }
