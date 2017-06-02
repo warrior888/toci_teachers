@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,8 +46,10 @@
     <Compile Include="GhostRider\Generics\ComplexDictionaryExample.cs" />
     <Compile Include="GhostRider\Generics\CoordinatesManipulations.cs" />
     <Compile Include="GhostRider\Generics\MbankTransfer.cs" />
-    <Compile Include="Kafar\Generics\BaseForBanks.cs" />
-    <Compile Include="Kafar\Generics\IBankBasic.cs" />
+    <Compile Include="Kafar\Generics\BankTransferBaseKafar.cs" />
+    <Compile Include="Kafar\Generics\BankTransferKafarsDictionary.cs" />
+    <Compile Include="Kafar\Generics\BankTransferKafar.cs" />
+    <Compile Include="Kafar\Generics\IBankKafarsBasic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

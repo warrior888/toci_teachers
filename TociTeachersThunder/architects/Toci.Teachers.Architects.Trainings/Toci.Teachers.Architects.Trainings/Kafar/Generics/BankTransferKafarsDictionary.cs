@@ -2,7 +2,7 @@
 
 namespace Toci.Architects.Training.Kafar.Generics
 {
-    public class BankTransferDictionary
+    public class BankTransferKafarsDictionary
     {
         public void Example()
         {

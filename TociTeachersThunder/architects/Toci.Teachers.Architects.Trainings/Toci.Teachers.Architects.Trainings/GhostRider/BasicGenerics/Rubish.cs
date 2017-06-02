@@ -4,7 +4,7 @@ namespace Toci.Architects.Training.GhostRider.BasicGenerics
 {
     public class PostCodeParser<TPostCode>
     {
-        public TPostCode PostCode { get; }
+        public TPostCode PostCode { get; set; }
 
         public virtual void ParsePostCode(TPostCode posrtCodesSource)
         {
