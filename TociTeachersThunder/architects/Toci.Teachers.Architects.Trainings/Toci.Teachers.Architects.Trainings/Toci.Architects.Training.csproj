@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="anaxagore78\Generics\BankTransferDictionaryExample.cs" />
+    <Compile Include="anaxagore78\Generics\IBankTransfer.cs" />
+    <Compile Include="anaxagore78\Generics\InteligoTransfer.cs" />
+    <Compile Include="anaxagore78\Generics\PekaoTransfer.cs" />
+    <Compile Include="anaxagore78\Generics\SantanderTransfer.cs" />
     <Compile Include="GhostRider\BasicGenerics\Rubish.cs" />
     <Compile Include="GhostRider\Generics\BankTransferBase.cs" />
     <Compile Include="GhostRider\Generics\ComplexDictionaryExample.cs" />
