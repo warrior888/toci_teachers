@@ -4,11 +4,12 @@ using Toci.Architects.Training.GhostRider.Generics;
 
 namespace Toci.Architects.Training.Kafar.Generics
 {
-    public class BankTransferKafar : BankTransferBaseKafar
+    public class BankTransferKafar : BankTransferBase
     {
-        public bool Transfer(string account, double amount)
+        BankTransferBaseKafar exampleOfTransfer = new BankTransferBaseKafar();
+        public override bool Transfer(string account, double amount)
         {
-            return (VerifyAccount(account) && VerifyAmount(amount));
+            return (exampleOfTransfer.VerifyAccount(account) && exampleOfTransfer.VerifyAmount(amount));
         }
     }
 }
