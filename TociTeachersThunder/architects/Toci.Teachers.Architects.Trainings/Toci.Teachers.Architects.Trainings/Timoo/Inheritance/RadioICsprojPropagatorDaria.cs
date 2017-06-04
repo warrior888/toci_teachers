@@ -5,18 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Toci.Architects.Training.Interfaces.GhostRider.Inheritance;
 
-namespace Toci.Architects.Training.anaxagore78.Inheritance
+namespace Toci.Architects.Training.Timoo.Inheritance
 {
-    public class SendAnaxagore78: ICsprojPropagator
+    public class RadioICsprojPropagatorDaria : ICsprojPropagator
     {
-        public void SendCharacter(int position, string text)
+        public bool CanPropagateCsproj(string path)
         {
             throw new NotImplementedException();
         }
 
-        public bool CanPropagateCsproj(string path)
+        public void SendCharacter(int position, string text)
         {
-            return true;
+            throw new NotImplementedException();
         }
     }
 }

@@ -47,6 +47,8 @@
     <Compile Include="anaxagore78\Generics\PekaoTransfer.cs" />
     <Compile Include="anaxagore78\Generics\SantanderTransfer.cs" />
     <Compile Include="anaxagore78\Inheritance\CanPropagateAnaxagore78.cs" />
+    <Compile Include="anaxagore78\Inheritance\BikePropagator.cs" />
+    <Compile Include="anaxagore78\Inheritance\CarPropagator.cs" />
     <Compile Include="anaxagore78\Inheritance\sendAnaxagore78.cs" />
     <Compile Include="Elchu\Generics\BankTransferBase.cs" />
     <Compile Include="Elchu\Generics\ComplexDictionaryExample.cs" />
@@ -59,17 +61,21 @@
     <Compile Include="GhostRider\SimpleCaseTestPolimorphism\SimplePolimfphic.cs" />
     <Compile Include="Irzica\Inheritance\InheritanceIz.cs" />
     <Compile Include="Irzica\Inheritance\InheritanceIz2.cs" />
+    <Compile Include="Irzica\Inheritance\TVICsprojPropagator.cs" />
     <Compile Include="Kafar\Generics\BankTransferBaseKafar.cs" />
     <Compile Include="Kafar\Generics\BankTransferKafarsDictionary.cs" />
     <Compile Include="Kafar\Generics\BankTransferKafar.cs" />
     <Compile Include="Kafar\Generics\IBankKafarsBasic.cs" />
     <Compile Include="Kafar\Inheritance\InheritanceKafar.cs" />
     <Compile Include="Kafar\Inheritance\InheritanceKafar2.cs" />
+    <Compile Include="Kafar\Inheritance\KafarHungryCsProjPropagator.cs" />
+    <Compile Include="Kafar\Inheritance\NeedABreakCsProjPropagator.cs" />
     <Compile Include="Piotrek\Inheritance\InheritancePiotek.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Timoo\Inheritance\CsProjDaria.cs" />
     <Compile Include="Timoo\Inheritance\InheritanceTimo.cs" />
     <Compile Include="Timo\Inheritance\InheritanceTimo.cs" />
+    <Compile Include="Timoo\Inheritance\RadioICsprojPropagatorDaria.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Piotrek\Generics\" />
