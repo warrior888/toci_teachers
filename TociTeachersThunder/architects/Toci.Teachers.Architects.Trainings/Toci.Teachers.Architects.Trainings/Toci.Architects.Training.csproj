@@ -46,6 +46,8 @@
     <Compile Include="anaxagore78\Generics\InteligoTransfer.cs" />
     <Compile Include="anaxagore78\Generics\PekaoTransfer.cs" />
     <Compile Include="anaxagore78\Generics\SantanderTransfer.cs" />
+    <Compile Include="anaxagore78\Homework\PeselValidator\PeselValidatorAnaxagore78.cs" />
+    <Compile Include="anaxagore78\Homework\PeselValidator\ReflectionAggregatorAnaxagore78.cs" />
     <Compile Include="anaxagore78\Inheritance\CanPropagateAnaxagore78.cs" />
     <Compile Include="anaxagore78\Inheritance\BikePropagator.cs" />
     <Compile Include="anaxagore78\Inheritance\CarPropagator.cs" />
@@ -70,7 +72,10 @@
     <Compile Include="Kafar\Inheritance\InheritanceKafar2.cs" />
     <Compile Include="Kafar\Inheritance\KafarHungryCsProjPropagator.cs" />
     <Compile Include="Kafar\Inheritance\NeedABreakCsProjPropagator.cs" />
-    <Compile Include="Piotrek\Inheritance\InheritancePiotek.cs" />
+    <Compile Include="Piotrek\Homework\PeselValidator\PeselValidatorPiotrek.cs" />
+    <Compile Include="Piotrek\Homework\PeselValidator\ReflectionAggregatorPiotrek.cs" />
+    <Compile Include="Piotrek\Inheritance\InheritancePiotrek.cs" />
+    <Compile Include="Piotrek\Inheritance\LaptopICsprojPropagator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Timoo\Inheritance\CsProjDaria.cs" />
     <Compile Include="Timoo\Inheritance\InheritanceTimo.cs" />
