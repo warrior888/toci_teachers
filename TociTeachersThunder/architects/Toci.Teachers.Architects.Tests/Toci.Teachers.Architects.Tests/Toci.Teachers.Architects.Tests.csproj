@@ -54,6 +54,7 @@
     <Compile Include="GhostRider\Generics\GenericsExampleTests.cs" />
     <Compile Include="GhostRider\Reflection\ComplexReflectionTests.cs" />
     <Compile Include="Kafar\Generics\GenericsKafarTest.cs" />
+    <Compile Include="piotex\ger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
