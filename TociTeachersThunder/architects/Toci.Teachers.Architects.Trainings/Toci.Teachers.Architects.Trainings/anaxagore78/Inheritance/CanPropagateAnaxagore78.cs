@@ -11,7 +11,7 @@ namespace Toci.Architects.Training.anaxagore78.Inheritance
 
         public bool CanPropagateCsproj(string path)
         {
-            throw new System.NotImplementedException();
+            return true;
         }
     }
 }

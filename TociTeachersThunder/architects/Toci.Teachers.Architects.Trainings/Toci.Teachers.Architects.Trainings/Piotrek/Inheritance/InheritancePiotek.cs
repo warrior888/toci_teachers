@@ -7,9 +7,14 @@ using Toci.Architects.Training.Interfaces.GhostRider.Inheritance;
 
 namespace Toci.Architects.Training.Piotrek.Inheritance
 {
-    class InheritancePiotrek : IPlugin
+    public class InheritancePiotrek : ICsprojPropagator
     {
         public void SendCharacter(int position, string text)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool CanPropagateCsproj(string path)
         {
             throw new NotImplementedException();
         }
