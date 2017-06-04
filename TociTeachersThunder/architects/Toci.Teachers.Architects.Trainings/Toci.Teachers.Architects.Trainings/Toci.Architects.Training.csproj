@@ -58,6 +58,7 @@
     <Compile Include="Kafar\Generics\BankTransferKafar.cs" />
     <Compile Include="Kafar\Generics\IBankKafarsBasic.cs" />
     <Compile Include="Kafar\Inheritance\InheritanceKafar.cs" />
+    <Compile Include="Kafar\Inheritance\InheritanceKafar2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Timoo\Inheritance\InheritanceTimo.cs" />
   </ItemGroup>
