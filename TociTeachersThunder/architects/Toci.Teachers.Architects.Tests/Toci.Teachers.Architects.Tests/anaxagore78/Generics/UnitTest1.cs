@@ -16,10 +16,9 @@ namespace Toci.Teachers.Architects.Tests.anaxagore78.Generics
             //string pesel = "80090102444"; //poprawny
             IPeselValidator validator = new PeselValidatorAnaxagore78();
             Console.WriteLine($"{pesel}- {((validator.IsPeselValid(pesel)) ? "poprawny" : "niepoprawny")} numer pesel");
-
             PeselValidatorAnaxagore78 validatorV2 = new PeselValidatorAnaxagore78();
-
             Console.WriteLine(validatorV2.GetSex(pesel));
+
             IReflectionAggregator aggregator = new ReflectionAggregatorAnaxagore78();
             aggregator.GetAllPeselValidators();
         }
