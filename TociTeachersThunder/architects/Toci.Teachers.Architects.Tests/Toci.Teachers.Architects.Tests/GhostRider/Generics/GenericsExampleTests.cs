@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Toci.Architects.Training.GhostRider.Generics;
 
@@ -24,6 +25,12 @@ namespace Toci.Teachers.Architects.Tests.GhostRider.Generics
             ComplexDictionaryExample ex = new ComplexDictionaryExample();
 
             ex.Example();
+        }
+
+        public void ttt()
+        {
+            //Dictionary<Enum, Dictionary<string, GenericsExampleTests>>
+            //    [enum][string]
         }
     }
 }
