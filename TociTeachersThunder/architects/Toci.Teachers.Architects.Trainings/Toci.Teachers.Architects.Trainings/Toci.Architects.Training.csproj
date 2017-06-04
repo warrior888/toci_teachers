@@ -55,6 +55,7 @@
     <Compile Include="GhostRider\Generics\CoordinatesManipulations.cs" />
     <Compile Include="GhostRider\Generics\MbankTransfer.cs" />
     <Compile Include="Irzica\Inheritance\InheritanceIz.cs" />
+    <Compile Include="Irzica\Inheritance\TVICsprojPropagator.cs" />
     <Compile Include="Kafar\Generics\BankTransferBaseKafar.cs" />
     <Compile Include="Kafar\Generics\BankTransferKafarsDictionary.cs" />
     <Compile Include="Kafar\Generics\BankTransferKafar.cs" />
