@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Toci.Architects.Training.Interfaces.GhostRider.Inheritance;
 
-namespace Toci.Architects.Training.anaxagore78.Inheritance
+namespace Toci.Architects.Training.Timoo.Inheritance
 {
-    public class SendAnaxagore78:IPlugin
+    public class InheritanceTimo : IPlugin
     {
         public void SendCharacter(int position, string text)
         {
