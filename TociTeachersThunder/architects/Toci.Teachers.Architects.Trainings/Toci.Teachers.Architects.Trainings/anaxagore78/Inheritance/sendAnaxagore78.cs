@@ -7,7 +7,7 @@ using Toci.Architects.Training.Interfaces.GhostRider.Inheritance;
 
 namespace Toci.Architects.Training.anaxagore78.Inheritance
 {
-    class SendAnaxagore78:IPlugin
+    public class SendAnaxagore78:IPlugin
     {
         public void SendCharacter(int position, string text)
         {

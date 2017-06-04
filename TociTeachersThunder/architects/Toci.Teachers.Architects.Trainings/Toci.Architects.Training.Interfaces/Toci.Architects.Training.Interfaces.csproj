@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="anaxagore78\Generics\IBankTransfer.cs" />
     <Compile Include="GhostRider\Extendes\BankBase.cs" />
     <Compile Include="GhostRider\Extendes\IBank.cs" />
     <Compile Include="GhostRider\Extendes\IMbank.cs" />
@@ -51,6 +52,11 @@
     <Compile Include="GhostRider\Generics\ITextFileParseInput.cs" />
     <Compile Include="GhostRider\Generics\ITextFileParser.cs" />
     <Compile Include="GhostRider\Generics\ITextFileParseResult.cs" />
+    <Compile Include="GhostRider\Homework\BankBase.cs" />
+    <Compile Include="GhostRider\Homework\IBank.cs" />
+    <Compile Include="GhostRider\Homework\IMbank.cs" />
+    <Compile Include="GhostRider\Homework\MBank.cs" />
+    <Compile Include="GhostRider\Inheritance\IPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
