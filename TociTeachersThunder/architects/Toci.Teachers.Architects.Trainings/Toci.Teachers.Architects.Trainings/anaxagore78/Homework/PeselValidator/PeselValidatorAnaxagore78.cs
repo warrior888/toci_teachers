@@ -15,8 +15,6 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
             return "anaxagore78";
         }
 
-
-
         /*
          Informacja o płci osoby, której zestaw informacji jest identyfikowany, zawarta jest na 10. (przedostatniej) pozycji numeru PESEL.
 
