@@ -47,6 +47,7 @@
     <Compile Include="anaxagore78\Generics\InteligoTransfer.cs" />
     <Compile Include="anaxagore78\Generics\PekaoTransfer.cs" />
     <Compile Include="anaxagore78\Generics\SantanderTransfer.cs" />
+    <Compile Include="anaxagore78\Inheritance\sendAnaxagore78.cs" />
     <Compile Include="GhostRider\BasicGenerics\Rubish.cs" />
     <Compile Include="GhostRider\Generics\BankTransferBase.cs" />
     <Compile Include="GhostRider\Generics\ComplexDictionaryExample.cs" />
