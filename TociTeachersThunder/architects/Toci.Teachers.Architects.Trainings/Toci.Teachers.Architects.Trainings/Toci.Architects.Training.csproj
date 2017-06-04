@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="anaxagore78\Generics\BankTransferDictionaryExample.cs" />
+    <Compile Include="anaxagore78\Generics\IBankTransfer.cs" />
     <Compile Include="anaxagore78\Generics\InteligoTransfer.cs" />
     <Compile Include="anaxagore78\Generics\PekaoTransfer.cs" />
     <Compile Include="anaxagore78\Generics\SantanderTransfer.cs" />
@@ -57,7 +58,9 @@
     <Compile Include="Kafar\Generics\IBankKafarsBasic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Timoo\" />
+  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Toci.Architects.Training.Interfaces\Toci.Architects.Training.Interfaces.csproj">
