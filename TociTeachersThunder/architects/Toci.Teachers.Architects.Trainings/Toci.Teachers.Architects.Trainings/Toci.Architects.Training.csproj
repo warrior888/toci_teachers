@@ -85,7 +85,9 @@
   <ItemGroup>
     <Folder Include="Piotrek\Generics\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Kafar\Generics\data\banks.txt" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Toci.Architects.Training.Interfaces\Toci.Architects.Training.Interfaces.csproj">
       <Project>{db604286-cac7-43a8-a679-83d52d04ae14}</Project>

@@ -36,7 +36,7 @@ namespace Toci.Architects.Training.Kafar.Generics
             }
 
             string bankId = account.Substring(0, 4);
-            foreach (string line in File.ReadAllLines(@"C:\Users\mlote\Documents\SourceTree\toci_teachers\TociTeachersThunder\architects\Toci.Teachers.Architects.Trainings\Toci.Teachers.Architects.Trainings\Kafar\Generics\banks.txt"))
+            foreach (string line in File.ReadAllLines(@"..\..\..\Toci.Teachers.Architects.Trainings\Kafar\Generics\banks.txt"))
                 if (line.Contains(bankId))
                 {
                     Name = line.Substring(bankId.Length + 1);
