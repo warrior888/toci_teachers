@@ -72,6 +72,8 @@
     <Compile Include="Kafar\Inheritance\InheritanceKafar2.cs" />
     <Compile Include="Kafar\Inheritance\KafarHungryCsProjPropagator.cs" />
     <Compile Include="Kafar\Inheritance\NeedABreakCsProjPropagator.cs" />
+    <Compile Include="Piotrek\Homework\PeselValidator\PeselValidatorPiotrek.cs" />
+    <Compile Include="Piotrek\Homework\PeselValidator\ReflectionAggregatorPiotrek.cs" />
     <Compile Include="Piotrek\Inheritance\InheritancePiotrek.cs" />
     <Compile Include="Piotrek\Inheritance\LaptopICsprojPropagator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
