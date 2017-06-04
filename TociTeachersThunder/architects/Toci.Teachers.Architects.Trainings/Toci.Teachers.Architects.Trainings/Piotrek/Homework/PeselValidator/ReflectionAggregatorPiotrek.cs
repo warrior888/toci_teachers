@@ -30,7 +30,8 @@ namespace Toci.Architects.Training.Piotrek.Homework.PeselValidator
             //}
             //return dictionary;
 
-            return derivingTypes.Select(derivingType => (IPeselValidator) Activator.CreateInstance(derivingType)).ToDictionary<IPeselValidator, string, IPeselValidator>(item => item.Name(), item => new PeselValidatorPiotrek());
+            return derivingTypes.Select(derivingType => (IPeselValidator) Activator.CreateInstance(derivingType)).ToDictionary(item => item.Name());
+
         }
     }
 }
