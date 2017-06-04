@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="anaxagore78\Generics\GenericExampleAnaxagore78Test.cs" />
+    <Compile Include="anaxagore78\Generics\UnitTest1.cs" />
     <Compile Include="GhostRider\Generics\GenericsExampleTests.cs" />
     <Compile Include="GhostRider\Reflection\ComplexReflectionTests.cs" />
     <Compile Include="Kafar\Generics\GenericsKafarTest.cs" />

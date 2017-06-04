@@ -46,6 +46,8 @@
     <Compile Include="anaxagore78\Generics\InteligoTransfer.cs" />
     <Compile Include="anaxagore78\Generics\PekaoTransfer.cs" />
     <Compile Include="anaxagore78\Generics\SantanderTransfer.cs" />
+    <Compile Include="anaxagore78\Homework\PeselValidator\PeselValidatorAnaxagore78.cs" />
+    <Compile Include="anaxagore78\Homework\PeselValidator\ReflectionAggregatorAnaxagore78.cs" />
     <Compile Include="anaxagore78\Inheritance\CanPropagateAnaxagore78.cs" />
     <Compile Include="anaxagore78\Inheritance\BikePropagator.cs" />
     <Compile Include="anaxagore78\Inheritance\CarPropagator.cs" />
