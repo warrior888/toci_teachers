@@ -47,12 +47,13 @@
     <Compile Include="anaxagore78\Generics\InteligoTransfer.cs" />
     <Compile Include="anaxagore78\Generics\PekaoTransfer.cs" />
     <Compile Include="anaxagore78\Generics\SantanderTransfer.cs" />
-    <Compile Include="anaxagore78\Inheritance\SendAnaxagore78.cs" />
+    <Compile Include="anaxagore78\Inheritance\sendAnaxagore78.cs" />
     <Compile Include="GhostRider\BasicGenerics\Rubish.cs" />
     <Compile Include="GhostRider\Generics\BankTransferBase.cs" />
     <Compile Include="GhostRider\Generics\ComplexDictionaryExample.cs" />
     <Compile Include="GhostRider\Generics\CoordinatesManipulations.cs" />
     <Compile Include="GhostRider\Generics\MbankTransfer.cs" />
+    <Compile Include="Irzica\Inheritance\InheritanceIz.cs" />
     <Compile Include="Kafar\Generics\BankTransferBaseKafar.cs" />
     <Compile Include="Kafar\Generics\BankTransferKafarsDictionary.cs" />
     <Compile Include="Kafar\Generics\BankTransferKafar.cs" />
