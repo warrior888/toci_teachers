@@ -22,6 +22,12 @@ namespace Toci.Architects.Training.GhostRider.ComplexPolimorphismTest
 
             IEnumerable<Type> derivingTypes = allTypesInAssembly.Where(m => seekedForType.IsAssignableFrom(m));
 
+            foreach (var derivingType in derivingTypes)
+            {
+                ICsprojPropagator item = (ICsprojPropagator)Activator.CreateInstance(derivingType);
+                item.CanPropagateCsproj("");
+            }
+            
             return null;
         }
     }
