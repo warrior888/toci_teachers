@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="anaxagore78\Generics\IBankTransfer.cs" />
     <Compile Include="GhostRider\Extending\BankBase.cs" />
     <Compile Include="GhostRider\Extending\IBank.cs" />
     <Compile Include="GhostRider\Extending\IMbank.cs" />

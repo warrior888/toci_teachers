@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Toci.Architects.Training.GhostRider.Generics;
+using Toci.Architects.Training.Interfaces.anaxagore78.Generics;
 
 namespace Toci.Architects.Training.anaxagore78.Generics
 {

@@ -1,4 +1,4 @@
-﻿namespace Toci.Architects.Training.anaxagore78.Generics
+﻿namespace Toci.Architects.Training.Interfaces.anaxagore78.Generics
 {
     public interface IBankTransfer
     {
