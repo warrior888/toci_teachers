@@ -44,6 +44,7 @@
     <Compile Include="GhostRider\Extendes\IBank.cs" />
     <Compile Include="GhostRider\Extendes\IMbank.cs" />
     <Compile Include="GhostRider\Extendes\MBank.cs" />
+    <Compile Include="GhostRider\Generics\IBankTransfer.cs" />
     <Compile Include="GhostRider\Generics\IParseInput.cs" />
     <Compile Include="GhostRider\Generics\IParser.cs" />
     <Compile Include="GhostRider\Generics\IParseResult.cs" />

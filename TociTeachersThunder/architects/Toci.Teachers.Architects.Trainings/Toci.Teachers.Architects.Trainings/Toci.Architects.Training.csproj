@@ -43,10 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="anaxagore78\Generics\BankTransferDictionaryExample.cs" />
-    <Compile Include="anaxagore78\Generics\IBankTransfer.cs" />
     <Compile Include="anaxagore78\Generics\InteligoTransfer.cs" />
     <Compile Include="anaxagore78\Generics\PekaoTransfer.cs" />
     <Compile Include="anaxagore78\Generics\SantanderTransfer.cs" />
+    <Compile Include="anaxagore78\Inheritance\sendAnaxagore78.cs" />
     <Compile Include="GhostRider\BasicGenerics\Rubish.cs" />
     <Compile Include="GhostRider\Generics\BankTransferBase.cs" />
     <Compile Include="GhostRider\Generics\ComplexDictionaryExample.cs" />
@@ -56,6 +56,7 @@
     <Compile Include="Kafar\Generics\BankTransferKafarsDictionary.cs" />
     <Compile Include="Kafar\Generics\BankTransferKafar.cs" />
     <Compile Include="Kafar\Generics\IBankKafarsBasic.cs" />
+    <Compile Include="Kafar\Inheritance\InheritanceKafar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
