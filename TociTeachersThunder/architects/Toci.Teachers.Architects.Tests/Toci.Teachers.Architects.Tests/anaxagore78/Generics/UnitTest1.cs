@@ -33,36 +33,10 @@ namespace Toci.Teachers.Architects.Tests.anaxagore78.Generics
         [TestMethod]
         public void TestMethod3()
         {
-            //string pesel = "78061906750"; //bledny
-            string pesel = "78061906751"; //poprawny
-            //string pesel = "80090102444"; //poprawny
 
-            IPeselValidator peselValidator = new PeselValidatorAnaxagore78();
-            Console.WriteLine("{0} -{1} numer pesel", pesel,
-                ((peselValidator.IsPeselValid(pesel)) ? "poprawny" : "niepoprawny"));
+            ValidatorOfPeselValidatorsAnaxagore78 validatorOfPesel = new ValidatorOfPeselValidatorsAnaxagore78();
+            validatorOfPesel.ValidateAllValidators();
 
-            IReflectionAggregator aggregator = new ReflectionAggregatorAnaxagore78();
-
-            Dictionary<string, IPeselValidator> validators = aggregator.GetAllPeselValidators();
-
-            Dictionary<string, List<string>> validatorsStatus = new Dictionary<string, List<string>>();
-
-            foreach (var validator in validators)
-            {
-                //try
-                //{
-                //    validator.Value.IsPeselValid(pesel);
-                //}
-                //catch (NotImplementedException notImplemented)
-                //{
-                //    validatorsStatus.Add(validator.Key,);
-                //}
-                //catch (Exception exc)
-                //{
-
-                //}
-
-            }
         }
     }
 }
