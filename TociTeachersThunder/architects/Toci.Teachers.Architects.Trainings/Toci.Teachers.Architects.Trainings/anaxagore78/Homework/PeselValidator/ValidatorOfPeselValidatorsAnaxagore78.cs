@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -13,40 +14,102 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
     public class ValidatorOfPeselValidatorsAnaxagore78
     {
 
-        public void ValidateAllValidators()
+        public Dictionary<string, ValidationResultAnaxagore78> ValidateAllValidators()
         {
             IReflectionAggregator aggregator = new ReflectionAggregatorAnaxagore78();
             Dictionary<string, IPeselValidator> validators = aggregator.GetAllPeselValidators();
             string fileName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Resources\pesel.csv";
-            List<string> peseList = GetPeselsList(fileName);
+            List<string> peseList = GetStringsFromFile(fileName);
+            Dictionary<string, ValidationResultAnaxagore78> validationResults = new Dictionary<string, ValidationResultAnaxagore78>();
 
-            Parallel.ForEach(validators, (validator) =>
+            foreach (var validator in validators)
             {
+                ValidationResultAnaxagore78 validationResultAnaxagore78 = new ValidationResultAnaxagore78();
+                DateTime start = DateTime.Now;
                 foreach (var pesel in peseList)
                 {
                     try
                     {
-
-                        Console.WriteLine(validator.Key + " => " + pesel + " =" + validator.Value.IsPeselValid(pesel));
+                        if (validator.Value.IsPeselValid(pesel))
+                        {
+                            validationResultAnaxagore78.Validated++;
+                        }
+                        else
+                        {
+                            validationResultAnaxagore78.NotValidated++;
+                        }
+                        //var i = (validator.Value.IsPeselValid(pesel))
+                        //    ? validationResultAnaxagore78.Validated++
+                        //    : validationResultAnaxagore78.NotValidated++;
                     }
                     catch (Exception exc)
                     {
-                        Console.WriteLine("Błąd przy sprawdzaniu: " + pesel + " => " + exc.Message);
+                        AddException2Dict(validationResultAnaxagore78, exc);
+                        //Console.WriteLine("Błąd przy sprawdzaniu: " + pesel + " => " + exc.Message);
                     }
                 }
+                TimeSpan executionTimeSpan = DateTime.Now - start;
+                validationResultAnaxagore78.ExecutionTime = executionTimeSpan.TotalMilliseconds.ToString(CultureInfo.InvariantCulture);
+                validationResults.Add(validator.Key, validationResultAnaxagore78);
 
-            });
+            }
 
-            //foreach (var line in (Resources.pesel))
-            //{
-
-            //    Console.WriteLine(line);
-            //}
+            return validationResults;
         }
 
-        private static List<string> GetPeselsList(string fileName)
+        public Dictionary<string, ValidationResultAnaxagore78> ValidateAllValidatorsParallel()
+        {
+            IReflectionAggregator aggregator = new ReflectionAggregatorAnaxagore78();
+            Dictionary<string, IPeselValidator> validators = aggregator.GetAllPeselValidators();
+            string fileName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Resources\pesel.csv";
+            List<string> peseList = GetStringsFromFile(fileName);
+            Dictionary<string, ValidationResultAnaxagore78> validationResults = new Dictionary<string, ValidationResultAnaxagore78>();
+
+            Parallel.ForEach(validators, (validator) =>
+            {
+                ValidationResultAnaxagore78 validationResultAnaxagore78 = new ValidationResultAnaxagore78();
+                DateTime start = DateTime.Now;
+                foreach (var pesel in peseList)
+                {
+                    try
+                    {
+                        if (validator.Value.IsPeselValid(pesel))
+                        {
+                            validationResultAnaxagore78.Validated++;
+                        }
+                        else
+                        {
+                            validationResultAnaxagore78.NotValidated++;
+                        }
+                    }
+                    catch (Exception exc)
+                    {
+                        AddException2Dict(validationResultAnaxagore78, exc);
+                    }
+                }
+                TimeSpan executionTimeSpan = DateTime.Now - start;
+                validationResultAnaxagore78.ExecutionTime = executionTimeSpan.TotalMilliseconds.ToString(CultureInfo.InvariantCulture);
+                validationResults.Add(validator.Key, validationResultAnaxagore78);
+            });
+            return validationResults;
+        }
+
+        private static void AddException2Dict(ValidationResultAnaxagore78 result, Exception exc)
+        {
+            if (result.Exceptions.ContainsKey(exc.Message))
+            {
+                result.Exceptions[exc.Message]++;
+            }
+            else
+            {
+                result.Exceptions.Add(exc.Message, 1);
+            }
+        }
+
+        private static List<string> GetStringsFromFile(string fileName)
         {
             List<string> lista = File.ReadAllLines(fileName).ToList();
+            #region loop
             //using (StreamReader sr = new StreamReader(fileName))
             //{
             //    for (int i = 0; i < .Length; i++)
@@ -54,7 +117,8 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
             //        string pesel = sr.ReadLine();
             //        lista.Add(pesel);
             //    }
-            //}
+            //} 
+            #endregion
             return lista;
         }
     }

@@ -33,10 +33,15 @@ namespace Toci.Teachers.Architects.Tests.anaxagore78.Generics
         [TestMethod]
         public void TestMethod3()
         {
-
+            DateTime start = DateTime.Now;
             ValidatorOfPeselValidatorsAnaxagore78 validatorOfPesel = new ValidatorOfPeselValidatorsAnaxagore78();
-            validatorOfPesel.ValidateAllValidators();
+            Dictionary<string, ValidationResultAnaxagore78> resultOAllValidators = validatorOfPesel.ValidateAllValidators();
+            TimeSpan executionTimeSpan1 = DateTime.Now - start;
 
+            start = DateTime.Now;
+            ValidatorOfPeselValidatorsAnaxagore78 validatorOfPeselV2 = new ValidatorOfPeselValidatorsAnaxagore78();
+            Dictionary<string, ValidationResultAnaxagore78> resultOAllValidatorsParallel = validatorOfPeselV2.ValidateAllValidatorsParallel();
+            TimeSpan executionTimeSpan2 = DateTime.Now - start;
         }
     }
 }
