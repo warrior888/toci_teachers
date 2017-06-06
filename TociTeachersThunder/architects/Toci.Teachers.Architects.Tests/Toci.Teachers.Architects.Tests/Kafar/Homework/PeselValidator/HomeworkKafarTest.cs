@@ -26,9 +26,13 @@ namespace Toci.Teachers.Architects.Tests.Kafar.Homework.PeselValidator
         {
             PeselValidatorKafar instanceOfPeselValidatorKafar = new PeselValidatorKafar();
             Dictionary<string, int> resultDictionary = new Dictionary<string, int>();
-            Dictionary<string, double> efficiencyDictionary = new Dictionary<string, double>();
+            Dictionary<string, double> averageEfficiencyDictionary = new Dictionary<string, double>();
+            Dictionary<string, double> timeOfExecutionDictionary = new Dictionary<string, double>();
+            
             string[] file = File.ReadAllLines(
                 @"..\..\..\..\Toci.Teachers.Architects.Tests\Toci.Teachers.Architects.Tests\Kafar\Homework\data\pesel.txt");
+
+            
 
             foreach (KeyValuePair<string, IPeselValidator> item in instanceOfPeselValidatorKafar.GetAllPeselValidators())
             {
@@ -46,6 +50,7 @@ namespace Toci.Teachers.Architects.Tests.Kafar.Homework.PeselValidator
                     {
                         count++;
                     }
+                    
                     TimeSpan duration = DateTime.Now - start;
 
                     efficiency += duration.TotalMilliseconds;
@@ -53,10 +58,14 @@ namespace Toci.Teachers.Architects.Tests.Kafar.Homework.PeselValidator
                     records++;
                 }
 
-                efficiency = efficiency/records;
+                resultDictionary.Add(item.Key, records - count);  // słownik zawierający liczbę błędnych weryfikacji
+                
+                timeOfExecutionDictionary.Add(item.Key, efficiency); // słownik zawierający czas wykonania weryfikcji 100 peseli
 
-                efficiencyDictionary.Add(item.Key, efficiency);
-                resultDictionary.Add(item.Key, count);
+                efficiency = efficiency/records;
+                averageEfficiencyDictionary.Add(item.Key, efficiency);  // słownik zawierający średni czas wykonania pojedynczej weryfikacji peselu
+
+                
             }
         }
     }
