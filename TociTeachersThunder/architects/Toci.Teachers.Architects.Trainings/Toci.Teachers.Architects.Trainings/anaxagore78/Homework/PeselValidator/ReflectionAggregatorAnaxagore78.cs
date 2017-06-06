@@ -18,7 +18,7 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
             IEnumerable<Type> derivingTypes = allTypesInAssembly.Where(m => seekedForType.IsAssignableFrom(m));
 
             #region petla zamiast Linq
-            /*
+      /*
     foreach (var derivingType in derivingTypes)
     {
         IPeselValidator item = (IPeselValidator)Activator.CreateInstance(derivingType);
@@ -26,11 +26,7 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
     }
      */
             #endregion
-
             return derivingTypes.Select(derivingType => (IPeselValidator)Activator.CreateInstance(derivingType)).ToDictionary(item => item.Name());
         }
-
-
-
     }
 }
