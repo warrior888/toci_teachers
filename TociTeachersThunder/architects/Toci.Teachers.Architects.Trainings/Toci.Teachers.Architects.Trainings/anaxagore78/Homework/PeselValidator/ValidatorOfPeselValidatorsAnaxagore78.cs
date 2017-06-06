@@ -49,11 +49,9 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
                     }
                 }
                 TimeSpan executionTimeSpan = DateTime.Now - start;
-                validationResultAnaxagore78.ExecutionTime = executionTimeSpan.TotalMilliseconds.ToString(CultureInfo.InvariantCulture);
+                validationResultAnaxagore78.ExecutionTime = executionTimeSpan.TotalMilliseconds;
                 validationResults.Add(validator.Key, validationResultAnaxagore78);
-
             }
-
             return validationResults;
         }
 
@@ -88,7 +86,7 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
                     }
                 }
                 TimeSpan executionTimeSpan = DateTime.Now - start;
-                validationResultAnaxagore78.ExecutionTime = executionTimeSpan.TotalMilliseconds.ToString(CultureInfo.InvariantCulture);
+                validationResultAnaxagore78.ExecutionTime = executionTimeSpan.TotalMilliseconds;
                 validationResults.Add(validator.Key, validationResultAnaxagore78);
             });
             return validationResults;
