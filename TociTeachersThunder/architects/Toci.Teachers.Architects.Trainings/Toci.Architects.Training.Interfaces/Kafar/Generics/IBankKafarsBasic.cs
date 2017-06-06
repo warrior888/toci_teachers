@@ -1,6 +1,4 @@
-﻿using System.Dynamic;
-
-namespace Toci.Architects.Training.Kafar.Generics
+﻿namespace Toci.Architects.Training.Interfaces.Kafar.Generics
 {
     public interface IBankKafarsBasic
     {

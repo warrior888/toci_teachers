@@ -4,7 +4,7 @@ using Toci.Architects.Training.Interfaces.GhostRider.Inheritance;
 using Toci.Architects.Training.Irzica.Inheritance;
 using Toci.Architects.Training.Kafar.Inheritance;
 using Toci.Architects.Training.Piotrek.Inheritance;
-using Toci.Architects.Training.Timoo.Inheritance;
+using Toci.Architects.Training.Timo.Inheritance;
 
 namespace Toci.Architects.Training.GhostRider.SimpleCaseTestPolimorphism
 {

@@ -54,6 +54,7 @@
     <Compile Include="GhostRider\Generics\GenericsExampleTests.cs" />
     <Compile Include="GhostRider\Reflection\ComplexReflectionTests.cs" />
     <Compile Include="Kafar\Generics\GenericsKafarTest.cs" />
+    <Compile Include="Kafar\Homework\PeselValidator\HomeworkKafarTest.cs" />
     <Compile Include="piotex\ger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -72,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GhostRider\FileAccess\data\peselcandidates.txt" />
+    <Content Include="Kafar\Homework\data\pesel.txt" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

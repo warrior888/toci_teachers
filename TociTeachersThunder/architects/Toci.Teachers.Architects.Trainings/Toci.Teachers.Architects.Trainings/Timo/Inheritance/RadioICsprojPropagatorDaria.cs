@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Toci.Architects.Training.Interfaces.GhostRider.Inheritance;
 
-namespace Toci.Architects.Training.Timoo.Inheritance
+namespace Toci.Architects.Training.Timo.Inheritance
 {
-    public class CsProjDaria : ICsprojPropagator
+    public class RadioICsprojPropagatorDaria : ICsprojPropagator
     {
         public bool CanPropagateCsproj(string path)
         {

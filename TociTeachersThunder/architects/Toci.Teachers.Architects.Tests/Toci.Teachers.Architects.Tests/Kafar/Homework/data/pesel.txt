@@ -1,0 +1,6 @@
+﻿92072210625 1
+9207221062534 0 zbyt dużo cyfr
+45111004809 0 niepoprawna cyfra kontrolna
+91412811573 1
+30096411651 0 zbyt dużo dni w miesiącu
+29161906244 0 zbyt dużo miesięcy w roku

@@ -1,0 +1,84 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography.X509Certificates;
+using Toci.Architects.Training.GhostRider.BasicGenerics;
+using Toci.Architects.Training.Interfaces.GhostRider.Extending.PeselValidator;
+using Toci.Architects.Training.Interfaces.GhostRider.Inheritance;
+
+namespace Toci.Architects.Training.Kafar.Homework.PeselValidator
+{
+    public class PeselValidatorKafar : IPeselValidator, IReflectionAggregator
+    {
+        public string Name()
+        {
+            return "Kafar";
+        }
+
+        public bool IsPeselValid(string pesel)
+        {
+            if (pesel.Trim().Length != 11)                         
+            {
+                return false;
+            } // sprawdzamy, czy pesel ma 11 znaków
+
+            if (!DateValidator(pesel))
+            {
+                return false;
+            } // sprawdzamy logiczność daty w peselu
+
+            int[] weight = {9, 7, 3, 1}; // tworzymy tabelę z wagami do obliczeń
+            int ckecksum = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                ckecksum = ckecksum + Int32.Parse(pesel.Substring(i, 1)) * weight[i%4];
+            } // obliczamy sumę iloczynów (znak w stringu) * waga
+
+            if (ckecksum%10 != Int32.Parse(pesel.Substring(10, 1)))
+            {
+                return false;
+            }   // sprawdzamy czy dzielenie modulo 10 sumy kontrolnej da nam cyfrę kontrolną peselu
+            
+            return true; // jeśli weryfikacja przebiegła pomyślnie, zwracamy true
+        }
+
+        public bool DateValidator(string pesel)
+        {
+            int month = int.Parse(pesel.Substring(2, 2));
+            if (month == 0 || (month > 12 && month < 21) || (month > 32 && month < 41) || (month > 52 && month < 61) || (month > 72 && month < 81) || month > 92)
+            {
+                return false;
+            } // sprawdzamy logiczność miesiąca daty urodzenia
+
+            int day = int.Parse(pesel.Substring(4, 2));
+            if (day > 31)
+            {
+                return false;
+            } // sprawdzamy logiczność dnia daty urodzenia; UPROSZCZONE - przyjąłem, że każdy miesiąc ma 31 dni
+
+            return true;
+        }
+
+        public Dictionary<string, IPeselValidator> GetAllPeselValidators()
+        {
+            Dictionary<string, IPeselValidator> testPeselValidators = new Dictionary<string, IPeselValidator>();
+
+            Type[] allTypesInAssembly = Assembly.GetExecutingAssembly().GetTypes();
+            Type seekedForType = typeof(IPeselValidator);
+
+            IEnumerable<Type> derivingTypes = allTypesInAssembly.Where(m => seekedForType.IsAssignableFrom(m));
+
+            foreach (var derivingType in derivingTypes)
+            {
+                IPeselValidator item = (IPeselValidator)Activator.CreateInstance(derivingType);
+                testPeselValidators.Add(item.Name(), item);
+            }
+
+            return testPeselValidators;
+        }
+    }
+}
