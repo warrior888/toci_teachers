@@ -6,7 +6,7 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
     {
         public int Validated { get; set; }
         public int NotValidated { get; set; }
-        public Dictionary<string, int> Exceptions { get; set; } = new Dictionary<string, int>();
+        public Dictionary<string, int> Exceptions = new Dictionary<string, int>();
         public double ExecutionTime { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace Toci.Architects.Training.GhostRider.Generics
                 //bankNamesMap["1060"]
                 foreach (var bankMName in bankNamesMap)
                 {
-                    KeyValuePair<string, string> ss = new KeyValuePair<string, string>();
+                    //KeyValuePair<string, string> ss = new KeyValuePair<string, string>();
                     //ss.
                     //bankMName.Value
                 }
