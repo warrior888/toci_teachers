@@ -48,7 +48,6 @@
     <Compile Include="anaxagore78\Generics\SantanderTransfer.cs" />
     <Compile Include="anaxagore78\Homework\PeselValidator\PeselValidatorAnaxagore78.cs" />
     <Compile Include="anaxagore78\Homework\PeselValidator\ReflectionAggregatorAnaxagore78.cs" />
-    <Compile Include="anaxagore78\Homework\PeselValidator\ValidationResultAnaxagore78.cs" />
     <Compile Include="anaxagore78\Homework\PeselValidator\ValidatorOfPeselValidatorsAnaxagore78.cs" />
     <Compile Include="anaxagore78\Inheritance\CanPropagateAnaxagore78.cs" />
     <Compile Include="anaxagore78\Inheritance\BikePropagator.cs" />
@@ -78,6 +77,7 @@
     <Compile Include="piotex\Generics\MBank.cs" />
     <Compile Include="piotex\Generics\myBank.cs" />
     <Compile Include="piotex\Generics\PKO.cs" />
+    <Compile Include="piotex\PeselValidator\PeselValidatorPiotex.cs" />
     <Compile Include="Piotrek\Homework\PeselValidator\PeselValidatorPiotrek.cs" />
     <Compile Include="Piotrek\Homework\PeselValidator\ReflectionAggregatorPiotrek.cs" />
     <Compile Include="Piotrek\Inheritance\InheritancePiotrek.cs" />

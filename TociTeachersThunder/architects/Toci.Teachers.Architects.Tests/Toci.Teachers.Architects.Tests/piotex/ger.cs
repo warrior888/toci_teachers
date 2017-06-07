@@ -3,13 +3,13 @@ using Toci.Architects.Training.piotex.Generics;
 
 namespace Toci.Teachers.Architects.Tests.piotex
 {
-    public class ger
+    public class Ger
     {
         [TestClass]
-        public class testClass
+        public class TestClassTest
         {
             [TestMethod]
-            public void testMethod()
+            public void TestMethodTest()
             {
                 BankTreansferDictionary example = new BankTreansferDictionary();
                 example.Example();
