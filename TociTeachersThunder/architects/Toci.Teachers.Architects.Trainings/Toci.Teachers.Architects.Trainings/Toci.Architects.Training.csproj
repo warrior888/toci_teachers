@@ -68,7 +68,7 @@
     <Compile Include="Kafar\Generics\BankTransferBaseKafar.cs" />
     <Compile Include="Kafar\Generics\BankTransferKafarsDictionary.cs" />
     <Compile Include="Kafar\Generics\BankTransferKafar.cs" />
-    <Compile Include="Kafar\Generics\IBankKafarsBasic.cs" />
+    <Compile Include="Kafar\Homework\PeselValidator\PeselValidatorKafar.cs" />
     <Compile Include="Kafar\Inheritance\InheritanceKafar.cs" />
     <Compile Include="Kafar\Inheritance\InheritanceKafar2.cs" />
     <Compile Include="Kafar\Inheritance\KafarHungryCsProjPropagator.cs" />
@@ -88,10 +88,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Timoo\Inheritance\CsProjDaria.cs" />
-    <Compile Include="Timoo\Inheritance\InheritanceTimo.cs" />
+    <Compile Include="Timo\Inheritance\CsProjDaria.cs" />
     <Compile Include="Timo\Inheritance\InheritanceTimo.cs" />
-    <Compile Include="Timoo\Inheritance\RadioICsprojPropagatorDaria.cs" />
+    <Compile Include="Timo\Inheritance\RadioICsprojPropagatorDaria.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Piotrek\Generics\" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Numerics;
+using Toci.Architects.Training.Interfaces.Kafar.Generics;
 
 namespace Toci.Architects.Training.Kafar.Generics
 {
@@ -36,7 +37,7 @@ namespace Toci.Architects.Training.Kafar.Generics
             }
 
             string bankId = account.Substring(0, 4);
-            foreach (string line in File.ReadAllLines(@"..\..\..\Toci.Teachers.Architects.Trainings\Kafar\Generics\banks.txt"))
+            foreach (string line in File.ReadAllLines(@"..\..\..\Toci.Teachers.Architects.Trainings\Kafar\Generics\data\banks.txt"))
                 if (line.Contains(bankId))
                 {
                     Name = line.Substring(bankId.Length + 1);

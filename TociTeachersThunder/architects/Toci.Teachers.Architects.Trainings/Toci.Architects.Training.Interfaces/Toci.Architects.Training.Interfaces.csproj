@@ -60,6 +60,7 @@
     <Compile Include="GhostRider\Homework\PeselValidator\IReflectionAggregator.cs" />
     <Compile Include="GhostRider\Inheritance\ICsprojPropagator.cs" />
     <Compile Include="GhostRider\Inheritance\IPlugin.cs" />
+    <Compile Include="Kafar\Generics\IBankKafarsBasic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
