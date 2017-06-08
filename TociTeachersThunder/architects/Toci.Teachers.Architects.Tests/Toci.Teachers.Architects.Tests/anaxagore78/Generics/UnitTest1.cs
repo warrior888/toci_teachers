@@ -37,11 +37,27 @@ namespace Toci.Teachers.Architects.Tests.anaxagore78.Generics
             ValidatorOfPeselValidatorsAnaxagore78 validatorOfPesel = new ValidatorOfPeselValidatorsAnaxagore78();
             Dictionary<string, ValidationResultAnaxagore78> resultOAllValidators = validatorOfPesel.ValidateAllValidators();
             TimeSpan executionTimeSpan1 = DateTime.Now - start;
-
-            start = DateTime.Now;
-            ValidatorOfPeselValidatorsAnaxagore78 validatorOfPeselV2 = new ValidatorOfPeselValidatorsAnaxagore78();
-            Dictionary<string, ValidationResultAnaxagore78> resultOAllValidatorsParallel = validatorOfPeselV2.ValidateAllValidatorsParallel();
-            TimeSpan executionTimeSpan2 = DateTime.Now - start;
         }
+
+        [TestMethod]
+        public void TestMethod3Parallel()
+        {
+            DateTime start = DateTime.Now;
+            ValidatorOfPeselValidatorsAnaxagore78 validatorOfPeselParallel = new ValidatorOfPeselValidatorsAnaxagore78();
+            Dictionary<string, ValidationResultAnaxagore78> resultOAllValidatorsParallel = validatorOfPeselParallel.ValidateAllValidatorsParallel();
+            TimeSpan executionTimeSpan2 = DateTime.Now - start;
+
+        }
+
+        [TestMethod]
+        public void TestMethod3TaskFactory()
+        {
+            DateTime start = DateTime.Now;
+            ValidatorOfPeselValidatorsAnaxagore78 validatorOfPeselTaskFactory = new ValidatorOfPeselValidatorsAnaxagore78();
+            Dictionary<string, ValidationResultAnaxagore78> resultOAllValidatorsTaskFactory = validatorOfPeselTaskFactory.ValidateAllValidatorsTaskFactory();
+            TimeSpan executionTimeSpan3 = DateTime.Now - start;
+
+        }
+
     }
 }
