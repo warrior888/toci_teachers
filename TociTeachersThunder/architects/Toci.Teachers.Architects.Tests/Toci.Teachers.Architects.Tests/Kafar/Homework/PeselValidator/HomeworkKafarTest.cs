@@ -28,11 +28,14 @@ namespace Toci.Teachers.Architects.Tests.Kafar.Homework.PeselValidator
             Dictionary<string, int> resultDictionary = new Dictionary<string, int>();
             Dictionary<string, double> averageEfficiencyDictionary = new Dictionary<string, double>();
             Dictionary<string, double> timeOfExecutionDictionary = new Dictionary<string, double>();
-            
-            string[] file = File.ReadAllLines(
-                @"..\..\..\..\Toci.Teachers.Architects.Tests\Toci.Teachers.Architects.Tests\Kafar\Homework\data\pesel.txt");
 
-            
+            string path =
+                @"..\..\..\..\Toci.Teachers.Architects.Tests\Toci.Teachers.Architects.Tests\Kafar\Homework\data\pesel.txt";
+
+            string[] file = File.ReadAllLines(path);
+
+            //instanceOfPeselValidatorKafar.ExtendPeselDatabase(path, file);
+            //instanceOfPeselValidatorKafar.RemovePeselValidationFromDatabase(path, file);
 
             foreach (KeyValuePair<string, IPeselValidator> item in instanceOfPeselValidatorKafar.GetAllPeselValidators())
             {
@@ -42,8 +45,8 @@ namespace Toci.Teachers.Architects.Tests.Kafar.Homework.PeselValidator
 
                 foreach (string line in file)
                 {
-                    string[] data = line.Split();
-                    bool check = data[1] == "1";
+                    string[] data = line.Split(); // dzieli każdą linię pliku na stringi
+                    bool check = data[1] == "1"; // przypisuje do zmiennej check wartość true jeśli po peselu w pliku jest 1, lub false w innym przypadku
                     DateTime start = DateTime.Now;
 
                     if (item.Value.IsPeselValid(data[0]) == check)
@@ -53,17 +56,17 @@ namespace Toci.Teachers.Architects.Tests.Kafar.Homework.PeselValidator
                     
                     TimeSpan duration = DateTime.Now - start;
 
-                    efficiency += duration.TotalMilliseconds;
+                    efficiency += duration.TotalMilliseconds; // dodaje do efficiency z poprzedniej iteracji czas trwania walidacji peselu obecnej iteracji
 
-                    records++;
+                    records++; // liczy ilość walidowanych peseli
                 }
 
                 resultDictionary.Add(item.Key, records - count);  // słownik zawierający liczbę błędnych weryfikacji
                 
-                timeOfExecutionDictionary.Add(item.Key, efficiency); // słownik zawierający czas wykonania weryfikcji 100 peseli
+                timeOfExecutionDictionary.Add(item.Key, efficiency); // słownik zawierający czas (w milisekundach) wykonania weryfikcji 1000 peseli
 
                 efficiency = efficiency/records;
-                averageEfficiencyDictionary.Add(item.Key, efficiency);  // słownik zawierający średni czas wykonania pojedynczej weryfikacji peselu
+                averageEfficiencyDictionary.Add(item.Key, efficiency);  // słownik zawierający średni czas (w milisekundach) wykonania pojedynczej weryfikacji peselu
 
                 
             }
