@@ -22,8 +22,9 @@ namespace Toci.Architects.Training.Kafar.Homework.PeselValidator
 
         public bool IsPeselValid(string pesel)
         {
+            long peselNumber;
 
-            if (!long.TryParse(pesel, out long peselNumber))
+            if (!long.TryParse(pesel, out peselNumber))
             {
                 return false;
             } // próbujemy parsować pesel na typ long
