@@ -1,8 +1,8 @@
-9207221062534 0 zbyt dużo cy
-45111004809 0 niepoprawna cyfra kontrol
-30096411651 0 zbyt dużo dni w miesią
-29161906244 0 zbyt dużo miesięcy w ro
-42073112921 1
+9207221062534 0 zbyt dużo cyfr
+45111004809 0 niepoprawna cyfra kontrolna
+30096411651 0 zbyt dużo dni w miesiącu
+29161906244 0 zbyt dużo miesięcy w roku
+42073112ABC 0 pierwotnie 921, zmieniono na ABC
 46111998313 1
 70071438233 1
 82122393673 1
