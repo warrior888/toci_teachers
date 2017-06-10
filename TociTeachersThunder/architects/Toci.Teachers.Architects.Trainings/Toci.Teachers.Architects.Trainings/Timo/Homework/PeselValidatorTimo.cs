@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Security.AccessControl;
@@ -26,6 +27,11 @@ namespace Toci.Architects.Training.Timo.Homework
                 return false;
             }
 
+            if (pesel.Length != 11)
+            {
+                return false;
+            };
+            //for (int i = 0,j = 0; (i < pesel.Length - 1)&&(j < 10); i++,j++)
             for (int i = 0; i < pesel.Length - 1; i++)
             {
                checkSum += int.Parse(pesel.Substring(i, 1)) * importance[i]; //"49040501580"

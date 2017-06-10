@@ -3,6 +3,7 @@
 30096411651 0 zbyt dużo dni w miesiącu
 29161906244 0 zbyt dużo miesięcy w roku
 42073112ABC 0 pierwotnie 921, zmieniono na ABC
+123	0
 46111998313 1
 70071438233 1
 82122393673 1
