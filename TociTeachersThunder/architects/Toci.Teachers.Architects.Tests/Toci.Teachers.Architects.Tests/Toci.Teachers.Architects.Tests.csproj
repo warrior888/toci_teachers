@@ -57,6 +57,7 @@
     <Compile Include="Kafar\Homework\PeselValidator\HomeworkKafarTest.cs" />
     <Compile Include="piotex\ger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Timo\PeselValidatorTestTimo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
