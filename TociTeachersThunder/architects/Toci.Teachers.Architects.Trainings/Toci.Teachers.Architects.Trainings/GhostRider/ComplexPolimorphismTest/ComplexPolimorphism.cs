@@ -17,7 +17,7 @@ namespace Toci.Architects.Training.GhostRider.ComplexPolimorphismTest
             Type kafar = typeof (Kafar.Inheritance.InheritanceKafar2);
 
             //seekedForType.
-               
+
             //allTypesInAssembly[0].IsAssignableFrom()
 
             IEnumerable<Type> derivingTypes = allTypesInAssembly.Where(m => seekedForType.IsAssignableFrom(m));
