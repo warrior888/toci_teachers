@@ -19,7 +19,12 @@ namespace Toci.Architects.Training.Timo.Homework
         {
             int[] importance = {9,7,3,1,9,7,3,1,9,7};
             int checkSum = 0;
+            long result;
 
+            if (!long.TryParse(pesel, out result))
+            {
+                return false;
+            }
 
             for (int i = 0; i < pesel.Length - 1; i++)
             {
