@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Toci.Architects.Training.anaxagore78.Homework.PeselValidator;
 using Toci.Architects.Training.Interfaces.GhostRider.Extending.PeselValidator;
-using System.Collections.Generic;
 
-namespace Toci.Teachers.Architects.Tests.anaxagore78.Generics
+namespace Toci.Teachers.Architects.Tests.anaxagore78.HomeWork
 {
     [TestClass]
     public class UnitTest1
@@ -37,6 +37,8 @@ namespace Toci.Teachers.Architects.Tests.anaxagore78.Generics
             ValidatorOfPeselValidatorsAnaxagore78 validatorOfPesel = new ValidatorOfPeselValidatorsAnaxagore78();
             Dictionary<string, ValidationResultAnaxagore78> resultOAllValidators = validatorOfPesel.ValidateAllValidators();
             TimeSpan executionTimeSpan1 = DateTime.Now - start;
+            
+            DisplayResult(resultOAllValidators, executionTimeSpan1);
         }
 
         [TestMethod]
@@ -46,6 +48,8 @@ namespace Toci.Teachers.Architects.Tests.anaxagore78.Generics
             ValidatorOfPeselValidatorsAnaxagore78 validatorOfPeselParallel = new ValidatorOfPeselValidatorsAnaxagore78();
             Dictionary<string, ValidationResultAnaxagore78> resultOAllValidatorsParallel = validatorOfPeselParallel.ValidateAllValidatorsParallel();
             TimeSpan executionTimeSpan2 = DateTime.Now - start;
+
+            DisplayResult(resultOAllValidatorsParallel, executionTimeSpan2);
 
         }
 
@@ -57,7 +61,26 @@ namespace Toci.Teachers.Architects.Tests.anaxagore78.Generics
             Dictionary<string, ValidationResultAnaxagore78> resultOAllValidatorsTaskFactory = validatorOfPeselTaskFactory.ValidateAllValidatorsTaskFactory();
             TimeSpan executionTimeSpan3 = DateTime.Now - start;
 
+            DisplayResult(resultOAllValidatorsTaskFactory, executionTimeSpan3);
         }
 
+        private static void DisplayResult(Dictionary<string, ValidationResultAnaxagore78> resultOAllValidators, TimeSpan executionTimeSpan)
+        {
+            foreach (var result in resultOAllValidators)
+            {
+                Console.WriteLine("Walidator uzytkownika: " + result.Key + ", odnalazł prawidłowych numerów PESEL: " +
+                                  result.Value.Validated + ", nieprawidłowych: " + result.Value.NotValidated);
+                Console.WriteLine(result.Value.Exceptions?.Count > 0 ? "Zgłoszone wyjątki:" : null);
+                int i = 1;
+                foreach (var exception in result.Value.Exceptions)
+                {
+                    Console.WriteLine(i++ + ") " + exception.Key + " : " + exception.Value + " razy");
+                }
+                Console.WriteLine("Całkowity czas walidacji:" + result.Value.ExecutionTime + " milisekund");
+                Console.WriteLine("______________________________________________________");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Czas testu: " + executionTimeSpan);
+        }
     }
 }
