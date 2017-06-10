@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Toci.Architects.Training.anaxagore78.Homework.PeselValidator;
 using Toci.Architects.Training.Interfaces.GhostRider.Extending.PeselValidator;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 
 namespace Toci.Teachers.Architects.Tests.anaxagore78.HomeWork
 {
     [TestClass]
     public class UnitTest1
     {
+        private readonly string _fileName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Resources\pesel.csv";
+
         [TestMethod]
         public void TestMethod1()
         {
@@ -35,9 +40,10 @@ namespace Toci.Teachers.Architects.Tests.anaxagore78.HomeWork
         {
             DateTime start = DateTime.Now;
             ValidatorOfPeselValidatorsAnaxagore78 validatorOfPesel = new ValidatorOfPeselValidatorsAnaxagore78();
-            Dictionary<string, ValidationResultAnaxagore78> resultOAllValidators = validatorOfPesel.ValidateAllValidators();
+            Dictionary<string, ValidationResultAnaxagore78> resultOAllValidators
+                = validatorOfPesel.ValidateAllValidators(GetStringsFromFile(_fileName));
             TimeSpan executionTimeSpan1 = DateTime.Now - start;
-            
+
             DisplayResult(resultOAllValidators, executionTimeSpan1);
         }
 
@@ -46,7 +52,8 @@ namespace Toci.Teachers.Architects.Tests.anaxagore78.HomeWork
         {
             DateTime start = DateTime.Now;
             ValidatorOfPeselValidatorsAnaxagore78 validatorOfPeselParallel = new ValidatorOfPeselValidatorsAnaxagore78();
-            Dictionary<string, ValidationResultAnaxagore78> resultOAllValidatorsParallel = validatorOfPeselParallel.ValidateAllValidatorsParallel();
+            Dictionary<string, ValidationResultAnaxagore78> resultOAllValidatorsParallel
+                = validatorOfPeselParallel.ValidateAllValidatorsParallel(GetStringsFromFile(_fileName));
             TimeSpan executionTimeSpan2 = DateTime.Now - start;
 
             DisplayResult(resultOAllValidatorsParallel, executionTimeSpan2);
@@ -58,10 +65,26 @@ namespace Toci.Teachers.Architects.Tests.anaxagore78.HomeWork
         {
             DateTime start = DateTime.Now;
             ValidatorOfPeselValidatorsAnaxagore78 validatorOfPeselTaskFactory = new ValidatorOfPeselValidatorsAnaxagore78();
-            Dictionary<string, ValidationResultAnaxagore78> resultOAllValidatorsTaskFactory = validatorOfPeselTaskFactory.ValidateAllValidatorsTaskFactory();
+            Dictionary<string, ValidationResultAnaxagore78> resultOAllValidatorsTaskFactory
+                = validatorOfPeselTaskFactory.ValidateAllValidatorsTaskFactory(GetStringsFromFile(_fileName));
             TimeSpan executionTimeSpan3 = DateTime.Now - start;
 
             DisplayResult(resultOAllValidatorsTaskFactory, executionTimeSpan3);
+        }
+        private static List<string> GetStringsFromFile(string fileName)
+        {
+            List<string> lista = File.ReadAllLines(fileName).ToList();
+            #region loop
+            //using (StreamReader sr = new StreamReader(fileName))
+            //{
+            //    for (int i = 0; i < .Length; i++)
+            //    {
+            //        string pesel = sr.ReadLine();
+            //        lista.Add(pesel);
+            //    }
+            //} 
+            #endregion
+            return lista;
         }
 
         private static void DisplayResult(Dictionary<string, ValidationResultAnaxagore78> resultOAllValidators, TimeSpan executionTimeSpan)

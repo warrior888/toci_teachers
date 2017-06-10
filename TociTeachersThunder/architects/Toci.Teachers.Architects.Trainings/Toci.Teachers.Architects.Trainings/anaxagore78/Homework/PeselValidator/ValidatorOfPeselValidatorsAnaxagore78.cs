@@ -13,12 +13,12 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
 {
     public class ValidatorOfPeselValidatorsAnaxagore78
     {
-        private readonly string _fileName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Resources\pesel.csv";
+        
 
-        public Dictionary<string, ValidationResultAnaxagore78> ValidateAllValidators()
+        public Dictionary<string, ValidationResultAnaxagore78> ValidateAllValidators(List<string> peseList)
         {
             var validators = GetDictPeselValidators();
-            List<string> peseList = GetStringsFromFile(_fileName);
+            //List<string> peseList = GetStringsFromFile(_fileName);
             Dictionary<string, ValidationResultAnaxagore78> validationResults = new Dictionary<string, ValidationResultAnaxagore78>();
 
             foreach (var validator in validators)
@@ -28,10 +28,10 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
             return validationResults;
         }
 
-        public Dictionary<string, ValidationResultAnaxagore78> ValidateAllValidatorsTaskFactory()
+        public Dictionary<string, ValidationResultAnaxagore78> ValidateAllValidatorsTaskFactory(List<string> peseList)
         {
             var validators = GetDictPeselValidators();
-            List<string> peseList = GetStringsFromFile(_fileName);
+            //List<string> peseList = GetStringsFromFile(_fileName);
             Dictionary<string, ValidationResultAnaxagore78> validationResults = new Dictionary<string, ValidationResultAnaxagore78>();
 
             Task.WaitAll(validators.Select(validator => Task.Factory.StartNew(() => ValidationTask(peseList, validator, validationResults))).ToArray());
@@ -41,10 +41,10 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
 
 
 
-        public Dictionary<string, ValidationResultAnaxagore78> ValidateAllValidatorsParallel()
+        public Dictionary<string, ValidationResultAnaxagore78> ValidateAllValidatorsParallel(List<string> peseList)
         {
             var validators = GetDictPeselValidators();
-            List<string> peseList = GetStringsFromFile(_fileName);
+            //List<string> peseList = GetStringsFromFile(_fileName);
             Dictionary<string, ValidationResultAnaxagore78> validationResults = new Dictionary<string, ValidationResultAnaxagore78>();
 
             Parallel.ForEach(validators, (validator) => { ValidationTask(peseList, validator, validationResults); });
@@ -97,20 +97,6 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
             }
         }
 
-        private static List<string> GetStringsFromFile(string fileName)
-        {
-            List<string> lista = File.ReadAllLines(fileName).ToList();
-            #region loop
-            //using (StreamReader sr = new StreamReader(fileName))
-            //{
-            //    for (int i = 0; i < .Length; i++)
-            //    {
-            //        string pesel = sr.ReadLine();
-            //        lista.Add(pesel);
-            //    }
-            //} 
-            #endregion
-            return lista;
-        }
+
     }
 }
