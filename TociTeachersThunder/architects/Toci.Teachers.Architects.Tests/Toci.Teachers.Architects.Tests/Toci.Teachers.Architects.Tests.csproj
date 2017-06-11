@@ -56,6 +56,7 @@
     <Compile Include="Kafar\Generics\GenericsKafarTest.cs" />
     <Compile Include="Kafar\Homework\PeselValidator\HomeworkKafarTest.cs" />
     <Compile Include="piotex\ger.cs" />
+    <Compile Include="piotex\pesel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

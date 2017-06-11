@@ -78,6 +78,7 @@
     <Compile Include="piotex\Generics\myBank.cs" />
     <Compile Include="piotex\Generics\PKO.cs" />
     <Compile Include="piotex\PeselValidator\PeselValidatorPiotex.cs" />
+    <Compile Include="piotex\PeselValidator\Reflectionpiotex.cs" />
     <Compile Include="Piotrek\Homework\PeselValidator\PeselValidatorPiotrek.cs" />
     <Compile Include="Piotrek\Homework\PeselValidator\ReflectionAggregatorPiotrek.cs" />
     <Compile Include="Piotrek\Inheritance\InheritancePiotrek.cs" />

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Remoting.Messaging;
@@ -20,6 +22,13 @@ namespace Toci.Architects.Training.Kafar.Homework.PeselValidator
 
         public bool IsPeselValid(string pesel)
         {
+            long peselNumber;
+
+            if (!long.TryParse(pesel, out peselNumber))
+            {
+                return false;
+            } // próbujemy parsować pesel na typ long
+
             if (pesel.Trim().Length != 11)                         
             {
                 return false;
@@ -35,10 +44,10 @@ namespace Toci.Architects.Training.Kafar.Homework.PeselValidator
 
             for (int i = 0; i < 10; i++)
             {
-                ckecksum = ckecksum + Int32.Parse(pesel.Substring(i, 1)) * weight[i%4];
+                ckecksum = ckecksum + int.Parse(pesel.Substring(i, 1)) * weight[i%4];
             } // obliczamy sumę iloczynów (znak w stringu) * waga
 
-            if (ckecksum%10 != Int32.Parse(pesel.Substring(10, 1)))
+            if (int.Parse(pesel.Substring(10, 1)) != ckecksum %10)
             {
                 return false;
             }   // sprawdzamy czy dzielenie modulo 10 sumy kontrolnej da nam cyfrę kontrolną peselu
@@ -80,5 +89,41 @@ namespace Toci.Architects.Training.Kafar.Homework.PeselValidator
 
             return testPeselValidators;
         }
+
+        public void ExtendPeselDatabase(string path, string[] file)
+        {
+            int count = 0;
+
+            foreach (string line in file)
+            {
+                if (!(line.Contains(" ")) && IsPeselValid(line))
+                {
+                    file[count] = file[count].Insert(line.Length, " 1");
+                } 
+                else if (!(line.Contains(" ")) && (IsPeselValid(line) == false))
+                {
+                    file[count] = file[count].Insert(line.Length, " 0");
+                }
+                count++;
+            }
+            
+            File.WriteAllLines(path, file);
+        } // metoda dodająca 1 przy poprawnych peselach oraz 0 przy niepoprawnych w bazie danych
+
+        public void RemovePeselValidationFromDatabase(string path, string[] file)
+        {
+            int count = 0;
+
+            foreach (string line in file)
+            {
+                if (line.Contains(" "))
+                {
+                    file[count] = file[count].Remove(line.Length - 2, 2);
+                }
+                count++;
+            }
+
+            File.WriteAllLines(path, file);
+        } // metoda usuwająca walidację peseli w bazie danych
     }
 }

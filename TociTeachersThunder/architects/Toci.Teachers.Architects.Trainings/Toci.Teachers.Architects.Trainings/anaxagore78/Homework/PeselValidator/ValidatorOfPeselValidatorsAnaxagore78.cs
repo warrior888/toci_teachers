@@ -13,83 +13,76 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
 {
     public class ValidatorOfPeselValidatorsAnaxagore78
     {
+        private readonly string _fileName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Resources\pesel.csv";
 
         public Dictionary<string, ValidationResultAnaxagore78> ValidateAllValidators()
         {
-            IReflectionAggregator aggregator = new ReflectionAggregatorAnaxagore78();
-            Dictionary<string, IPeselValidator> validators = aggregator.GetAllPeselValidators();
-            string fileName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Resources\pesel.csv";
-            List<string> peseList = GetStringsFromFile(fileName);
+            var validators = GetDictPeselValidators();
+            List<string> peseList = GetStringsFromFile(_fileName);
             Dictionary<string, ValidationResultAnaxagore78> validationResults = new Dictionary<string, ValidationResultAnaxagore78>();
 
             foreach (var validator in validators)
             {
-                ValidationResultAnaxagore78 validationResultAnaxagore78 = new ValidationResultAnaxagore78();
-                DateTime start = DateTime.Now;
-                foreach (var pesel in peseList)
-                {
-                    try
-                    {
-                        if (validator.Value.IsPeselValid(pesel))
-                        {
-                            validationResultAnaxagore78.Validated++;
-                        }
-                        else
-                        {
-                            validationResultAnaxagore78.NotValidated++;
-                        }
-                        //var i = (validator.Value.IsPeselValid(pesel))
-                        //    ? validationResultAnaxagore78.Validated++
-                        //    : validationResultAnaxagore78.NotValidated++;
-                    }
-                    catch (Exception exc)
-                    {
-                        AddException2Dict(validationResultAnaxagore78, exc);
-                        //Console.WriteLine("Błąd przy sprawdzaniu: " + pesel + " => " + exc.Message);
-                    }
-                }
-                TimeSpan executionTimeSpan = DateTime.Now - start;
-                validationResultAnaxagore78.ExecutionTime = executionTimeSpan.TotalMilliseconds;
-                validationResults.Add(validator.Key, validationResultAnaxagore78);
+                ValidationTask(peseList, validator, validationResults);
             }
             return validationResults;
         }
 
+        public Dictionary<string, ValidationResultAnaxagore78> ValidateAllValidatorsTaskFactory()
+        {
+            var validators = GetDictPeselValidators();
+            List<string> peseList = GetStringsFromFile(_fileName);
+            Dictionary<string, ValidationResultAnaxagore78> validationResults = new Dictionary<string, ValidationResultAnaxagore78>();
+
+            Task.WaitAll(validators.Select(validator => Task.Factory.StartNew(() => ValidationTask(peseList, validator, validationResults))).ToArray());
+
+            return validationResults;
+        }
+
+
+
         public Dictionary<string, ValidationResultAnaxagore78> ValidateAllValidatorsParallel()
+        {
+            var validators = GetDictPeselValidators();
+            List<string> peseList = GetStringsFromFile(_fileName);
+            Dictionary<string, ValidationResultAnaxagore78> validationResults = new Dictionary<string, ValidationResultAnaxagore78>();
+
+            Parallel.ForEach(validators, (validator) => { ValidationTask(peseList, validator, validationResults); });
+            return validationResults;
+        }
+
+        private static Dictionary<string, IPeselValidator> GetDictPeselValidators()
         {
             IReflectionAggregator aggregator = new ReflectionAggregatorAnaxagore78();
             Dictionary<string, IPeselValidator> validators = aggregator.GetAllPeselValidators();
-            string fileName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Resources\pesel.csv";
-            List<string> peseList = GetStringsFromFile(fileName);
-            Dictionary<string, ValidationResultAnaxagore78> validationResults = new Dictionary<string, ValidationResultAnaxagore78>();
+            return validators;
+        }
 
-            Parallel.ForEach(validators, (validator) =>
+        private static void ValidationTask(List<string> peseList, KeyValuePair<string, IPeselValidator> validator, Dictionary<string, ValidationResultAnaxagore78> validationResults)
+        {
+            ValidationResultAnaxagore78 validationResultAnaxagore78 = new ValidationResultAnaxagore78();
+            DateTime start = DateTime.Now;
+            foreach (var pesel in peseList)
             {
-                ValidationResultAnaxagore78 validationResultAnaxagore78 = new ValidationResultAnaxagore78();
-                DateTime start = DateTime.Now;
-                foreach (var pesel in peseList)
+                try
                 {
-                    try
+                    if (validator.Value.IsPeselValid(pesel))
                     {
-                        if (validator.Value.IsPeselValid(pesel))
-                        {
-                            validationResultAnaxagore78.Validated++;
-                        }
-                        else
-                        {
-                            validationResultAnaxagore78.NotValidated++;
-                        }
+                        validationResultAnaxagore78.Validated++;
                     }
-                    catch (Exception exc)
+                    else
                     {
-                        AddException2Dict(validationResultAnaxagore78, exc);
+                        validationResultAnaxagore78.NotValidated++;
                     }
                 }
-                TimeSpan executionTimeSpan = DateTime.Now - start;
-                validationResultAnaxagore78.ExecutionTime = executionTimeSpan.TotalMilliseconds;
-                validationResults.Add(validator.Key, validationResultAnaxagore78);
-            });
-            return validationResults;
+                catch (Exception exc)
+                {
+                    AddException2Dict(validationResultAnaxagore78, exc);
+                }
+            }
+            TimeSpan executionTimeSpan = DateTime.Now - start;
+            validationResultAnaxagore78.ExecutionTime = executionTimeSpan.TotalMilliseconds;
+            validationResults.Add(validator.Key, validationResultAnaxagore78);
         }
 
         private static void AddException2Dict(ValidationResultAnaxagore78 result, Exception exc)
