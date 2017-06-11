@@ -62,6 +62,7 @@
     <Compile Include="GhostRider\Generics\CoordinatesManipulations.cs" />
     <Compile Include="GhostRider\Generics\MbankTransfer.cs" />
     <Compile Include="GhostRider\SimpleCaseTestPolimorphism\SimplePolimfphic.cs" />
+    <Compile Include="Irzica\Homework\PeselValidator\PeselValidatorIza.cs" />
     <Compile Include="Irzica\Inheritance\InheritanceIz.cs" />
     <Compile Include="Irzica\Inheritance\InheritanceIz2.cs" />
     <Compile Include="Irzica\Inheritance\TVICsprojPropagator.cs" />
@@ -89,6 +90,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Timo\Homework\PeselValidatorTimo.cs" />
     <Compile Include="Timo\Inheritance\CsProjDaria.cs" />
     <Compile Include="Timo\Inheritance\InheritanceTimo.cs" />
     <Compile Include="Timo\Inheritance\RadioICsprojPropagatorDaria.cs" />

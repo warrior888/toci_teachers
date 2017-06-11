@@ -50,7 +50,7 @@
   <ItemGroup>
     <Compile Include="anaxagore78\Generics\GenericExampleAnaxagore78Test.cs" />
     <Compile Include="GhostRider\FileAccess\PeselValidatorsTests.cs" />
-    <Compile Include="anaxagore78\Generics\UnitTest1.cs" />
+    <Compile Include="anaxagore78\HomeWork\UnitTest1.cs" />
     <Compile Include="GhostRider\Generics\GenericsExampleTests.cs" />
     <Compile Include="GhostRider\Reflection\ComplexReflectionTests.cs" />
     <Compile Include="Kafar\Generics\GenericsKafarTest.cs" />
@@ -58,6 +58,7 @@
     <Compile Include="piotex\ger.cs" />
     <Compile Include="piotex\pesel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Timo\PeselValidatorTestTimo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

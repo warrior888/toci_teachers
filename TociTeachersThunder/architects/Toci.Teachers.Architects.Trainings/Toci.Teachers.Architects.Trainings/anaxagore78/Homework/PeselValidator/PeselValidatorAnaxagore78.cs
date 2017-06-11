@@ -26,7 +26,10 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
             {
                 return false; //throw new Exception("Numer pesel musi składać sie z 11 cyfr");
             }
-            if (!CheckMonth(int.Parse(pesel.Substring(2, 2))))
+
+            //TODO: mozna by dodac sprawdzanie czy podany rok juz wystapil na podstawie numeracji miesiaca,  mialoby to sens w srodowisku produkcyjnym
+
+            if (!CheckMonth(int.Parse(pesel.Substring(2, 2))))  //sprawdzamy czy prawidlowy miesiac
             {
                 return false;
             }
@@ -37,14 +40,7 @@ namespace Toci.Architects.Training.anaxagore78.Homework.PeselValidator
 
         private static bool CheckMonth(int month)
         {
-            foreach (var item in MonthDictionary)
-            {
-                if (month >= item.Key && month <= item.Value)
-                {
-                    return true;
-                }
-            }
-            return false;
+            return MonthDictionary.Any(item => month >= item.Key && month <= item.Value);
         }
 
         private static int GetControlSum(string pesel)
