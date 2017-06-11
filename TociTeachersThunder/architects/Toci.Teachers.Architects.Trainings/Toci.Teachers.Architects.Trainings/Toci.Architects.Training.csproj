@@ -48,6 +48,7 @@
     <Compile Include="anaxagore78\Generics\SantanderTransfer.cs" />
     <Compile Include="anaxagore78\Homework\PeselValidator\PeselValidatorAnaxagore78.cs" />
     <Compile Include="anaxagore78\Homework\PeselValidator\ReflectionAggregatorAnaxagore78.cs" />
+    <Compile Include="anaxagore78\Homework\PeselValidator\ValidationResultAnaxagore78.cs" />
     <Compile Include="anaxagore78\Homework\PeselValidator\ValidatorOfPeselValidatorsAnaxagore78.cs" />
     <Compile Include="anaxagore78\Inheritance\CanPropagateAnaxagore78.cs" />
     <Compile Include="anaxagore78\Inheritance\BikePropagator.cs" />
