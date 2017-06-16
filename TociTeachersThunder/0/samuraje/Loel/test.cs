@@ -8,7 +8,7 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, GitHub, Hello SourceTree!");
+            Console.WriteLine("Hello GitHub, Hello SourceTree, Hello Samuraje!");
             Console.ReadLine();
         }
     }
