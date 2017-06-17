@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="371" Width="498" ResizeMode="NoResize">
+    <Grid Margin="2,0,0,0" UseLayoutRounding="False" Height="340" MaxHeight="344" MaxWidth="488" MinHeight="344" MinWidth="488">
+        <TextBox x:Name="pasekWyniku" HorizontalAlignment="Left" Height="37" Margin="53,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="pasekWyniku_TextChanged"  Width="363" HorizontalContentAlignment="Right"/>
+        <Button x:Name="liczba1" Content="1" HorizontalAlignment="Left" Margin="53,72,0,0" VerticalAlignment="Top" Width="40" Height="40" FontWeight="Bold" FontSize="20" Click="liczba_Click"/>
+        <Button x:Name="liczba2" Content="2" HorizontalAlignment="Left" Margin="115,72,0,0" VerticalAlignment="Top" Width="39" Height="40" RenderTransformOrigin="1.575,-0.187" FontWeight="Bold" FontSize="20" Click="liczba_Click"/>
+        <Button x:Name="liczba7" Content="7" HorizontalAlignment="Left" Margin="53,204,0,0" VerticalAlignment="Top" Width="40" Height="40" RenderTransformOrigin="0.638,1.838" FontWeight="Bold" FontSize="20" Click="liczba_Click"/>
+        <Button x:Name="liczba8" Content="8" HorizontalAlignment="Left" Margin="115,204,0,0" VerticalAlignment="Top" Width="39" Height="40" RenderTransformOrigin="1.575,-0.187" FontWeight="Bold" FontSize="20" Click="liczba_Click"/>
+        <Button x:Name="liczba4" Content="4" HorizontalAlignment="Left" Margin="53,134,0,0" VerticalAlignment="Top" Width="40" Height="40" RenderTransformOrigin="0.563,2.063" FontWeight="Bold" FontSize="20" Click="liczba_Click"/>
+        <Button x:Name="liczba5" Content="5" HorizontalAlignment="Left" Margin="115,134,0,0" VerticalAlignment="Top" Width="39" Height="40" RenderTransformOrigin="1.575,-0.187" FontWeight="Bold" FontSize="20" Click="liczba_Click"/>
+        <Button x:Name="liczba3" Content="3" HorizontalAlignment="Left" Margin="180,72,0,0" VerticalAlignment="Top" Width="38" Height="40" RenderTransformOrigin="1.575,-0.187" FontWeight="Bold" FontSize="20" Click="liczba_Click"/>
+        <Button x:Name="liczba6" Content="6" HorizontalAlignment="Left" Margin="180,134,0,0" VerticalAlignment="Top" Width="39" Height="40" RenderTransformOrigin="1.575,-0.187" FontWeight="Bold" FontSize="20" Click="liczba_Click"/>
+        <Button x:Name="liczba9" Content="9" HorizontalAlignment="Left" Margin="180,204,0,0" VerticalAlignment="Top" Width="39" Height="40" RenderTransformOrigin="1.575,-0.187" FontWeight="Bold" FontSize="20" Click="liczba_Click"/>
+        <Button x:Name="mnozenie" Content="*" HorizontalAlignment="Left" Margin="261,72,0,0" VerticalAlignment="Top" Width="60" Height="40" RenderTransformOrigin="1.575,-0.187" FontWeight="Bold" FontSize="20" Click="dzialanie_Click"/>
+        <Button x:Name="dzielenie" Content="/" HorizontalAlignment="Left" Margin="356,72,0,0" VerticalAlignment="Top" Width="60" Height="40" RenderTransformOrigin="1.575,-0.187" Click="dzialanie_Click" FontWeight="Bold" FontSize="20"/>
+        <Button x:Name="dodawanie" Content="+" HorizontalAlignment="Left" Margin="261,134,0,0" VerticalAlignment="Top" Width="60" Height="40" RenderTransformOrigin="1.575,-0.187" FontWeight="Bold" FontSize="20" Click="dzialanie_Click"/>
+        <Button x:Name="odejmowanie" Content="-" HorizontalAlignment="Left" Margin="356,134,0,0" VerticalAlignment="Top" Width="60" Height="40" RenderTransformOrigin="1.575,-0.187" FontWeight="Bold" FontSize="20" Click="dzialanie_Click"/>
+        <Button x:Name="potega" Content="^" HorizontalAlignment="Left" Margin="261,204,0,0" VerticalAlignment="Top" Width="60" Height="40" RenderTransformOrigin="1.575,-0.187" FontWeight="Bold" FontSize="20" Click="POWIE"/>
+        <Button x:Name="silnia" Content="N!" HorizontalAlignment="Left" Margin="356,204,0,0" VerticalAlignment="Top" Width="60" Height="40" RenderTransformOrigin="1.575,-0.187" FontWeight="Bold" FontSize="20" Click="silnia_Click"/>
+        <Button x:Name="liczba0" Content="0" HorizontalAlignment="Left" Margin="53,269,0,0" VerticalAlignment="Top" Width="40" Height="40" RenderTransformOrigin="0.638,1.838" FontWeight="Bold" FontSize="20" Click="liczba_Click"/>
+        <Button x:Name="przecinek" Content="," HorizontalAlignment="Left" Margin="115,269,0,0" VerticalAlignment="Top" Width="40" Height="40" RenderTransformOrigin="0.638,1.838" FontWeight="Bold" FontSize="20" Click="przecinek_Click"/>
+        <Button x:Name="rowna" Content="=" HorizontalAlignment="Left" Margin="180,269,0,0" VerticalAlignment="Top" Width="40" Height="40" RenderTransformOrigin="0.638,1.838" FontWeight="Bold" FontSize="20" Click="rowna_Click"/>
+        <Button x:Name="cls" Content="cls" HorizontalAlignment="Left" Margin="356,269,0,0" VerticalAlignment="Top" Width="60" Height="40" RenderTransformOrigin="1.575,-0.187" FontWeight="Bold" FontSize="20" Click="czyszczenie_Click"/>
+        <Button x:Name="bin" Content="bin" HorizontalAlignment="Left" Margin="261,269,0,0" VerticalAlignment="Top" Width="60" Height="40" RenderTransformOrigin="1.575,-0.187" FontWeight="Bold" FontSize="20" Click="systemBinarny_Click"/>
+
+    </Grid>
+</Window>
