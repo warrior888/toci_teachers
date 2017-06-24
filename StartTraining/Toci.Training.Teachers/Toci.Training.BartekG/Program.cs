@@ -17,12 +17,15 @@ namespace Toci.Training.BartekG
                 Console.WriteLine("Wpisz coś do indexu " + i + " na " + na);
                 table[i] = Console.ReadLine();
 
-
+                if (i==table.Length-1)
+                {
+                    Console.WriteLine("Uzupełniłeś całą tablicę :)");
+                }
             }
-            Console.WriteLine("Uzupełniłeś całą tablicę. Oto twoja tablica:");
+            Console.WriteLine("Oto twoja tablica: ");
             for (int i = 0; i < table.Length; i++)
             {
-                Console.WriteLine(table[i]);
+                Console.WriteLine("dla ["+i+"] = "+table[i]);
 
 
 
