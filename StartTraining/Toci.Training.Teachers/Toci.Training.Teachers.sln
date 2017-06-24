@@ -2,9 +2,13 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 
+
 VisualStudioVersion = 15.0.26430.13
 
 VisualStudioVersion = 15.0.26430.14
+
+
+VisualStudioVersion = 15.0.26430.6
 
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
@@ -24,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.BartekG", "To
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.MateuszB", "Toci.Training.MateuszB\Toci.Training.MateuszB.csproj", "{F522DE7C-2C83-4DD8-9095-0E26E3872662}"
 
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Traininig.Leon", "Toci.Traininig.Leon\Toci.Traininig.Leon.csproj", "{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +56,13 @@ Global
 		{F522DE7C-2C83-4DD8-9095-0E26E3872662}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F522DE7C-2C83-4DD8-9095-0E26E3872662}.Release|Any CPU.Build.0 = Release|Any CPU
 
+
+
+		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +73,10 @@ Global
 		{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 
 		{F522DE7C-2C83-4DD8-9095-0E26E3872662} = {48CC1F7F-DD1C-451E-9B50-E7C7066922BA}
+
 1ce77600c039002978c4e9a82f253147b404f4af
+
+		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
+
 	EndGlobalSection
 EndGlobal
