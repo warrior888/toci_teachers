@@ -19,7 +19,7 @@ namespace Toci.Training.Teachers
             // translacje duze male litery na tabloicy kodow ascii 
             // utf8
 
-            string example = "Bartłomiej";
+            string example = "Bartłomiej"; 
 
             for (int i = example.Length - 1; i >= 0; i--)
             {
