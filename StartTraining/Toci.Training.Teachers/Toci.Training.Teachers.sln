@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -32,10 +32,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppTraining", "ConsoleAppTraining\ConsoleAppTraining.csproj", "{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.LukaszJ", "Toci.Training.LukaszJ\Toci.Training.LukaszJ.csproj", "{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "berserki", "berserki", "{50CDCA3B-C1C3-4335-931B-D4B4FA98C2EE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piotrek", "Piotrek\Piotrek.csproj", "{C6137799-7CD4-47D6-8153-1D40645D397E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,10 +75,6 @@ Global
 		{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6137799-7CD4-47D6-8153-1D40645D397E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6137799-7CD4-47D6-8153-1D40645D397E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6137799-7CD4-47D6-8153-1D40645D397E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6137799-7CD4-47D6-8153-1D40645D397E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +89,5 @@ Global
 		{26C519F2-397B-48EC-8BBE-C15C196E7CDD} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
 		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8} = {26C519F2-397B-48EC-8BBE-C15C196E7CDD}
 		{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
-		{C6137799-7CD4-47D6-8153-1D40645D397E} = {50CDCA3B-C1C3-4335-931B-D4B4FA98C2EE}
 	EndGlobalSection
 EndGlobal
