@@ -31,7 +31,7 @@ namespace Toci.Training.BartekG
 
 
             }
-            Console.ReadLine();
+            Console.ReadKey();
 
         }
 
