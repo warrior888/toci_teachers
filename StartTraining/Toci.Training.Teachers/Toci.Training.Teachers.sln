@@ -1,11 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-<<<<<<< HEAD
-VisualStudioVersion = 15.0.26403.7
-=======
-VisualStudioVersion = 15.0.26430.14
->>>>>>> ec450a7b8b9afc7a4293a1c4fec6860ff1cfb9b7
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -34,13 +30,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DarekB", "DarekB", "{26C519F2-397B-48EC-8BBE-C15C196E7CDD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppTraining", "ConsoleAppTraining\ConsoleAppTraining.csproj", "{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}"
-<<<<<<< HEAD
-=======
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.LukaszJ", "Toci.Training.LukaszJ\Toci.Training.LukaszJ.csproj", "{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.MarcinK", "Toci.Training.MarcinK\Toci.Training.MarcinK.csproj", "{B6A1BF05-F28F-4C43-AC23-CBBB1F3CD39F}"
->>>>>>> ec450a7b8b9afc7a4293a1c4fec6860ff1cfb9b7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.KamilP", "Toci.Training.KamilP\Toci.Training.KamilP.csproj", "{19B7EAD4-366C-4A12-B527-F206BCB25393}"
 EndProject
@@ -51,6 +44,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Edwin", "Toci.Training.Edwin\Toci.Training.Edwin.csproj", "{02674FEC-C75F-4D45-8FC3-40E66E76D86C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.MichalW", "Toci.Training.MichalW\Toci.Training.MichalW.csproj", "{3BCF4B47-2568-4064-A182-4270B0C86F0D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "berserki", "berserki", "{C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Peter", "Toci.Training.Peter\Toci.Training.Peter.csproj", "{AD0AABE3-0A77-4E03-A790-287B5B61F1E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.IzaN", "ConsoleApp1\Toci.Training.IzaN.csproj", "{27EA820D-DF37-4536-87FE-9F243AC802D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -90,8 +89,6 @@ Global
 		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
-=======
 		{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -120,7 +117,14 @@ Global
 		{3BCF4B47-2568-4064-A182-4270B0C86F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BCF4B47-2568-4064-A182-4270B0C86F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BCF4B47-2568-4064-A182-4270B0C86F0D}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> ec450a7b8b9afc7a4293a1c4fec6860ff1cfb9b7
+		{AD0AABE3-0A77-4E03-A790-287B5B61F1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD0AABE3-0A77-4E03-A790-287B5B61F1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD0AABE3-0A77-4E03-A790-287B5B61F1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD0AABE3-0A77-4E03-A790-287B5B61F1E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27EA820D-DF37-4536-87FE-9F243AC802D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27EA820D-DF37-4536-87FE-9F243AC802D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27EA820D-DF37-4536-87FE-9F243AC802D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27EA820D-DF37-4536-87FE-9F243AC802D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -134,8 +138,6 @@ Global
 		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 		{26C519F2-397B-48EC-8BBE-C15C196E7CDD} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
 		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8} = {26C519F2-397B-48EC-8BBE-C15C196E7CDD}
-<<<<<<< HEAD
-=======
 		{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
 		{B6A1BF05-F28F-4C43-AC23-CBBB1F3CD39F} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 		{19B7EAD4-366C-4A12-B527-F206BCB25393} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
@@ -143,6 +145,7 @@ Global
 		{09E228C6-0B89-4080-B600-F83131BAC726} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
 		{02674FEC-C75F-4D45-8FC3-40E66E76D86C} = {48CC1F7F-DD1C-451E-9B50-E7C7066922BA}
 		{3BCF4B47-2568-4064-A182-4270B0C86F0D} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
->>>>>>> ec450a7b8b9afc7a4293a1c4fec6860ff1cfb9b7
+		{AD0AABE3-0A77-4E03-A790-287B5B61F1E8} = {C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}
+		{27EA820D-DF37-4536-87FE-9F243AC802D1} = {C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}
 	EndGlobalSection
 EndGlobal
