@@ -17,7 +17,7 @@ namespace Toci.Training.MateuszB
                 array[i] = Console.ReadLine();
                 if (i == array.Length - 1)
                 {
-                    Console.WriteLine("Wprowadziles wszystkie wartosci. Wcisnij ENTER aby kontynuowac");
+                    Console.WriteLine("Wprowadziles wszystkie wartosci. Wcisnij ENTER aby je teraz wyświetlić");
                     Console.ReadKey();
                 }
             }
