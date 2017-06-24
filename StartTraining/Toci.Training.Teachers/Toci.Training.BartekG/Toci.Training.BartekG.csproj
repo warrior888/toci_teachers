@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}</ProjectGuid>
+    <ProjectGuid>{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Toci.Training.Teachers</RootNamespace>
-    <AssemblyName>Toci.Training.Teachers</AssemblyName>
+    <RootNamespace>Toci.Training.BartekG</RootNamespace>
+    <AssemblyName>Toci.Training.BartekG</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,6 +48,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

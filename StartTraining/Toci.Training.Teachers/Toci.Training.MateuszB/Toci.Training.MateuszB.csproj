@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}</ProjectGuid>
+    <ProjectGuid>{F522DE7C-2C83-4DD8-9095-0E26E3872662}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Toci.Training.Teachers</RootNamespace>
-    <AssemblyName>Toci.Training.Teachers</AssemblyName>
+    <RootNamespace>Toci.Training.MateuszB</RootNamespace>
+    <AssemblyName>Toci.Training.MateuszB</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,6 +48,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
