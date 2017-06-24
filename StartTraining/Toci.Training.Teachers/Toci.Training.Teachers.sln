@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -40,7 +40,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DarekB", "DarekB", "{26C519
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppTraining", "ConsoleAppTraining\ConsoleAppTraining.csproj", "{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.MarcinK", "Toci.Training.MarcinK\Toci.Training.MarcinK.csproj", "{B6A1BF05-F28F-4C43-AC23-CBBB1F3CD39F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.LukaszJ", "Toci.Training.LukaszJ\Toci.Training.LukaszJ.csproj", "{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "berserki", "berserki", "{50CDCA3B-C1C3-4335-931B-D4B4FA98C2EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piotrek", "Piotrek\Piotrek.csproj", "{C6137799-7CD4-47D6-8153-1D40645D397E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -100,11 +104,22 @@ Global
 		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{B6A1BF05-F28F-4C43-AC23-CBBB1F3CD39F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B6A1BF05-F28F-4C43-AC23-CBBB1F3CD39F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6A1BF05-F28F-4C43-AC23-CBBB1F3CD39F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6A1BF05-F28F-4C43-AC23-CBBB1F3CD39F}.Release|Any CPU.Build.0 = Release|Any CPU
 
+=======
+		{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6137799-7CD4-47D6-8153-1D40645D397E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6137799-7CD4-47D6-8153-1D40645D397E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6137799-7CD4-47D6-8153-1D40645D397E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6137799-7CD4-47D6-8153-1D40645D397E}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> f8350c75b9a60669dc786113172379bef0ccd9cf
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +138,7 @@ Global
 		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 		{26C519F2-397B-48EC-8BBE-C15C196E7CDD} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
 		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8} = {26C519F2-397B-48EC-8BBE-C15C196E7CDD}
-		{B6A1BF05-F28F-4C43-AC23-CBBB1F3CD39F} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
+		{53E7CFEE-9887-4A15-B0B5-6ACAD2E16A7D} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
+		{C6137799-7CD4-47D6-8153-1D40645D397E} = {50CDCA3B-C1C3-4335-931B-D4B4FA98C2EE}
 	EndGlobalSection
 EndGlobal

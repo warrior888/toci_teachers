@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Toci.Training.DamianB
+namespace Piotrek
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("dd");
         }
     }
 }
