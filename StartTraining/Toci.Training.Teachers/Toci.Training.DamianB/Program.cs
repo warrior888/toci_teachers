@@ -10,6 +10,7 @@ namespace Toci.Training.DamianB
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("dd");
         }
     }
 }
