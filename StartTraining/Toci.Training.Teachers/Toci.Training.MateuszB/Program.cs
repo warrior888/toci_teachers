@@ -10,6 +10,23 @@ namespace Toci.Training.MateuszB
     {
         static void Main(string[] args)
         {
+            string[] array = new string[10];
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write("Podaj array[" + i + "] = ");
+                array[i] = Console.ReadLine();
+                if (i == array.Length - 1)
+                {
+                    Console.WriteLine("Wprowadziles wszystkie wartosci. Wcisnij ENTER aby je teraz wyświetlić");
+                    Console.ReadKey();
+                }
+            }
+            Console.WriteLine("Oto wprowadzone wartosci: ");
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine("array[" + i + "] = " + array[i]);
+            }
+            Console.ReadKey();
         }
     }
 }
