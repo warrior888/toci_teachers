@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -18,6 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.MateuszB", "Toci.Training.MateuszB\Toci.Training.MateuszB.csproj", "{F522DE7C-2C83-4DD8-9095-0E26E3872662}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Traininig.Leon", "Toci.Traininig.Leon\Toci.Traininig.Leon.csproj", "{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DarekB", "DarekB", "{26C519F2-397B-48EC-8BBE-C15C196E7CDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppTraining", "ConsoleAppTraining\ConsoleAppTraining.csproj", "{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,5 +57,7 @@ Global
 		{481ED3CF-3DC0-463D-8FFD-C8A222C1E570} = {48CC1F7F-DD1C-451E-9B50-E7C7066922BA}
 		{F522DE7C-2C83-4DD8-9095-0E26E3872662} = {48CC1F7F-DD1C-451E-9B50-E7C7066922BA}
 		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
+		{26C519F2-397B-48EC-8BBE-C15C196E7CDD} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
+		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8} = {26C519F2-397B-48EC-8BBE-C15C196E7CDD}
 	EndGlobalSection
 EndGlobal
