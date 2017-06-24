@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26206.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -50,6 +50,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.MichalK", "Toci.Training.MichalK\Toci.Training.MichalK.csproj", "{8FCD8476-6560-40BC-83D9-B5720A3B3857}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.AngelikaW", "Toci.Training.AngelikaW\Toci.Training.AngelikaW.csproj", "{09E228C6-0B89-4080-B600-F83131BAC726}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Edwin", "Toci.Training.Edwin\Toci.Training.Edwin.csproj", "{02674FEC-C75F-4D45-8FC3-40E66E76D86C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,10 @@ Global
 		{09E228C6-0B89-4080-B600-F83131BAC726}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09E228C6-0B89-4080-B600-F83131BAC726}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09E228C6-0B89-4080-B600-F83131BAC726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02674FEC-C75F-4D45-8FC3-40E66E76D86C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02674FEC-C75F-4D45-8FC3-40E66E76D86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02674FEC-C75F-4D45-8FC3-40E66E76D86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02674FEC-C75F-4D45-8FC3-40E66E76D86C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -152,5 +158,6 @@ Global
 		{19B7EAD4-366C-4A12-B527-F206BCB25393} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
 		{8FCD8476-6560-40BC-83D9-B5720A3B3857} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
 		{09E228C6-0B89-4080-B600-F83131BAC726} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
+		{02674FEC-C75F-4D45-8FC3-40E66E76D86C} = {48CC1F7F-DD1C-451E-9B50-E7C7066922BA}
 	EndGlobalSection
 EndGlobal
