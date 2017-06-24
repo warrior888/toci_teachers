@@ -1,15 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
-EndProject
-
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mangudaie", "mangudaie", "{9FB1AE10-37C9-4276-A3AD-4306EE481B46}"
-
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "paladyni", "paladyni", "{48CC1F7F-DD1C-451E-9B50-E7C7066922BA}"
-
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
