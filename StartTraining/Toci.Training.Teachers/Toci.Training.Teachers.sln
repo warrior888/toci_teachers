@@ -1,25 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-
 VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mangudaie", "mangudaie", "{9FB1AE10-37C9-4276-A3AD-4306EE481B46}"
 EndProject
-
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "paladyni", "paladyni", "{48CC1F7F-DD1C-451E-9B50-E7C7066922BA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.MichalJ", "Toci.Training.MichalJ\Toci.Training.MichalJ.csproj", "{481ED3CF-3DC0-463D-8FFD-C8A222C1E570}"
-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "katafrakci", "katafrakci", "{6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}"
 EndProject
-
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "arbalesci", "arbalesci", "{9F328D05-7232-443C-8B00-25B6580C5569}"
 EndProject
-
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.BartekG", "Toci.Training.BartekG\Toci.Training.BartekG.csproj", "{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,11 +31,16 @@ Global
 		{481ED3CF-3DC0-463D-8FFD-C8A222C1E570}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{481ED3CF-3DC0-463D-8FFD-C8A222C1E570}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{481ED3CF-3DC0-463D-8FFD-C8A222C1E570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{481ED3CF-3DC0-463D-8FFD-C8A222C1E570} = {48CC1F7F-DD1C-451E-9B50-E7C7066922BA}
+		{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 	EndGlobalSection
 EndGlobal
