@@ -1,13 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-<<<<<<< HEAD
 VisualStudioVersion = 15.0.26403.7
-=======
-VisualStudioVersion = 15.0.26430.6
-
->>>>>>> 858f3fe89b5ee417002a8c483a9fc1e3c793c220
->>>>>>> 6d29b14060e6d030324d70e1f610d35af6799dc0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -17,31 +11,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "paladyni", "paladyni", "{48
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.MichalJ", "Toci.Training.MichalJ\Toci.Training.MichalJ.csproj", "{481ED3CF-3DC0-463D-8FFD-C8A222C1E570}"
 EndProject
-<<<<<<< HEAD
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "szwolezerowie", "szwolezerowie", "{931DE218-8311-4ECF-9B95-2A070DDA5B27}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.DamianB", "Toci.Training.DamianB\Toci.Training.DamianB.csproj", "{C19D1528-94EA-4C87-8702-E9508312743A}"
-=======
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "katafrakci", "katafrakci", "{6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "arbalesci", "arbalesci", "{9F328D05-7232-443C-8B00-25B6580C5569}"
 EndProject
-<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Kamil", "Toci.Training.Kamil\Toci.Training.Kamil.csproj", "{26C28F17-BD3B-4593-A6A2-DCD421B19FD5}"
-=======
-
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.BartekG", "Toci.Training.BartekG\Toci.Training.BartekG.csproj", "{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.MateuszB", "Toci.Training.MateuszB\Toci.Training.MateuszB.csproj", "{F522DE7C-2C83-4DD8-9095-0E26E3872662}"
-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Traininig.Leon", "Toci.Traininig.Leon\Toci.Traininig.Leon.csproj", "{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF}"
->>>>>>> 858f3fe89b5ee417002a8c483a9fc1e3c793c220
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DarekB", "DarekB", "{26C519F2-397B-48EC-8BBE-C15C196E7CDD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppTraining", "ConsoleAppTraining\ConsoleAppTraining.csproj", "{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}"
->>>>>>> 6d29b14060e6d030324d70e1f610d35af6799dc0
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,31 +45,22 @@ Global
 		{481ED3CF-3DC0-463D-8FFD-C8A222C1E570}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{481ED3CF-3DC0-463D-8FFD-C8A222C1E570}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{481ED3CF-3DC0-463D-8FFD-C8A222C1E570}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
 		{C19D1528-94EA-4C87-8702-E9508312743A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C19D1528-94EA-4C87-8702-E9508312743A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C19D1528-94EA-4C87-8702-E9508312743A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C19D1528-94EA-4C87-8702-E9508312743A}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
-<<<<<<< HEAD
 		{26C28F17-BD3B-4593-A6A2-DCD421B19FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{26C28F17-BD3B-4593-A6A2-DCD421B19FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26C28F17-BD3B-4593-A6A2-DCD421B19FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26C28F17-BD3B-4593-A6A2-DCD421B19FD5}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
-
 		{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF}.Release|Any CPU.Build.0 = Release|Any CPU
-
 		{F522DE7C-2C83-4DD8-9095-0E26E3872662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F522DE7C-2C83-4DD8-9095-0E26E3872662}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F522DE7C-2C83-4DD8-9095-0E26E3872662}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F522DE7C-2C83-4DD8-9095-0E26E3872662}.Release|Any CPU.Build.0 = Release|Any CPU
-
-
-
 		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -90,29 +69,18 @@ Global
 		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> 6d29b14060e6d030324d70e1f610d35af6799dc0
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{481ED3CF-3DC0-463D-8FFD-C8A222C1E570} = {48CC1F7F-DD1C-451E-9B50-E7C7066922BA}
-<<<<<<< HEAD
 		{C19D1528-94EA-4C87-8702-E9508312743A} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
-=======
-<<<<<<< HEAD
 		{26C28F17-BD3B-4593-A6A2-DCD421B19FD5} = {9F328D05-7232-443C-8B00-25B6580C5569}
-=======
-
 		{B1D79ADF-9A95-4448-9FEA-BCE91308A1DF} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
-
 		{F522DE7C-2C83-4DD8-9095-0E26E3872662} = {48CC1F7F-DD1C-451E-9B50-E7C7066922BA}
-
-1ce77600c039002978c4e9a82f253147b404f4af
-
 		{68ACE3B9-9632-42F0-B089-64A2CA5D6BAF} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 		{26C519F2-397B-48EC-8BBE-C15C196E7CDD} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
 		{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8} = {26C519F2-397B-48EC-8BBE-C15C196E7CDD}
->>>>>>> 6d29b14060e6d030324d70e1f610d35af6799dc0
 	EndGlobalSection
 EndGlobal
