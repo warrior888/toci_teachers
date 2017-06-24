@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Toci.Training.MichalK
 {
-    public class Class1
+    class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }
