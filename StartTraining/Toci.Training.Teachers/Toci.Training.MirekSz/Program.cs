@@ -16,6 +16,7 @@ namespace Toci.Training.MirekSz
             int y = 60;
             bool test = x == y;
             Console.WriteLine("Write value");
+            Console.WriteLine(test);
             Console.ReadLine();
            // Console.ReadKey();
 
