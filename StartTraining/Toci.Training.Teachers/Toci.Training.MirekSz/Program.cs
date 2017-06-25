@@ -11,6 +11,7 @@ namespace Toci.Training.MirekSz
         static void Main(string[] args)
         {
             string name = "MirekSz";
+            int variabelLength = 7;
         }
     }
 }
