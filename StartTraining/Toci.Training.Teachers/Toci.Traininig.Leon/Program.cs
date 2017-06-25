@@ -17,13 +17,12 @@ namespace Toci.Traininig.Leon
             Console.WriteLine(text);
             Console.WriteLine("The encoding: ");
 
-            
             foreach(byte b in encodeBytes)
             {
                 int a = 0;
                 if (b >= 97 && b <= 122)
                 {
-                    a = b;
+;                    a = b;
                     a -= 32;
                     a = Convert.ToByte(a);
                     //... wymyslec
