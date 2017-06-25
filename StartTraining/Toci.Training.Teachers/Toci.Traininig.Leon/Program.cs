@@ -31,7 +31,7 @@ namespace Toci.Traininig.Leon
                 Console.Write("[{0}]", b);
                 Console.WriteLine();
                 Console.Write("[{0}]", a);
-                char decodestring = ascii.GetString(a); // i jak to obejsc?
+                //char decodestring = ascii.GetString(a); // i jak to obejsc?
             }
             Console.WriteLine();
 
