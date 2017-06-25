@@ -64,7 +64,7 @@ namespace Toci.Training.Teachers
                 if (valueFromUserInput.Length > 3) // 0 a 1
                 {
                     int w = 5;
-
+                    Console.WriteLine(ofCourse + w); // dodane przez Kafar, żeby wyeliminować warningi
                 }
             }
             else if (valueFromUserInput.Length == 5)
@@ -107,6 +107,7 @@ namespace Toci.Training.Teachers
             int countOfA = 1;
             int nameLength = 6;
 
+            Console.WriteLine(name + test + robotnik + elchu + thisIsTrue + letterA + lettera + countOfA + nameLength); // dodane przez Kafar, żeby wyeliminować warningi
             Console.WriteLine("Skonczylem");
             Console.ReadKey();
         }
