@@ -30,7 +30,7 @@ namespace Toci.Training.MichalK
 
             for(int i=0;i<number;i++)
             {
-                Console.Write(" "+table[i]);
+                Console.Write(" "+(i+1)+"."+table[i]);
             }
            
 
