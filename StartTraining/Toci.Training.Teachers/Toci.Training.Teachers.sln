@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.IzaN", "Conso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Kafar", "Toci.Training.Kafar\Toci.Training.Kafar.csproj", "{FD34160E-26A1-4A44-84AB-E84EEF846FEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.PatrykK", "Toci.Training.PatrykK\Toci.Training.PatrykK.csproj", "{E6167B8D-2E5E-4C96-9C6D-A0102962F945}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{FD34160E-26A1-4A44-84AB-E84EEF846FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD34160E-26A1-4A44-84AB-E84EEF846FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD34160E-26A1-4A44-84AB-E84EEF846FEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6167B8D-2E5E-4C96-9C6D-A0102962F945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6167B8D-2E5E-4C96-9C6D-A0102962F945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6167B8D-2E5E-4C96-9C6D-A0102962F945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6167B8D-2E5E-4C96-9C6D-A0102962F945}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -179,5 +185,6 @@ Global
 		{AD0AABE3-0A77-4E03-A790-287B5B61F1E8} = {C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}
 		{27EA820D-DF37-4536-87FE-9F243AC802D1} = {C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}
 		{FD34160E-26A1-4A44-84AB-E84EEF846FEE} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
+		{E6167B8D-2E5E-4C96-9C6D-A0102962F945} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 	EndGlobalSection
 EndGlobal
