@@ -10,8 +10,15 @@ namespace Toci.Training.MirekSz
     {
         static void Main(string[] args)
         {
-            string name = "MirekSz";
-            int variabelLength = 7;
+            string name = "MirekSz".ToLower();
+            //int variabelLength = 7;
+            int x = 5;
+            int y = 60;
+            bool test = x == y;
+            Console.WriteLine("Write value");
+            Console.ReadLine();
+           // Console.ReadKey();
+
         }
     }
 }
