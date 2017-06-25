@@ -17,6 +17,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.DamianB", "To
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "katafrakci", "katafrakci", "{6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.WojciechSeweryn", "Toci.Training.WojciechSeweryn\Toci.Training.WojciechSeweryn.csproj", "{347B7408-FF1A-4270-9CC3-F856293BD8BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.TadeuszWieczkowski", "Toci.Training.TadeuszWieczkowski\Toci.Training.TadeuszWieczkowski.csproj", "{E555AF6D-9C98-4B49-866B-50511EB45774}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.DarekBraula", "TociTraining.DarekBraula\Toci.Training.DarekBraula.csproj", "{94383451-7663-49B0-A1DE-A99C6A84B82E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.DominikDulinski", "Toci.Training.DominikDulinski\Toci.Training.DominikDulinski.csproj", "{1226116C-A7F5-4B19-AFB3-65CDD800977E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.JozefFranczak", "Toci.Training.JozefFranczak\Toci.Training.JozefFranczak.csproj", "{977EA161-EB18-42C0-9BB0-164B32B6CD97}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "arbalesci", "arbalesci", "{9F328D05-7232-443C-8B00-25B6580C5569}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Kamil", "Toci.Training.Kamil\Toci.Training.Kamil.csproj", "{26C28F17-BD3B-4593-A6A2-DCD421B19FD5}"
