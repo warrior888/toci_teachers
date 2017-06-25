@@ -10,6 +10,7 @@ namespace Toci.Training.MirekSz
     {
         static void Main(string[] args)
         {
+            string name = "Mirek";
         }
     }
 }
