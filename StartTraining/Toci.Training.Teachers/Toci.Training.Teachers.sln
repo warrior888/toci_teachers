@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -50,6 +50,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Peter", "Toci.Training.Peter\Toci.Training.Peter.csproj", "{AD0AABE3-0A77-4E03-A790-287B5B61F1E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.IzaN", "ConsoleApp1\Toci.Training.IzaN.csproj", "{27EA820D-DF37-4536-87FE-9F243AC802D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Kafar", "Toci.Training.Kafar\Toci.Training.Kafar.csproj", "{FD34160E-26A1-4A44-84AB-E84EEF846FEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +127,10 @@ Global
 		{27EA820D-DF37-4536-87FE-9F243AC802D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27EA820D-DF37-4536-87FE-9F243AC802D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27EA820D-DF37-4536-87FE-9F243AC802D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD34160E-26A1-4A44-84AB-E84EEF846FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD34160E-26A1-4A44-84AB-E84EEF846FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD34160E-26A1-4A44-84AB-E84EEF846FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD34160E-26A1-4A44-84AB-E84EEF846FEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -147,5 +153,6 @@ Global
 		{3BCF4B47-2568-4064-A182-4270B0C86F0D} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 		{AD0AABE3-0A77-4E03-A790-287B5B61F1E8} = {C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}
 		{27EA820D-DF37-4536-87FE-9F243AC802D1} = {C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}
+		{FD34160E-26A1-4A44-84AB-E84EEF846FEE} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 	EndGlobalSection
 EndGlobal
