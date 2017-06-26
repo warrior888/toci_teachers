@@ -15,10 +15,10 @@ namespace Toci.Training.MirekSz
             int x = 5;
             int y = 60;
             bool test = x == y;
-            //string imie = Console.WriteLine("Write value");
-            
+            string name = "Mirek";
+            Console.Write(y);
             Console.ReadLine();
-           // Console.ReadKey();
+            // Console.ReadKey();
 
         }
     }
