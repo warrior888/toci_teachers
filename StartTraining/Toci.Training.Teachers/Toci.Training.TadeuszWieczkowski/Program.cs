@@ -8,8 +8,17 @@ namespace Toci.Training.TadeuszWieczkowski
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            Console.WriteLine("Podaj ciag znakow:");
+            string someString = Console.ReadLine();
+
+
+
+
+
+
+
         }
     }
 }
