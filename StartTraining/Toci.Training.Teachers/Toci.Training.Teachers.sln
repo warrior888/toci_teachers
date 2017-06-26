@@ -63,6 +63,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.PatrykK", "To
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.MirekSz", "Toci.Training.MirekSz\Toci.Training.MirekSz.csproj", "{EE97BC9A-729D-496B-8EF0-CA64F5D97333}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.PawelK", "Toci.Training.PawelK\Toci.Training.PawelK.csproj", "{13B2FC49-CC80-4333-9BBD-4A378B1FA22A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{EE97BC9A-729D-496B-8EF0-CA64F5D97333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE97BC9A-729D-496B-8EF0-CA64F5D97333}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE97BC9A-729D-496B-8EF0-CA64F5D97333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13B2FC49-CC80-4333-9BBD-4A378B1FA22A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13B2FC49-CC80-4333-9BBD-4A378B1FA22A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13B2FC49-CC80-4333-9BBD-4A378B1FA22A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13B2FC49-CC80-4333-9BBD-4A378B1FA22A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -193,5 +199,6 @@ Global
 		{FD34160E-26A1-4A44-84AB-E84EEF846FEE} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 		{E6167B8D-2E5E-4C96-9C6D-A0102962F945} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 		{EE97BC9A-729D-496B-8EF0-CA64F5D97333} = {48CC1F7F-DD1C-451E-9B50-E7C7066922BA}
+		{13B2FC49-CC80-4333-9BBD-4A378B1FA22A} = {48CC1F7F-DD1C-451E-9B50-E7C7066922BA}
 	EndGlobalSection
 EndGlobal
