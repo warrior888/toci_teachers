@@ -19,6 +19,14 @@ namespace Toci.Training.Teachers
             // translacje duze male litery na tabloicy kodow ascii 
             // utf8
 
+            string userInput = Console.ReadLine();
+            int userInputNumber = 0;
+            int.TryParse(userInput, out userInputNumber);
+
+            int.Parse(userInput);
+
+            int[] exampl = new int[userInputNumber];
+
             string example = "Bartłomiej"; 
 
             for (int i = example.Length - 1; i >= 0; i--)
@@ -110,6 +118,17 @@ namespace Toci.Training.Teachers
             Console.WriteLine(name + test + robotnik + elchu + thisIsTrue + letterA + lettera + countOfA + nameLength); // dodane przez Kafar, żeby wyeliminować warningi
             Console.WriteLine("Skonczylem");
             Console.ReadKey();
+
+
+            // [3,56,3,5,78,9,78,4,3,567,8]
+            // 1. znalezc w tej tablkicy maxymalna wartosc
+            // 2. xznalezc minimlna
+            // 3. suma wszystkich elementow tablicy
+            // 4. zliczyc ilosc wystapien przykladowego elementu 78 -> 2
+
+            //   1  1  1
+            //   1 -1  1
+            //   1  1  1
         }
     }
 }
