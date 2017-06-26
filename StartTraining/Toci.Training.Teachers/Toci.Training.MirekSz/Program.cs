@@ -15,8 +15,8 @@ namespace Toci.Training.MirekSz
             int x = 5;
             int y = 60;
             bool test = x == y;
-            Console.WriteLine("Write value");
-            Console.WriteLine(test);
+            //string imie = Console.WriteLine("Write value");
+            
             Console.ReadLine();
            // Console.ReadKey();
 
