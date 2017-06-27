@@ -39,8 +39,8 @@ namespace Toci.Training.TadeuszWieczkowski
             Console.WriteLine("Suma: " + suma);
 
 
-            for (int i = 0; i < tab.Length; i++)
-            {
+            
+            
                 int find = 1;
                 int counter = 0;
                 foreach (int ele in tab)
@@ -50,7 +50,7 @@ namespace Toci.Training.TadeuszWieczkowski
                     
                 }
                 Console.WriteLine("Szukany element: " + find + " Znaleziono ilosc : " + counter );
-            }
+            
 
             
 
@@ -60,7 +60,7 @@ namespace Toci.Training.TadeuszWieczkowski
 
 
 
-
+           
 
             string someString = "Ala ma kota";
 
