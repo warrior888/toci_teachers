@@ -1,16 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Toci.Training.Kafar
 {
     class Saper
     {
+        public static Dictionary<int, int[]> LocationOfBombs = new Dictionary<int, int[]>();
+
         public void Game(int columns, int rows, int bombs)
         {
             string[,] area = new string[columns, rows];
 
             RandomBombs(columns, rows, bombs, area);
             InsertZero(columns, rows, area);
-            IteratingBombNumbers(columns, rows, area);
+            LookingForBombs(area);
 
             DrawOnScreen(columns, rows, area);
 
@@ -18,152 +21,38 @@ namespace Toci.Training.Kafar
 
         // metoda iterująca pola sąsiadujące bomb
 
-        private static void IteratingBombNumbers(int columns, int rows, string[,] area)
+        private static void LookingForBombs(string[,] area)
         {
-            for (int i = 0; i < columns; i++)
+            foreach (KeyValuePair<int, int[]> location in LocationOfBombs)
             {
-                for (int j = 0; j < rows; j++)
-                {
+                AdjacentFieldsIncrementation(area, location.Value[0], location.Value[1]);
+            }
 
-                    if (area[i, j] == "X") // uzupełniamy liczby bomb
+        }
+
+        // metoda inkrementująca 8 pól przylegających do bomby
+
+        private static void AdjacentFieldsIncrementation(string[,] area, int i, int j)
+        {
+            for (int c = i - 1; c <= i + 1; c++)
+            {
+                for (int r = j - 1; r <= j + 1; r++)
+                {
+                    try
                     {
-                        UpperLeftField(area, i, j);
-                        LeftField(area, i, j);
-                        LowerLeftField(area, i, j);
-                        UpperField(area, i, j);
-                        LowerField(area, i, j);
-                        UpperRightField(area, i, j);
-                        RightField(area, i, j);
-                        LowerRightField(area, i, j);
+                        if (int.TryParse(area[c, r], out int value))
+                        {
+                            value++;
+                            area[c, r] = value.ToString();
+                        }
                     }
-
+                    catch (Exception)
+                    {
+                        // ignored
+                    }
                 }
             }
         }
-
-        // osiem metod obsługujących inkrementacje liczby bomb w sąsiednich polach, w każdym polu z osobna
-
-        private static void LowerRightField(string[,] area, int i, int j)
-        {
-            try
-            {
-                if (int.TryParse(area[i + 1, j + 1], out int value))
-                {
-                    value++;
-                    area[i + 1, j + 1] = value.ToString();
-                }
-            }
-            catch (Exception)
-            {
-                // ignored
-            }
-        }
-        private static void RightField(string[,] area, int i, int j)
-        {
-            try
-            {
-                if (int.TryParse(area[i + 1, j], out int value))
-                {
-                    value++;
-                    area[i + 1, j] = value.ToString();
-                }
-            }
-            catch (Exception)
-            {
-                // ignored
-            }
-        }
-        private static void UpperRightField(string[,] area, int i, int j)
-        {
-            try
-            {
-                if (int.TryParse(area[i + 1, j - 1], out int value))
-                {
-                    value++;
-                    area[i + 1, j - 1] = value.ToString();
-                }
-            }
-            catch (Exception)
-            {
-                // ignored
-            }
-        }
-        private static void LowerField(string[,] area, int i, int j)
-        {
-            try
-            {
-                if (int.TryParse(area[i, j + 1], out int value))
-                {
-                    value++;
-                    area[i, j + 1] = value.ToString();
-                }
-            }
-            catch (Exception)
-            {
-                // ignored
-            }
-        }
-        private static void UpperField(string[,] area, int i, int j)
-        {
-            try
-            {
-                if (int.TryParse(area[i, j - 1], out int value))
-                {
-                    value++;
-                    area[i, j - 1] = value.ToString();
-                }
-            }
-            catch (Exception)
-            {
-                // ignored
-            }
-        }
-        private static void LowerLeftField(string[,] area, int i, int j)
-        {
-            try
-            {
-                if (int.TryParse(area[i - 1, j + 1], out int value))
-                {
-                    value++;
-                    area[i - 1, j + 1] = value.ToString();
-                }
-            }
-            catch (Exception)
-            {
-                // ignored
-            }
-        }
-        private static void LeftField(string[,] area, int i, int j)
-        {
-            try
-            {
-                if (int.TryParse(area[i - 1, j], out int value))
-                {
-                    value++;
-                    area[i - 1, j] = value.ToString();
-                }
-            }
-            catch (Exception)
-            {
-                // ignored
-            }
-        }
-        private static void UpperLeftField(string[,] area, int i, int j)
-        {
-            try
-            {
-                if (int.TryParse(area[i - 1, j - 1], out int value))
-                {
-                    value++;
-                    area[i - 1, j - 1] = value.ToString();
-                }
-            }
-            catch (Exception)
-            {
-                // ignored
-            }
-        }
-
 
         // metoda rysująca Sapera w konsoli
 
@@ -203,15 +92,18 @@ namespace Toci.Training.Kafar
 
         private static void RandomBombs(int columns, int rows, int bombs, string[,] area)
         {
+
             for (int i = 0; i < bombs;)
             {
+                int[] location = new int[2];
                 Random locOfBomb = new Random();
-                int columnsLoc = locOfBomb.Next(columns - 1);
-                int rowsLoc = locOfBomb.Next(rows - 1);
-                if (area[columnsLoc, rowsLoc] != "X") // if sprawdza, czy wylosowana lokacja nie jest już miejscem gdzie znajduje się bomba
+                location[0] = locOfBomb.Next(columns - 1);
+                location[1] = locOfBomb.Next(rows - 1);
+                if (area[location[0], location[1]] != "X") // if sprawdza, czy wylosowana lokacja nie jest już miejscem gdzie znajduje się bomba
                 {
-                    area[columnsLoc, rowsLoc] = "X"; // jeśli w wylosowanej lokacji nie ma bomby, to wstawiamy bombę
+                    area[location[0], location[1]] = "X"; // jeśli w wylosowanej lokacji nie ma bomby, to wstawiamy bombę
                     i++;
+                    LocationOfBombs.Add(i, location);
                 }
             }
         }
