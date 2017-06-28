@@ -10,9 +10,21 @@ namespace Toci.Training.MirekSz
     {
         static void Main(string[] args)
         {
-            
 
-            string name = "Mi";
+
+            Console.WriteLine("ada");
+
+            /*string surname = "Nowak";
+
+            for (int i = 0; i < surname.Length; i++)
+            {
+                Console.Write(surname[i]);
+            }*/
+
+
+
+
+            /*string name = "Mi";
             Console.Write(name + " ");
             Console.Write("Sz\n");
 
@@ -38,7 +50,7 @@ namespace Toci.Training.MirekSz
             //bool test = x == y;
 
             // Console.ReadKey();
-
+            */
         }
     }
 }
