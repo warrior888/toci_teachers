@@ -10,7 +10,33 @@ namespace Toci.Training.MateuszB
     {
         static void Main(string[] args)
         {
-            string[] array = new string[10];
+            int[] numValues = { 3, 56, 3, 5, 78, 9, 78, 4, 3, 567, 8};
+            int max = numValues[0], min = numValues[0], sum = 0, number = numValues[4], count = 0; 
+
+            for (int i = 0; i < numValues.Length; i++)
+            {
+                if (numValues[i] >= max)
+                {
+                    max = numValues[i];
+                }
+                if (numValues[i] <= min)
+                {
+                    min = numValues[i];
+                }
+                sum += numValues[i];
+                if (numValues[i] == number)
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine("Wartość maksymalna: " + max);
+            Console.WriteLine("Wartosc minimalna: " + min);
+            Console.WriteLine("Suma: " + sum);
+            Console.WriteLine("Liczba wystapien 78: " + count);
+
+            Console.ReadKey();
+            
+            /* string[] array = new string[10];
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write("Podaj array[" + i + "] = ");
@@ -26,7 +52,7 @@ namespace Toci.Training.MateuszB
             {
                 Console.WriteLine("array[" + i + "] = " + array[i]);
             }
-            Console.ReadKey();
+            Console.ReadKey();*/
         }
     }
 }
