@@ -34,19 +34,8 @@ namespace Toci.Training.BartekG
 
              }
             // max liczba
-            int[] homework = new int[11]; //[3, 56, 3, 5, 78, 9, 78, 4, 3, 567, 8] 
-            homework[0] = 3; 
-            homework[1] = 56;
-            homework[2] = 3;
-            homework[3] = 5;
-            homework[4] = 78;
-            homework[5] = 9;
-            homework[6] = 78;
-            homework[7] = 4;
-            homework[8] = 3;
-            homework[9] = 567;
-            homework[10] = 8;
-
+            int[] homework = new int[] { 3, 56, 3, 5, 78, 9, 78, 4, 3, 567, 8 };
+          
             int max = homework[0];
 
         
