@@ -88,6 +88,7 @@ namespace Toci.Training.PawelK
             {
                 Console.WriteLine(i + 1 + ". " + text[i]);
             }*/
+            //saper_start
             const int mine = -1;
 
             int [,] createMinefield (int x, int y, int bombsQuantity)
@@ -154,7 +155,7 @@ namespace Toci.Training.PawelK
             
             
                 print(createMinefield(xCord, yCord, minesQuantity));
-            
+           //saper_end 
             
 
 
