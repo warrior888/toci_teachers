@@ -12,7 +12,7 @@ namespace Toci.Training.MirekSz
         {
 
 
-            Console.WriteLine("ada");
+            Console.WriteLine("adaa");
 
             /*string surname = "Nowak";
 
