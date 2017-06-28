@@ -12,12 +12,55 @@ namespace Toci.Training.MirekSz
         {
 
 
-            Console.WriteLine("adaa");
+            //homework
+
+            //jest tablica a w niej elementy, by znalezc w tablicy maksymalna wartość
+            //(za pomoca petli, bez gotowych      funkcji)
+
+            Console.Write("Ile elementów ma mieć tablica?\n");
+
+            string rozmiarTablicy = Console.ReadLine();
+            int x = Int32.Parse(rozmiarTablicy);
+
+            //string[] kolory = new string[rozmiarTablicy];
+        
+            
+            //Console.Clear();
+                       
+            Console.WriteLine("Rozmiar tablicy: " + rozmiarTablicy);
+            
+            for (int i = 0; i < x; i++)
+            {
+                int pom = i + 1;
+                Console.Write("Podaj wartość tablicy nr: " + pom);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+            //tablice
+
+
+
+
+
+
+            //Console.WriteLine("adaa");
+
 
             /*string surname = "Nowak";
 
             for (int i = 0; i < surname.Length; i++)
             {
+                //Console.WriteLine(surname[i]);
                 Console.Write(surname[i]);
             }*/
 
@@ -49,8 +92,10 @@ namespace Toci.Training.MirekSz
             //int y = 60;
             //bool test = x == y;
 
-            // Console.ReadKey();
+            
             */
+
+            Console.ReadKey();
         }
     }
 }
