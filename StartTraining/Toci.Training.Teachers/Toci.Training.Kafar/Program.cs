@@ -5,45 +5,60 @@ namespace Toci.Training.Kafar
 {
     class Saper
     {
-        public static Dictionary<int, int[]> LocationOfBombs = new Dictionary<int, int[]>();
+        private static string[,] Area { get; set; }
+        private static int Columns { get; set; }
+        private static int Rows { get; set; }
+        private static int Bombs { get; set; }
+        private static readonly Dictionary<int, int[]> LocationOfBombs = new Dictionary<int, int[]>();
 
-        public void Game(int columns, int rows, int bombs)
+        public Saper(int columns, int rows, int bombs)
         {
-            string[,] area = new string[columns, rows];
-
-            RandomBombs(columns, rows, bombs, area);
-            InsertZero(columns, rows, area);
-            LookingForBombs(area);
-
-            DrawOnScreen(columns, rows, area);
-
+            Columns = columns;
+            Rows = rows;
+            Bombs = bombs;
+            Area = new string[columns, rows];
+            Play();
         }
 
-        // metoda iterująca pola sąsiadujące bomb
+        private static void Play()
+        {
+            RandomBombs();
+            InsertZero();
+            LookingForBombs();
+            DrawOnScreen();
+        }
 
-        private static void LookingForBombs(string[,] area)
+        /// <summary>
+        /// A method to increments numbers in 8 fields around all bombs.
+        /// </summary>
+
+        private static void LookingForBombs()
         {
             foreach (KeyValuePair<int, int[]> location in LocationOfBombs)
             {
-                AdjacentFieldsIncrementation(area, location.Value[0], location.Value[1]);
+                AdjacentFieldsIncrementation(location.Value[0], location.Value[1]);
             }
 
         }
 
-        // metoda inkrementująca 8 pól przylegających do bomby
+        /// <summary>
+        /// A method to increments numbers in 8 fields around bomb.
+        /// </summary>
+        /// <param name="columns">A number of columns</param>
+        /// <param name="rows">A number of rows</param>
 
-        private static void AdjacentFieldsIncrementation(string[,] area, int i, int j)
+        private static void AdjacentFieldsIncrementation(int columns, int rows)
         {
-            for (int c = i - 1; c <= i + 1; c++)
+            for (int c = columns - 1; c <= columns + 1; c++)
             {
-                for (int r = j - 1; r <= j + 1; r++)
+                for (int r = rows - 1; r <= rows + 1; r++)
                 {
                     try
                     {
-                        if (int.TryParse(area[c, r], out int value))
+                        if (int.TryParse(Area[c, r], out int value))
                         {
                             value++;
-                            area[c, r] = value.ToString();
+                            Area[c, r] = value.ToString();
                         }
                     }
                     catch (Exception)
@@ -56,52 +71,60 @@ namespace Toci.Training.Kafar
 
         // metoda rysująca Sapera w konsoli
 
-        private static void DrawOnScreen(int columns, int rows, string[,] area)
+        /// <summary>
+        /// A method to draw Minesweeper board in console.
+        /// </summary>
+
+        private static void DrawOnScreen()
         {
             Console.WriteLine();
-            for (int i = 0; i < columns; i++)
+            for (int i = 0; i < Columns; i++)
             {
                 Console.Write(" ");
-                for (int j = 0; j < rows; j++)
+                for (int j = 0; j < Rows; j++)
                 {
-                    if (j == rows - 1)
-                        Console.WriteLine(" " + area[i, j] + "\n");
+                    if (j == Rows - 1)
+                        Console.WriteLine(" " + Area[i, j] + "\n");
                     else
-                        Console.Write(" " + area[i, j] + " ");
+                        Console.Write(" " + Area[i, j] + " ");
                 }
             }
         }
 
-        // metoda uzupełniająca Sapera zerami
+        /// <summary>
+        /// A method to supplement Minesweeper board with zeeros.
+        /// </summary>
 
-        private static void InsertZero(int columns, int rows, string[,] area)
+        private static void InsertZero()
         {
-            for (int i = 0; i < columns; i++)
+            for (int i = 0; i < Columns; i++)
             {
-                for (int j = 0; j < rows; j++)
+                for (int j = 0; j < Rows; j++)
                 {
-                    if (area[i, j] != "X") // jeśli w danym miejscu nie ma bomby, to wstawiane jest 0
+                    if (Area[i, j] != "X") // jeśli w danym miejscu nie ma bomby, to wstawiane jest 0
                     {
-                        area[i, j] = "0";
+                        Area[i, j] = "0";
                     }
                 }
             }
         }
 
-        // metoda losująca bomby w Saperze
+        /// <summary>
+        /// A method to random bombs on Minesweeper board.
+        /// </summary>
 
-        private static void RandomBombs(int columns, int rows, int bombs, string[,] area)
+        private static void RandomBombs()
         {
 
-            for (int i = 0; i < bombs;)
+            for (int i = 0; i < Bombs;)
             {
                 int[] location = new int[2];
                 Random locOfBomb = new Random();
-                location[0] = locOfBomb.Next(columns - 1);
-                location[1] = locOfBomb.Next(rows - 1);
-                if (area[location[0], location[1]] != "X") // if sprawdza, czy wylosowana lokacja nie jest już miejscem gdzie znajduje się bomba
+                location[0] = locOfBomb.Next(Columns - 1);
+                location[1] = locOfBomb.Next(Rows - 1);
+                if (Area[location[0], location[1]] != "X") // if sprawdza, czy wylosowana lokacja nie jest już miejscem gdzie znajduje się bomba
                 {
-                    area[location[0], location[1]] = "X"; // jeśli w wylosowanej lokacji nie ma bomby, to wstawiamy bombę
+                    Area[location[0], location[1]] = "X"; // jeśli w wylosowanej lokacji nie ma bomby, to wstawiamy bombę
                     i++;
                     LocationOfBombs.Add(i, location);
                 }
@@ -114,7 +137,7 @@ namespace Toci.Training.Kafar
         static void Main(string[] args)
         {
             int columns, rows, bombs;
-            Saper a = new Saper();
+            
             Console.Write("Podaj wielkość pola gry.");
 
             do
@@ -132,7 +155,7 @@ namespace Toci.Training.Kafar
                 Console.Write("\nPodaj ilość min na polu gry: ");
             } while (!int.TryParse(Console.ReadLine(), out bombs));
 
-            a.Game(columns, rows, bombs);
+            new Saper(columns, rows, bombs);
 
             Console.ReadKey();
         }
