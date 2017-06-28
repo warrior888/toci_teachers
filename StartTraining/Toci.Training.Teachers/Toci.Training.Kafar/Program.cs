@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Toci.Training.Kafar
 {
@@ -225,8 +221,26 @@ namespace Toci.Training.Kafar
     {
         static void Main(string[] args)
         {
+            int columns, rows, bombs;
             Saper a = new Saper();
-            a.Game(10, 10, 20);
+            Console.Write("Podaj wielkość pola gry.");
+
+            do
+            {
+                Console.Write("\nIlość kolumn: ");
+            } while (!int.TryParse(Console.ReadLine(), out columns));
+
+            do
+            {
+                Console.Write("\nIlość rzędów: ");
+            } while (!int.TryParse(Console.ReadLine(), out rows));
+
+            do
+            {
+                Console.Write("\nPodaj ilość min na polu gry: ");
+            } while (!int.TryParse(Console.ReadLine(), out bombs));
+
+            a.Game(columns, rows, bombs);
 
             Console.ReadKey();
         }
