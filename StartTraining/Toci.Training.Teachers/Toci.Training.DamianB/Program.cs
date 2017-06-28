@@ -14,8 +14,8 @@ namespace Toci.Training.DamianB
             String NumberOfEntries;
             Console.WriteLine("Ile wpisów?");
             NumberOfEntries = Console.ReadLine();
-            String[] DataTable = new String[Convert.ToInt32(NumberOfEntries)];
-            for (int i = 0; i < Convert.ToInt32(NumberOfEntries); i++)
+            String[] DataTable = new String[int.Parse(NumberOfEntries)];
+            for (int i = 0; i < int.Parse(NumberOfEntries); i++)
             {
                 Console.WriteLine("Podaj wpis: ");
                 DataTable[i] = Console.ReadLine();
