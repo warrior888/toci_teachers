@@ -20,7 +20,6 @@ namespace Saper
 
         public GameBoard(GameDifficultyLevel difficultyLevel, Panel panel)
         {
-            //TODO: Dodać ustawienia wymiarów dla panela i okna zależnie od planszy
             _random = new Random();
             _panel = panel;
             switch (difficultyLevel)
@@ -64,7 +63,7 @@ namespace Saper
                 
                 for (int j = 0; j < _boardSize[1]; j++)
                 {
-                    _board[i, j] = new SingleField(i, j/*, _panel*/);
+                    _board[i, j] = new SingleField(i, j);
                     _board[i, j].FieldButton.Location = new Point(positionX, positionY);
                     _panel.Controls.Add(_board[i, j].FieldButton);
                     positionX += 30;
@@ -93,7 +92,6 @@ namespace Saper
             return false;
         }
 
-        //private void BombsInTheNeighborhood(SingleField field)
         private void BombsInTheNeighborhood(SingleField[,] board)
         {
             foreach (var field in board)
@@ -120,7 +118,6 @@ namespace Saper
                     field.FieldValue++;
                 if (CheckField(x + 1, y - 1))
                     field.FieldValue++;
-                //field.FieldButton.Text = field.FieldValue.ToString();
             }
         }
     }

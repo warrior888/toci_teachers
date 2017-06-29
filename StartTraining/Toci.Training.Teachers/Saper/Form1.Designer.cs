@@ -48,6 +48,7 @@
             // 
             // bombNumberTextBox
             // 
+            this.bombNumberTextBox.Enabled = false;
             this.bombNumberTextBox.Location = new System.Drawing.Point(12, 25);
             this.bombNumberTextBox.Name = "bombNumberTextBox";
             this.bombNumberTextBox.Size = new System.Drawing.Size(52, 20);
@@ -55,6 +56,7 @@
             // 
             // timeTextBox
             // 
+            this.timeTextBox.Enabled = false;
             this.timeTextBox.Location = new System.Drawing.Point(211, 25);
             this.timeTextBox.Name = "timeTextBox";
             this.timeTextBox.Size = new System.Drawing.Size(100, 20);
@@ -72,16 +74,17 @@
             // 
             // difficultyComboBox
             // 
+            this.difficultyComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.difficultyComboBox.FormattingEnabled = true;
             this.difficultyComboBox.Items.AddRange(new object[] {
             "Easy",
             "Normal",
             "Hard"});
+            this.difficultyComboBox.SelectedIndex = 0;
             this.difficultyComboBox.Location = new System.Drawing.Point(361, 25);
             this.difficultyComboBox.Name = "difficultyComboBox";
             this.difficultyComboBox.Size = new System.Drawing.Size(93, 21);
             this.difficultyComboBox.TabIndex = 3;
-            this.difficultyComboBox.SelectedIndexChanged += new System.EventHandler(this.difficultyComboBox_SelectedIndexChanged);
             // 
             // label1
             // 

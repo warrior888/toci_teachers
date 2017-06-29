@@ -41,9 +41,14 @@ namespace Saper
                 FieldButton.Text = @"X";
                 FieldButton.BackColor = Color.Red;
             }
-            IsHide = false;
-            this.FieldButton.Text = FieldValue.ToString();
-            RemoveHandler(e);
+            else
+            {
+                IsHide = false;
+                this.FieldButton.BackColor = Color.FloralWhite;
+                this.FieldButton.Text = FieldValue.ToString();
+                this.FieldButton.Enabled = false;
+                RemoveHandler(e);
+            }
         }
 
         private void RightClick_MouseDown(object sender, MouseEventArgs e)
@@ -54,7 +59,7 @@ namespace Saper
             {
                 FieldButton.Text = @"?";
                 IsChecked = true;
-                RemoveHandler(e); // TODO: Sprawdzić
+                RemoveHandler(e);
             }
             else
             {

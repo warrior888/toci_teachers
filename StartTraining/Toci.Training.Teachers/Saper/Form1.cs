@@ -20,11 +20,6 @@ namespace Saper
             InitializeComponent();
         }
 
-        private void difficultyComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            _difficultyLevel = (GameDifficultyLevel)difficultyComboBox.SelectedIndex;
-        }
-
         private void startGameButton_Click(object sender, EventArgs e)
         {
             _gameStart = new Game(panel1, difficultyComboBox);
