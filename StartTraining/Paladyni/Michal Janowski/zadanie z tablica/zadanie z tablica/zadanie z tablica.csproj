@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{60E5C727-A5E9-446D-9489-F4F60165952E}</ProjectGuid>
+    <ProjectGuid>{92FEFAD1-F2E6-41EC-A079-B7913CF93DC9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Toci.Training.IzaN</RootNamespace>
-    <AssemblyName>Toci.Training.IzaN</AssemblyName>
+    <RootNamespace>zadanie_z_tablica</RootNamespace>
+    <AssemblyName>zadanie z tablica</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

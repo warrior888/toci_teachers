@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{60E5C727-A5E9-446D-9489-F4F60165952E}</ProjectGuid>
+    <ProjectGuid>{A78A04F5-9F9D-49B4-BDD3-9793EF1C5137}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Toci.Training.IzaN</RootNamespace>
-    <AssemblyName>Toci.Training.IzaN</AssemblyName>
+    <RootNamespace>prog_z_trainingu</RootNamespace>
+    <AssemblyName>prog z trainingu</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

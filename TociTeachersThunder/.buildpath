@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="0/magudaie/Frogie"/>
+	<buildpathentry kind="src" path="0/magudaie/GhostRider"/>
+	<buildpathentry kind="src" path="0/magudaie/gocarter"/>
+	<buildpathentry kind="src" path="0/magudaie/piotex"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+</buildpath>
