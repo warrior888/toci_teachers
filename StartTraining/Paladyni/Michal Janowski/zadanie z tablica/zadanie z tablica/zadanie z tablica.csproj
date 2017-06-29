@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0D4F0B48-3780-43DB-95EE-35FEF6AFE0B8}</ProjectGuid>
+    <ProjectGuid>{92FEFAD1-F2E6-41EC-A079-B7913CF93DC9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleAppTraining</RootNamespace>
-    <AssemblyName>ConsoleAppTraining</AssemblyName>
+    <RootNamespace>zadanie_z_tablica</RootNamespace>
+    <AssemblyName>zadanie z tablica</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
