@@ -33,6 +33,7 @@ namespace Toci.Training.Teachers.Tests
             for (int i = 0; i < subdirectoryEntries.Length; i++)
             {
                 subdirectoryEntries[i] += @"\bin\debug\";
+                if (subdirectoryEntries[i] == filePathTemp) continue;
                 if (!Directory.Exists(subdirectoryEntries[i])) continue;
                 string[] fileEntries = Directory.GetFiles(subdirectoryEntries[i]);
                 string exeFile = fileEntries.FirstOrDefault(file => file.EndsWith(".exe"));
@@ -48,7 +49,6 @@ namespace Toci.Training.Teachers.Tests
                     ProcessStartInfo startInfo = new ProcessStartInfo { FileName = exeFile };
                     using (Process exeProcess = Process.Start(startInfo))
                     {
-
                         exeProcess.WaitForExit();
                     }
                 }
