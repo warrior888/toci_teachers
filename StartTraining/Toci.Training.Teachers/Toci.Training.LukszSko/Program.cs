@@ -59,18 +59,18 @@ namespace ConsoleApp1
 
             string lenghtOfTable = Console.ReadLine();
 
-            int lenghtOfNumber = 0;
+            int lenghtOfNumber;
 
             int.TryParse(lenghtOfTable, out lenghtOfNumber);
 
-            string[] values;
+            int[] values;
 
-            values = new string [lenghtOfNumber];
+            values = new Int32 [10];
 
                     for (int j = 0; j < lenghtOfNumber; j++)
                     {
                         Console.WriteLine("Podaj liczbe: {0}", j +1);
-                        values[j] = Console.ReadLine();
+                        values[j] = int.Parse(Console.ReadLine()) ;
                         //Nie mam pojęcia jak zrobic aby po wpisaniu wartosci przez uzytkownika wprowadzilo kolejno  do elementu talicy
                         // wartosc 0,1,2,3,4,5,6,7,8 itd
 
@@ -79,24 +79,23 @@ namespace ConsoleApp1
 
                     }
 
-            int[] result;
-            result = new int[lenghtOfNumber];
-
-            for (int i = 0; i < lenghtOfNumber; i++)
-            {
-                
-                result[i] = int.Parse(values[i]);
-               
-            }
-
-
-
-
-
-
-
+            Console.WriteLine("Max to: {0} Min to: {1}", resultMax, resultMin);
+            Console.Write("Liczby od użytkownika: {0}",values); // wywala int 32, cos zle zrobilem
+            Console.ReadLine();
 
 
         }
+
+
+
+            
+
+            
+
+
+
+
+
+        
     }
 }
