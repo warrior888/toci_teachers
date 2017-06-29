@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -58,14 +59,18 @@ namespace ConsoleApp1
 
             string lenghtOfTable = Console.ReadLine();
 
-            int parsedlenght= Int32.Parse(lenghtOfTable);
+            int lenghtOfNumber = 0;
 
-            int[] table = { };
+            int.TryParse(lenghtOfTable, out lenghtOfNumber);
 
-                    for (int j = 0; j < parsedlenght; j++)
+            string[] values;
+
+            values = new string [lenghtOfNumber];
+
+                    for (int j = 0; j < lenghtOfNumber; j++)
                     {
                         Console.WriteLine("Podaj liczbe: {0}", j +1);
-
+                        values[j] = Console.ReadLine();
                         //Nie mam pojęcia jak zrobic aby po wpisaniu wartosci przez uzytkownika wprowadzilo kolejno  do elementu talicy
                         // wartosc 0,1,2,3,4,5,6,7,8 itd
 
@@ -74,6 +79,15 @@ namespace ConsoleApp1
 
                     }
 
+            int[] result;
+            result = new int[lenghtOfNumber];
+
+            for (int i = 0; i < lenghtOfNumber; i++)
+            {
+                
+                result[i] = int.Parse(values[i]);
+               
+            }
 
 
 
