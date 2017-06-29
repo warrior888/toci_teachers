@@ -81,7 +81,32 @@ namespace Toci.Treining.Leon
 
             // znalezc minimalna wartosc
 
+            int NajmniejszaLiczba = TablicaFor[0];
+            for(int i = 0; i < TablicaFor.Length; i++)
+            {
+                if(NajmniejszaLiczba > TablicaFor[i])
+                {
+                    NajmniejszaLiczba = TablicaFor[i];
+                }
+            }
+            Console.WriteLine(NajmniejszaLiczba);
 
+            // ilosc wystapien
+
+            Console.WriteLine("Podaj jaka liczbe bedziemy sprawdzac: ");
+            string FromUser = Console.ReadLine();
+            int IntFromUser = 0;
+            int.TryParse(FromUser, out IntFromUser);
+            int occurence = 0;
+
+            for (int i = 0; i < TablicaFor.Length; i++)
+            {
+                if(IntFromUser == TablicaFor[i])
+                {
+                    occurence++;
+                }
+            }
+            Console.WriteLine("Liczba {0} wystepuje w tej tablicy {1} razy", IntFromUser, occurence);
 
             Console.ReadLine();
         }
