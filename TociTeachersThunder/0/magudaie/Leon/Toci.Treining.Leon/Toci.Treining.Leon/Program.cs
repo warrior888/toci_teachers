@@ -11,26 +11,31 @@ namespace Toci.Treining.Leon
         static void Main(string[] args)
         {
             ASCIIEncoding ascii = new ASCIIEncoding();
-            string text = "tat";
+            string text = "TO CI dopiero";
 
             Byte[] encodeBytes = ascii.GetBytes(text);
             Console.WriteLine(text);
             Console.WriteLine("The encoding: ");
 
+            int j = 0;
             foreach (byte b in encodeBytes)
             {
-                int a = 0;
+                byte a = 0; // zmienilem zmienna INT na BYTE
                 if (b >= 97 && b <= 122)
                 {
-                    ; a = b;
+                    a = b;
                     a -= 32;
-                    a = Convert.ToByte(a);
-                    //... wymyslec
+                    //a = Convert.ToByte(a); // to juz nie potrzebne
                 }
-                Console.Write("[{0}]", b);
-                Console.WriteLine();
-                Console.Write("[{0}]", a);
-                //char decodestring = ascii.GetString(a); // i jak to obejsc?
+                else 
+                {
+                    a = b;
+                }
+                Console.WriteLine("Mala litera: [{0}]", b);
+                Console.WriteLine("Duza litera: [{0}]", a);
+                encodeBytes[j] = a; // dzieki Kafar!!!!
+                j++;
+                //string decodestring = ascii.GetString(a); // to w ogole nie jest potrzebne
             }
             Console.WriteLine();
 
