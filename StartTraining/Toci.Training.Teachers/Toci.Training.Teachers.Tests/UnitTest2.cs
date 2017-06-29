@@ -16,7 +16,6 @@ namespace Toci.Training.Teachers.Tests
         public void TestMethod1()
         {
             string filePathTemp = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string file2 = Assembly.GetExecutingAssembly().CodeBase;
 
             List<string> pathTab = filePathTemp.Split('\\').ToList();
 
@@ -34,6 +33,7 @@ namespace Toci.Training.Teachers.Tests
             for (int i = 0; i < subdirectoryEntries.Length; i++)
             {
                 subdirectoryEntries[i] += @"\bin\debug\";
+                if (subdirectoryEntries[i] == filePathTemp) continue;
                 if (!Directory.Exists(subdirectoryEntries[i])) continue;
                 string[] fileEntries = Directory.GetFiles(subdirectoryEntries[i]);
                 string exeFile = fileEntries.FirstOrDefault(file => file.EndsWith(".exe"));
@@ -46,11 +46,7 @@ namespace Toci.Training.Teachers.Tests
             {
                 try
                 {
-                    ProcessStartInfo startInfo = new ProcessStartInfo();
-                    //startInfo.CreateNoWindow = false;
-                    //startInfo.UseShellExecute = false;
-                    startInfo.FileName = exeFile;
-
+                    ProcessStartInfo startInfo = new ProcessStartInfo { FileName = exeFile };
                     using (Process exeProcess = Process.Start(startInfo))
                     {
                         exeProcess.WaitForExit();
