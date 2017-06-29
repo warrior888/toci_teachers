@@ -1,62 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Globalization;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Toci.Training.MichalJ
+namespace _4_zadania_z_tablica
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // ZADANIE 1: PROGRAM WYPELNIAJACY TABLICE PODANYM TEKSTEM
-
-            System.Console.WriteLine("Program wypelniajacy tablice podanym tekstem.");
-
-            string[] text = new string[5];
-
-            int tablica = text.Length;
-
-            for (int i = 0; i < tablica; i++)
-            {
-                Console.WriteLine();
-                System.Console.WriteLine("Podaj tekst: ");
-                string tekscik;
-                tekscik = Console.ReadLine();
-                text[i] = tekscik;
-            }
-
-            Console.WriteLine();
-            System.Console.WriteLine("Wpisane teksty to:");
-            Console.WriteLine();
-
-            for (int j = 0; j < tablica; j++)
-            {
-                Console.WriteLine(j + 1 + ". " + text[j]);
-                Console.WriteLine();
-            }
-            System.Console.ReadKey();
-
-
-
-
-
-            // ZADANIE 2: CZTERY ZADANIA NA TABLICE
-
             // [3,56,3,5,78,9,78,4,3,567,8]
             // zad.1 znalezc w tej tablicy maxymalna wartosc
             // zad.2 znalezc minimalna
             // zad.3 suma wszystkich elementow w tablicy
             // zad.4 zliczyc ilosc wystapien przykladowego elementu
 
-            int[] table = { 3, 56, 3, 5, 78, 9, 78, 4, 3, 567, 8 };
+            int[] table = {3, 56, 3, 5, 78, 9, 78, 4, 3, 567, 8};
 
             int wielkosc = table.Length;
 
             for (int i = 0; i < wielkosc; i++)
             {
-                Console.WriteLine(i + 1 + ". wartosc: " + table[i]);
+                Console.WriteLine(i+1 + ". wartosc: " + table[i]);
             }
 
             Console.WriteLine();
@@ -71,10 +40,10 @@ namespace Toci.Training.MichalJ
             {
                 if (max < table[j])
                 {
-                    max = table[j];
+                     max = table[j];
                 }
             }
-
+            
             Console.WriteLine("Najwieksza wartosc w tablicy to: " + max);
 
             // Console.WriteLine($"Najwieksza wartosc to: " + table.Max());
@@ -115,7 +84,7 @@ namespace Toci.Training.MichalJ
                 }
                 else
                 {
-                    y = y + table[m];
+                 y = y + table[m];
                 }
             }
 
@@ -141,8 +110,9 @@ namespace Toci.Training.MichalJ
 
                 Console.WriteLine("Wartosc " + value + " wystepuje w tablicy " + ilosc + " razy");
             }
-
+           
             Console.ReadKey();
+
         }
     }
 }

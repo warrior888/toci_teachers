@@ -138,21 +138,21 @@ namespace Toci.Training.Kafar
         {
             int columns, rows, bombs;
             
-            Console.Write("Podaj wielkość pola gry.");
+            Console.WriteLine("Podaj wielkość pola gry.");
 
             do
             {
-                Console.Write("\nIlość kolumn: ");
+                Console.Write("Ilość kolumn: ");
             } while (!int.TryParse(Console.ReadLine(), out columns));
 
             do
             {
-                Console.Write("\nIlość rzędów: ");
+                Console.Write("Ilość rzędów: ");
             } while (!int.TryParse(Console.ReadLine(), out rows));
 
             do
             {
-                Console.Write("\nPodaj ilość min na polu gry: ");
+                Console.Write("Podaj ilość min na polu gry: ");
             } while (!int.TryParse(Console.ReadLine(), out bombs));
 
             new Saper(columns, rows, bombs);

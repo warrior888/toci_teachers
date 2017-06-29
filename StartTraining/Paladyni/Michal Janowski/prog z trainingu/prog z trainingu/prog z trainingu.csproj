@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C6137799-7CD4-47D6-8153-1D40645D397E}</ProjectGuid>
+    <ProjectGuid>{A78A04F5-9F9D-49B4-BDD3-9793EF1C5137}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Piotrek</RootNamespace>
-    <AssemblyName>Piotrek</AssemblyName>
+    <RootNamespace>prog_z_trainingu</RootNamespace>
+    <AssemblyName>prog z trainingu</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

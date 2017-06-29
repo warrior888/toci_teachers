@@ -10,7 +10,7 @@ namespace Toci.Training.PawelK
     {
         static void Main(string[] args)
         {
-             /*int maxValue (int [] tabfun )
+             int maxValue (int [] tabfun )
             {
                 int tmp = tabfun[0];
                 for(int i = 1; i < tabfun.Length; i++)
@@ -87,9 +87,9 @@ namespace Toci.Training.PawelK
             for (int i = 0; i < text.Length;i++)
             {
                 Console.WriteLine(i + 1 + ". " + text[i]);
-            }*/
+            }
             //saper_start
-            const int mine = -1;
+            /*const int mine = -1;
 
             int [,] createMinefield (int x, int y, int bombsQuantity)
             {
@@ -156,7 +156,7 @@ namespace Toci.Training.PawelK
             
                 print(createMinefield(xCord, yCord, minesQuantity));
            //saper_end 
-            
+            */
 
 
             Console.ReadKey();
