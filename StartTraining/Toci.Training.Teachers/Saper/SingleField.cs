@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Saper
 {
-    public class SingleField
+    public class SingleField : EventArgs
     {
         public int FieldValue { get; set; }     // określa czy w poblizu pola znajduje się bomba - 9 = bomba
         public bool HasABomb { get; set; }
@@ -13,6 +13,9 @@ namespace Saper
         public int X;
         public int Y;
         public Button FieldButton { get; }
+
+        public event EventHandler Explosion;
+        public event EventHandler ShowW;
 
          public SingleField(int x, int y)
          {
@@ -40,10 +43,19 @@ namespace Saper
             {
                 FieldButton.Text = @"X";
                 FieldButton.BackColor = Color.Red;
+                if (Explosion != null) Explosion(this, new EventArgs());
             }
-            IsHide = false;
-            this.FieldButton.Text = FieldValue.ToString();
-            RemoveHandler(e);
+            else
+            {
+                IsHide = false;
+                FieldButton.BackColor = Color.FloralWhite;
+                FieldButton.Text = FieldValue.ToString();
+                FieldButton.Enabled = false;
+
+                if (ShowW != null) ShowW(this, new EventArgs());
+
+                RemoveHandler(e);
+            }
         }
 
         private void RightClick_MouseDown(object sender, MouseEventArgs e)
@@ -54,7 +66,7 @@ namespace Saper
             {
                 FieldButton.Text = @"?";
                 IsChecked = true;
-                RemoveHandler(e); // TODO: Sprawdzić
+                RemoveHandler(e);
             }
             else
             {
@@ -82,10 +94,6 @@ namespace Saper
             {
                 FieldButton.Click += ClickField;
             }
-           /* else
-            {
-                FieldButton.Click += ClickField;
-            }*/
         }
     }
 }

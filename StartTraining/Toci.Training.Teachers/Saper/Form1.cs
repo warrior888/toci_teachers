@@ -13,20 +13,16 @@ namespace Saper
     public partial class Form1 : Form
     {
         private Game _gameStart;
-        private GameDifficultyLevel _difficultyLevel;
+        //private GameDifficultyLevel _difficultyLevel;
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void difficultyComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            _difficultyLevel = (GameDifficultyLevel)difficultyComboBox.SelectedIndex;
-        }
-
         private void startGameButton_Click(object sender, EventArgs e)
         {
+            panel1.Enabled = true;
             _gameStart = new Game(panel1, difficultyComboBox);
         }
     }

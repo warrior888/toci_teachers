@@ -2,7 +2,7 @@
 
 namespace Saper
 {
-    public class Game
+    public class Game       // TODO: Ograniczyć tylko do jednej instancji
     {
         public Game(Panel panel, ComboBox difficulty)
         {
