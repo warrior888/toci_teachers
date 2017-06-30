@@ -47,7 +47,7 @@ namespace Toci.Training.GosiaN
 
             //znalezienie maksymalnej wartości
             int max = table[0];
-            for (int i = 1; i < table.Length; i++)
+            for (int i = 0; i < table.Length; i++)
             {
                 if (max < table[i])
                     max = table[i];
@@ -57,7 +57,7 @@ namespace Toci.Training.GosiaN
             //znalezienie minimalnej wartości
             int min = table[0];
 
-            for (int i = 1; i < table.Length; i++)
+            for (int i = 0; i < table.Length; i++)
             {
                 if (min > table[i])
                     min = table[i];
@@ -66,7 +66,7 @@ namespace Toci.Training.GosiaN
 
             //dodanie wszystkich wyrazów
             int sum = table[0];
-            for (int i = 1; i < table.Length; i++)
+            for (int i = 0; i < table.Length; i++)
             {
                 sum += table[i];
             }
@@ -79,7 +79,7 @@ namespace Toci.Training.GosiaN
 
             Console.WriteLine("Wybrana liczba to " + chosenNumber);
             int instance = 0;
-            for (int i = 1; i < table.Length; i++)
+            for (int i = 0; i < table.Length; i++)
             {
                 if(table[i] == chosenNumber)
                 instance++;
