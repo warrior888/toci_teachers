@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -80,6 +80,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AleksanderS", "AleksanderS", "{07797540-E72D-4164-87B0-02E474A80826}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.AleksanderS", "Toci.Training.AleksanderS\Toci.Training.AleksanderS.csproj", "{3F774888-E3C3-4856-BF8D-1327C284E0F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LukaszSko", "LukaszSko", "{B7106B1D-9FF3-434B-A7E7-C70F0A264D81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{E32F50B3-A505-4CF4-B382-F053FD02FC75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,6 +211,10 @@ Global
 		{3F774888-E3C3-4856-BF8D-1327C284E0F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F774888-E3C3-4856-BF8D-1327C284E0F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F774888-E3C3-4856-BF8D-1327C284E0F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E32F50B3-A505-4CF4-B382-F053FD02FC75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E32F50B3-A505-4CF4-B382-F053FD02FC75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E32F50B3-A505-4CF4-B382-F053FD02FC75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E32F50B3-A505-4CF4-B382-F053FD02FC75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -241,5 +249,7 @@ Global
 		{8F7FAA92-63B8-4D9F-A554-F88D4482EEAB} = {48CC1F7F-DD1C-451E-9B50-E7C7066922BA}
 		{07797540-E72D-4164-87B0-02E474A80826} = {9F328D05-7232-443C-8B00-25B6580C5569}
 		{3F774888-E3C3-4856-BF8D-1327C284E0F3} = {07797540-E72D-4164-87B0-02E474A80826}
+		{B7106B1D-9FF3-434B-A7E7-C70F0A264D81} = {9F328D05-7232-443C-8B00-25B6580C5569}
+		{E32F50B3-A505-4CF4-B382-F053FD02FC75} = {B7106B1D-9FF3-434B-A7E7-C70F0A264D81}
 	EndGlobalSection
 EndGlobal
