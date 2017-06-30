@@ -6,7 +6,7 @@ namespace Saper
 {
     public class GameBoard
     {
-        public byte NumberOfBomb { get; }
+        public byte NumberOfBomb { get; }       // TODO: Dodać zliczanie bomb podczas oznaczania pól
 
         private readonly SingleField[,] _board;
         private readonly int[] _boardSize; // _boardSize[0] - lenght, _boradSize[1] - width
@@ -86,6 +86,19 @@ namespace Saper
 
         private void Boom(Object sender, EventArgs e)
         {
+            foreach (var field in _board)
+            {
+                if (field.FieldValue == 9)
+                {
+                    field.FieldButton.Text = @"X";
+                    field.FieldButton.BackColor = Color.Red;
+                }
+                else
+                {
+                    field.FieldButton.Text = field.FieldValue.ToString();
+                    field.FieldButton.BackColor = Color.Aqua;
+                }
+            }
             _panel.Enabled = false;
             MessageBox.Show(@"Game over");
         }
@@ -133,19 +146,22 @@ namespace Saper
             if (x >= 0 && x < _boardSize[0])
                 if (y >= 0 && y < _boardSize[1])
                     if (_board[x, y].IsHide)
-                        Show(_board[x, y]);
+                        if (!_board[x, y].HasABomb)
+                        {
+                            _board[x, y].IsHide = false;
+                            _board[x, y].FieldButton.Text = _board[x, y].FieldValue.ToString();
+                            _board[x, y].FieldButton.BackColor = Color.Aqua;
+                            _board[x, y].FieldButton.Enabled = false;
+                            Show(_board[x, y]);
+                        }
         }
 
-        private void Show(SingleField field) //??
+        private void Show(SingleField field)
         {
-            if (!field.HasABomb && !field.IsChecked)
+            if (field.FieldValue == 0)
             {
                 int x = field.X,
                     y = field.Y;
-                field.IsHide = false;
-                field.FieldButton.Text = field.FieldValue.ToString();
-                field.FieldButton.Enabled = false;
-                field.FieldButton.BackColor = Color.Aqua;
 
                 ShowFields(x - 1, y + 1);
                 ShowFields(x - 1, y);

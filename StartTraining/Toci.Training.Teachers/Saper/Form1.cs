@@ -18,6 +18,7 @@ namespace Saper
         public Form1()
         {
             InitializeComponent();
+            difficultyComboBox.SelectedIndex = 0;
         }
 
         private void startGameButton_Click(object sender, EventArgs e)

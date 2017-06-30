@@ -48,7 +48,7 @@ namespace Saper
             else
             {
                 IsHide = false;
-                FieldButton.BackColor = Color.FloralWhite;
+                FieldButton.BackColor = Color.Aqua;
                 FieldButton.Text = FieldValue.ToString();
                 FieldButton.Enabled = false;
 
