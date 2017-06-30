@@ -74,9 +74,9 @@ namespace Toci.Training.PawelK
            string userInput = Console.ReadLine();
            int userInputNumber = 0;
            int.TryParse(userInput, out userInputNumber);
-           Console.WriteLine($"Suma elementow zbioru: {count(tab,userInputNumber)}");
-            
-            /*string [] text = new string[5];
+           Console.WriteLine($"Ilosc wystąpien podanego elementu: {count(tab,userInputNumber)}");
+
+            string [] text = new string[5];
 
             for (int i = 0; i < text.Length; i++)
             {
@@ -87,7 +87,78 @@ namespace Toci.Training.PawelK
             for (int i = 0; i < text.Length;i++)
             {
                 Console.WriteLine(i + 1 + ". " + text[i]);
-            }*/
+            }
+            //saper_start
+            /*const int mine = -1;
+
+            int [,] createMinefield (int x, int y, int bombsQuantity)
+            {
+                int[,] minefield = new int[x, y];
+
+                int randomX = 0;
+                int randomY = 0;
+
+                Random rnd = new Random(DateTime.Now.Millisecond);
+                while (bombsQuantity > 0)
+                {
+                    randomX = rnd.Next(0, x - 1);
+                    randomY = rnd.Next(0, y - 1);
+
+                    if (minefield[randomX, randomY] != mine)
+                    {
+                        minefield[randomX, randomY] = mine;
+
+                        for (int k = -1; k < 2; k++)
+                            for (int l = -1; l < 2; l++)
+                            {
+                                if ((randomX + l) < 0 || (randomY + k) < 0) continue; //wyjdz bo krawedz
+                                if ((randomX + l) > minefield.GetLength(0) - 1 || (randomY + k) > minefield.GetLength(1) - 1) continue; //wyjdz bo krawedz
+
+                                if (minefield[randomX + l, randomY + k] == mine) continue; //wyjdz bo mina
+                                minefield[randomX + l, randomY + k] += 1; //zwieksz o 1
+                            }
+
+                       bombsQuantity--;
+                    }
+                }
+
+                
+
+
+            return minefield;
+            }
+            
+            
+
+
+            void print (int [,] minefield)
+            {
+                for(int i = 0; i < minefield.GetLength(0) - 1; i++)
+                {
+                    for(int j = 0; j < minefield.GetLength(1) - 1; j++)
+                    {
+                        Console.Write(" {0} ", minefield[i, j]);
+                    }
+                    Console.WriteLine("");
+                }
+            }
+
+
+            int xCord, yCord,minesQuantity;
+            Console.WriteLine("Podaj wielkość pola minowego(W postaci x,y ):");
+            string corrdinates = Console.ReadLine();
+            int.TryParse(corrdinates.Substring(0, 1),out xCord);
+            int.TryParse(corrdinates.Substring(2, 1), out yCord);
+            Console.WriteLine("Podaj ilosc min:");
+            string minesQ = Console.ReadLine();
+            int.TryParse(minesQ, out minesQuantity);
+            
+            
+                print(createMinefield(xCord, yCord, minesQuantity));
+           //saper_end 
+            */
+
+
             Console.ReadKey();
         }
     }
