@@ -1,0 +1,6 @@
+D:\TOCIteachers\repo\StartTraining\Arbalesci\Mariusz Terlecki\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+D:\TOCIteachers\repo\StartTraining\Arbalesci\Mariusz Terlecki\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\TOCIteachers\repo\StartTraining\Arbalesci\Mariusz Terlecki\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\TOCIteachers\repo\StartTraining\Arbalesci\Mariusz Terlecki\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\TOCIteachers\repo\StartTraining\Arbalesci\Mariusz Terlecki\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\TOCIteachers\repo\StartTraining\Arbalesci\Mariusz Terlecki\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
