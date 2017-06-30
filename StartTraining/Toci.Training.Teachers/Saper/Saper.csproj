@@ -54,7 +54,6 @@
     <Compile Include="Game.cs" />
     <Compile Include="GameBoard.cs" />
     <Compile Include="GameDifficultyLevel.cs" />
-    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingleField.cs" />
