@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -10,28 +12,89 @@ namespace Toci.Training.Teachers.Tests
     [TestClass]
     public class UnitTest1
     {
+        List<string> paths = new List<string>();
+        List<string> temp = new List<string>();
+        const string origin = @"..\..\..\";
+
+        private void CloneTempToPath()
+        {
+            paths.Clear();
+            paths = temp.ToList();
+            temp.Clear();
+        }
+
+        private void RunAllExe()
+        {
+            paths = Directory.GetDirectories(origin).ToList();
+
+            foreach (string path in paths)
+            {
+                if (path.Contains("Toci"))
+                {
+                    temp.Add(path);
+                }
+            }
+
+            CloneTempToPath();
+
+            foreach (string path in paths)
+            {
+                string[] foldersInToci = Directory.GetDirectories(path);
+                foreach (string folder in foldersInToci)
+                {
+                    if (folder.Contains("bin"))
+                    {
+                        temp.Add(folder);
+                    }
+
+                }
+
+            }
+
+            CloneTempToPath();
+
+            foreach (string path in paths)
+            {
+                string[] foldersInBin = Directory.GetDirectories(path);
+                foreach (string folder in foldersInBin)
+                {
+                    if (folder.Contains("Debug"))
+                    {
+                        temp.Add(folder);
+                    }
+
+                }
+
+            }
+
+            CloneTempToPath();
+
+            foreach (string path in paths)
+            {
+                string[] filesInDebug = Directory.GetFiles(path);
+                foreach (string file in filesInDebug)
+                {
+                    if (file.EndsWith("exe"))
+                    {
+                        temp.Add(file);
+                    }
+                }
+
+            }
+
+            CloneTempToPath();
+
+            foreach (string path in paths)
+            {
+                Process.Start(path);
+            }
+        }
+
         [TestMethod]
         public void TestMethod1()
         {
-            //Process.Start(@"..\..\..\Toci.Training.Kafar\bin\Debug\Toci.Training.Kafar.exe");
-            string path =
-                @"C:\Users\mlote\Documents\GitHub\toci_teachers\StartTraining\Toci.Training.Teachers\Toci.Training.Kafar\bin\Debug\Toci.Training.Kafar.exe";
-            const string exe = "costam";
-            string pathX = @"..\..\..\";
-            string[] pathY = new string[50];
-            string[] paths = new string[100];
-            paths = Directory.GetDirectories(pathX);
-            pathY = Directory.GetDirectories(paths[13]);
-            //Directory.
-            var exePath = Path.GetFullPath(exe);
-            var universalPath = Path.GetDirectoryName(exePath);
-            ProcessStartInfo testProcessStartInfo = new ProcessStartInfo();
-            string path2 = Assembly.GetExecutingAssembly().Location;
-            string path3 = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            RunAllExe();
 
-            
-
-            string test = Process.GetCurrentProcess().Modules.ToString();
         }
     }
 }
