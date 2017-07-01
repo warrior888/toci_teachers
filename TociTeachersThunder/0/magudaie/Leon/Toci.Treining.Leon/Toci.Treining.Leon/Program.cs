@@ -112,6 +112,35 @@ namespace Toci.Treining.Leon
                 }
             }
             Console.WriteLine("Liczba {0} wystepuje w tej tablicy {1} razy", IntFromUser, occurence);
+            
+            // sortowanie babelkowe
+
+            int[] BabbleSortTable = new int[] {9, 2, 4, 7, 36, 6, 5};
+
+            foreach(int elementarny in BabbleSortTable)
+            {
+                Console.WriteLine(elementarny);
+            }
+
+            int ToReplace = 0;
+            for(int i = 0; i < BabbleSortTable.Length; i++)
+            {
+                for(int j = 0; j < BabbleSortTable.Length; j++)
+                {
+                    if(BabbleSortTable[i] < BabbleSortTable[j])
+                    {
+                        ToReplace = BabbleSortTable[i];
+                        BabbleSortTable[i] = BabbleSortTable[j];
+                        BabbleSortTable[j] = ToReplace;
+                    }
+                }
+            }
+
+            Console.WriteLine("nowa tablica");
+            foreach (int elementarny in BabbleSortTable)
+            {
+                Console.WriteLine(elementarny);
+            }
 
             Console.ReadLine();
         }
