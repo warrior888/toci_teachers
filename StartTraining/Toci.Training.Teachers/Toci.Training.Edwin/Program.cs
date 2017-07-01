@@ -117,8 +117,26 @@ namespace Toci.Training.Edwin
                 sumOfElements += tableOfElements[i];
             }
 
-            //
+            
             Console.WriteLine("Suma tablicy to: {0}", sumOfElements);
+            //---------------------------------------
+
+
+            //-----------Zadanie 5-----------------
+            // zliczanie wystąpionych elementów
+            Console.Write("\nPodaj element do zliczenia: ");
+            int elementToCount = Convert.ToInt32(Console.ReadLine());
+            int counter = 0;
+
+            for (int i = 0; i < numbOfTableElement; i++)
+            {
+                if (elementToCount == tableOfElements[i])
+                {
+                    counter++;
+                }
+            }
+
+            Console.WriteLine("\nIlość elementu {0} w tablicy wystąpiła {1}", elementToCount, counter);
 
             Console.ReadKey();
         }
