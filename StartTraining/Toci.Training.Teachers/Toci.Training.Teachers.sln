@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -67,8 +67,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.LeszekS", "To
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers.Tests", "Toci.Training.Teachers.Tests\Toci.Training.Teachers.Tests.csproj", "{86D62BEC-076E-4F41-B6CC-FD2B5FE5B038}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.IzaN", "Toci.Training.IzaN\Toci.Training.IzaN.csproj", "{60E5C727-A5E9-446D-9489-F4F60165952E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DarekB", "DarekB", "{F5CF4EBA-3551-405A-A89E-844B8880FF32}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Saper", "Saper", "{3E3B1EF7-AE84-4D02-ABF2-ECF68FE2EF44}"
@@ -83,7 +81,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.AleksanderS",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LukaszSko", "LukaszSko", "{B7106B1D-9FF3-434B-A7E7-C70F0A264D81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.LukaszSko", "ConsoleApp1\Toci.Training.LukaszSko.csproj", "{E32F50B3-A505-4CF4-B382-F053FD02FC75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{E32F50B3-A505-4CF4-B382-F053FD02FC75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Teachers.AdriannaS", "Toci.Teachers.AdriannaS\Toci.Teachers.AdriannaS.csproj", "{2BCD57AE-717D-4496-A182-8ECE940F2662}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.IzaN", "Toci.Training.IzaN\Toci.Training.IzaN.csproj", "{60E5C727-A5E9-446D-9489-F4F60165952E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.GrzegorzT", "Toci.Training.GrzegorzT\Toci.Training.GrzegorzT.csproj", "{6906A375-F779-4F3A-A71F-A5EF8CC393A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -195,10 +199,6 @@ Global
 		{86D62BEC-076E-4F41-B6CC-FD2B5FE5B038}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86D62BEC-076E-4F41-B6CC-FD2B5FE5B038}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86D62BEC-076E-4F41-B6CC-FD2B5FE5B038}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60E5C727-A5E9-446D-9489-F4F60165952E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60E5C727-A5E9-446D-9489-F4F60165952E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60E5C727-A5E9-446D-9489-F4F60165952E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60E5C727-A5E9-446D-9489-F4F60165952E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2834C053-83A8-489B-974D-DD4753527859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2834C053-83A8-489B-974D-DD4753527859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2834C053-83A8-489B-974D-DD4753527859}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -215,6 +215,18 @@ Global
 		{E32F50B3-A505-4CF4-B382-F053FD02FC75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E32F50B3-A505-4CF4-B382-F053FD02FC75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E32F50B3-A505-4CF4-B382-F053FD02FC75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BCD57AE-717D-4496-A182-8ECE940F2662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BCD57AE-717D-4496-A182-8ECE940F2662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BCD57AE-717D-4496-A182-8ECE940F2662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BCD57AE-717D-4496-A182-8ECE940F2662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E5C727-A5E9-446D-9489-F4F60165952E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E5C727-A5E9-446D-9489-F4F60165952E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E5C727-A5E9-446D-9489-F4F60165952E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E5C727-A5E9-446D-9489-F4F60165952E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6906A375-F779-4F3A-A71F-A5EF8CC393A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6906A375-F779-4F3A-A71F-A5EF8CC393A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6906A375-F779-4F3A-A71F-A5EF8CC393A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6906A375-F779-4F3A-A71F-A5EF8CC393A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -251,5 +263,8 @@ Global
 		{3F774888-E3C3-4856-BF8D-1327C284E0F3} = {07797540-E72D-4164-87B0-02E474A80826}
 		{B7106B1D-9FF3-434B-A7E7-C70F0A264D81} = {9F328D05-7232-443C-8B00-25B6580C5569}
 		{E32F50B3-A505-4CF4-B382-F053FD02FC75} = {B7106B1D-9FF3-434B-A7E7-C70F0A264D81}
+		{2BCD57AE-717D-4496-A182-8ECE940F2662} = {C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}
+		{60E5C727-A5E9-446D-9489-F4F60165952E} = {C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}
+		{6906A375-F779-4F3A-A71F-A5EF8CC393A3} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
 	EndGlobalSection
 EndGlobal
