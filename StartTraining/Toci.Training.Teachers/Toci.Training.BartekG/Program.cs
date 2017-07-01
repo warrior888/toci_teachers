@@ -91,7 +91,7 @@ namespace Toci.Training.BartekG
             }
             Console.WriteLine("ilosc powtorzen: " + wystapienia + " dla liczby "+ liczba );
             Console.ReadKey();
-
+            
         }
 
 
