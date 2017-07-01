@@ -89,6 +89,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.IzaN", "Toci.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.GrzegorzT", "Toci.Training.GrzegorzT\Toci.Training.GrzegorzT.csproj", "{6906A375-F779-4F3A-A71F-A5EF8CC393A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.MichalMytnik", "Toci.Training.MichalMytnik\Toci.Training.MichalMytnik.csproj", "{FCA38254-C3DB-4EA1-A50E-9626FBDA8824}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -227,6 +229,10 @@ Global
 		{6906A375-F779-4F3A-A71F-A5EF8CC393A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6906A375-F779-4F3A-A71F-A5EF8CC393A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6906A375-F779-4F3A-A71F-A5EF8CC393A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCA38254-C3DB-4EA1-A50E-9626FBDA8824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCA38254-C3DB-4EA1-A50E-9626FBDA8824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCA38254-C3DB-4EA1-A50E-9626FBDA8824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCA38254-C3DB-4EA1-A50E-9626FBDA8824}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -266,5 +272,6 @@ Global
 		{2BCD57AE-717D-4496-A182-8ECE940F2662} = {C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}
 		{60E5C727-A5E9-446D-9489-F4F60165952E} = {C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}
 		{6906A375-F779-4F3A-A71F-A5EF8CC393A3} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
+		{FCA38254-C3DB-4EA1-A50E-9626FBDA8824} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
 	EndGlobalSection
 EndGlobal
