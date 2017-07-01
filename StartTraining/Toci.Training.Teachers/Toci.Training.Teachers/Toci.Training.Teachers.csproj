@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arek.cs" />
     <Compile Include="GhostRider.cs" />
     <Compile Include="Kafar.cs" />
     <Compile Include="Program.cs" />
