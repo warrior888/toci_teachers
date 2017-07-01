@@ -26,7 +26,7 @@ namespace ConsoleApp1
                     resultMax = parameters[i];
                 }
 
-                    if (parameters[i] < resultMin)
+                    if (parameters[i+1] < resultMin)
                     {
                         resultMin = parameters[i];
 
