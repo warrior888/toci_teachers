@@ -244,7 +244,9 @@ namespace Toci.Training.WojciechSeweryn
             Console.WriteLine("\nSuma elementow tablicy wynosi: " + SumTableValues(table));
             Console.WriteLine(CountElement(table));
 
+
             Console.ReadLine();
+
         }
     }
 }

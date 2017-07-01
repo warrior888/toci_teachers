@@ -84,6 +84,14 @@ namespace ConsoleApp1
             Console.ReadLine();
 
 
+
+            string[][] quizQuestionAnswer = new string[5][];
+
+            //quizQuestionAnswer[0][0] = new string{"o"};
+
+
+
+
         }
 
 

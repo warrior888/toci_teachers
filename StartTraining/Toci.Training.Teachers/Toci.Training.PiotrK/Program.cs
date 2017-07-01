@@ -15,6 +15,7 @@ namespace Toci.Training.PiotrK
             string[] text = new string[5];
 
             int lengthOfTextArray = text.Length;
+            int whichElement;
 
             Console.WriteLine("Podaj słowo: ");
 
@@ -29,6 +30,39 @@ namespace Toci.Training.PiotrK
             for (int j = 0; j < lengthOfTextArray; j++)
             {
                 Console.WriteLine(j + 1 + ". " + text[j]);
+            }
+
+            // wyświetlenie żądanego elementu tablicy
+            Console.WriteLine("Podaj numer elementu tablicy, który chcesz wyświetlić (zakres od 0 do {0}", lengthOfTextArray - 1);
+
+
+            try
+            {
+                whichElement = Int32.Parse(Console.ReadLine());
+                Console.WriteLine("\n{0}", text[whichElement]);
+            }
+            catch(IndexOutOfRangeException ex)
+            {
+                Console.WriteLine("Wystąpił wyjątek: {0}", ex.Message);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Wystąpił wyjątek: {0}", ex.Message);
+            }
+
+            // zamiana na duże litery
+            Console.WriteLine("\nZamiana na duże litery");
+
+            for(int i = 0; i < lengthOfTextArray; i++)
+            {
+                Console.WriteLine(myUpperCase(text[i]));
+            }
+            // zamiana na małe litery
+            Console.WriteLine("\nZamiana na małe litery");
+
+            for (int i = 0; i < lengthOfTextArray; i++)
+            {
+                Console.WriteLine(myLowerCase(text[i]));
             }
 
             // zadania z poniedziałku
@@ -75,7 +109,7 @@ namespace Toci.Training.PiotrK
 
 
             // Wypisanie tablicy
-            Console.Write("Tablica:");
+            Console.Write("\nTablica liczb:");
 
             for (int i = 0; i < sizeOfArray; i++)
             {
@@ -103,9 +137,43 @@ namespace Toci.Training.PiotrK
             Console.WriteLine("Szukana liczba występuje {0} raz(y)", ileRazy);
 
             Console.ReadKey();
+        }
+
+        public static string myUpperCase(string word)
+        {
+            char[] example;
+            example = word.ToCharArray();
+            int tmp;
+            for (int i = 0; i < word.Length; i++)
+            {
+                if ((int)word[i] < 65 || (int)word[i] > 90)
+                {
+                    tmp = (int)word[i];
+                    tmp -= 32;
+                    example[i] = (char)tmp;
+                }
+            }
+
+            return new string(example);
+        }
 
 
-            Console.ReadKey();
+        public static string myLowerCase(string word)
+        {
+            char[] example;
+            example = word.ToCharArray();
+            int tmp;
+            for (int i = 0; i < word.Length; i++)
+            {
+                if ((int)word[i] < 97 || (int)word[i] > 122)
+                {
+                    tmp = (int)word[i];
+                    tmp += 32;
+                    example[i] = (char)tmp;
+                }
+            }
+
+            return new string(example);
         }
     }
 }
