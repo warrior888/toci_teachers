@@ -68,7 +68,7 @@ namespace Toci.Training.DamianB
             for (int i = 0; i < intDataTable.Length; i++)
             {
                 sumOfElements += intDataTable[i];
-                //Console.WriteLine(sumOfElements);
+             
             }
 
             Console.WriteLine("Suma elementów tablicy: {0}", sumOfElements);
