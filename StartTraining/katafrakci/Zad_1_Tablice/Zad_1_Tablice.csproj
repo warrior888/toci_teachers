@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{53F9674C-A972-448E-B56F-EEF757701F34}</ProjectGuid>
+    <ProjectGuid>{60BFCC20-98B8-4443-9E97-A0454D0D9DC1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleAppTest</RootNamespace>
-    <AssemblyName>ConsoleAppTest</AssemblyName>
+    <RootNamespace>Zad_1_Tablice</RootNamespace>
+    <AssemblyName>Zad_1_Tablice</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
