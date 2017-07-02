@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5647A4C-7945-438E-B0C7-17A6197BD7EE}</ProjectGuid>
+    <ProjectGuid>{079F7654-8596-4C38-AA0D-064C864DF2A7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>KingaC</RootNamespace>
-    <AssemblyName>KingaC</AssemblyName>
+    <RootNamespace>HomeWork_2</RootNamespace>
+    <AssemblyName>HomeWork 2</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
