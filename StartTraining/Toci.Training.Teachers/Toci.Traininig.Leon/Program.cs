@@ -145,6 +145,8 @@ namespace Toci.Treining.Leon
             // DRUGI TYDZIEN
             // check for index
 
+            
+
             Console.WriteLine(IndedexOf("latem chce sie na morze", "sie"));
             
             // Quize 
