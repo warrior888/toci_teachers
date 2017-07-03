@@ -74,7 +74,7 @@ namespace Toci.Training.MichalW
              }
              Console.ReadKey();  */
 
-
+            /*------------------------------------------------------------------------------------------------
 int[] Tablle = new int[11];
 Tablle[0] = 3;
 Tablle[1] = 56;
@@ -161,7 +161,50 @@ for (int i = 0; i < Tablle.Length; i++)
 }
 Console.WriteLine("Element " + UserNumber + " pojawił się : " + Result + " raz(y)");
 
-Console.ReadKey(); 
-}
-}
+Console.ReadKey(); */
+/*------------------------------------------------------------------------------------------------------------------
+            // Zadania z dnia 01.07 2 lekcja
+
+            int[] content = new int[] {4, 56, 3, 2, 6, 8, 78, 54, 756, 78, 54, 3, 2, 1, 6};
+            int temp;
+            for (int i = 0; i < content.Length; i++)
+            {
+                for (int j = 0; j < content.Length; j++)
+                {
+                    if (i != j)
+                    {
+                        if (content[i] < content[j])
+                        {
+                            temp = content[i];
+                            content[i] = content[j];
+                            content[j] = temp;
+                        }
+                    }    
+                }
+            } */
+
+            // Zadania domowe nr 1 (Lekcja nr 2 01.07.2017)  Podać pozycję słowa ze stringa
+            string Lesson2 = "Bartek szkoli programistów";
+
+            Console.WriteLine(Lesson2);
+            Console.WriteLine("Który wyraz Cię interesuje : ");
+            string UserAnswerToCut = Console.ReadLine();
+            
+            
+            char CharOfUserAnswerToCuT = UserAnswerToCut[0];
+            char CharOfUserAnswerToCuT2 = UserAnswerToCut[1];
+
+            int NumberStartOf = 0;
+
+            for (int i = 0; i < Lesson2.Length - 1; i++)
+            {
+                if (CharOfUserAnswerToCuT == Lesson2[i] && CharOfUserAnswerToCuT2 == Lesson2[i+1])
+                {
+                   NumberStartOf = i + 1;  // Dziwnie, żeby na pozycji 0 się zaczynało ;)
+                }
+            }
+            Console.WriteLine("Wybrane przez Ciebie słowo zaczyna się na pozycji nr : " + NumberStartOf);
+            Console.ReadKey();
+        }
+    }
 }
