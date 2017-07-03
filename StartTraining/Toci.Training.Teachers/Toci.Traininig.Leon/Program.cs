@@ -17,7 +17,7 @@ namespace Toci.Treining.Leon
             Console.WriteLine(text);
             Console.WriteLine("The encoding: ");
 
-            int j = 0;
+            int k = 0;
             foreach (byte b in encodeBytes)
             {
                 byte a = 0; // zmienilem zmienna INT na BYTE
@@ -33,8 +33,8 @@ namespace Toci.Treining.Leon
                 }
                 Console.WriteLine("Mala litera: [{0}]", b);
                 Console.WriteLine("Duza litera: [{0}]", a);
-                encodeBytes[j] = a; // dzieki Kafar!!!!
-                j++;
+                encodeBytes[k] = a; // dzieki Kafar!!!!
+                k++;
                 //string decodestring = ascii.GetString(a); // to w ogole nie jest potrzebne
             }
             Console.WriteLine();
@@ -141,8 +141,80 @@ namespace Toci.Treining.Leon
             {
                 Console.WriteLine(elementarny);
             }
+            
+            // DRUGI TYDZIEN
+            // check for index
+
+            Console.WriteLine(IndedexOf("latem chce sie na morze", "sie"));
+            
+            // Quize 
+
+            string[] QuizeQuestions =
+            {
+                "Which of the below is a loop?",
+                "Which of the below is a variable?",
+                "Which of the below is a condition?",
+                "Which of the below starts a block code?",
+                "Which of the below is an array indexer?",
+            };
+
+            string[][] QuizeAnswers = new string[QuizeQuestions.Length][];
+
+            QuizeAnswers[0] = new string[] {"  a) for", "  b) int", "  c) class", "  d) Console" };
+            QuizeAnswers[1] = new string[] {"  a) string", "  b) int Number", "  c) 1;", "  d) foreache" };
+            QuizeAnswers[2] = new string[] {"  a) Console.WriteLine('...');", "  b) [1]", "  c) 1 < 2", "  d) i++", "  e) return" };
+            QuizeAnswers[3] = new string[] {"  a) ||", "  b) [", "  c) (", "  d) {", "  e) ." };
+            QuizeAnswers[4] = new string[] {"  a) string[1]", "  b) string(1)", "  c) string{1}" };
+
+            string[] UserAnswers = new string[QuizeQuestions.Length];
+
+            string[] CorrectAnswers = {"a", "b", "c", "d", "a"};
+
+            int score = 100;
+            int wrongAnswers = 0;
+
+            Console.WriteLine("PREPARE YOURSELF FOR A QUIZE!");
+
+            for(int i = 0; i < QuizeQuestions.Length; i++)
+            {
+                Console.WriteLine(QuizeQuestions[i]);
+
+                for(int j = 0; j < QuizeAnswers[i].Length; j++)
+                {
+                    Console.WriteLine(QuizeAnswers[i][j]);
+                }
+                do
+                {
+                    Console.Write("Please put your answer here: ");
+                    UserAnswers[i] = Console.ReadLine();
+                    if (UserAnswers[i] != CorrectAnswers[i])
+                    {
+                        score -= 10;
+                        wrongAnswers++;
+                    }
+                }
+                while (UserAnswers[i] != CorrectAnswers[i]);
+            }
+
+            Console.WriteLine("Your score is " + score + "%. You have " + wrongAnswers + " uncorrect answers.");
 
             Console.ReadLine();
+        }
+
+        // index of 
+
+        public static string IndedexOf(string candidate, string needle)
+        {
+            string result = "";
+            for (int i = 0; i < candidate.Length; i++)
+            {
+                if ((needle.Length + i) < candidate.Length && candidate.Substring(i, needle.Length) == needle)
+                {
+                    result = Convert.ToString(i);
+                    break;
+                }
+            }
+            return result;
         }
     }
 }
