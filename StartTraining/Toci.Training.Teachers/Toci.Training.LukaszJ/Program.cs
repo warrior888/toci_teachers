@@ -33,7 +33,7 @@ namespace Toci.Training.LukaszJ
 
                /* if (i == 0)
                 {
-                    Console.WriteLine("Dziekuje, wszystko przebieglo bez problemu.");
+                    Console.WriteLine("Dziekuje, wszystko przebieglo     bez problemu.");
                 }
                 */
             }
