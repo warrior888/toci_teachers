@@ -86,12 +86,12 @@ namespace ConsoleApp1
 
             string string1 = "Nie jak talala";
             string example = "jak";
-            string result = "";
+            
 
 
 
 
-
+            /*
 
             for (int i = 0; i < string1.Length - 1 - example.Length - 1; i++)
             {
@@ -102,27 +102,30 @@ namespace ConsoleApp1
                     if (String.Equals(example, result))
                     {
                         Console.WriteLine(i + "  aaaaa znalazlem");
+                        break;
                     }
                 }
             }
+            */
 
-
-            string result2 = "";
+                    string result2 = "";
                     int f = example.Length;
-                    for (int k = 0; k < string1.Length - example.Length-1; k++)
+                    for (int k = 0; k < string1.Length - example.Length; k++)
                     {
-                        result = string1.Substring(k, f);
+                        result2 = string1.Substring(k, f);
 
-                                if (String.Equals(example, result2))
-                                {
-                                    Console.WriteLine(k + "  aaaaa znalazlem");
-                                }
+                        if (String.Equals(example, result2))
+                        {
+                           Console.WriteLine("IndexOf to: "+k);
+                           break;
+
+                        }
                         
 
                         
                         
-                        Console.WriteLine("to: {0}, {1}",k,f);
-                        Console.WriteLine(result);
+                        
+                        
 
 
                     }
