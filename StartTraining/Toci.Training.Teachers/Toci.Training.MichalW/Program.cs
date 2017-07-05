@@ -162,48 +162,107 @@ for (int i = 0; i < Tablle.Length; i++)
 Console.WriteLine("Element " + UserNumber + " pojawił się : " + Result + " raz(y)");
 
 Console.ReadKey(); */
-/*------------------------------------------------------------------------------------------------------------------
-            // Zadania z dnia 01.07 2 lekcja
+            /*------------------------------------------------------------------------------------------------------------------
+                        // Zadania z dnia 01.07 2 lekcja
 
-            int[] content = new int[] {4, 56, 3, 2, 6, 8, 78, 54, 756, 78, 54, 3, 2, 1, 6};
-            int temp;
-            for (int i = 0; i < content.Length; i++)
-            {
-                for (int j = 0; j < content.Length; j++)
-                {
-                    if (i != j)
-                    {
-                        if (content[i] < content[j])
+                        int[] content = new int[] {4, 56, 3, 2, 6, 8, 78, 54, 756, 78, 54, 3, 2, 1, 6};
+                        int temp;
+                        for (int i = 0; i < content.Length; i++)
                         {
-                            temp = content[i];
-                            content[i] = content[j];
-                            content[j] = temp;
-                        }
-                    }    
-                }
-            } */
+                            for (int j = 0; j < content.Length; j++)
+                            {
+                                if (i != j)
+                                {
+                                    if (content[i] < content[j])
+                                    {
+                                        temp = content[i];
+                                        content[i] = content[j];
+                                        content[j] = temp;
+                                    }
+                                }    
+                            }
+                        } */
 
-            // Zadania domowe nr 1 (Lekcja nr 2 01.07.2017)  Podać pozycję słowa ze stringa
-            string Lesson2 = "Bartek szkoli programistów";
+            /* // Zadania domowe nr 1 (Lekcja nr 2 01.07.2017)  Podać pozycję słowa ze stringa
+             string Lesson2 = "Bartek szkoli programistów";
 
-            Console.WriteLine(Lesson2);
-            Console.WriteLine("Który wyraz Cię interesuje : ");
-            string UserAnswerToCut = Console.ReadLine();
-            
-            
-            char CharOfUserAnswerToCuT = UserAnswerToCut[0];
-            char CharOfUserAnswerToCuT2 = UserAnswerToCut[1];
+             Console.WriteLine(Lesson2);
+             Console.WriteLine("Który wyraz Cię interesuje : ");
+             string UserAnswerToCut = Console.ReadLine();
 
-            int NumberStartOf = 0;
 
-            for (int i = 0; i < Lesson2.Length - 1; i++)
+             char CharOfUserAnswerToCuT = UserAnswerToCut[0];
+             char CharOfUserAnswerToCuT2 = UserAnswerToCut[1];
+
+             int NumberStartOf = 0;
+
+             for (int i = 0; i < Lesson2.Length; i++)
+             {
+                 if (CharOfUserAnswerToCuT == Lesson2[i] && CharOfUserAnswerToCuT2 == Lesson2[i+1])
+                 {
+                    NumberStartOf = i + 1;  // Dziwnie, żeby na pozycji 0 się zaczynało ;)
+                 }
+             }
+             Console.WriteLine("Wybrane przez Ciebie słowo zaczyna się na pozycji nr : " + NumberStartOf);
+             Console.ReadKey(); */
+
+            // -----------------------------------------------------------------------------------------------
+            // Zadania domowe nr 2 (Lekcja nr 2 01.07.2017) Quiz
+
+            string[] QuizQuestion = new string[]
             {
-                if (CharOfUserAnswerToCuT == Lesson2[i] && CharOfUserAnswerToCuT2 == Lesson2[i+1])
+                "1. Kto stworzył 'Gwiezdne Wojny ?",
+                "2. W którym roku odbyła się premiera 'Star Wars Episode IV: A New Hope' ?",
+                "3. Najbardziej znany droid naprawczy z serii 'Star Wars' to ?",
+                "4. Kto był odpowiedzialny za utrzymywanie pokoju w Republice Galaktycznej ?",
+                "5. Najbardziej znany czarny charakter ze świata 'Star Wars' to ?"
+            };
+
+            string[][] QuizQuestionAnswer = new string[QuizQuestion.Length][];
+
+            int QuizIndexer = 0;
+            int PlayerScore = 0;
+            int GoodAnswer = 0;
+            int BadAnswer = 0;
+            char AnswerQuiz;
+            char[] RightAnswer = new char[] {'a', 'b', 'c', 'c', 'b'};
+
+            QuizQuestionAnswer[QuizIndexer++] = new string[] {"a) George Lucas", "b) Steven Spielberg", "c) Tom Hanks", "d) Christopher Nolan"};
+            QuizQuestionAnswer[QuizIndexer++] = new string[] {"a) 1998", "b) 1977", "c) 2001", "d) 1971"};
+            QuizQuestionAnswer[QuizIndexer++] = new string[] {"a) R4-P17", "b) C-3PO", "c) R2-D2", "d) Jabba the Hutt"};
+            QuizQuestionAnswer[QuizIndexer++] = new string[] {"a) Ewoki", "b) Sithowie", "c) Zakon rycerzy Jedi", "d) Huttowie"};
+            QuizQuestionAnswer[QuizIndexer++] = new string[] {"a) Mace Windu", "b) Darth Vader", "c) Han Solo", "d) Luke Skywalker"};
+
+            for (int i = 0; i < QuizQuestion.Length; i++)
+            {
+                Console.WriteLine("\n" + QuizQuestion[i] + "\n");
+
+                for (int j = 0; j < QuizQuestionAnswer[i].Length; j++)
                 {
-                   NumberStartOf = i + 1;  // Dziwnie, żeby na pozycji 0 się zaczynało ;)
+                    Console.WriteLine(QuizQuestionAnswer[i][j]);
                 }
+                
+                    Console.Write("\nTwoja odpowiedź : ");
+                    AnswerQuiz = Console.ReadKey().KeyChar;
+
+                if (AnswerQuiz == RightAnswer[i])
+                    {
+                        PlayerScore++;
+                        GoodAnswer++;
+                    }
+                        else
+                    {
+                        BadAnswer++;
+                    }
+                
+                
+                Console.WriteLine("");
+                
             }
-            Console.WriteLine("Wybrane przez Ciebie słowo zaczyna się na pozycji nr : " + NumberStartOf);
+            Console.WriteLine("");
+            Console.WriteLine("Twój wynik : " + PlayerScore + " punktów");
+            Console.WriteLine("Poprawne odpowiedzi : " + GoodAnswer);
+            Console.WriteLine("Błędne odpowiedzi : " + BadAnswer);
             Console.ReadKey();
         }
     }
