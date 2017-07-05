@@ -105,6 +105,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.JarekGie", "T
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JarekGie", "JarekGie", "{532983CB-565D-418B-BCA0-CB0B91E95FCB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maksymalnaWartośćTablicy", "maksymalnaWartośćTablicy\maksymalnaWartośćTablicy.csproj", "{9747D00B-9177-498F-B7CA-463D66283C57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -267,6 +269,10 @@ Global
 		{9F1AC648-30D1-49E0-98A2-0E47031601E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F1AC648-30D1-49E0-98A2-0E47031601E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F1AC648-30D1-49E0-98A2-0E47031601E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9747D00B-9177-498F-B7CA-463D66283C57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9747D00B-9177-498F-B7CA-463D66283C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9747D00B-9177-498F-B7CA-463D66283C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9747D00B-9177-498F-B7CA-463D66283C57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -314,5 +320,6 @@ Global
 		{7373BB2A-BA04-4CBB-B2B6-828B10445065} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
 		{9F1AC648-30D1-49E0-98A2-0E47031601E8} = {532983CB-565D-418B-BCA0-CB0B91E95FCB}
 		{532983CB-565D-418B-BCA0-CB0B91E95FCB} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
+		{9747D00B-9177-498F-B7CA-463D66283C57} = {532983CB-565D-418B-BCA0-CB0B91E95FCB}
 	EndGlobalSection
 EndGlobal
