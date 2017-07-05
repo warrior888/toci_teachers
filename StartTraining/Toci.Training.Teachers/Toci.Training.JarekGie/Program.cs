@@ -10,24 +10,24 @@ namespace Toci.Training.JarekGie
     {
         static void Main(string[] args)
         {
-            int i;
+           
             Console.WriteLine("Napisz coś :");
             string tekst = Console.ReadLine();
 
             string[] tablicaStringow = new string[10];
 
-            for (i = 0; i < tablicaStringow.Length; i++)
+            for (int i = 0; i < tablicaStringow.Length; i++)
             {
                 tablicaStringow[i] = Console.ReadLine();
                 Console.WriteLine("Dodano :" + tablicaStringow[i]);
-
+                if (i == tablicaStringow.Length - 1)
+                {
+                    Console.WriteLine("Koniec tablicy");
+                }
             }
-            if (i == tablicaStringow.Length)
-            {
-                Console.WriteLine("Koniec tablicy");
-            }
+            
             /*
-            for (i = 0; i < tablicaStringow.Length; i++)
+            for (int i = 0; i < tablicaStringow.Length; i++)
             {
                 Console.WriteLine("W tablicy :" + tablicaStringow[i]);
             }
