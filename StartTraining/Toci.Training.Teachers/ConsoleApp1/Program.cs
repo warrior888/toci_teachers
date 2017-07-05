@@ -78,29 +78,56 @@ namespace ConsoleApp1
 
             }
 
-            Console.WriteLine("Max to: {0} Min to: {1}", resultMax, resultMin);
+            Console.WriteLine("Max to: {0}, Min to: {1}, Wystapienia: {2}, Suma to: {3}", resultMax, resultMin,Occurrence,sumOfNumber);
             //Console.Write("Liczby od użytkownika: {0}", values); // wywala int 32, cos zle zrobilem
             //Console.ReadLine();
 
-            //sprawdzanie czy sie rowna
+            // HomeWork Training 2 |ex. 1
 
-            string string1 = "Nie wiedziaem jak zaprogramowac wiec uzylem gotowej funkcji";
+            string string1 = "Nie jak talala";
             string example = "jak";
-            for (int i = 0, j=string1.Length-1; i < string1.Length-example.Length-1 && j>=0; i++,j--)
+            string result = "";
+
+
+
+
+
+
+            for (int i = 0; i < string1.Length - 1 - example.Length - 1; i++)
             {
-               
-                    
-
-                if (String.Equals(example, string1.Substring(i+1,j-example.Length-1)))
+                for (int j = string1.Length - 1 - example.Length; j >= example.Length - 1; j--)
                 {
-                    Console.WriteLine(i);
-                    
-                    
+                    result = string1.Substring(i, j);
+
+                    if (String.Equals(example, result))
+                    {
+                        Console.WriteLine(i + "  aaaaa znalazlem");
+                    }
                 }
-
             }
-            
 
+
+            string result2 = "";
+                    int f = example.Length;
+                    for (int k = 0; k < string1.Length - example.Length-1; k++)
+                    {
+                        result = string1.Substring(k, f);
+
+                                if (String.Equals(example, result2))
+                                {
+                                    Console.WriteLine(k + "  aaaaa znalazlem");
+                                }
+                        
+
+                        
+                        
+                        Console.WriteLine("to: {0}, {1}",k,f);
+                        Console.WriteLine(result);
+
+
+                    }
+
+                
 
             
 
