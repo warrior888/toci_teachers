@@ -109,6 +109,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maksymalnaWartośćTablicy"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minimalnaWartoscTablicy", "minimalnaWartoscTablicy\minimalnaWartoscTablicy.csproj", "{CA11D3E0-485F-40A9-A92D-0698F1802DA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sumaElementów", "sumaElementów\sumaElementów.csproj", "{39F5CE3B-D4F0-4017-B3D5-42A58521A97D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -279,6 +281,10 @@ Global
 		{CA11D3E0-485F-40A9-A92D-0698F1802DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA11D3E0-485F-40A9-A92D-0698F1802DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA11D3E0-485F-40A9-A92D-0698F1802DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39F5CE3B-D4F0-4017-B3D5-42A58521A97D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F5CE3B-D4F0-4017-B3D5-42A58521A97D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F5CE3B-D4F0-4017-B3D5-42A58521A97D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39F5CE3B-D4F0-4017-B3D5-42A58521A97D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -328,5 +334,6 @@ Global
 		{532983CB-565D-418B-BCA0-CB0B91E95FCB} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
 		{9747D00B-9177-498F-B7CA-463D66283C57} = {532983CB-565D-418B-BCA0-CB0B91E95FCB}
 		{CA11D3E0-485F-40A9-A92D-0698F1802DA6} = {532983CB-565D-418B-BCA0-CB0B91E95FCB}
+		{39F5CE3B-D4F0-4017-B3D5-42A58521A97D} = {532983CB-565D-418B-BCA0-CB0B91E95FCB}
 	EndGlobalSection
 EndGlobal
