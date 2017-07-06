@@ -10,6 +10,7 @@ namespace Toci.Training.JarekGie
     {
         static void Main(string[] args)
         {
+           // Console.ReadKey();
         }
     }
 }
