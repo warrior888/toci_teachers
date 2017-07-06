@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Toci.Training.JarekGie
 {
-    class Program
+    class TablicaStr
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }

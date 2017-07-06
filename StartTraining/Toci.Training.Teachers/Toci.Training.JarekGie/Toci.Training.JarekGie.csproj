@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9F1AC648-30D1-49E0-98A2-0E47031601E8}</ProjectGuid>
+    <ProjectGuid>{546D4F18-F8FB-4BFC-9DB7-D2164DAF1C9D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Toci.Training.JarekGie</RootNamespace>
     <AssemblyName>Toci.Training.JarekGie</AssemblyName>
@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TablicaStr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
