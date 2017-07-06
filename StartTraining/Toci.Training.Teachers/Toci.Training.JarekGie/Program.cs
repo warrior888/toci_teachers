@@ -43,7 +43,7 @@ namespace Toci.Training.JarekGie
 
             //Zadanie 2.1 - Największy element tablicy
 
-            
+
             int max;
             int[] tablica1 = new int[10];
 
