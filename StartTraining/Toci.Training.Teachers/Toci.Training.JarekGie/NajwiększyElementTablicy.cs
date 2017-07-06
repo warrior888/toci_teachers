@@ -10,7 +10,7 @@ namespace Toci.Training.JarekGie
     {
         //deklaracja zmiennych celowo na samej górze, żeby uniknąć 
         //śmieci w kodzie ( jeśli źle rozumuję, to poprawcie mnie ;) )
-        int i, max;
+        int max;
         int[] tablica = new int[10];
 
         //klasa generująca liczby pseudolosowe
@@ -18,14 +18,14 @@ namespace Toci.Training.JarekGie
            
             
             //wypełniam tablicę liczbami pseudolosowymi
-            for (i = 0;i<tablica.Length; i++)
+            for (int i = 0 , i<tablica.Length, i++)
             {
                 tablica[i] =r.Next(10);
                 Console.Write(tablica[i] + " ");
             }
 
     //Przejście do nowej linii
-    Console.WriteLine();
+			Console.WriteLine();
             max = tablica[9];
 
             for (i = 0; i<tablica.Length; i++)
