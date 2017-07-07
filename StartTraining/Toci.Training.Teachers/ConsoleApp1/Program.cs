@@ -59,18 +59,20 @@ namespace ConsoleApp1
 
             string lenghtOfTable = Console.ReadLine();
 
-            int lenghtOfNumber =0;
+            
 
-            int.TryParse(lenghtOfTable, out lenghtOfNumber);
+            int wow = Convert.ToInt32(lenghtOfTable);
 
-            //int[] values;
+            //int.TryParse(lenghtOfTable, out lenghtOfNumber);
 
-            //values = new[lenghtOfNumber];// Jak tutaj zainicjowac tablice??
+            int[] values;
 
-            for (int j = 0; j < lenghtOfNumber; j++)
+            values= new int[wow];
+
+            for (int j = 0; j < values.Length; j++)
             {
                 Console.WriteLine("Podaj liczbe: {0}", j + 1);
-                //values[j] = Convert.ToInt32(Console.ReadLine());
+                values[j] = Convert.ToInt32(Console.ReadLine());
                 
 
 
@@ -79,8 +81,8 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine("Max to: {0}, Min to: {1}, Wystapienia: {2}, Suma to: {3}", resultMax, resultMin,Occurrence,sumOfNumber);
-            //Console.Write("Liczby od użytkownika: {0}", values); // wywala int 32, cos zle zrobilem
-            //Console.ReadLine();
+             
+            
 
             // HomeWork Training 2 |ex. 1
 
@@ -120,19 +122,62 @@ namespace ConsoleApp1
                            break;
 
                         }
-                        
-
-                        
-                        
-                        
-                        
-
-
                     }
 
-                
+            // Quiz zad
+            string[] quizQuestions =
+            {
+                "Brazylia pod wodzą Dungi odniosła już 10 kolejnych zwycięstw. Z kim wygrała ostatni mecz?",
+                "FC Barcelona po raz drugi w historii wywalczyła potrójną koronę. Kiedy uczyniła to pierwszy raz?",
+                "Która z wymienionych reprezentacji nigdy nie wygrała Copa America?",
+                "Ile występów w reprezentacji Polski A ma Łukasz Szukała?",
+                "W którym z krajów w minionym sezonie nie grał Łukasz Gikiewicz?",
+            };
 
-            
+            string[][] quizQuestionsAnswers = new string[quizQuestions.Length][];
+
+            int quizQIndexer = 0;
+
+            quizQuestionsAnswers[quizQIndexer++] = new string[] { "z Jamajką", "z Kostaryką", "z Hondurasem"};
+            quizQuestionsAnswers[quizQIndexer++] = new string[] { "w 2006 roku", "w 2009 roku", "w 2011 roku"};
+            quizQuestionsAnswers[quizQIndexer++] = new string[] { "Peru", "Kolumbia", "Chile"};
+            quizQuestionsAnswers[quizQIndexer++] = new string[] { "8", "10", "11"};
+            quizQuestionsAnswers[quizQIndexer++] = new string[] { "Cypr", "Bułgaria", "Rumunia" };
+
+
+            char[] quizAnswers= {'c','b','a','c','c'};
+            char answerTheUser = '';
+            int correctAnswer = 0;
+            int inCorrectAnswer = 0;
+
+
+            //Console.WriteLine(quizQuestions);
+
+            for (int i = 0; i < quizQuestions.Length; i++)
+            {
+                Console.WriteLine(quizQuestions[i]);
+
+                for (int j = 0; j < quizQuestionsAnswers[i].Length; j++)
+                {
+                    Console.WriteLine(quizQuestionsAnswers[i][j]);
+                }
+
+                Console.WriteLine("Podaj odpowiedz : ");
+                answerTheUser = Convert.ToChar(Console.ReadKey());
+                    if (quizAnswers[i] == answerTheUser)
+                    {
+                        correctAnswer++;
+                    }
+                    else
+                    {
+                        inCorrectAnswer++;
+                    }
+
+
+            }
+                Console.WriteLine("Liczba poprawnych odpowiedzi to: "+correctAnswer);
+                Console.WriteLine("Liczba blednych odpowiedzi to: "+inCorrectAnswer);
+
 
 
         }

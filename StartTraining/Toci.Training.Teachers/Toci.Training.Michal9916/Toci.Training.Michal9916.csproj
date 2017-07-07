@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A9EB2AC2-8889-47FD-B9A6-29390A2EB489}</ProjectGuid>
+    <ProjectGuid>{0D2C5C5F-8535-4B5A-93B4-BBD62FB13CE3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Toci.Training.JarekGie</RootNamespace>
-    <AssemblyName>Toci.Training.JarekGie</AssemblyName>
+    <RootNamespace>Toci.Training.Michal9916</RootNamespace>
+    <AssemblyName>Toci.Training.Michal9916</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

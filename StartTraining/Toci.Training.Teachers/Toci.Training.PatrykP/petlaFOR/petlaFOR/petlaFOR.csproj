@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A9EB2AC2-8889-47FD-B9A6-29390A2EB489}</ProjectGuid>
+    <ProjectGuid>{BE835027-2F05-4A56-A445-390DD1F8059C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Toci.Training.JarekGie</RootNamespace>
-    <AssemblyName>Toci.Training.JarekGie</AssemblyName>
+    <RootNamespace>petlaFOR</RootNamespace>
+    <AssemblyName>petlaFOR</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

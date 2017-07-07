@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A9EB2AC2-8889-47FD-B9A6-29390A2EB489}</ProjectGuid>
+    <ProjectGuid>{5F55268F-C841-4F72-8D7F-EA191C4363FD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Toci.Training.JarekGie</RootNamespace>
-    <AssemblyName>Toci.Training.JarekGie</AssemblyName>
+    <RootNamespace>Translator_kodu_ascii</RootNamespace>
+    <AssemblyName>Translator_kodu_ascii</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
