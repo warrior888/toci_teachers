@@ -10,6 +10,7 @@ namespace Toci.Training.DamianG
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hey");
         }
     }
 }
