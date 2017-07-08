@@ -119,6 +119,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "petlaFOR", "Toci.Training.P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translator_kodu_ascii", "Toci.Training.PatrykP\Translator_kodu_ascii\Translator_kodu_ascii\Translator_kodu_ascii.csproj", "{5F55268F-C841-4F72-8D7F-EA191C4363FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework week1", "homework week1\homework week1.csproj", "{1ECB0DB4-F9F9-4C8A-82B6-17EE27013094}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -305,6 +307,10 @@ Global
 		{5F55268F-C841-4F72-8D7F-EA191C4363FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F55268F-C841-4F72-8D7F-EA191C4363FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F55268F-C841-4F72-8D7F-EA191C4363FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ECB0DB4-F9F9-4C8A-82B6-17EE27013094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ECB0DB4-F9F9-4C8A-82B6-17EE27013094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ECB0DB4-F9F9-4C8A-82B6-17EE27013094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ECB0DB4-F9F9-4C8A-82B6-17EE27013094}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -359,5 +365,6 @@ Global
 		{B8C5D0B9-AA5D-445E-B908-FD4B2E3B4547} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 		{BE835027-2F05-4A56-A445-390DD1F8059C} = {B8C5D0B9-AA5D-445E-B908-FD4B2E3B4547}
 		{5F55268F-C841-4F72-8D7F-EA191C4363FD} = {B8C5D0B9-AA5D-445E-B908-FD4B2E3B4547}
+		{1ECB0DB4-F9F9-4C8A-82B6-17EE27013094} = {B8C5D0B9-AA5D-445E-B908-FD4B2E3B4547}
 	EndGlobalSection
 EndGlobal
