@@ -146,7 +146,7 @@ namespace ConsoleApp1
 
 
             char[] quizAnswers= {'c','b','a','c','c'};
-            char answerTheUser = '';
+            char answerTheUser;
             int correctAnswer = 0;
             int inCorrectAnswer = 0;
 
