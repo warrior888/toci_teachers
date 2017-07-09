@@ -10,6 +10,7 @@ namespace Toci.Training.JarekGie
     {
         static void Main(string[] args)
         {
+            /*
             //zadanie 1.1 - Dodawanie stringów do tablicy
 
             string[] tablicaStringow = new string[10];
@@ -128,6 +129,35 @@ namespace Toci.Training.JarekGie
                 wynik += tab[i];
             }
             Console.WriteLine("Suma elementów to: " + wynik);
+            */
+
+
+            //zliczanie wystąpień elementów w tablicy
+
+            int suma,
+                szukam;
+
+            int[] elementy = new int[10] { 2, 2, 2, 2, 45, 3, 7, 8, 9, 11 };
+           
+
+            for (int i = 0; i < elementy.Length; i++)
+            {
+                Console.Write(elementy[i] + " ");
+            }
+            suma = 0;
+            szukam = 2;
+            for (int i = 0; i < elementy.Length; i++)
+            {
+                if (elementy[i] == szukam)
+                {
+                    suma = suma + 1;
+                }
+               
+            }
+            Console.Write("Szukana wartość występuje " + suma + " razy ");
+
+
+
             Console.ReadKey();
         }
     }
