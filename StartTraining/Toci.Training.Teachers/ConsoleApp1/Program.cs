@@ -163,7 +163,8 @@ namespace ConsoleApp1
                 }
 
                 Console.WriteLine("Podaj odpowiedz : ");
-                answerTheUser = Convert.ToChar(Console.ReadKey());
+                answerTheUser =Console.ReadKey().KeyChar;
+                Console.ReadLine();
                     if (quizAnswers[i] == answerTheUser)
                     {
                         correctAnswer++;
@@ -173,6 +174,7 @@ namespace ConsoleApp1
                         inCorrectAnswer++;
                     }
 
+                Console.WriteLine();
 
             }
                 Console.WriteLine("Liczba poprawnych odpowiedzi to: "+correctAnswer);
