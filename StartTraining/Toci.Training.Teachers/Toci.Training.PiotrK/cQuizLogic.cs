@@ -17,7 +17,6 @@ namespace Toci.Training.PiotrK
                 "Stanisław Żółkiewski był:",
                 "Nazwa \"Dymitriady\" pochodzi od:",
                 "Lata 1598 - 1613 w historii Rosji określa się jako"
-
              };
 
             // tablica pomocnicza z dobrymi odpowiedziami
