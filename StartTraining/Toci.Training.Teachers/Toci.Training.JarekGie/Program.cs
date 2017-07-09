@@ -132,13 +132,13 @@ namespace Toci.Training.JarekGie
             */
 
 
-            //zliczanie wystąpień elementów w tablicy
+            //Zadanie 5.1 - zliczanie wystąpień elementów w tablicy
 
             int suma,
                 szukam;
 
             int[] elementy = new int[10] { 2, 2, 2, 2, 45, 3, 7, 8, 9, 11 };
-           
+
 
             for (int i = 0; i < elementy.Length; i++)
             {
