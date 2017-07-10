@@ -8,5 +8,7 @@ namespace Toci.Training.JarekGie
 {
    public static class QuizLogic
     {
-    }
-}
+       
+
+    }//class
+}//namespace

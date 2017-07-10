@@ -164,25 +164,43 @@ namespace Toci.Training.JarekGie
 
 
             //sortowanie bąbelkowe
-            int temp;
-            for (int i = 0;i < elementy.Length; i++)
-            {
-                for (int j = 0;j < elementy.Length; j++)
-                {
-                    if (i != j)
-                    {
-                        if (elementy[i] < elementy[j])
-                        {
-                            temp = elementy[i];
-                            elementy[i] = elementy[j];
-                            elementy[j] = temp;
-                        }
-                    }
-                    Console.Write(elementy[j] + " ");
-                }
-                
-            }
+
             
+
+            //int temp;
+            //for (int i = 0;i < elementy.Length; i++)
+            //{
+            //    for (int j = 0;j < elementy.Length; j++)
+            //    {
+            //        if (i != j)
+            //        {
+            //            if (elementy[i] < elementy[j])
+            //            {
+            //                temp = elementy[i];
+            //                elementy[i] = elementy[j];
+            //                elementy[j] = temp;
+            //            }
+            //        }
+                   
+            //    }
+                
+            //}
+
+            //for (int i = 0; i < elementy.Length; i++)
+            //{
+            //    Console.Write(elementy[i] + " ");
+            //}
+
+
+            //sub string
+
+            string imie = "Jarek";
+
+            for (int i = imie.Length - 1; i >= 0;i--)
+            {
+                Console.Write(imie[i]);
+
+            }
 
             Console.ReadKey();
         }//main
