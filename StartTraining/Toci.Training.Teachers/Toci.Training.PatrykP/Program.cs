@@ -10,58 +10,76 @@ namespace petlaFOR
     {
         static void Main(string[] args)
         {
-            //Petla FOR
-            string[] pamiec = new string[5];
+            ////Petla FOR
+            //string[] pamiec = new string[5];
 
-            for (int i = 0; i < pamiec.Length; i++)
-            {
-                Console.WriteLine("Podaj " + i + " informację: ");
-                pamiec[i] = Console.ReadLine();
-            }
-            Console.WriteLine("Dziękujemy, to już wszystkie dane których potrzebowaliśmy!");
-            Console.ReadKey();
+            //for (int i = 0; i < pamiec.Length; i++)
+            //{
+            //    Console.WriteLine("Podaj " + i + " informację: ");
+            //    pamiec[i] = Console.ReadLine();
+            //}
+            //Console.WriteLine("Dziękujemy, to już wszystkie dane których potrzebowaliśmy!");
+            //Console.ReadKey();
 
-            //Translator Kodu ASCII
+            ////Translator Kodu ASCII
 
-            Console.WriteLine("Podaj coś człowieku");
-            string tekst = Console.ReadLine();
+            //Console.WriteLine("Podaj coś człowieku");
+            //string tekst = Console.ReadLine();
 
-            foreach (char znak in tekst)
-            {
-                int i = znak;
+            //foreach (char znak in tekst)
+            //{
+            //    int i = znak;
 
-                if (znak < 97)
-                {
-                    Przelicz(i);
-                    char c = Convert.ToChar(Przelicz(i));
+            //    if (znak < 97)
+            //    {
+            //        Przelicz(i);
+            //        char c = Convert.ToChar(Przelicz(i));
 
-                    Console.WriteLine(c);
-                }
-                if (znak > 97)
-                {
-                    Przelicz2(i);
-                    char a = Convert.ToChar(Przelicz2(i));
-                    Console.WriteLine(a);
-                }
+            //        Console.WriteLine(c);
+            //    }
+            //    if (znak > 97)
+            //    {
+            //        Przelicz2(i);
+            //        char a = Convert.ToChar(Przelicz2(i));
+            //        Console.WriteLine(a);
+            //    }
 
-                Console.ReadKey();
-            }
+            //    Console.ReadKey();
+            //}
 
 
 
 
             //Zadanie domowe tydzień 1
-            int[] tablica = new int[10] {17, 18, 39, 20, 30, 16, 14, 32, 65, 10 };
+          
+            int[] tablica = new int[] {10,11,11,42,12,15,12,51,12,25,43,13,251,45,3,2,234,32,1,2};
             int max = 0;
+            int min = 0;
+            int suma = 0;
+            int powtorzenie = 0;
                 for(int i=0; i<tablica.Length; i++)
             {
-                tablica[i]  = max;
-                Console.WriteLine(max);
-               // if (max < tablica(i))
-                //{
+               
+                if (max < tablica[i])
+                {
+                    max = tablica[i];
+                }
+                if (max > tablica[i])
+                {
+                    min = tablica[i];
+                }
+                suma = tablica[i] + suma; 
 
-                //}
+                if (tablica[i] == 11)
+                {
+                    powtorzenie++;
+                }
+                
             }
+            Console.WriteLine("Maksymalna wartość to: " + max);
+            Console.WriteLine("Minimalna wartość to:" + min);
+            Console.WriteLine("Suma wszyskich elementów wynosi: " + suma);
+            Console.WriteLine("Powtórzeń liczby 11: " + powtorzenie);
             Console.ReadKey();
         }
 
