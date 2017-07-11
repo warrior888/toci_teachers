@@ -20,7 +20,9 @@ namespace Toci.Training.DarekK
             }
             Console.WriteLine("Dziekuje za podanie czterech wyrazów");
             Console.ReadKey();
-            string przyklad = "Dariusz";
+
+
+            string przyklad = "Darek";
             for (int i = przyklad.Length - 1; i >= 0; i--)
             {
                 if (przyklad[i] != 'i')
@@ -28,7 +30,7 @@ namespace Toci.Training.DarekK
                     Console.Write(przyklad[i]);
                 }
             }
-
+            Console.WriteLine();
             int[] dlugoscstring = new int[10];
             for (int i = 0; i < dlugoscstring.Length; i++)
             {
@@ -58,7 +60,6 @@ namespace Toci.Training.DarekK
 
             Console.WriteLine("Koniec");
             Console.ReadKey();
-
         }
     }
 }
