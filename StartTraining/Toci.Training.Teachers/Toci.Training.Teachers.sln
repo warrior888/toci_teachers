@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+<<<<<<< HEAD
 VisualStudioVersion = 15.0.26430.14
+=======
+VisualStudioVersion = 15.0.26228.4
+>>>>>>> c63ca83a790dcdc546133b7bd4a2236b8c49088e
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -99,25 +103,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DamianB", "DamianB", "{C4C3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.DamianB.Quiz", "Toci.Training.DamianB.Quiz\Toci.Training.DamianB.Quiz.csproj", "{432FB3DD-B0F9-4A2E-88D2-98FF43175A2D}"
 EndProject
+<<<<<<< HEAD
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.DamianG", "Toci.Training.DamianG\Toci.Training.DamianG.csproj", "{A97ED228-7994-4F88-B80D-0C442AD0D450}"
+=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.PawelKielkowski", "Toci.Training.PawelKielkowski\Toci.Training.PawelKielkowski.csproj", "{7373BB2A-BA04-4CBB-B2B6-828B10445065}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.JarekGie", "Toci.Training.JarekGie\Toci.Training.JarekGie.csproj", "{9F1AC648-30D1-49E0-98A2-0E47031601E8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JarekGie", "JarekGie", "{532983CB-565D-418B-BCA0-CB0B91E95FCB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "maksymalnaWartośćTablicy", "maksymalnaWartośćTablicy\maksymalnaWartośćTablicy.csproj", "{9747D00B-9177-498F-B7CA-463D66283C57}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minimalnaWartoscTablicy", "minimalnaWartoscTablicy\minimalnaWartoscTablicy.csproj", "{CA11D3E0-485F-40A9-A92D-0698F1802DA6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sumaElementów", "sumaElementów\sumaElementów.csproj", "{39F5CE3B-D4F0-4017-B3D5-42A58521A97D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Michal9916", "Toci.Training.Michal9916\Toci.Training.Michal9916.csproj", "{0D2C5C5F-8535-4B5A-93B4-BBD62FB13CE3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Toci.Training.PatrykP", "Toci.Training.PatrykP", "{B8C5D0B9-AA5D-445E-B908-FD4B2E3B4547}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "petlaFOR", "Toci.Training.PatrykP\petlaFOR\petlaFOR\petlaFOR.csproj", "{BE835027-2F05-4A56-A445-390DD1F8059C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translator_kodu_ascii", "Toci.Training.PatrykP\Translator_kodu_ascii\Translator_kodu_ascii\Translator_kodu_ascii.csproj", "{5F55268F-C841-4F72-8D7F-EA191C4363FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.JarekGie", "Toci.Training.JarekGie\Toci.Training.JarekGie.csproj", "{A9EB2AC2-8889-47FD-B9A6-29390A2EB489}"
+>>>>>>> c63ca83a790dcdc546133b7bd4a2236b8c49088e
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "homework week1", "homework week1\homework week1.csproj", "{1ECB0DB4-F9F9-4C8A-82B6-17EE27013094}"
 EndProject
@@ -275,10 +267,17 @@ Global
 		{432FB3DD-B0F9-4A2E-88D2-98FF43175A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{432FB3DD-B0F9-4A2E-88D2-98FF43175A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{432FB3DD-B0F9-4A2E-88D2-98FF43175A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
+		{A97ED228-7994-4F88-B80D-0C442AD0D450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A97ED228-7994-4F88-B80D-0C442AD0D450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A97ED228-7994-4F88-B80D-0C442AD0D450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A97ED228-7994-4F88-B80D-0C442AD0D450}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
 		{7373BB2A-BA04-4CBB-B2B6-828B10445065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7373BB2A-BA04-4CBB-B2B6-828B10445065}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7373BB2A-BA04-4CBB-B2B6-828B10445065}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7373BB2A-BA04-4CBB-B2B6-828B10445065}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{9F1AC648-30D1-49E0-98A2-0E47031601E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9F1AC648-30D1-49E0-98A2-0E47031601E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F1AC648-30D1-49E0-98A2-0E47031601E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -311,6 +310,13 @@ Global
 		{1ECB0DB4-F9F9-4C8A-82B6-17EE27013094}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ECB0DB4-F9F9-4C8A-82B6-17EE27013094}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ECB0DB4-F9F9-4C8A-82B6-17EE27013094}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{A9EB2AC2-8889-47FD-B9A6-29390A2EB489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9EB2AC2-8889-47FD-B9A6-29390A2EB489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9EB2AC2-8889-47FD-B9A6-29390A2EB489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9EB2AC2-8889-47FD-B9A6-29390A2EB489}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> c63ca83a790dcdc546133b7bd4a2236b8c49088e
+>>>>>>> c9817d1687eb4b9c029e74f5af306d94cbc96f2c
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -355,7 +361,11 @@ Global
 		{2C9ECCF9-20D0-4E45-BEBB-0A40B0A2DB3D} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
 		{C4C37E01-62AF-4395-B20E-017DD46EF095} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
 		{432FB3DD-B0F9-4A2E-88D2-98FF43175A2D} = {C4C37E01-62AF-4395-B20E-017DD46EF095}
+<<<<<<< HEAD
+		{A97ED228-7994-4F88-B80D-0C442AD0D450} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
+=======
 		{7373BB2A-BA04-4CBB-B2B6-828B10445065} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
+<<<<<<< HEAD
 		{9F1AC648-30D1-49E0-98A2-0E47031601E8} = {532983CB-565D-418B-BCA0-CB0B91E95FCB}
 		{532983CB-565D-418B-BCA0-CB0B91E95FCB} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
 		{9747D00B-9177-498F-B7CA-463D66283C57} = {532983CB-565D-418B-BCA0-CB0B91E95FCB}
@@ -366,5 +376,9 @@ Global
 		{BE835027-2F05-4A56-A445-390DD1F8059C} = {B8C5D0B9-AA5D-445E-B908-FD4B2E3B4547}
 		{5F55268F-C841-4F72-8D7F-EA191C4363FD} = {B8C5D0B9-AA5D-445E-B908-FD4B2E3B4547}
 		{1ECB0DB4-F9F9-4C8A-82B6-17EE27013094} = {B8C5D0B9-AA5D-445E-B908-FD4B2E3B4547}
+=======
+		{A9EB2AC2-8889-47FD-B9A6-29390A2EB489} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
+>>>>>>> c63ca83a790dcdc546133b7bd4a2236b8c49088e
+>>>>>>> c9817d1687eb4b9c029e74f5af306d94cbc96f2c
 	EndGlobalSection
 EndGlobal
