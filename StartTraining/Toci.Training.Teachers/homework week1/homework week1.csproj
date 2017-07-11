@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5F55268F-C841-4F72-8D7F-EA191C4363FD}</ProjectGuid>
+    <ProjectGuid>{1ECB0DB4-F9F9-4C8A-82B6-17EE27013094}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Translator_kodu_ascii</RootNamespace>
-    <AssemblyName>Translator_kodu_ascii</AssemblyName>
+    <RootNamespace>homework_week1</RootNamespace>
+    <AssemblyName>homework week1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

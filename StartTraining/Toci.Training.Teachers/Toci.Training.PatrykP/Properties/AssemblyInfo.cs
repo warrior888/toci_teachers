@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Ogólne informacje o zestawie są kontrolowane poprzez następujący 
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
-[assembly: AssemblyTitle("Translator_kodu_ascii")]
+[assembly: AssemblyTitle("Toci.Training.PatrykP")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Translator_kodu_ascii")]
+[assembly: AssemblyProduct("Toci.Training.PatrykP")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Następujący identyfikator GUID jest identyfikatorem biblioteki typów w przypadku udostępnienia tego projektu w modelu COM
-[assembly: Guid("5f55268f-c841-4f72-8d7f-ea191c4363fd")]
+[assembly: Guid("02d81d4c-4ccb-4118-8741-f917f4a7d16b")]
 
 // Informacje o wersji zestawu zawierają następujące cztery wartości:
 //
