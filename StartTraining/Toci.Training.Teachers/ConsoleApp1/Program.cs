@@ -146,7 +146,7 @@ namespace ConsoleApp1
 
 
             char[] quizAnswers= {'c','b','a','c','c'};
-            char answerTheUser = '';
+            char answerTheUser;
             int correctAnswer = 0;
             int inCorrectAnswer = 0;
 
@@ -163,7 +163,8 @@ namespace ConsoleApp1
                 }
 
                 Console.WriteLine("Podaj odpowiedz : ");
-                answerTheUser = Convert.ToChar(Console.ReadKey());
+                answerTheUser =Console.ReadKey().KeyChar;
+                Console.ReadLine();
                     if (quizAnswers[i] == answerTheUser)
                     {
                         correctAnswer++;
@@ -173,6 +174,7 @@ namespace ConsoleApp1
                         inCorrectAnswer++;
                     }
 
+                Console.WriteLine();
 
             }
                 Console.WriteLine("Liczba poprawnych odpowiedzi to: "+correctAnswer);
