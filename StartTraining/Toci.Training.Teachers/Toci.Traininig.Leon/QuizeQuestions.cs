@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Toci.Traininig.Leon
 {
-    public class Quize
+    public class QuizeQuestion
     {
-        string[] QuizeQuestions = new string[]
+        public string[] QuizeQuestions = new string[]
         {
             "Which of the below is a loop?",
             "Which of the below is a variable?",
@@ -16,9 +16,5 @@ namespace Toci.Traininig.Leon
             "Which of the below starts a block code?",
             "Which of the below is an array indexer?",
         };
-
-        string[][] QuizeQuestionsAnswers = new string[5][];
-
-        //QuizeQuestionsAnswers[0] = new string[] {};
     }
 }
