@@ -1,3 +1,3 @@
 <?php
-	echo 'To jest jakiœ przyk³adowy plik php';
+	echo 'To jest jakiÅ› przykÅ‚adowy plik php';
 ?>
