@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Toci.Training.Teachers
+namespace Toci.Training.DamianG
 {
-    public static class QuizLogic
+    class Program
     {
+        static void Main(string[] args)
         {
+            Console.WriteLine("Hey");
         }
     }
 }

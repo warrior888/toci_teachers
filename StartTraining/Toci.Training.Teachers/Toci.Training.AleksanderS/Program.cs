@@ -157,7 +157,7 @@ namespace Toci.Training.AleksanderS
         }
         */
 
-        static void AleksanderS(string[] args)
+        static void Main(string[] args)
         {
             //interfejs
             Console.WriteLine("Wybierz zadanie:");
