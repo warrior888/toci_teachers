@@ -10,11 +10,24 @@ namespace Toci_training
         static void Main(string[] args)
         {
             Console.WriteLine("Wpisz tekst: ");
-            string textFromUserImput = Console.ReadLine();
+            string textFromUserInput = Console.ReadLine();
 
-            Console.WriteLine("długość tekstu = {0}", textFromUserImput.Length);
+            //Console.WriteLine("podaj długość tablicy: ");
+            //int countFromUserInput = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("długość tekstu = {0}", textFromUserInput.Length);
 
+            //int[] example = new int[countFromUserInput];
+            char mark = '-';
+            for (int i = 0; i < textFromUserInput.Length; i++)
+            {
+                Console.Write("{0}", textFromUserInput[i]);
+
+                if (i < textFromUserInput.Length - 1)
+                {
+                    Console.Write(mark);
+                }
+            }
 
             Console.ReadKey();
         }
