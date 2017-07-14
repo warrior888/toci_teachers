@@ -55,14 +55,24 @@ namespace Toci.Training.PawelK
 
             //quiz_stop
 
-           /* int IndexOf(string text,string index)
+            int IndexOf(string text,char index)
             {
                 int indexOf = 0;
-                for(int i = 0 ; )
+                for(int i = 0 ;i< text.Length; i++ )
+                {
+                    
+                    if (text[i] == index)
+                    {
+                        indexOf = i;
+                    }
+                }
 
 
                 return indexOf;
-            }*/
+            }
+
+
+            Console.WriteLine(IndexOf("ala ma kota", 'a'));
 
             /*int maxValue (int [] tabfun )
            {
