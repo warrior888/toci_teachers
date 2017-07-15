@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 /*
+ *  zadanie     - translacja liter duże/małe na tablicy kodów ascii
     zadanie 1.1 - Dodawanie stringów do tablicy
     Zadanie 2.1 - Największy element tablicy
     Zadanie 3.1 - Najmniejszy element tablicy
@@ -165,7 +166,7 @@ namespace Toci.Training.JarekGie
 
             //sortowanie bąbelkowe
 
-            
+
 
             //int temp;
             //for (int i = 0;i < elementy.Length; i++)
@@ -181,9 +182,9 @@ namespace Toci.Training.JarekGie
             //                elementy[j] = temp;
             //            }
             //        }
-                   
+
             //    }
-                
+
             //}
 
             //for (int i = 0; i < elementy.Length; i++)
@@ -191,7 +192,7 @@ namespace Toci.Training.JarekGie
             //    Console.Write(elementy[i] + " ");
             //}
 
-
+            /*
             //sub string
 
             string imie = "Jarek";
@@ -201,8 +202,27 @@ namespace Toci.Training.JarekGie
                 Console.Write(imie[i]);
 
             }
+            */
+            //Quiz
+
+            string[] quizQuestions = new string[]
+            {
+                "Czy język C# jest językiem .Net",
+                "Który typ jest typem logicznym?",
+                "Co przechowuje zmienna o typie int?"
+            };
+            string[][] quizAnswers = new string[quizQuestions.Length][];
+            int quizIndexer = 0;
+            quizAnswers[quizIndexer++] = new string[] { "a) tak", "b)nie" };
+            quizAnswers[quizIndexer++] = new string[] { "a) int", "b)bool","c)double","float" };
+            quizAnswers[quizIndexer++] = new string[] { "a) liczby dodatnie", "b)liczby całkowite","c)łańcuchy znaków",
+                                                        "d)pojedynczy znak" };
+
 
             Console.ReadKey();
+
+
+
         }//main
     }//class
 }//namespace

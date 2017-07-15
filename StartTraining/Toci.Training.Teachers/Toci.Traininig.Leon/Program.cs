@@ -9,7 +9,7 @@ namespace Toci.Treining.Leon
     class Program
     {
         static void Main(string[] args)
-        {
+        {/*
             ASCIIEncoding ascii = new ASCIIEncoding();
             string text = "TO CI dopiero";
 
@@ -148,7 +148,7 @@ namespace Toci.Treining.Leon
             
 
             Console.WriteLine(IndedexOf("latem chce sie na morze", "sie"));
-            
+            */
             // Quize 
 
             string[] QuizeQuestions =
