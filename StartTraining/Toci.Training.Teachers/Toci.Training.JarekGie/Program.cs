@@ -207,13 +207,17 @@ namespace Toci.Training.JarekGie
 
             string[] quizQuestions = new string[]
             {
-                "Czy C# jest językiem .NET ",
-                "Któa ze zmiennych jest zmienną logiczną",
-                "Który typ zmiennych przechowuje liczby całkowite",
+                "Czy język C# jest językiem .Net",
+                "Który typ jest typem logicznym?",
+                "Co przechowuje zmienna o typie int?"
             };
-
             string[][] quizAnswers = new string[quizQuestions.Length][];
-            quizQuestions[0] = new string[] { };
+            int quizIndexer = 0;
+            quizAnswers[quizIndexer++] = new string[] { "a) tak", "b)nie" };
+            quizAnswers[quizIndexer++] = new string[] { "a) int", "b)bool","c)double","float" };
+            quizAnswers[quizIndexer++] = new string[] { "a) liczby dodatnie", "b)liczby całkowite","c)łańcuchy znaków",
+                                                        "d)pojedynczy znak" };
+
 
             Console.ReadKey();
 
