@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Toci.Training.JarekGie
 {
-   public static class QuizLogic
+   public class QuizLogic
     {
-       
-
+      
+        
     }//class
 }//namespace
