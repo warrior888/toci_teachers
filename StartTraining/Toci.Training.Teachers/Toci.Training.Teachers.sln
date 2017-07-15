@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -110,6 +110,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.PatrykP", "Toci.Training.PatrykP\Toci.Training.PatrykP.csproj", "{02D81D4C-4CCB-4118-8741-F917F4A7D16B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Michal9916", "Toci.Training.Michal9916\Toci.Training.Michal9916.csproj", "{0D2C5C5F-8535-4B5A-93B4-BBD62FB13CE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "szaserzy", "szaserzy", "{64DCB183-70F6-497A-8F8B-35A5513D7E60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.ArekR", "Toci.Training.ArekR\Toci.Training.ArekR.csproj", "{EF161936-FDAD-4E7B-800B-1F0700AB5DDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -289,6 +293,10 @@ Global
 		{0D2C5C5F-8535-4B5A-93B4-BBD62FB13CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D2C5C5F-8535-4B5A-93B4-BBD62FB13CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D2C5C5F-8535-4B5A-93B4-BBD62FB13CE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF161936-FDAD-4E7B-800B-1F0700AB5DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF161936-FDAD-4E7B-800B-1F0700AB5DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF161936-FDAD-4E7B-800B-1F0700AB5DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF161936-FDAD-4E7B-800B-1F0700AB5DDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -338,5 +346,6 @@ Global
 		{A9EB2AC2-8889-47FD-B9A6-29390A2EB489} = {6EAC7615-5475-46F9-ABFD-BA9A2A255CAD}
 		{02D81D4C-4CCB-4118-8741-F917F4A7D16B} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 		{0D2C5C5F-8535-4B5A-93B4-BBD62FB13CE3} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
+		{EF161936-FDAD-4E7B-800B-1F0700AB5DDA} = {64DCB183-70F6-497A-8F8B-35A5513D7E60}
 	EndGlobalSection
 EndGlobal
