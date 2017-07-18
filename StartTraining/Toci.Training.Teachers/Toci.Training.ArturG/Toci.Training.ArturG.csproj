@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4B636A26-D9B3-43B0-9CFE-FB787CD719C5}</ProjectGuid>
+    <ProjectGuid>{2170E064-0759-4CC9-AC3A-068C73C13182}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>program1</RootNamespace>
-    <AssemblyName>program1</AssemblyName>
+    <RootNamespace>Toci.Training.ArturG</RootNamespace>
+    <AssemblyName>Toci.Training.ArturG</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

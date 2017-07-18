@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -114,6 +114,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "szaserzy", "szaserzy", "{64DCB183-70F6-497A-8F8B-35A5513D7E60}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.ArekR", "Toci.Training.ArekR\Toci.Training.ArekR.csproj", "{EF161936-FDAD-4E7B-800B-1F0700AB5DDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.ArturG", "Toci.Training.ArturG\Toci.Training.ArturG.csproj", "{2170E064-0759-4CC9-AC3A-068C73C13182}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -297,6 +299,10 @@ Global
 		{EF161936-FDAD-4E7B-800B-1F0700AB5DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF161936-FDAD-4E7B-800B-1F0700AB5DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF161936-FDAD-4E7B-800B-1F0700AB5DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2170E064-0759-4CC9-AC3A-068C73C13182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2170E064-0759-4CC9-AC3A-068C73C13182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2170E064-0759-4CC9-AC3A-068C73C13182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2170E064-0759-4CC9-AC3A-068C73C13182}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -347,5 +353,6 @@ Global
 		{02D81D4C-4CCB-4118-8741-F917F4A7D16B} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 		{0D2C5C5F-8535-4B5A-93B4-BBD62FB13CE3} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
 		{EF161936-FDAD-4E7B-800B-1F0700AB5DDA} = {64DCB183-70F6-497A-8F8B-35A5513D7E60}
+		{2170E064-0759-4CC9-AC3A-068C73C13182} = {48CC1F7F-DD1C-451E-9B50-E7C7066922BA}
 	EndGlobalSection
 EndGlobal

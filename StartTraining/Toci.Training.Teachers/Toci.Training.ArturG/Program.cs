@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace program1
+namespace Toci.Training.ArturG
 {
     class Program
     {
@@ -80,8 +80,6 @@ namespace program1
             }
             Console.WriteLine("Chyba sie udalo xd");
             Console.ReadKey();
-
-
         }
     }
 }
