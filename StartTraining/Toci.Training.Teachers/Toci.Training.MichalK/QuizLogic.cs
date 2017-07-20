@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Toci.Training.MichalK
 {
-    class QuizLogic
+    public static class QuizLogic
     {
+
     }
 }
