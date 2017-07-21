@@ -19,7 +19,7 @@ namespace sortbdk
                 dowyc += tekst[i];
             }
 
-            int[] dane = new int[] { 4,5,15,21,3,123,80,725,1,14 };
+            int[] dane = new int[] { 4, 5, 15, 21, 3, 123, 80, 725, 1, 14 };
             int temp;
             for (int i = 0; i < dane.Length; i++)
             {
@@ -38,4 +38,4 @@ namespace sortbdk
             }
         }
     }
-}
+ }

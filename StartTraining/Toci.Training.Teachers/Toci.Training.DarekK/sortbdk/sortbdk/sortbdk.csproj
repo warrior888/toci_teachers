@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{43E61E76-AE15-4BAB-B3A3-9A97DD874259}</ProjectGuid>
+    <ProjectGuid>{284264EC-6DCC-4B69-8EA6-3B9217ADBAC7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>sortbdk</RootNamespace>
     <AssemblyName>sortbdk</AssemblyName>
