@@ -27,21 +27,14 @@ namespace zadaniadarekk
                 {
                     min = dane[i];
                 }
-                suma = suma + dane[i];
-                tech = dane[i];
-                for (int n = 1; i < dane.Length; i++)
-                {
-                    if (tech == dane[n])
-                    {
-                        naj = naj + 1;
-                    }
-                }
+                suma += dane[i];
+                
             }
 
             Console.WriteLine("Maksymalna liczba to: " + max);
             Console.WriteLine("Minimalna liczba to: " + min);
             Console.WriteLine("Suma: " + suma); 
-            Console.WriteLine("Powtarrzają się "+ naj + "razy");
+            Console.WriteLine("Powtarzają się "+ naj + " razy");
             Console.ReadLine();
             
         }
