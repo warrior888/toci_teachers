@@ -10,15 +10,19 @@ namespace Toci.Training.DarekK
     {
         static void Main(string[] args)
         {
-            string[] tablica = new String[4];
+            Console.WriteLine("Podj ile wyrazów chcesz wpisać");
+            string znakowe = Console.ReadLine();
+            int liczba = 0;
+            int.TryParse(znakowe, out liczba);
+            string[] tablica = new String[liczba];
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < liczba; i++)
             {
                 Console.WriteLine("Podaj wyraz:");
                 string zconsoli = Console.ReadLine();
                 tablica[i] = zconsoli;
             }
-            Console.WriteLine("Dziekuje za podanie czterech wyrazów");
+            Console.WriteLine("Dziekuje za podanie " + liczba + " wyrazów");
             Console.ReadKey();
 
 
