@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.IzaN", "Toci.Training.IzaN\Toci.Training.IzaN.csproj", "{60E5C727-A5E9-446D-9489-F4F60165952E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.MateuszN", "Toci.Training.MateuszN\Toci.Training.MateuszN.csproj", "{AE3BC335-9342-4EDA-98AC-15250FAF847C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +191,10 @@ Global
 		{60E5C727-A5E9-446D-9489-F4F60165952E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60E5C727-A5E9-446D-9489-F4F60165952E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60E5C727-A5E9-446D-9489-F4F60165952E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE3BC335-9342-4EDA-98AC-15250FAF847C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE3BC335-9342-4EDA-98AC-15250FAF847C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE3BC335-9342-4EDA-98AC-15250FAF847C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE3BC335-9342-4EDA-98AC-15250FAF847C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -220,5 +226,6 @@ Global
 		{16881948-8EE9-478F-8A3F-3ED2A8C088FF} = {48CC1F7F-DD1C-451E-9B50-E7C7066922BA}
 		{9485DDD7-78A2-40BD-BC4C-D3A47625A858} = {C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}
 		{60E5C727-A5E9-446D-9489-F4F60165952E} = {C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}
+		{AE3BC335-9342-4EDA-98AC-15250FAF847C} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
 	EndGlobalSection
 EndGlobal
