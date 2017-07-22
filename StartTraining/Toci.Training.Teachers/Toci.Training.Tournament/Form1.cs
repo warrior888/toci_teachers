@@ -13,6 +13,9 @@ namespace Toci.Training.Tournament
     public partial class Form1 : Form
     {
         public string[] Participants = new string[10];
+
+        public List<string> participants = new List<string>();
+
         public int counter = 0;
         TextBox participantNameTextBox = new TextBox();
 
@@ -20,9 +23,12 @@ namespace Toci.Training.Tournament
         {
             InitializeComponent();
 
+            //GhRTournamentDeriving ghr = new GhRTournamentDeriving();
+
+            //ghr.Show();
             //for (int i = 0; i < 10; i++)
             {
-                AddNewParticipantForm(20);
+                AddNewParticipantForm(70);
             }
         }
 
@@ -43,12 +49,13 @@ namespace Toci.Training.Tournament
 
             Controls.Add(participantLabel);
 
-            participantNameTextBox.Location = new Point(150, 20);
+            participantNameTextBox.Location = new Point(150, y);
 
             Button participantAdd = new Button();
 
             participantAdd.Click += ParticipantAdd_Click;
-            participantAdd.Location = new Point(400, 20);
+            //participantAdd.Click +=
+            participantAdd.Location = new Point(400, y);
             participantAdd.Text = "Dodaj";
 
             Controls.Add(participantAdd);
@@ -58,7 +65,7 @@ namespace Toci.Training.Tournament
             //Button
         }
 
-        private void ParticipantAdd_Click(object sender, EventArgs e)
+        protected virtual void ParticipantAdd_Click(object sender, EventArgs e)
         {
             Participants[counter] = participantNameTextBox.Text;
             counter++;
