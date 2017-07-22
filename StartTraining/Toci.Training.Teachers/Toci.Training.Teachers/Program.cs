@@ -19,6 +19,117 @@ namespace Toci.Training.Teachers
             // translacje duze male litery na tabloicy kodow ascii 
             // utf8
 
+            // petla tablice algorytmika
+
+            string[] quizQuestions = 
+            {
+                "Which of the below is a loop ?",
+                "Which of the below is a condition ?",
+                "Which of the below is a variable ?",
+                "Which of the below starts a block code ?",
+                "Which of the below is an array indexer ?",
+            };
+
+            string[][] quizQuestionsAnswers = new string[quizQuestions.Length][];
+
+            int quizQIndexer = 0;
+
+            quizQuestionsAnswers[quizQIndexer++] = new string[] { "a", "b", "c", "d", "e", "f"};
+            quizQuestionsAnswers[quizQIndexer++] = new string[] { "a", "b", "c", "d"};
+            quizQuestionsAnswers[quizQIndexer++] = new string[] { "a", "b", "c", "d"};
+            quizQuestionsAnswers[quizQIndexer++] = new string[] { "a", "b", "c", "d"};
+            quizQuestionsAnswers[quizQIndexer++] = new string[] { "a", "b", "c" };
+
+            //Console.WriteLine(quizQuestions);
+
+            for (int i = 0; i < quizQuestions.Length; i++)
+            {
+                Console.WriteLine(quizQuestions[i]);
+
+                for (int j = 0; j < quizQuestionsAnswers[i].Length; j++)
+                {
+                    Console.WriteLine(quizQuestionsAnswers[i][j]);
+                }
+            }
+            
+            string ourSubstringCandidate = "beatka lubi programowac";
+            
+            int start = 6;
+            int lengthToCut = 6;
+
+            string cutString = "";
+
+            for (int i = start; i < start + lengthToCut; i++)
+            {
+                cutString += ourSubstringCandidate[i];
+            }
+
+
+            int[] content = new int[] { 4,56,3,2,6,8,78,54,45,54,756,78,54,3,2,1,6 };
+
+            int temp;
+
+            for (int i = 0; i < content.Length; i++)
+            {
+                // 0
+                for (int j = 0; j < content.Length; j++)
+                {
+                    // 0 1 2 3 4
+                    if (i != j)
+                    {
+                        if (content[i] < content[j])
+                        {
+                            temp = content[i];
+                            content[i] = content[j];
+                            content[j] = temp;
+                        }
+                    }
+                }
+            }
+
+            int max = int.MinValue;
+
+            for (int i = 0; i < content.Length; i++)
+            {
+                if (max < content[i])
+                {
+                    max = content[i];
+                }
+            }
+
+            int result = max;
+
+
+            int min = int.MaxValue;
+
+            for (int i = content.Length - 1; i >= 0; i--)
+            {
+                if (min > content[i])
+                {
+                    min = content[i];
+                }
+            }
+
+
+            int sum = 0;
+
+            for (int i = content.Length - 1; i >= 0; i--)
+            {
+                sum += content[i];
+            }
+
+            int exampleElement = 78;
+            int countOfExampleElement = 0;
+
+            for (int i = content.Length - 1; i >= 0; i--)
+            {
+                if (content[i] == exampleElement)
+                {
+                    countOfExampleElement++;
+                }
+            }
+
+
             string userInput = Console.ReadLine();
             int userInputNumber = 0;
             int.TryParse(userInput, out userInputNumber);
@@ -29,7 +140,7 @@ namespace Toci.Training.Teachers
 
             string example = "Bartłomiej"; 
 
-            for (int i = example.Length - 1; i >= 0; i--)
+            for (int i = example.Length - 1; i >= 0; i--) // i = 15 i -> 0 length = 16
             {
                 if (example[i] != 'i')
                 {
@@ -40,8 +151,6 @@ namespace Toci.Training.Teachers
             int[] lengthsOfStrings = new int[20];
             //lengthsOfStrings[0] = 2;
 
-            int j = 0;
-            j = j + 1; // j++
             int limit = lengthsOfStrings.Length;
 
             for (int i = 0; i < limit; i++)
