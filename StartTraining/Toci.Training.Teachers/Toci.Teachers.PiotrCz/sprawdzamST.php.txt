@@ -1,0 +1,3 @@
+<?php
+	echo'sprawdzam ST';
+	echo'sprawdzam ST22222';

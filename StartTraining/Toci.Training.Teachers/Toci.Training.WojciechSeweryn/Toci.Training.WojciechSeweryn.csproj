@@ -43,9 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeGenerator.cs" />
+    <Compile Include="MoneyValue.cs" />
+    <Compile Include="PeselValidator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuizLogic.cs" />
+    <Compile Include="Saper.cs" />
+    <Compile Include="TableOperations.cs" />
+    <Compile Include="BankResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleApp1;
 
 namespace ConsoleApp1
 {
     class Program
-    {
-        
+    {   
         static void Main(string[] args)
         {
+
             int[] dane = new int[] { 3, 56, 3, 5, 78, 9, 78, 4, 3, 567, 8 };
             int dlugosc = dane.Length;
             int suma = 0;
@@ -41,7 +42,7 @@ namespace ConsoleApp1
                     }
                 }
             }
-            for(int j = 0; j < dlugosc; j++)
+            for (int j = 0; j < dlugosc; j++)
             {
                 Console.Write(dane[j] + ",");
                 if (dane[j] == szukaj)
