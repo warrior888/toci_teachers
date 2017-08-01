@@ -14,7 +14,7 @@ namespace Toci.Training.Tournament
     {
         public string[] Participants = new string[10];
 
-        public List<string> participants = new List<string>();
+        //public List<string> participants = new List<string>();
 
         public int counter = 0;
         TextBox participantNameTextBox = new TextBox();
@@ -28,7 +28,7 @@ namespace Toci.Training.Tournament
             //ghr.Show();
             //for (int i = 0; i < 10; i++)
             {
-                AddNewParticipantForm(70);
+                AddNewParticipantForm(20);
             }
         }
 
