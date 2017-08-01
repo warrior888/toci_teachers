@@ -10,6 +10,32 @@ namespace Toci.Training.DamianG
     {
         static void Main(string[] args)
         {
+            string[] lengthOfStrings = new string[10];
+
+            int limitS = lengthOfStrings.Length;
+
+            for (int i = 0 ; i < limitS ; i++)
+            {
+                Console.WriteLine("Podaj element");
+                string stringWord = Console.ReadLine();
+
+                lengthOfStrings[i] = stringWord;
+
+                Console.WriteLine(lengthOfStrings[i]);
+
+            }
+
+
+            /*Console.WriteLine("Podaj słowo do odwórcenia");
+            string name = Console.ReadLine();
+            for (int i = name.Length - 1; i >= 0; i--)
+            {
+                Console.Write(name[i]);
+                
+            }
+            
+
+
             int[] lengthOfStrings = new int[10];
             int limit = lengthOfStrings.Length;
             for (int i = 0; i < limit; i++)
@@ -55,7 +81,7 @@ namespace Toci.Training.DamianG
             else 
             {
                 Console.WriteLine("Popracuj nad swoją długością hasła");
-            }
+            }*/
 
 
 
