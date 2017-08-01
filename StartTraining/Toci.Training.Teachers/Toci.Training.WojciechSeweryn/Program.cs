@@ -16,12 +16,17 @@ namespace Toci.Training.WojciechSeweryn
         
         static void Main(string[] args)
         {
-        
+            MoneyValue moneyTEST = new MoneyValue();
+            moneyTEST.GetMoneyValue("666666666");
+
+            PeselValidator peselTest = new PeselValidator();
+            peselTest.IsPeselValid("91090702398");
+
             /*
             Saper example = new Saper();
             example.SaperGame();
             */
-            
+
             QuizLogic exampleQuiz = new QuizLogic();
             exampleQuiz.Load();
                  

@@ -7,7 +7,7 @@
     <ProjectGuid>{96643F8E-0F8B-4A83-AFC8-2414CFD8750B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Toci.Training.Tournament</RootNamespace>
-    <AssemblyName>Toci.Training.Tournament</AssemblyName>
+    <AssemblyName>`</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,9 +50,6 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GhRTournamentDeriving.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -16,7 +16,7 @@ namespace Toci.Training.DamianG
 
             for (int i = 0 ; i < limitS ; i++)
             {
-                Console.WriteLine("Podaj element");
+                Console.WriteLine("Podaj elementy");
                 string stringWord = Console.ReadLine();
 
                 lengthOfStrings[i] = stringWord;
