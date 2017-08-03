@@ -32,9 +32,11 @@ namespace Toci.Training.MichalK
             {
                 Console.Write(" "+(i+1)+"."+table[i]);
             }
-           
 
-            Console.ReadKey();
+            //----------------------------------------------------------------Quizogic-------------------------------------------------->>
+            QuizLogic.quizLogic(); //<--- Wywolanie w glownym programie z klasy QuizLogic metody quizLogic.
+
+            Console.ReadLine();
         }
     }
 }
