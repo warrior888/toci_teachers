@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sundayApp", "sundayApp\sundayApp.csproj", "{4290A760-97E1-4A64-B0D4-449841846A15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeterWinformsApp", "PeterWinformsApp\PeterWinformsApp.csproj", "{B017B5D6-0867-44F3-9492-A762A6704848}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4290A760-97E1-4A64-B0D4-449841846A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4290A760-97E1-4A64-B0D4-449841846A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4290A760-97E1-4A64-B0D4-449841846A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4290A760-97E1-4A64-B0D4-449841846A15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B017B5D6-0867-44F3-9492-A762A6704848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B017B5D6-0867-44F3-9492-A762A6704848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B017B5D6-0867-44F3-9492-A762A6704848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B017B5D6-0867-44F3-9492-A762A6704848}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

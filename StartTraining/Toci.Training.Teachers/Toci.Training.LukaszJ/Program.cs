@@ -11,6 +11,19 @@ namespace Toci.Training.LukaszJ
     {
         static void Main(string[] args)
         {
+            #region materiał z lekcji o debugowaniu
+            string imie = "ghostrider";
+            char szukane = 'o';
+            int pozycja = 0;
+
+            for (int i = 0; i < imie.Length; i++)
+            {
+                if (imie[i] == szukane)
+                {
+                    pozycja = i;
+                }
+            }
+            #endregion
 
             /* for (int i = 0; i < 10; i++)
             {

@@ -6,10 +6,70 @@ using System.Threading.Tasks;
 
 namespace Toci.Training.MateuszB
 {
+    class CandidateForAnObjectInstance
+    {
+        //public 
+        //protected
+        //private
+
+        public string QuizQuestion;
+    }
+
+    class QuizAnswer
+    {
+        public string Answer;
+        public bool IsAnswerCorrect;
+    }
+
+    class QuizQuestion
+    {
+        public string Question;
+        public QuizAnswer[] Answers;
+    }
+
+
     class Program
     {
+        private static int ThisIsAStaticFieldVisibleInAllMethods;
+
+        //QuizQuestion[] questions = new QuizQuestion[10];
+
+        public static QuizQuestion[] GetQuizQuestions(int IamAMethodParameter, CandidateForAnObjectInstance ins)
+        {
+            //ins.QuizQuestion
+            return null;
+        }
+
+        public static QuizQuestion[] GetQuizQuestions()
+        {
+            ThisIsAStaticFieldVisibleInAllMethods = 9;
+            // filll the object with questions
+            return new QuizQuestion[10];
+        }
+
+        public static QuizAnswer[] ShuffleAnswers(QuizQuestion question)
+        {
+            ThisIsAStaticFieldVisibleInAllMethods = 12;
+            // todo sghuffle
+            return question.Answers;
+        }
+
+        public static void ShowQuestions()
+        {
+            ThisIsAStaticFieldVisibleInAllMethods = 13;
+        }
+
+
         static void Main(string[] args)
         {
+            GetQuizQuestions();
+            //for
+            //ShuffleAnswers()
+
+            ShowQuestions();
+
+
+            /// -----------------
             int quizAnswersIndex = 0;
             string answer = "";
             int countWrong = 0;
