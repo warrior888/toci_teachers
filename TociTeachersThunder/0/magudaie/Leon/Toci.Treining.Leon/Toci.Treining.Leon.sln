@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Treining.Leon", "Toci.Treining.Leon\Toci.Treining.Leon.csproj", "{2CE68246-4E3A-4A53-838F-D6D6FD261D7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineSweeper", "MineSweeper\MineSweeper.csproj", "{84F7930D-35D6-49BE-BD7F-F49685708350}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2CE68246-4E3A-4A53-838F-D6D6FD261D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CE68246-4E3A-4A53-838F-D6D6FD261D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CE68246-4E3A-4A53-838F-D6D6FD261D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84F7930D-35D6-49BE-BD7F-F49685708350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84F7930D-35D6-49BE-BD7F-F49685708350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84F7930D-35D6-49BE-BD7F-F49685708350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84F7930D-35D6-49BE-BD7F-F49685708350}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

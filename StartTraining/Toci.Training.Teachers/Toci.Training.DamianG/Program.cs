@@ -10,23 +10,57 @@ namespace Toci.Training.DamianG
     {
         static void Main(string[] args)
         {
-            string[] lengthOfStrings = new string[10];
+            Console.WriteLine("Zmienna długość tablicy. Podaj długość jaką chcesz otrzymać:"); // To LEARN
+            string input = Console.ReadLine();
+            int inputNumbers = 0;
+            int.TryParse(input, out inputNumbers);
+            Console.WriteLine("Twoja tablica ma długosć " + inputNumbers);
+            string [] arrayNumbers = new string [inputNumbers];
 
-            int limitS = lengthOfStrings.Length;
-
-            for (int i = 0 ; i < limitS ; i++)
+            for (int i = 0; i < arrayNumbers.Length; i++)
             {
-                Console.WriteLine("Podaj elementy");
-                string stringWord = Console.ReadLine();
+                Console.Write(i + 1); //dodanie liczb przed każdym słowem
+                string arrayWord = Console.ReadLine(); // dodanie do tablicy słów 
 
-                lengthOfStrings[i] = stringWord;
+                arrayNumbers[i] = arrayWord; // up
+            }
 
-                Console.WriteLine(lengthOfStrings[i]);
+            Console.WriteLine("\nDziękuję za podanie informacji");
 
+            Console.WriteLine("\nTwoje informacje w tablicy to:");
+
+            for (int i = 0; i < arrayNumbers.Length; i++)
+            {
+                Console.Write((i + 1) + "." + arrayNumbers[i] + " "); // wyświetlenie danych z tablicy (liczba + . + dana + spacja
             }
 
 
-            /*Console.WriteLine("Podaj słowo do odwórcenia");
+
+            /*string[] lengthOfStrings = new string[10];
+
+            int limitS = lengthOfStrings.Length;
+
+            Console.WriteLine("Podaj swoje informacje do tablicy");
+
+            for (int i = 0 ; i < limitS ; i++)
+            {
+                Console.Write(i+1); //dodanie liczb przed każdym słowem
+                string stringWord = Console.ReadLine(); // dodanie do tablicy słów 
+
+                lengthOfStrings[i] = stringWord; // up
+            }
+
+            Console.WriteLine("\nDziękuję za podanie informacji");
+
+            Console.WriteLine("\nTwoje informacje w tablicy to:");
+
+            for (int i = 0; i < limitS; i++)
+            {
+                Console.Write( (i+1) + "." + lengthOfStrings[i] + " " ); // wyświetlenie danych z tablicy (liczba + . + dana + spacja
+            }
+
+
+            Console.WriteLine("Podaj słowo do odwórcenia");
             string name = Console.ReadLine();
             for (int i = name.Length - 1; i >= 0; i--)
             {
