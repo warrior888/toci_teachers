@@ -51,11 +51,11 @@ namespace TournamentAppArekR
         {
             if (userName?.Length == 0)
             {
-                MessageBox.Show("Nazwa użytkownika nie może być pusta");
+                MessageBox.Show("Nazwa użytkownika nie może być pusta", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (_playersTemporary.Any(pt => pt.Name.Equals(userName)))
             {
-                MessageBox.Show("Użytkownik o takiej nazwie już istnieje");
+                MessageBox.Show("Użytkownik o takiej nazwie już istnieje", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -104,7 +104,7 @@ namespace TournamentAppArekR
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                MessageBox.Show(exc.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -128,7 +128,7 @@ namespace TournamentAppArekR
             }
             catch (Exception exc)
             {
-                MessageBox.Show(exc.Message);
+                MessageBox.Show(exc.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
