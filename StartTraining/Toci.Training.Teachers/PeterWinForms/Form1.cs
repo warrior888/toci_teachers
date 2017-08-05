@@ -33,6 +33,7 @@ namespace PeterWinForms
         TextBox textBox = new TextBox();
         TextBox PointsBpx = new TextBox();
         TextBox PlayerNameBox = new TextBox();
+
         public static Dictionary<string,int> slownik = new Dictionary<string, int>();
         public static Dictionary<string,int> WinSlownik = new Dictionary<string, int>();
 

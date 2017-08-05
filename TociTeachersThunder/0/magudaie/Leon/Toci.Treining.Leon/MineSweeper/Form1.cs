@@ -150,6 +150,7 @@ namespace MineSweeper
         private void StartGame_Click(object sender, EventArgs e)
         {
             int[,] SupperField = new int[FieldSize, FieldSize];
+            string[] number = new string[FieldSize * FieldSize];
             
             BombIngection(SupperField);
             BombCounter(SupperField);
@@ -160,20 +161,43 @@ namespace MineSweeper
                 {
                     FieldBox = new Button();
                     FieldBox.SetBounds(10 + (20 * i), 100 + (20 * j), 20, 20);
-                    FieldBox.BackColor = Color.Yellow;
+                    FieldBox.BackColor = Color.Black;
                     if (SupperField[i, j] != 0)
                     {
                         FieldBox.Text = Convert.ToString(SupperField[i, j]);
                     }
                     Controls.Add(FieldBox);
-                    FieldBox.Click += FieldBox_Click;
+                    FieldBox.Click += Form1_Click;
                 }
             }
         }
 
-        private void FieldBox_Click(object sender, EventArgs e)
+        private void Form1_Click(object sender, EventArgs e)
         {
-            FieldBox.BackColor = Color.White;
+                ((Button)sender).BackColor = Color.White;
         }
+
+        /*private void StartGame_Click(object sender, EventArgs e)
+        {
+            int[,] SupperField = new int[FieldSize, FieldSize];
+            Button[,] buttonTable = new Button[FieldSize, FieldSize];
+
+            BombIngection(SupperField);
+            BombCounter(SupperField);
+
+            for (int i = 0; i < buttonTable.GetLength(0); i++)
+            {
+                for (int j = 0; j < buttonTable.GetLength(1); j++)
+                {
+                    buttonTable = new Button[i,j];
+                    FieldBox.SetBounds(10 + (20 * i), 100 + (20 * j), 20, 20);
+                    buttonTable[i,j].BackColor = Color.Yellow;
+                    
+                    buttonTable[i, j].Location = new Point(10 + (20*i), 400 + (20*j));
+                    FieldBox.Click += FieldBox_Click;
+                    Controls.Add(buttonTable[i, j]);
+                }
+            }
+        }*/
     }
 }
