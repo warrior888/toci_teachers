@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Documents;
+using System.Windows.Media;
 
 namespace Quiz
 {
@@ -13,7 +15,13 @@ namespace Quiz
 
         public Group()
         {
-            GroupId++;
+            ++GroupId;
+            GroupMember = new List<User>();
+        }
+
+        public override string ToString()
+        {
+            return GroupId.ToString();
         }
 
         public bool AddMember(User user)

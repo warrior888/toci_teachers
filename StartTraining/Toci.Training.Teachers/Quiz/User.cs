@@ -11,7 +11,7 @@ namespace Quiz
         public int UserId => _userId;
         public string Name { get; set; }
         public int Score { get; private set; }
-        public int GroupMambership { get; set; }
+        public int? GroupMambership { get; set; } = null;
         public List<String> ResolvedQuiz { get; private set; }
 
         private static int _userId = 0;

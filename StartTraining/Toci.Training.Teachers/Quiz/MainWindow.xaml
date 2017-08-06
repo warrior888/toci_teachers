@@ -25,7 +25,8 @@
                 <Border BorderThickness="2" BorderBrush="Black">
                     <StackPanel>
                         <TextBlock Text="Competitors" Margin="5" HorizontalAlignment="Center"></TextBlock>
-                        <ListView ItemsSource="{Binding Users}" MinHeight="200" Margin="5"></ListView>
+                        <ListView x:Name="AllUserListView" ItemsSource="{Binding Users, Mode=OneWay}" MouseDoubleClick="UserList_OnMouseDoubleClick" MinHeight="200" Margin="5"></ListView>
+                        <TextBlock x:Name="AllUserWaringTextBlock" HorizontalAlignment="Center" FontSize="10"></TextBlock>
                     </StackPanel>
                 </Border>
             </StackPanel>
@@ -33,17 +34,21 @@
             <StackPanel Grid.Column="1" Grid.Row="0"  Margin="5">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
                         <RowDefinition Height="1*"></RowDefinition>
                         <RowDefinition Height="1*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <TextBlock Text="Created group (four members)" Grid.Row="0" HorizontalAlignment="Center" Margin="5"></TextBlock>
                     <StackPanel Grid.Row="1">
                         <Border BorderThickness="2" Margin="5">
-                        <ListView Drop="UIElement_OnDrop" Width="150" Height="100" HorizontalAlignment="Center" AllowDrop="True"></ListView>
-                    </Border>
+                            <StackPanel>
+                                <TextBox x:Name="GroupNameTextBox" HorizontalAlignment="Center" Margin="5" Width="100"></TextBox>
+                                <ListView x:Name="createdGroupPanel" Drop="UIElement_OnDrop" Width="150" Height="100" HorizontalAlignment="Center" AllowDrop="True"></ListView>
+                            </StackPanel>
+                        </Border>
+                        <TextBlock x:Name="GroupWarringTextBlock" HorizontalAlignment="Center" FontSize="10"></TextBlock>
                     </StackPanel>
-                    <Button Content="Add Group" Grid.Row="1" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5"></Button>
+                    <Button x:Name="AddGroupButton" IsEnabled="False"  Content="Add Group" Click="AddGroupButton_OnClick" Grid.Row="1" Width="100" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5"></Button>
                     <StackPanel Grid.Row="2">
 
                     </StackPanel>
@@ -61,7 +66,7 @@
                                     <RowDefinition Height="1*"></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <TextBlock Text="Name" Width="50" TextAlignment="Center" HorizontalAlignment="Left" Margin="5" Grid.Row="0"></TextBlock>
-                                <TextBox x:Name="userNameTextBox" Width="80" Margin="5" Grid.Row="0"></TextBox>
+                                <TextBox x:Name="userNameTextBox" KeyUp="ButtonBase_OnClick"  Width="80" Margin="5" Grid.Row="0"></TextBox>
                                 <StackPanel Grid.Row="1">
                                     <TextBlock x:Name="confirmedTextBlock" HorizontalAlignment="Center" FontSize="10" Margin="2"></TextBlock>
                                 </StackPanel>

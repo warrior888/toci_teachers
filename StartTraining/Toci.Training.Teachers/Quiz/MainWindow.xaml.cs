@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Quiz
 {
@@ -20,7 +10,7 @@ namespace Quiz
     /// </summary>
     public partial class MainWindow : Window
     {
-        protected QuizManager _quizManager;
+        private readonly QuizManager _quizManager;
 
         public MainWindow()
         {
@@ -29,24 +19,61 @@ namespace Quiz
         }
 
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        private void ButtonBase_OnClick(object sender, EventArgs e)
         {
-            if (_quizManager.AddUser(userNameTextBox.Text))
+                var pushEnter = (KeyEventArgs) e;
+
+            if (pushEnter.Key == Key.Enter)
             {
-                confirmedTextBlock.Text = "Added";
-                confirmedTextBlock.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                
-                confirmedTextBlock.Text = "Empty box or name exist";
-                confirmedTextBlock.Visibility = Visibility.Visible;
+                if (_quizManager.AddUser(userNameTextBox.Text))
+                {
+                    confirmedTextBlock.Text = "Added";
+                    confirmedTextBlock.Visibility = Visibility.Visible;
+                }
+                else
+                {
+
+                    confirmedTextBlock.Text = "Empty box or name exist";
+                    confirmedTextBlock.Visibility = Visibility.Visible;
+                }
             }
         }
 
         private void UIElement_OnDrop(object sender, DragEventArgs e)
         {
             
+        }
+
+        private void AddGroupButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (!_quizManager.CreateGroup(createdGroupPanel.Items, GroupNameTextBox.Text))
+            {
+                GroupWarringTextBlock.IsEnabled = true;
+                GroupWarringTextBlock.Text = "Name already exist. Please change group name.";
+            }
+            else
+            {
+                GroupWarringTextBlock.IsEnabled = false;
+                createdGroupPanel.Items.Clear();
+                AddGroupButton.IsEnabled = false;
+            }
+        }
+
+        private void UserList_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is ListView)
+            {
+                ListView list = (ListView) sender;
+                var user = list.SelectedItem as User;
+                if (user?.GroupMambership != null || createdGroupPanel.Items.Contains(list.SelectedItem))
+                {
+                    AllUserWaringTextBlock.Text = "User already has a group";
+                    return;
+                }
+                AllUserWaringTextBlock.Text = "";
+                createdGroupPanel.Items.Add(list.SelectedItem);
+                AddGroupButton.IsEnabled = true;
+            }
         }
     }
 }

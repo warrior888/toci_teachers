@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows.Controls;
 using System.Windows.Documents;
 
 namespace Quiz
@@ -9,13 +11,13 @@ namespace Quiz
     public class QuizManager
     {
         public ObservableCollection<User> Users { get; private set; }
-        public List<Group> Groups { get; private set; }
+        public Dictionary<string, Group> Groups { get; private set; }
         public List<QuizToSolve> QuizToSolves { get; private set; }
 
         public QuizManager()
         {
             Users = new ObservableCollection<User>();
-            Groups = new List<Group>();
+            Groups = new Dictionary<string, Group>();
             QuizToSolves = new List<QuizToSolve>();
             // TODO: Dokończyć
         }
@@ -34,18 +36,27 @@ namespace Quiz
             return true;
         }
 
-        public void CreateGroup(string[] usernames)
+        public bool CreateGroup(ItemCollection @group, string name)     //(string[] usernames)
         {
-            var findUsers = from user in Users
-                where usernames.Contains(user.Name)
-                select user;
+            if (Groups.Keys.Contains(name)) return false;
+
+            /*var findUsers = from user in Users
+                where @group.Contains(user)
+                select user;*/
 
             Group newGroup = new Group();
 
-            foreach (var user in findUsers)
-                newGroup.AddMember(user);
-
-            Groups.Add(newGroup);
+            foreach (var user in @group)
+            {
+                var itIsUser = user as User;
+                if (itIsUser != null)
+                {
+                    itIsUser.GroupMambership = newGroup.GroupId;
+                    newGroup.AddMember(itIsUser);
+                }
+            }
+            Groups.Add(name, newGroup);
+            return true;
         }
     }
 }
