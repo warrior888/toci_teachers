@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sundayApp", "sundayApp\sund
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeterWinformsApp", "PeterWinformsApp\PeterWinformsApp.csproj", "{B017B5D6-0867-44F3-9492-A762A6704848}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{88F94C0C-0F4A-46DC-8314-C809C1880EFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B017B5D6-0867-44F3-9492-A762A6704848}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B017B5D6-0867-44F3-9492-A762A6704848}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B017B5D6-0867-44F3-9492-A762A6704848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88F94C0C-0F4A-46DC-8314-C809C1880EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88F94C0C-0F4A-46DC-8314-C809C1880EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88F94C0C-0F4A-46DC-8314-C809C1880EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88F94C0C-0F4A-46DC-8314-C809C1880EFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
