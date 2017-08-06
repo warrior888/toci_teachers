@@ -5,14 +5,11 @@
         public PlayerEntity Player1 { get; set; }
         public PlayerEntity Player2 { get; set; }
 
+        public bool IsFinished;
+
         public bool CheckForWinner()
         {
-            return Player1.Score != Player2.Score;
-        }
-
-        public PlayerEntity GetWinner()
-        {
-            return Player1.Score > Player2.Score ? Player1 : Player2;
+            return IsFinished = Player1.Score != Player2.Score;
         }
 
         public PlayerEntity GetLoser()

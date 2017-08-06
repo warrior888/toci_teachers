@@ -7,7 +7,7 @@ namespace TournamentAppArekR
     public class TournamentLogic
     {
         public List<Team> TournamentTeams { get; set; }
-        public static DuellPairEntity DuellPair { get; set; }
+        public static List<DuellPairEntity> DuellPairs { get; set; }
         public void CreateTeams()
         {
             TournamentTeams = new List<Team>
@@ -37,52 +37,60 @@ namespace TournamentAppArekR
             }
         }
 
-
         public void PrepareDuell()
         {
-            DuellPair = new DuellPairEntity();
+            //UnSelectAllTeams();
+            DuellPairs = new List<DuellPairEntity>();
+            int numberOfDuells = TournamentTeams.Sum(tt => tt.Players.Count(pl => !pl.IsEliminated)) / 2;
+            for (int i = 0; i < numberOfDuells; i++)
+            {
+                DuellPairEntity duellPair = new DuellPairEntity();
+                for (int j = 0; j < 2; j++)
+                {
+                    var teams = TournamentTeams.Where(tt => tt.Players.Count(pl => !pl.IsSelected && !pl.IsEliminated) > 0).ToList();
+                    if (!(teams?.Count > 0)) return;
+                    Random rnd = new Random();
+                    int tempIndex = rnd.Next(0, teams.Count);
+                    int index = TournamentTeams.FindIndex(tt => tt.Name.Equals(teams[tempIndex].Name));
+                    TournamentTeams[index].IsSelected = numberOfDuells > 1;
+                    PlayerEntity tempPlayer = PrepareDuellPlayer(TournamentTeams[index].Players);
+
+                    if (j == 0)
+                    {
+                        duellPair.Player1 = new PlayerEntity { Name = tempPlayer.Name };
+                    }
+                    else
+                    {
+                        duellPair.Player2 = new PlayerEntity { Name = tempPlayer.Name };
+                    }
+                }
+                DuellPairs.Add(duellPair);
+                //UnSelectAllTeams();
+            }
+        }
+
+        private void UnSelectAllTeams()
+        {
             foreach (var team in TournamentTeams)
             {
                 team.IsSelected = false;
-            }
-
-            for (int i = 0; i < 2; i++)
-            {
-                var teams = TournamentTeams.Where(tt => !tt.IsSelected && tt.Players.Count(pl => !pl.IsEliminated) > 0).ToList();
-                if (!(teams?.Count > 0)) return;
-                Random rnd = new Random();
-                int tempIndex = rnd.Next(0, teams.Count);
-                int index = TournamentTeams.FindIndex(tt => tt.Name.Equals(teams[tempIndex].Name));
-                TournamentTeams[index].IsSelected = true;
-                PlayerEntity tempPlayer = PrepareDuellPlayer(TournamentTeams[index].Players);
-
-                if (i == 0)
-                {
-                    DuellPair.Player1 = new PlayerEntity {Name = tempPlayer.Name};
-                    //DuellPair.Player1.Score = 0;
-                }
-                else
-                {
-                    DuellPair.Player2 = new PlayerEntity { Name = tempPlayer.Name };
-                    //DuellPair.Player2.Score = 0;
-                }
-
             }
         }
 
         private PlayerEntity PrepareDuellPlayer(List<PlayerEntity> players)
         {
             Random rnd = new Random();
-            var tempTeam = players.Where(p => !p.IsEliminated).ToList();
-            int index = rnd.Next(0, tempTeam.Count);
-            return players.FirstOrDefault(pl => pl.Name.Equals(tempTeam[index].Name));
+            var tempTeam = players.Where(p => !p.IsEliminated && !p.IsSelected).ToList();
+            int tempIndex = rnd.Next(0, tempTeam.Count);
+            int indx = players.FindIndex(pl => pl.Name.Equals(tempTeam[tempIndex].Name));
+            players[indx].IsSelected = true;
+            return players[indx];
         }
 
-        public void FinishDuell()
+        public void FinishDuell(int indx)
         {
-            var teams = TournamentTeams.Where(tt => tt.IsSelected).ToList();
-            SaveDuellScore(teams.FirstOrDefault(tt => tt.Players.Count(pl => pl.Name.Equals(DuellPair.Player1.Name)) > 0), DuellPair.Player1);
-            SaveDuellScore(teams.FirstOrDefault(tt => tt.Players.Count(pl => pl.Name.Equals(DuellPair.Player2.Name)) > 0), DuellPair.Player2);
+            SaveDuellScore(TournamentTeams.FirstOrDefault(tt => tt.Players.Count(pl => pl.Name.Equals(DuellPairs[indx].Player1.Name)) > 0), DuellPairs[indx].Player1, indx);
+            SaveDuellScore(TournamentTeams.FirstOrDefault(tt => tt.Players.Count(pl => pl.Name.Equals(DuellPairs[indx].Player2.Name)) > 0), DuellPairs[indx].Player2, indx);
         }
 
 
@@ -96,14 +104,15 @@ namespace TournamentAppArekR
         }
 
 
-        private static void SaveDuellScore(Team team, PlayerEntity player)
+        private static void SaveDuellScore(Team team, PlayerEntity player, int indx)
         {
             int index = team.Players.FindIndex(pl => pl.Name.Equals(player.Name));
             if (index >= 0)
             {
                 team.IsSelected = false;
                 team.Players[index].Score += player.Score;
-                team.Players[index].IsEliminated = team.Players[index].Name.Equals(DuellPair.GetLoser().Name);
+                team.Players[index].IsEliminated = team.Players[index].Name.Equals(DuellPairs[indx].GetLoser().Name);
+                team.Players[index].IsSelected = false;
             }
         }
     }

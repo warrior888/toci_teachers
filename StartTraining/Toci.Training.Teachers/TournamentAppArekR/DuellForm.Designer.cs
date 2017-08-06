@@ -34,7 +34,7 @@
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDuellNum = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -94,15 +94,15 @@
             this.label2.Text = "Podaj wynik gracza";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lblDuellNum
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(179, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Pojedynek";
+            this.lblDuellNum.AutoSize = true;
+            this.lblDuellNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblDuellNum.Location = new System.Drawing.Point(179, 22);
+            this.lblDuellNum.Name = "lblDuellNum";
+            this.lblDuellNum.Size = new System.Drawing.Size(91, 20);
+            this.lblDuellNum.TabIndex = 8;
+            this.lblDuellNum.Text = "Pojedynek";
             // 
             // btnSave
             // 
@@ -120,7 +120,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 239);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblDuellNum);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown2);
@@ -146,7 +146,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDuellNum;
         private System.Windows.Forms.Button btnSave;
     }
 }

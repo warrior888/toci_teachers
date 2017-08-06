@@ -196,13 +196,17 @@ namespace TournamentAppArekR
         private void btnGetDuell_Click(object sender, EventArgs e)
         {
             tournament.PrepareDuell();
-            new DuellForm().ShowDialog();
-            tournament.FinishDuell();
-            SetScoreTable(tournament.TournamentTeams);
-            winner = tournament.GetTotalWinner();
-            if (winner is null) return;
-            btnGetDuell.Enabled = false;
-            MessageBox.Show("Wygrywa gracz "+winner.Name + " Brawo ON!", "And the winner is...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            for (int i = 0; i < TournamentLogic.DuellPairs.Count; i++)
+            {
+                new DuellForm(i).ShowDialog();
+                tournament.FinishDuell(i);
+                SetScoreTable(tournament.TournamentTeams);
+                winner = tournament.GetTotalWinner();
+                if (winner is null) continue;
+                btnGetDuell.Enabled = false;
+                MessageBox.Show("Wygrywa gracz " + winner.Name + " \r\nBrawo ON!", "And the winner is...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 }

@@ -12,26 +12,30 @@ namespace TournamentAppArekR
 {
     public partial class DuellForm : Form
     {
-        public DuellForm()
+        private int DuellIndex { get; set; }
+
+        public DuellForm(int duellIndx)
         {
             InitializeComponent();
-            lblPlayer1.Text = TournamentLogic.DuellPair.Player1.Name;
-            lblPlayer2.Text = TournamentLogic.DuellPair.Player2.Name;
+            DuellIndex = duellIndx;
+            lblDuellNum.Text += @" " + (duellIndx + 1);
+            lblPlayer1.Text = TournamentLogic.DuellPairs[DuellIndex].Player1.Name;
+            lblPlayer2.Text = TournamentLogic.DuellPairs[DuellIndex].Player2.Name;
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            TournamentLogic.DuellPair.Player1.Score = (int)((NumericUpDown)sender).Value;
+            TournamentLogic.DuellPairs[DuellIndex].Player1.Score = (int)((NumericUpDown)sender).Value;
         }
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
-            TournamentLogic.DuellPair.Player2.Score = (int)((NumericUpDown)sender).Value;
+            TournamentLogic.DuellPairs[DuellIndex].Player2.Score = (int)((NumericUpDown)sender).Value;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (TournamentLogic.DuellPair.CheckForWinner())
+            if (TournamentLogic.DuellPairs[DuellIndex].CheckForWinner())
             {
                 this.Close();
             }
@@ -43,7 +47,7 @@ namespace TournamentAppArekR
 
         private void DuellForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!TournamentLogic.DuellPair.CheckForWinner())
+            if (!TournamentLogic.DuellPairs[DuellIndex].CheckForWinner())
             {
                 e.Cancel = true;
                 MessageBox.Show("pojedynek musi wyłonić zwycięzcę");
