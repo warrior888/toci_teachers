@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,13 +11,14 @@ using System.Windows.Forms;
 
 namespace TournamentAppArekR
 {
-    public partial class Tournament : Form
+    public partial class TournamentFrm : Form
     {
         private List<PlayerEntity> _playersTemporary;
         private int _numberOfPlayers;
-        private List<Team> _tournamentTeams;
-
-        public Tournament()
+        private PlayerEntity winner;
+        //private List<Team> _tournamentTeams;
+        private TournamentLogic tournament;
+        public TournamentFrm()
         {
             InitializeComponent();
             StartTournament();
@@ -25,26 +27,9 @@ namespace TournamentAppArekR
         private void StartTournament()
         {
             _playersTemporary = new List<PlayerEntity>();
-            _tournamentTeams = new List<Team>
-            {
-                new Team(){Name = "Dryzuna A" },
-                new Team() { Name = "Dryzuna B" },
-                new Team() { Name = "Dryzuna C" },
-                new Team() { Name = "Dryzuna D" }
-            };
-        }
+            tournament = new TournamentLogic();
+            tournament.CreateTeams();
 
-        private bool CheckNumberOfPlayers()
-        {
-            if (_numberOfPlayers != _playersTemporary.Count) return false;
-            txtAddUser.Enabled =
-                btnAddUser.Enabled =
-                btnNumberOfPlayers.Enabled =
-                numNumberOfPlayers.Enabled = false;
-            btnStartTournament.Visible = true;
-            lblEnterNewPlayer.Text = "";
-
-            return true;
         }
 
         private void AddNewUser(string userName)
@@ -66,11 +51,22 @@ namespace TournamentAppArekR
             }
         }
 
+        private bool CheckNumberOfPlayers()
+        {
+            if (_numberOfPlayers != _playersTemporary.Count) return false;
+            txtAddUser.Enabled =
+                btnAddUser.Enabled =
+                    btnNumberOfPlayers.Enabled =
+                        numNumberOfPlayers.Enabled = false;
+            btnStartTournament.Visible = true;
+            lblEnterNewPlayer.Text = "";
+            return true;
+        }
+
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             AddNewUser(txtAddUser.Text);
             txtAddUser.Text = "";
-            txtAddUser.Focus();
         }
 
         private void txtAddUser_KeyDown(object sender, KeyEventArgs e)
@@ -90,6 +86,7 @@ namespace TournamentAppArekR
         private void SetNewPlayerLabelText()
         {
             lblEnterNewPlayer.Text = "Wprowadź imię gracza nr " + (_playersTemporary.Count + 1);
+            txtAddUser.Focus();
         }
 
         private void SetScoreTable()
@@ -100,7 +97,7 @@ namespace TournamentAppArekR
                 DataTable dt = new DataTable();
                 SetDataTableHeaders(dt, "Gracz", "Drużyna", "Wynik");
                 SetScoreTableRow(dt, _playersTemporary);
-                DisplayScoreTable(dt);
+                DisplayScoreTable(dt, dgvTrnmtScore);
             }
             catch (Exception exc)
             {
@@ -108,11 +105,11 @@ namespace TournamentAppArekR
             }
         }
 
-        private void DisplayScoreTable(DataTable dt)
+        private void DisplayScoreTable(DataTable dt, DataGridView dgv)
         {
-            dgvTrnmtScore.Columns.Clear();
-            dgvTrnmtScore.DataSource = dt;
-            dgvTrnmtScore.Refresh();
+            dgv.Columns.Clear();
+            dgv.DataSource = dt;
+            dgv.Refresh();
         }
 
 
@@ -123,13 +120,27 @@ namespace TournamentAppArekR
                 if (!(teams?.Count() > 0)) return;
                 DataTable dt = new DataTable();
                 SetDataTableHeaders(dt, "Gracz", "Drużyna", "Wynik");
+                DataColumn column = new DataColumn("Status")
+                {
+                    DataType = Type.GetType("System.Byte[]"),
+                    AllowDBNull = true,
+                    Caption = "Status"
+                };
+                dt.Columns.Add(column);
                 SetScoreTableRow(dt, teams);
-                DisplayScoreTable(dt);
+                DisplayScoreTable(dt, dgvTrnmtScore);
             }
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        public byte[] ImageToByteArray(Image imageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            return ms.ToArray();
         }
 
         private void SetScoreTableRow(DataTable dt, IEnumerable<Team> teams)
@@ -142,7 +153,8 @@ namespace TournamentAppArekR
                     DataRow workRow = dt.NewRow();
                     workRow[i++] = t.Name;
                     workRow[i++] = teamItem.Name;
-                    workRow[i] = t.Score;
+                    workRow[i++] = t.Score;
+                    workRow[i] = ImageToByteArray(t.IsEliminated ? Properties.Resources.cross : Properties.Resources.tick);
                     dt.Rows.Add(workRow);
                 }
             }
@@ -170,31 +182,27 @@ namespace TournamentAppArekR
         }
         private void btnStartTournament_Click(object sender, EventArgs e)
         {
-            ShufflePlayers();
-            SetScoreTable(_tournamentTeams);
+            tournament.ShufflePlayers(_playersTemporary, _numberOfPlayers);
+            SetScoreTable(tournament.TournamentTeams);
+            btnStartTournament.Enabled = false;
         }
 
-        private void ShufflePlayers()
-        {
-            foreach (Team t in _tournamentTeams)
-            {
-                for (int j = 0; j < _numberOfPlayers / _tournamentTeams.Count; j++)
-                {
-                    Random rnd = new Random();
-                    int index = rnd.Next(0, _playersTemporary.Count);
-                    if (!(t.Players?.Count > 0))
-                    {
-                        t.Players = new List<PlayerEntity>();
-                    }
-                    t.Players.Add(_playersTemporary[index]);
-                    _playersTemporary.RemoveAt(index);
-                }
-            }
-        }
 
         private void txtAddUser_TextChanged(object sender, EventArgs e)
         {
             btnAddUser.Enabled = ((TextBox)sender).Text.Length > 0;
+        }
+
+        private void btnGetDuell_Click(object sender, EventArgs e)
+        {
+            tournament.PrepareDuell();
+            new DuellForm().ShowDialog();
+            tournament.FinishDuell();
+            SetScoreTable(tournament.TournamentTeams);
+            winner = tournament.GetTotalWinner();
+            if (winner is null) return;
+            btnGetDuell.Enabled = false;
+            MessageBox.Show("Wygrywa gracz "+winner.Name + " Brawo ON!", "And the winner is...", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

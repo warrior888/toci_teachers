@@ -1,6 +1,6 @@
 ﻿namespace TournamentAppArekR
 {
-    partial class Tournament
+    partial class TournamentFrm
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -41,19 +41,22 @@
             this.numNumberOfPlayers = new System.Windows.Forms.NumericUpDown();
             this.btnNumberOfPlayers = new System.Windows.Forms.Button();
             this.btnStartTournament = new System.Windows.Forms.Button();
+            this.btnGetDuell = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTrnmtScore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numNumberOfPlayers)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddUser
             // 
+            this.btnAddUser.BackColor = System.Drawing.Color.Orange;
             this.btnAddUser.Enabled = false;
+            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddUser.Location = new System.Drawing.Point(143, 95);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(75, 23);
             this.btnAddUser.TabIndex = 0;
             this.btnAddUser.Text = "Dodaj";
-            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.UseVisualStyleBackColor = false;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // label1
@@ -71,8 +74,9 @@
             this.dgvTrnmtScore.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvTrnmtScore.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvTrnmtScore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvTrnmtScore.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTrnmtScore.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvTrnmtScore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTrnmtScore.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -81,7 +85,7 @@
             this.Punkty});
             this.dgvTrnmtScore.Location = new System.Drawing.Point(12, 238);
             this.dgvTrnmtScore.Name = "dgvTrnmtScore";
-            this.dgvTrnmtScore.Size = new System.Drawing.Size(345, 345);
+            this.dgvTrnmtScore.Size = new System.Drawing.Size(481, 345);
             this.dgvTrnmtScore.TabIndex = 2;
             // 
             // Gracz
@@ -121,7 +125,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 13);
+            this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 13);
             this.label2.TabIndex = 5;
@@ -168,20 +172,33 @@
             // 
             // btnStartTournament
             // 
+            this.btnStartTournament.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnStartTournament.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartTournament.Location = new System.Drawing.Point(12, 153);
             this.btnStartTournament.Name = "btnStartTournament";
             this.btnStartTournament.Size = new System.Drawing.Size(206, 23);
             this.btnStartTournament.TabIndex = 8;
             this.btnStartTournament.Text = "Rozpocznij turniej";
-            this.btnStartTournament.UseVisualStyleBackColor = true;
+            this.btnStartTournament.UseVisualStyleBackColor = false;
             this.btnStartTournament.Visible = false;
             this.btnStartTournament.Click += new System.EventHandler(this.btnStartTournament_Click);
+            // 
+            // btnGetDuell
+            // 
+            this.btnGetDuell.Location = new System.Drawing.Point(530, 94);
+            this.btnGetDuell.Name = "btnGetDuell";
+            this.btnGetDuell.Size = new System.Drawing.Size(75, 23);
+            this.btnGetDuell.TabIndex = 9;
+            this.btnGetDuell.Text = "Pojedynek";
+            this.btnGetDuell.UseVisualStyleBackColor = true;
+            this.btnGetDuell.Click += new System.EventHandler(this.btnGetDuell_Click);
             // 
             // Tournament
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 595);
+            this.Controls.Add(this.btnGetDuell);
             this.Controls.Add(this.btnStartTournament);
             this.Controls.Add(this.btnNumberOfPlayers);
             this.Controls.Add(this.numNumberOfPlayers);
@@ -214,6 +231,7 @@
         private System.Windows.Forms.NumericUpDown numNumberOfPlayers;
         private System.Windows.Forms.Button btnNumberOfPlayers;
         private System.Windows.Forms.Button btnStartTournament;
+        private System.Windows.Forms.Button btnGetDuell;
     }
 }
 
