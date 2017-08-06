@@ -8,7 +8,7 @@ namespace PeterWinformsApp
     public class AddMethods 
     {
         Dictionary<string, int> lexicon = GetDictionary();
-        Dictionary<string, int> lexiclexiconSecondStageons = GetDictionaryForSecondStage();
+        
         
 
         public void ButoonToAddPlayerOnClick(object sender, EventArgs e)
@@ -21,7 +21,7 @@ namespace PeterWinformsApp
 
         public void ButoonToAddPointsOnClick(object sender, EventArgs eventArgs)
         {
-            Dictionary<string, int> lexiconSecondStage = GetDictionaryForSecondStage();
+            lexiconSecondStage = GetDictionaryForSecondStage();
             Int32 number = 0;
             if (Int32.TryParse(PointsBox.Text, out number) && lexiconSecondStage.ContainsKey(PlayerNameBox.Text))
             {
