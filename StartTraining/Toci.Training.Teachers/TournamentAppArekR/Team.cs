@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms.VisualStyles;
 
 namespace TournamentAppArekR
 {
@@ -10,6 +12,15 @@ namespace TournamentAppArekR
         public int GetScore()
         {
             return Players.Sum(player => player.Score);
+        }
+        public bool IsSelected;
+
+        public void GetTournamentDuelPairs()
+        {
+            Random rnd= new Random();
+            var index = rnd.Next(0, Players.Count);
+
+
         }
     }
 }
