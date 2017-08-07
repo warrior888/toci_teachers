@@ -22,8 +22,10 @@ namespace Toci.Training.KarolB
                 Console.ReadLine();
             }
 
-
-
+            for (int i= 0; i < Name.Length; i++)
+            {
+                Console.Write(Name[i]);
+            }
             Console.WriteLine(stringLength);
             Console.ReadLine();
            
