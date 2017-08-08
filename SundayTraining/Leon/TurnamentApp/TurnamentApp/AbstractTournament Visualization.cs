@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TurnamentApp
 {
-    class AbstractTournament_Visualization
+    public abstract class AbstractTournament_Visualization
     {
+        public abstract void GroupVisualization(string[][] candidate);
     }
 }
