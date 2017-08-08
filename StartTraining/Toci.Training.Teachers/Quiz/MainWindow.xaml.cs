@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 
 namespace Quiz
@@ -21,41 +22,54 @@ namespace Quiz
 
         private void ButtonBase_OnClick(object sender, EventArgs e)
         {
-                var pushEnter = (KeyEventArgs) e;
+            var pushEnter = (KeyEventArgs) e;       // Dodać obsługę kliknięcia. Zrobić z tego funkcje wywoływaną w na enter i kliknięcie ?
 
             if (pushEnter.Key == Key.Enter)
             {
-                if (_quizManager.AddUser(userNameTextBox.Text))
+                if (_quizManager.AddUser(UserNameTextBox.Text))
                 {
-                    confirmedTextBlock.Text = "Added";
-                    confirmedTextBlock.Visibility = Visibility.Visible;
+                    ConfirmedTextBlock.Text = "Added";
+                    ConfirmedTextBlock.Visibility = Visibility.Visible;
+                    UserNameTextBox.Clear();
                 }
                 else
                 {
 
-                    confirmedTextBlock.Text = "Empty box or name exist";
-                    confirmedTextBlock.Visibility = Visibility.Visible;
+                    ConfirmedTextBlock.Text = "Empty box or name exist";
+                    ConfirmedTextBlock.Visibility = Visibility.Visible;
                 }
             }
         }
 
         private void UIElement_OnDrop(object sender, DragEventArgs e)
         {
-            
+            // TODO: Pomyśleć nad zaimplementowaniem przeciągania i upuszcania elementów!!!
+            /*if (_quizManager.AddUser(UserNameTextBox.Text))
+            {
+                ConfirmedTextBlock.Text = "Added";
+                ConfirmedTextBlock.Visibility = Visibility.Visible;
+            }
+            else
+            {
+
+                ConfirmedTextBlock.Text = "Empty box or name exist";
+                ConfirmedTextBlock.Visibility = Visibility.Visible;
+            }*/
         }
 
         private void AddGroupButton_OnClick(object sender, RoutedEventArgs e)
         {
-            if (!_quizManager.CreateGroup(createdGroupPanel.Items, GroupNameTextBox.Text))
+            if (!_quizManager.CreateGroup(CreatedGroupPanel.Items, GroupNameTextBox.Text))
             {
                 GroupWarringTextBlock.IsEnabled = true;
-                GroupWarringTextBlock.Text = "Name already exist. Please change group name.";
+                GroupWarringTextBlock.Text = "Name already exist. \nPlease change group name.";
             }
             else
             {
                 GroupWarringTextBlock.IsEnabled = false;
-                createdGroupPanel.Items.Clear();
+                CreatedGroupPanel.Items.Clear();
                 AddGroupButton.IsEnabled = false;
+                GroupNameTextBox.Clear();
             }
         }
 
@@ -65,13 +79,13 @@ namespace Quiz
             {
                 ListView list = (ListView) sender;
                 var user = list.SelectedItem as User;
-                if (user?.GroupMambership != null || createdGroupPanel.Items.Contains(list.SelectedItem))
+                if (user?.GroupMambership != null || CreatedGroupPanel.Items.Contains(list.SelectedItem))
                 {
                     AllUserWaringTextBlock.Text = "User already has a group";
                     return;
                 }
                 AllUserWaringTextBlock.Text = "";
-                createdGroupPanel.Items.Add(list.SelectedItem);
+                CreatedGroupPanel.Items.Add(list.SelectedItem);
                 AddGroupButton.IsEnabled = true;
             }
         }
