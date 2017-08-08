@@ -26,7 +26,8 @@ namespace Toci.Training.KarolB
             {
                 Console.Write(Name[i]);
             }
-            Console.WriteLine(stringLength);
+           
+            Console.WriteLine("\n \n" + stringLength);
             Console.ReadLine();
            
         }
