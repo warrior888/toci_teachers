@@ -10,6 +10,25 @@ namespace Toci.Training.KarolB
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Mój pierwszy program");
+            Console.ReadLine();
+
+            string Name = "Karol";
+            int stringLength= Name.Length;
+
+            if (stringLength > 4)
+            {
+                Console.WriteLine("If sie spełnił");
+                Console.ReadLine();
+            }
+
+            for (int i= 0; i < Name.Length; i++)
+            {
+                Console.Write(Name[i]);
+            }
+            Console.WriteLine(stringLength);
+            Console.ReadLine();
+           
         }
     }
 }

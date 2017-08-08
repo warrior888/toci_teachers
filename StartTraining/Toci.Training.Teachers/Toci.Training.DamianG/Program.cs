@@ -10,6 +10,66 @@ namespace Toci.Training.DamianG
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Zmienna długość tablicy. Podaj długość jaką chcesz otrzymać:"); // To LEARN
+            string input = Console.ReadLine();
+            int inputNumbers = 0;
+            int.TryParse(input, out inputNumbers);
+            Console.WriteLine("Twoja tablica ma długosć " + inputNumbers);
+            string [] arrayNumbers = new string [inputNumbers];
+
+            for (int i = 0; i < arrayNumbers.Length; i++)
+            {
+                Console.Write(i + 1); //dodanie liczb przed każdym słowem
+                string arrayWord = Console.ReadLine(); // dodanie do tablicy słów 
+
+                arrayNumbers[i] = arrayWord; // up
+            }
+
+            Console.WriteLine("\nDziękuję za podanie informacji");
+
+            Console.WriteLine("\nTwoje informacje w tablicy to:");
+
+            for (int i = 0; i < arrayNumbers.Length; i++)
+            {
+                Console.Write((i + 1) + "." + arrayNumbers[i] + " "); // wyświetlenie danych z tablicy (liczba + . + dana + spacja
+            }
+
+
+
+            /*string[] lengthOfStrings = new string[10];
+
+            int limitS = lengthOfStrings.Length;
+
+            Console.WriteLine("Podaj swoje informacje do tablicy");
+
+            for (int i = 0 ; i < limitS ; i++)
+            {
+                Console.Write(i+1); //dodanie liczb przed każdym słowem
+                string stringWord = Console.ReadLine(); // dodanie do tablicy słów 
+
+                lengthOfStrings[i] = stringWord; // up
+            }
+
+            Console.WriteLine("\nDziękuję za podanie informacji");
+
+            Console.WriteLine("\nTwoje informacje w tablicy to:");
+
+            for (int i = 0; i < limitS; i++)
+            {
+                Console.Write( (i+1) + "." + lengthOfStrings[i] + " " ); // wyświetlenie danych z tablicy (liczba + . + dana + spacja
+            }
+
+
+            Console.WriteLine("Podaj słowo do odwórcenia");
+            string name = Console.ReadLine();
+            for (int i = name.Length - 1; i >= 0; i--)
+            {
+                Console.Write(name[i]);
+                
+            }
+            
+
+
             int[] lengthOfStrings = new int[10];
             int limit = lengthOfStrings.Length;
             for (int i = 0; i < limit; i++)
@@ -55,7 +115,7 @@ namespace Toci.Training.DamianG
             else 
             {
                 Console.WriteLine("Popracuj nad swoją długością hasła");
-            }
+            }*/
 
 
 
