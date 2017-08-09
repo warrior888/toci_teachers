@@ -21,9 +21,11 @@ namespace PeterWinformsApp
             textBox.Location = new Point(x, y);
             return textBox;
         }
-        public Label CreateLabel(int x, int y, string tekst, int sizeX, int sizeY)
+        public Label CreateLabel(int x, int y, string tekst, int sizeX, int sizeY, Color color , int fontSize)
         {
             Label label = new Label();
+            label.Font = new Font(tekst, fontSize);
+            label.BackColor = color;
             label.Text = tekst;
             label.BackColor = Color.AliceBlue;
             label.Size = new Size(sizeX, sizeY);

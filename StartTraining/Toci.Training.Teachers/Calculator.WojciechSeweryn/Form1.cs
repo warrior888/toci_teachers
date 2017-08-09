@@ -46,11 +46,21 @@ namespace Calculator.WojciechSeweryn
         private void operator_click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            operationPerformed = button.Text;
-            resultValue = Double.Parse(textBox_Result.Text);
-            labelCurrentOperation.Text = resultValue + " " + operationPerformed;
-            isOperationPerformed = true;
 
+            if (resultValue != 0)
+            {
+                buttonEqual.PerformClick();
+                operationPerformed = button.Text;
+                labelCurrentOperation.Text = resultValue + " " + operationPerformed;
+                isOperationPerformed = true;
+            }
+            else
+            {
+                operationPerformed = button.Text;
+                resultValue = Double.Parse(textBox_Result.Text);
+                labelCurrentOperation.Text = resultValue + " " + operationPerformed;
+                isOperationPerformed = true;
+            }
         }
 
         private void buttonClearEnter_Click(object sender, EventArgs e)
@@ -87,6 +97,8 @@ namespace Calculator.WojciechSeweryn
                 default:
                     break;
             }
+            resultValue = Double.Parse(textBox_Result.Text);
+            labelCurrentOperation.Text = "";
         }
     }
 }
