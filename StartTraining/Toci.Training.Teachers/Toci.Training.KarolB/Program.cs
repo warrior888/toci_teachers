@@ -13,13 +13,17 @@ namespace Toci.Training.KarolB
             Console.WriteLine("Mój pierwszy program");
             Console.ReadLine();
 
-            string Name = "Karol";
+            string Name = "Karol i  Natalia ";
             int stringLength= Name.Length;
 
-            if (stringLength > 4)
+            if (stringLength < 4)
             {
                 Console.WriteLine("If sie spełnił");
                 Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Spełnia sie else");
             }
 
             for (int i= 0; i < Name.Length; i++)
