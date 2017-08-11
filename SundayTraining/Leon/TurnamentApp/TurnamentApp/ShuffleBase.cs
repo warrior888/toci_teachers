@@ -11,5 +11,7 @@ namespace TurnamentApp
         public abstract RandomShuffle Shuffle(RandomShuffle random);
 
         public abstract string[][] ToSplitGroups(string[] candidate);
+
+        public abstract int[] ShuffleGroups();
     }
 }

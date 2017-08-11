@@ -18,7 +18,7 @@ namespace TurnamentApp
                 j = tableNumber.Next(0, random.Length-2);
                 while(candidate[j] != null)
                 {
-                    if(j == 19)
+                    if(j == (random.Length - 1))
                     {
                         j = 0;
                     }
@@ -27,6 +27,24 @@ namespace TurnamentApp
                 candidate[j] = random[i];
             }
             return candidate;
+        }
+
+        public override int[] ShuffleGroups()
+        {
+            int[] result = new int[4];
+            Random number = new Random();
+            int RandomNumber;
+
+            for(int i =0; i < 4; i++)
+            {
+                do
+                {
+                    RandomNumber = number.Next(1, 5);
+                }
+                while (RandomNumber == result[0] || RandomNumber == result[1] || RandomNumber == result[2]);
+                result[i] = RandomNumber;
+            }
+            return result;
         }
 
         public override string[][] ToSplitGroups(string[] candidate)

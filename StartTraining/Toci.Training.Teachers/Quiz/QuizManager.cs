@@ -11,15 +11,14 @@ namespace Quiz
     public class QuizManager
     {
         public ObservableCollection<User> Users { get; private set; }
-        public Dictionary<string, Group> Groups { get; private set; }
+        public ObservableCollection<Dictionary<string, Group>> Groups { get; private set; }
         public List<QuizToSolve> QuizToSolves { get; private set; }
 
         public QuizManager()
         {
             Users = new ObservableCollection<User>();
-            Groups = new Dictionary<string, Group>();
+            Groups = new ObservableCollection<Dictionary<string, Group>> {new Dictionary<string, Group>()};
             QuizToSolves = new List<QuizToSolve>();
-            // TODO: Dokończyć
         }
 
         public bool AddUser(string name)
@@ -36,9 +35,9 @@ namespace Quiz
             return true;
         }
 
-        public bool CreateGroup(ItemCollection @group, string name)     //(string[] usernames)
+        public bool CreateGroup(ItemCollection @group, string name)
         {
-            if (Groups.Keys.Contains(name)) return false;
+            if (Groups.Any() && Groups[0].Keys.Contains(name)) return false;
 
             /*var findUsers = from user in Users
                 where @group.Contains(user)
@@ -55,7 +54,7 @@ namespace Quiz
                     newGroup.AddMember(itIsUser);
                 }
             }
-            Groups.Add(name, newGroup);
+            Groups[0].Add(name, newGroup);
             return true;
         }
     }
