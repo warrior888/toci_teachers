@@ -16,6 +16,8 @@ namespace Toci.Training.DamianG
             for (int i = 0; i < content.Length; i++)
             {
                 Console.WriteLine(content[i]);
+
+                int d = 5;
             }
 
 
