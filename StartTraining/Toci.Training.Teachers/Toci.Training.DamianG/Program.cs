@@ -18,6 +18,7 @@ namespace Toci.Training.DamianG
                 Console.WriteLine(content[i]);
             }
 
+
             
             
             /* Console.WriteLine("Zmienna długość tablicy. Podaj długość jaką chcesz otrzymać:"); // To LEARN
