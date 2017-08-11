@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using Npgsql;
 
 namespace ConsoleApp1
 {
@@ -12,6 +13,18 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+
+                NpSQL client = new NpSQL();
+            client.insert("insert into toci (name,surname,telephone) values ('tomasz','kowalski','554223122')");
+            client.insert("insert into toci (name,surname,telephone) values ('lukasz','skorupka','554223122')");
+            client.insert("insert into toci (name,surname,telephone) values ('bartek','skorupka','554223122')");
+
+
+
+
+
+            /*
+
             // zad 1&2&3. Max wartosc/ Min wartosc. Suma liczb z tablicy
             int[] parameters = { 2, 3, 5, 4, 5, 2, 1, 3, 6, 7, 9, 11, 24, 5, 12, 12, 14, 3 };
             int length = parameters.Length;
@@ -109,7 +122,7 @@ namespace ConsoleApp1
                 }
             }
             */
-
+            /*
                     string result2 = "";
                     int f = example.Length;
                     for (int k = 0; k < string1.Length - example.Length; k++)
@@ -179,7 +192,7 @@ namespace ConsoleApp1
             }
                 Console.WriteLine("Liczba poprawnych odpowiedzi to: "+correctAnswer);
                 Console.WriteLine("Liczba blednych odpowiedzi to: "+inCorrectAnswer);
-
+            */
 
 
         }
