@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2ED401A0-7102-44A2-9549-53718751F52F}</ProjectGuid>
+    <ProjectGuid>{A60E787B-4F35-4409-A8FD-EC5222D94E14}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Toci.Training.KarolB</RootNamespace>
     <AssemblyName>Toci.Training.KarolB</AssemblyName>

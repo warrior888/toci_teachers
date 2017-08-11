@@ -33,6 +33,7 @@ namespace PeterWinForms
         TextBox textBox = new TextBox();
         TextBox PointsBpx = new TextBox();
         TextBox PlayerNameBox = new TextBox();
+
         public static Dictionary<string,int> slownik = new Dictionary<string, int>();
         public static Dictionary<string,int> WinSlownik = new Dictionary<string, int>();
 
@@ -96,7 +97,7 @@ namespace PeterWinForms
             Controls.Add(PlayerNameBox);
 
             
-            //BackgroundImage = Image.FromFile(@"..\..\image.jpg");
+            BackgroundImage = Image.FromFile(@"..\..\image.jpg");
 
             Label PlayerNameLabel = CreateLabel(774, 30, "Write player name", 100, 16);
             PlayerNameLabel.BackColor = Color.DarkGray;
@@ -199,7 +200,12 @@ namespace PeterWinForms
                     y += 30;
                 }
                 Label label = CreateLabel(800, y, winners[i] + " :  " + points[i]+" pkt", 150, 20);
-                WinSlownik.Add(winners[i], points[i]);
+                label.Text += winners[i] + " :  " + points[i]+" pkt";
+                if (!WinSlownik.ContainsKey(winners[i]))
+                {
+                    WinSlownik.Add(winners[i], points[i]);
+                }
+                
                 y += 20;
                 pomoc++;
             }
