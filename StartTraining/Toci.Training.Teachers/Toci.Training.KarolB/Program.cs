@@ -58,8 +58,17 @@ namespace Toci.Training.KarolB
         public static int Letterposition(string animal, char needle)
         {
             for (int i = 1; i < animal.Length; i++)
-                if (animal[i] == needle) 
-            return i;
+            {
+                Console.WriteLine(animal[i]);
+                if (animal[i] == needle)
+                {
+                    return i;
+                }
+
+            }
+            return 1;
+
+
         }
 
     }
