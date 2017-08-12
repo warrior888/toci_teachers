@@ -13,6 +13,7 @@ namespace Toci.Training.DamianG
             Console.WriteLine("Hej");
             int [] content = new int [] { 4, 56, 3, 2, 6, 8, 78, 54, 45, 54, 756, 78, 54, 3, 2, 1, 6 };
         
+
             for (int i = 0; i < content.Length; i++)
             {
                 Console.WriteLine(content[i]);
