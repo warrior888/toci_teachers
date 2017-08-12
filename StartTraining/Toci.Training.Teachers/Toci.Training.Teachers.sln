@@ -1,14 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-
-VisualStudioVersion = 15.0.26430.15
-
-
-VisualStudioVersion = 15.0.26430.13
-
 VisualStudioVersion = 15.0.26430.16
-
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -139,6 +132,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Traning.MateuszN", "Toci.Traning.MateuszN\Toci.Traning.MateuszN.csproj", "{5BE65F45-87D7-4093-9CF8-E4A059777143}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.WojciechSeweryn", "Calculator.WojciechSeweryn\Calculator.WojciechSeweryn.csproj", "{622F5873-25B8-4107-9099-742B4DB9AE4C}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeterWinForms", "PeterWinForms\PeterWinForms.csproj", "{65989A5A-BAA8-45ED-8F8C-25929277606C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "peter", "peter", "{DAA700BF-3B29-48C6-AAEF-1A2978E2619F}"
@@ -152,6 +146,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.KarolB", "Toci.Training.KarolB\Toci.Training.KarolB.csproj", "{A60E787B-4F35-4409-A8FD-EC5222D94E14}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.GabrysiaW", "Toci.Training.GabrysiaW\Toci.Training.GabrysiaW.csproj", "{3B864038-991C-4282-980C-A1CDDC0F6C0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LukaszJ", "LukaszJ", "{C86FF53A-6C2C-4EBA-AB35-D5DA18406B85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spotkanie_1", "Spotkanie_1", "{C8D5561B-D0A7-4643-81E1-08F00137E4A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nauka", "Nauka", "{01DB2FBC-BD8B-48FE-9B7A-2AEA8AD56A67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Praca_Domowa", "Praca_Domowa", "{5DAA0992-984B-4DFF-9012-C8990F603A8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.LukaszJ_Spotkanie1_Nauka", "Toci.Training.LukaszJ_Spotkanie1_Nauka\Toci.Training.LukaszJ_Spotkanie1_Nauka.csproj", "{5A95343D-56F1-41BA-89B4-66534430CEB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -387,6 +391,10 @@ Global
 		{3B864038-991C-4282-980C-A1CDDC0F6C0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B864038-991C-4282-980C-A1CDDC0F6C0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B864038-991C-4282-980C-A1CDDC0F6C0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A95343D-56F1-41BA-89B4-66534430CEB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A95343D-56F1-41BA-89B4-66534430CEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A95343D-56F1-41BA-89B4-66534430CEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A95343D-56F1-41BA-89B4-66534430CEB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -452,5 +460,10 @@ Global
 		{0BF142E1-CC8C-4FB3-AF15-141039B86BEB} = {E016225C-0624-43C6-92D6-6A0731A3EDAC}
 		{A60E787B-4F35-4409-A8FD-EC5222D94E14} = {C46BB3E3-3328-400B-BEE4-BD18E1BE4F29}
 		{3B864038-991C-4282-980C-A1CDDC0F6C0A} = {9FB1AE10-37C9-4276-A3AD-4306EE481B46}
+		{C86FF53A-6C2C-4EBA-AB35-D5DA18406B85} = {931DE218-8311-4ECF-9B95-2A070DDA5B27}
+		{C8D5561B-D0A7-4643-81E1-08F00137E4A5} = {C86FF53A-6C2C-4EBA-AB35-D5DA18406B85}
+		{01DB2FBC-BD8B-48FE-9B7A-2AEA8AD56A67} = {C8D5561B-D0A7-4643-81E1-08F00137E4A5}
+		{5DAA0992-984B-4DFF-9012-C8990F603A8F} = {C8D5561B-D0A7-4643-81E1-08F00137E4A5}
+		{5A95343D-56F1-41BA-89B4-66534430CEB9} = {01DB2FBC-BD8B-48FE-9B7A-2AEA8AD56A67}
 	EndGlobalSection
 EndGlobal
