@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
-using System.Text
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Toci.Training.KarolB
@@ -15,7 +15,7 @@ namespace Toci.Training.KarolB
             Console.WriteLine("Mój pierwszy program");
             Console.ReadLine();
 
-            int position = Letterposition("Tygrys", "g");
+            int position = Letterposition("Tygrys", 'g');
             string Name = "Karol i  Natalia ";
             int stringLength = Name.Length;
 
@@ -55,9 +55,11 @@ namespace Toci.Training.KarolB
 
         }
 
-        public static int Letterposition(string animal, string needle)
+        public static int Letterposition(string animal, char needle)
         {
-            for (int i = 1; i < animal.Length; i++) ;
+            for (int i = 1; i < animal.Length; i++)
+                if (animal[i] == needle) 
+            return i;
         }
 
     }
