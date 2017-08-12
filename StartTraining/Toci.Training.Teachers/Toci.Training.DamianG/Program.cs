@@ -10,7 +10,21 @@ namespace Toci.Training.DamianG
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Zmienna długość tablicy. Podaj długość jaką chcesz otrzymać:"); // To LEARN
+            Console.WriteLine("Hej");
+            int [] content = new int [] { 4, 56, 3, 2, 6, 8, 78, 54, 45, 54, 756, 78, 54, 3, 2, 1, 6 };
+        
+
+            for (int i = 0; i < content.Length; i++)
+            {
+                Console.WriteLine(content[i]);
+
+                int d = 5;
+            }
+
+
+            
+            
+            /* Console.WriteLine("Zmienna długość tablicy. Podaj długość jaką chcesz otrzymać:"); // To LEARN
             string input = Console.ReadLine();
             int inputNumbers = 0;
             int.TryParse(input, out inputNumbers);
@@ -36,7 +50,7 @@ namespace Toci.Training.DamianG
 
 
 
-            /*string[] lengthOfStrings = new string[10];
+            string[] lengthOfStrings = new string[10];
 
             int limitS = lengthOfStrings.Length;
 
