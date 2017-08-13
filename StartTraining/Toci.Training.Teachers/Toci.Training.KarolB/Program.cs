@@ -66,7 +66,7 @@ namespace Toci.Training.KarolB
                 }
 
             }
-            return 1;
+            return 4;
 
 
         }
