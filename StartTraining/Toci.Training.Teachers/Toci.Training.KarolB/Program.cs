@@ -11,32 +11,27 @@ namespace Toci.Training.KarolB
     {
         static void Main(string[] args)
         {
-            string[] fish = new string[10];
-            for (int i = 0; i < fish.Length; i++)
+            int[] losoweliczby = new int[] {3, 4, 67, 45, 43, 90, 86, 75, 47, 86, 93, 24, 67, 86};
+
+            int temp;
+
+            for (int i = 0; i < losoweliczby.Length; i++)
             {
-             
-                Console.WriteLine("Wpisz nazwe ryby {0} ", i);
-                fish[i] = Console.ReadLine(); 
-
-                if (i == fish.Length - 1)
-
+                for (int j = 0; j < losoweliczby.Length; j++)
                 {
-                    Console.WriteLine("Dziekuje za uzupełnienie tabeli");
+                    if (i != j)
+                    {
+                        if (losoweliczby[i] < losoweliczby[j])
+                        {
+                            temp = losoweliczby[i];
+                            losoweliczby[i] = losoweliczby[j];
+                            losoweliczby[j] = temp;
+                        }
+                    }
                 }
-                
-               
-            }
-            Console.ReadKey();
-            Console.WriteLine("\n");
-            Console.WriteLine("Tablica Ryb");
-
-            for (int i = 0; i < fish.Length; i++)
-            {
-                Console.WriteLine(""+(i+1)+ "." +fish[i]);
             }
 
-
-            Console.WriteLine("Mój pierwszy program");
+        Console.WriteLine("Mój pierwszy program");
             Console.ReadLine();
 
             int position = Letterposition("Tygrys", 'g');
