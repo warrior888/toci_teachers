@@ -54,6 +54,9 @@ namespace WindowsFormsApp1
             Controls.Add(participantAdd);
 
             participants= new string[Convert.ToInt32(numberOfParticipantTextBox.Text)];
+21
+
+
 
             
 
