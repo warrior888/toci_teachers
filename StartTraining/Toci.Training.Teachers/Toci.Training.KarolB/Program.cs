@@ -36,11 +36,6 @@ namespace Toci.Training.KarolB
             }
 
 
-
-
-
-
-
             Console.WriteLine("Mój pierwszy program");
             Console.ReadLine();
 

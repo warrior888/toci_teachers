@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B622E583-5DFE-405C-92D8-09BE3525C42B}</ProjectGuid>
+    <ProjectGuid>{9EB0B072-3452-44A4-B351-4DFC3272416B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Zadanie_domowe__Pętle_</RootNamespace>
-    <AssemblyName>Zadanie domowe %28Pętle%29</AssemblyName>
+    <RootNamespace>_1st_task_Pętla_FOR</RootNamespace>
+    <AssemblyName>1st task Pętla FOR</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
