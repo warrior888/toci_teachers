@@ -100,6 +100,43 @@ namespace Toci.Training.LukaszJ_Spotkanie1_praca
 
             #endregion
 
+            #region Dodatkowe zadania domowe
+
+            // tablica o wartości: { 3, 56, 3, 5, 78, 9, 78, 4, 3, 567, 8 }
+            // 1. Znaleźć w tej tablicy maksymalną wartość
+            // 2. znaleźć minimalną wartość
+            // 3. Zrobić sumę wszystkich elementów tablicy
+            // 4. Zliczyć ilość wystąpień przykładowego elementu, np. szukamy 78 to ma wyskoczyć 2, bo tyle mamy wystąpień w tablicy
+
+
+            int[] liczby = { 3, 56, 3, 5, 78, 9, 78, 4, 3, 567, 8 };
+
+            // Ad. 1
+            int max = liczby[0]; // tymczasowe maximum
+
+            for (int i = 1; i < liczby.Length; i++)
+            {
+                if (liczby[i] > max)
+                {
+                    max = liczby[i];
+                }
+            }
+            Console.WriteLine("Maksymalna liczba w tablicy wynosi: {0}", max);
+            Console.ReadKey();
+
+            //Ad. 2
+            int min = liczby[0]; // tymczasowe minimum
+
+            for (int i = 1; i < liczby.Length; i++)
+            {
+                if (liczby[i] < min)
+                {
+                    min = liczby[i];
+                }
+            }
+            Console.WriteLine("Minimalna liczba w tablicy wynosi: {0}", min);
+            Console.ReadKey();
+            #endregion
         }
     }
 }
