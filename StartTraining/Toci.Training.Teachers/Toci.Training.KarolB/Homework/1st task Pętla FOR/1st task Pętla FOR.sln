@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1st task Pętla FOR", "1st task Pętla FOR\1st task Pętla FOR.csproj", "{9EB0B072-3452-44A4-B351-4DFC3272416B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EB0B072-3452-44A4-B351-4DFC3272416B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB0B072-3452-44A4-B351-4DFC3272416B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB0B072-3452-44A4-B351-4DFC3272416B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB0B072-3452-44A4-B351-4DFC3272416B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

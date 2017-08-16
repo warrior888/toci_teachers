@@ -11,8 +11,27 @@ namespace Toci.Training.KarolB
     {
         static void Main(string[] args)
         {
+            int[] losoweliczby = new int[] {3, 4, 67, 45, 43, 90, 86, 75, 47, 86, 93, 24, 67, 86};
 
-            Console.WriteLine("Mój pierwszy program");
+            int temp;
+
+            for (int i = 0; i < losoweliczby.Length; i++)
+            {
+                for (int j = 0; j < losoweliczby.Length; j++)
+                {
+                    if (i != j)
+                    {
+                        if (losoweliczby[i] < losoweliczby[j])
+                        {
+                            temp = losoweliczby[i];
+                            losoweliczby[i] = losoweliczby[j];
+                            losoweliczby[j] = temp;
+                        }
+                    }
+                }
+            }
+
+        Console.WriteLine("Mój pierwszy program");
             Console.ReadLine();
 
             int position = Letterposition("Tygrys", 'g');
@@ -66,7 +85,7 @@ namespace Toci.Training.KarolB
                 }
 
             }
-            return 1;
+            return 4;
 
 
         }
