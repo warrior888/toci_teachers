@@ -12,10 +12,11 @@ namespace Sudoku
         {
             Random IntForTable = new Random();
             int number;
+            int number2 = 0;
 
             for(int i = 0; i < 9; i++)
             {
-                for(int j = 0; j < 9; j++)
+                for (int j = 0; j < 9; j++)
                 {
                     do
                     {
