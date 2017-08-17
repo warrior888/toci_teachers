@@ -11,6 +11,21 @@ namespace Toci.Training.KarolB
     {
         static void Main(string[] args)
         {
+            string ourSubstringexample = "Karol i Natalia";
+            
+            int start = 5;
+            int lettertocut = 3;
+
+            string cuttingletters = "";
+
+            for (int i = start; i < start + lettertocut; i++)
+            {
+                cuttingletters += ourSubstringexample[i];
+            }
+            Console.WriteLine(cuttingletters);
+
+
+
             int[] losoweliczby = new int[] {3, 4, 67, 45, 43, 90, 86, 75, 47, 86, 93, 24, 67, 86};
 
             int temp;

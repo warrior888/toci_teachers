@@ -10,6 +10,9 @@ namespace _1st_task_Pętla_FOR
     {
         static void Main(string[] args)
         {
+            
+
+
             string[] fish = new string[10];
             for (int i = 0; i < fish.Length; i++)
             {
