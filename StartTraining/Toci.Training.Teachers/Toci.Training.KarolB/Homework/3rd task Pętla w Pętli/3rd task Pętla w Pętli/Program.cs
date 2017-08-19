@@ -31,7 +31,6 @@ namespace _3rd_task_Pętla_w_Pętli
                     {
                         if (basic[positionBasic]!=simple[positionSimple])
                         {
-                            isChanged = false;
                             break;
                         }
                     }
