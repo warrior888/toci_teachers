@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace Quiz
             int correct = 0;
             int incorrect = 0;
             string answer = "";
+            int quizindexer = 0;
 
 
             string[] FirstQuiz = new string[]
@@ -25,24 +27,56 @@ namespace Quiz
 
             };
 
+
             string[][] FirstQuizAnswers = new string[FirstQuiz.Length][];
             {
-                int quizinexer = 0;
+                
 
-                FirstQuizAnswers[quizinexer++] = new string []{"a. string","b. int","c. for", "d. class"};
-                FirstQuizAnswers[quizinexer++] = new string []{"a. static","b. first","c. string", "d. Console", "e.else"};
-                FirstQuizAnswers[quizinexer++] = new string []{"a. []","b. {}","c. ()",};
-                FirstQuizAnswers[quizinexer++] = new string []{"a. <>","b. ==","c. --","d. ++", "e. []"};
-                FirstQuizAnswers[quizinexer++] = new string []{"a. foreach","b. double","c. namespace ","d. System", "e. public"};
+                FirstQuizAnswers[quizindexer++] = new string []{"a. string","b. int","c. for", "d. class"};
+                FirstQuizAnswers[quizindexer++] = new string []{"a. static","b. first","c. string", "d. Console", "e.else"};
+                FirstQuizAnswers[quizindexer++] = new string []{"a. []","b. {}","c. ()",};
+                FirstQuizAnswers[quizindexer++] = new string []{"a. <>","b. ==","c. --","d. ++", "e. []"};
+                FirstQuizAnswers[quizindexer++] = new string []{"a. foreach","b. double","c. namespace ","d. System", "e. public"};
             };
-            for (int i = 0; i < FirstQuiz.Length; i++)
+            for (int i = 0 ; i < FirstQuiz.Length; i++)
             {
                 Console.WriteLine(FirstQuiz[i]);
                 for (int j =0; j < FirstQuizAnswers[i].Length; j++)
                 {
+
                     Console.WriteLine(FirstQuizAnswers[i][j]);
+                    Console.WriteLine("Wpisz odpowiedź:");
+                    answer = Console.ReadLine();
+                    if (answer == "for")
+                    {
+                        Console.WriteLine(FirstQuizAnswers[i][j]);
+                        correct++;
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Błędna odpowiedź, spróbuj ponownie");
+                        incorrect++;
+                        answer = Console.ReadLine();
+
+                    }
                 }
-            
+                //Console.WriteLine("Wpisz odpowiedź:");
+                //answer = Console.ReadLine();
+                //if (answer == "for")
+                //{
+                //    Console.WriteLine(FirstQuizAnswers[i]);
+                //    correct++;
+
+                //}
+                //else
+                //{
+                //    Console.WriteLine("Błędna odpowiedź, spróbuj ponownie");
+                //    incorrect++;
+                //    answer = Console.ReadLine();
+
+                //}
+                
             }
             Console.ReadKey();
         }
