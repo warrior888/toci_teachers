@@ -26,12 +26,18 @@ namespace Quiz
                 "Which of the below is a type ?",
 
             };
-
+            
+            string[] Answers = new string[]
+            {
+                "for",
+                "first",
+                "{}",
+                "[]",
+                "double",
+            };
 
             string[][] FirstQuizAnswers = new string[FirstQuiz.Length][];
             {
-                
-
                 FirstQuizAnswers[quizindexer++] = new string []{"a. string","b. int","c. for", "d. class"};
                 FirstQuizAnswers[quizindexer++] = new string []{"a. static","b. first","c. string", "d. Console", "e.else"};
                 FirstQuizAnswers[quizindexer++] = new string []{"a. []","b. {}","c. ()",};
@@ -41,43 +47,28 @@ namespace Quiz
             for (int i = 0 ; i < FirstQuiz.Length; i++)
             {
                 Console.WriteLine(FirstQuiz[i]);
+
                 for (int j =0; j < FirstQuizAnswers[i].Length; j++)
                 {
-
                     Console.WriteLine(FirstQuizAnswers[i][j]);
-                    Console.WriteLine("Wpisz odpowiedź:");
-                    answer = Console.ReadLine();
-                    if (answer == "for")
-                    {
-                        Console.WriteLine(FirstQuizAnswers[i][j]);
-                        correct++;
-
-                    }
-                    else
-                    {
-                        Console.WriteLine("Błędna odpowiedź, spróbuj ponownie");
-                        incorrect++;
-                        answer = Console.ReadLine();
-
-                    }
                 }
-                //Console.WriteLine("Wpisz odpowiedź:");
-                //answer = Console.ReadLine();
-                //if (answer == "for")
-                //{
-                //    Console.WriteLine(FirstQuizAnswers[i]);
-                //    correct++;
 
-                //}
-                //else
-                //{
-                //    Console.WriteLine("Błędna odpowiedź, spróbuj ponownie");
-                //    incorrect++;
-                //    answer = Console.ReadLine();
+                Console.WriteLine("Wpisz odpowiedź:");
 
-                //}
-                
+                answer = Console.ReadLine();
+
+                while (answer != Answers[i])
+                {
+                    Console.WriteLine("Błędna odpowiedź, spróbuj ponownie");
+                    incorrect++;
+                    answer = Console.ReadLine();
+
+                }
+                correct++;
+
             }
+            Console.WriteLine("Dziękuje za uzupełnienie testu poniżej Twój wynik :)");
+            Console.WriteLine("Poprawnych  " + correct + "  " + "Błędnych  "+ incorrect);
             Console.ReadKey();
         }
     }
