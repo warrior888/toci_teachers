@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Toci.Training.KarolBudny
+namespace Toci.Training.Spotkanie_1
 {
     class Program
     {

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FED72E1A-286E-430D-BCE7-21322B222944}</ProjectGuid>
+    <ProjectGuid>{B622E583-5DFE-405C-92D8-09BE3525C42B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Toci.Training.KarolBudny</RootNamespace>
-    <AssemblyName>Toci.Training.KarolBudny</AssemblyName>
+    <RootNamespace>Zadanie_domowe__Pętle_</RootNamespace>
+    <AssemblyName>Zadanie domowe %28Pętle%29</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
