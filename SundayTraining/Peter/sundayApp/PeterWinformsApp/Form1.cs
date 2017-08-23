@@ -53,10 +53,10 @@ namespace PeterWinformsApp
         }
         public void AddTextBox()
         {
-            ItemsBox.StartPlayerName = addItem.CreateTextBox(161, 40, "name", 158, 40);
+            ItemsBox.StartPlayerName = addItem.CreateTextBox(261, 40, "name", 158, 40);
             Controls.Add(ItemsBox.StartPlayerName);
 
-            ItemsBox.PointsBox = addItem.CreateTextBox(878, 64, "points",78 , 20);
+            ItemsBox.PointsBox = addItem.CreateTextBox(978, 64, "points",78 , 20);
             Controls.Add(ItemsBox.PointsBox);
 
             ItemsBox.PlayerNameBox = addItem.CreateTextBox(878, 28, "name", 78, 20);
@@ -67,7 +67,7 @@ namespace PeterWinformsApp
         {
             Label PlayerNameLabel = addItem.CreateLabel(774, 30, "Write player name", 100, 16, Color.DarkGray , 10);
             Controls.Add(PlayerNameLabel);
-            Label PointsLabel = addItem.CreateLabel(774, 65, "Write player points", 100, 16, Color.DarkGray,10);
+            Label PointsLabel = addItem.CreateLabel(794, 65, "Write player points", 120, 16, Color.DarkGray,10);
            Controls.Add(PointsLabel);
         }
 

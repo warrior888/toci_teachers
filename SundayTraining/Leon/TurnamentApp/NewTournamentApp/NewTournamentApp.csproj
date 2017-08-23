@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2BAA5698-B9C8-4850-BD30-8162C66C0954}</ProjectGuid>
+    <ProjectGuid>{8E179A35-168C-4E1A-B836-6BFAE0891C0F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Sudoku</RootNamespace>
-    <AssemblyName>Sudoku</AssemblyName>
+    <RootNamespace>NewTournamentApp</RootNamespace>
+    <AssemblyName>NewTournamentApp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -53,8 +53,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SudokuTable.cs" />
-    <Compile Include="SudokuTableInherit.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
