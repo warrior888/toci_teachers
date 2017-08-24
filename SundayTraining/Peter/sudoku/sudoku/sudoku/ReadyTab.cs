@@ -15,7 +15,7 @@ namespace sudoku
 
         public static char[] readTab()
         {
-            StreamReader sr = new StreamReader(@"C:\Users\Piotr\Desktop\sudoku\sudoku\sudoku\sudokuTab.txt"); 
+            StreamReader sr = new StreamReader(@"C:\Users\Piotr\Desktop\toci\SundayTraining\Peter\sudoku\sudoku\sudoku\sudokuTab.txt"); 
             
                                                                         //todo więcej tablic , losowanie tablic
 
