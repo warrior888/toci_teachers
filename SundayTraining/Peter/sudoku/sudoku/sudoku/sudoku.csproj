@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{311FA410-BDD5-4EEB-99A9-268BEB235979}</ProjectGuid>
+    <ProjectGuid>{F8B4AF1D-66D3-4EB8-8627-BD2210139A9E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>sudoku</RootNamespace>
     <AssemblyName>sudoku</AssemblyName>
@@ -45,22 +45,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="check\CheckMySquare.cs" />
+    <Compile Include="check\chcekX.cs" />
+    <Compile Include="check\checkSquare.cs" />
+    <Compile Include="check\checkY.cs" />
+    <Compile Include="ItemFactory\ButtonBase.cs" />
+    <Compile Include="ItemFactory\CheckButton.cs" />
+    <Compile Include="ItemFactory\interface\IBaseThing.cs" />
+    <Compile Include="ItemFactory\interface\IlabelY.cs" />
+    <Compile Include="ItemFactory\interface\IlabelX.cs" />
+    <Compile Include="ItemFactory\ItemOnClick.cs" />
+    <Compile Include="ItemFactory\MyLabelX.cs" />
+    <Compile Include="ItemFactory\ItemFactory.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="check\CheckMyTableX.cs" />
-    <Compile Include="check\CheckMyTableY.cs" />
-    <Compile Include="items\ButtonWhenClick.cs" />
-    <Compile Include="items\MyButton.cs" />
-    <Compile Include="items\MyItems.cs" />
-    <Compile Include="items\MyLabel.cs" />
-    <Compile Include="items\MyTable.cs" />
+    <Compile Include="ItemFactory\interface\IButton.cs" />
+    <Compile Include="ItemFactory\NormalButton.cs" />
+    <Compile Include="ItemFactory\MyLabelY.cs" />
+    <Compile Include="ItemFactory\ReadOnlyButton.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ItemFactory\WhatItem.cs" />
+    <Compile Include="ReadyTab.cs" />
+    <Compile Include="Table.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sudokuTab.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
