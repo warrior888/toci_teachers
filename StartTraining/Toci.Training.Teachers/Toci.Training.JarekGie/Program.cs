@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 /*
  *  zadanie     - translacja liter duże/małe na tablicy kodów ascii
     zadanie 1.1 - Dodawanie stringów do tablicy
-    Zadanie 2.1 - Największy element tablicy
-    Zadanie 3.1 - Najmniejszy element tablicy
-    Zadanie 4.1 - Suma elementów tablicy
-    Zadanie 5.1 - zliczanie wystąpień elementów w tablicy
+    Zadanie 1.2 - Największy element tablicy
+    Zadanie 1.3 - Najmniejszy element tablicy
+    Zadanie 1.4 - Suma elementów tablicy
+    Zadanie 1.5 - zliczanie wystąpień elementów w tablicy
      */
 namespace Toci.Training.JarekGie
 {
@@ -18,58 +18,145 @@ namespace Toci.Training.JarekGie
         static void Main(string[] args)
         {
             //Zadanie 1.1 - Dodawanie stringów do tablicy
-/*
-            string[] tablica = new string[10];
+            /*
+                       string[] tablica = new string[10];
 
-            Console.WriteLine("Wpisz swoją liczbę: ");
 
-            for(int i = 0; i < tablica.Length; i++)
-            {
-                
-                tablica[i] = Console.ReadLine();
 
-                Console.WriteLine("Dodano :" + tablica[i]);
+                       for (int i = 0;i < tablica.Length; i++)
+                       {
+                           Console.Write("Podaj swój tekst: ");
+                           tablica[i] = Console.ReadLine();
+                           Console.WriteLine("Wpisałeś :" + tablica[i]);
 
-                if (i == tablica.Length -1 )
-                {
-                    Console.WriteLine("Koniec Tablicy");
-                }
-            }
-            for(int i = 0; i < tablica.Length; i++)
-            { 
-                Console.WriteLine(tablica[i] + " ");
-            }
-            */
+                           if(i == tablica.Length -1)
+                           {
+                               Console.WriteLine("Koniec tablicy, dziękuję.");
+                           }
+                       }
+                       for ( int i = 0; i < tablica.Length; i++)
+                       {
+                           Console.WriteLine("Do tablicy wpisano: " + tablica[i]);
+                       }
 
-            // Zadanie 2.1 - Największy element tablicy
 
-            int min;
-            int[] tablicaInt = new int[10];
 
-            //klasa generująca liczby pseudolosowe
+                       // Zadanie 1.2 - Najmniejszy element tablicy
+
+                       int min;
+                       int[] tablicaInt = new int[10];
+
+                       //klasa generująca liczby pseudolosowe
+                       Random r = new Random();
+
+
+                       //wypełniam tablicę liczbami pseudolosowymi
+                       for (int i = 0; i < tablicaInt.Length; i++)
+                       {
+                           tablicaInt[i] = r.Next(10);
+                           Console.Write(tablicaInt[i] + " ");
+                       }
+
+                       //Przejście do nowej linii
+                       Console.WriteLine();
+                       min = tablicaInt[9];
+
+                       for (int i = 0; i < tablicaInt.Length; i++)
+                       {
+                           if (tablicaInt[i] < min)
+                           {
+                               min = tablicaInt[i];
+                           }
+
+                       }
+                       Console.WriteLine("Najmniejszy element tablicy to: " + min);
+                      
+                 // Zadanie 1.3 - Największy element tablicy
+
+                       int max;
+                       int[] tablicaInt = new int[10];
+
+                       //klasa generująca liczby pseudolosowe
+                       Random r = new Random();
+
+
+                       //wypełniam tablicę liczbami pseudolosowymi
+                       for (int i = 0; i < tablicaInt.Length; i++)
+                       {
+                           tablicaInt[i] = r.Next(10);
+                           Console.Write(tablicaInt[i] + " ");
+                       }
+
+                       //Przejście do nowej linii
+                       Console.WriteLine();
+                       max = tablicaInt[0];
+
+                       for (int i = 0; i < tablicaInt.Length; i++)
+                       {
+                           if (tablicaInt[i] > max)
+                           {
+                               max = tablicaInt[i];
+                           }
+
+                       }
+                       Console.WriteLine("Największy element tablicy to: " + max);
+                       
+
+            //Zadanie 1.4 - Suma elementów tablicy
+
+            int wynik = 0;
+            int[] tablica = new int[10];
             Random r = new Random();
 
-
-            //wypełniam tablicę liczbami pseudolosowymi
-            for (int i = 0; i < tablicaInt.Length; i++)
+            for (int i = 0; i < tablica.Length; i++)
             {
-                tablicaInt[i] = r.Next(10);
-                Console.Write(tablicaInt[i] + " ");
+                tablica[i] = r.Next(10);
             }
-
-            //Przejście do nowej linii
+            for (int i = 0; i < tablica.Length; i++)
+            {
+               
+                Console.Write(tablica[i] + " ");
+            }
             Console.WriteLine();
-            min = tablicaInt[9];
-
-            for (int i = 0; i < tablicaInt.Length; i++)
+           
+            for (int i = 0; i < tablica.Length; i++)
             {
-                if (tablicaInt[i] < min)
-                {
-                    min = tablicaInt[i];
-                }
-
+                wynik += tablica[i];
+                
             }
-            Console.WriteLine("Najmniejszy element tablicy to: " + min);
+
+
+            Console.Write("Suma elementów tablicy, wynosi :" + wynik);
+             */
+
+            //Zadanie 1.5 - zliczanie wystąpień elementów w tablicy
+
+            int seek = 7;
+            int count = 0;
+            int[] tablica = new int[10];
+
+            Random r = new Random();
+
+            for (int i = 0; i < tablica.Length; i++)
+            {
+                tablica[i] = r.Next(10);
+                Console.Write(tablica[i] + " ");
+            }
+            for (int i = 0; i < tablica.Length; i++)
+            {
+                if (tablica[i] == seek)
+                {
+                    count = count + 1;
+
+                }
+               
+            }
+            Console.WriteLine();
+            Console.Write("Liczba " + seek + " pojawia się w tablicy " + count + " razy.");
+
+
+
+
             Console.ReadKey();
 
 
