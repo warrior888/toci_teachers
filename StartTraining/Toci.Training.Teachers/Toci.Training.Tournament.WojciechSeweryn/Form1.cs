@@ -107,7 +107,7 @@ namespace Toci.Training.Tournament.WojciechSeweryn
 
             for (int i = 0; i < participantCandidate.Length; i++)
             {
-                participantCandidate[i] = 
+                //participantCandidate[i] = 
             }
             
         }
