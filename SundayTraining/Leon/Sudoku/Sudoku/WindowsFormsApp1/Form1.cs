@@ -39,17 +39,14 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string button = "";
-            string table = "";
             bool checking = true;
             for (int x = 0; x < 9; x++)
             {
                 for (int y = 0; y < 9; y++)
                 {
-                    button = Convert.ToString(sbtn.ButtonTable[x, y].Text);
-                    table = stbl.TableOfSudoku[x, y].ToString();
-                    if (button != table)
+                    if (Convert.ToString(sbtn.ButtonTable[x, y].Text) != stbl.TableOfSudoku[x, y].ToString())
                     {
+                        sbtn.ButtonTable[x, y].BackColor = Color.Red;
                         checking = false;
                     }
                 }
@@ -60,6 +57,13 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Correct");
             }
             else { MessageBox.Show("Try harder"); }
+            for (int x = 0; x < 9; x++)
+            {
+                for (int y = 0; y < 9; y++)
+                {
+                    sbtn.ButtonTable[x, y].BackColor = Color.WhiteSmoke;
+                }
+            }
         }
     }
 }
