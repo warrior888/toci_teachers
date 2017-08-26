@@ -12,19 +12,38 @@ namespace Sudoku
         {
             Random IntForTable = new Random();
             int number;
-            int number2 = 0;
-
-            for(int i = 0; i < 9; i++)
+            int ControlNumber = 1;
+            number = IntForTable.Next(1, 10);
+            for (int z = 0, DemY = 0, DemX = 0; z <9; z++)
             {
-                for (int j = 0; j < 9; j++)
+                for (int i = DemX; i < 9; i += 3)
                 {
-                    do
+                    for (int j = DemY; j < 9; j += 3)
                     {
-                        number = IntForTable.Next(1, 10);
+                        number = CheckNumber(number);
+                        candidate[j, i] = number;
+                        number++;
                     }
-                    while (HorizontalChecking(candidate, number, j) == false || VerticalChecking(candidate, number, i) == false);
-                    candidate[i, j] = number;
                 }
+                number = CheckNumber(number);
+                number++;
+                if(ControlNumber == 1) { DemX+=2; DemY+=2; }
+                if(ControlNumber == 2) { DemX--; DemY-=2; }
+                if(ControlNumber == 3) { DemX--; DemY++; }
+                if(ControlNumber == 4) { DemX+=2; DemY--; }
+                if(ControlNumber == 5) { DemX--; DemY++; }
+                if(ControlNumber == 6) { DemX--; DemY++; }
+                if(ControlNumber == 7) { DemX+=2; DemY--; }
+                if(ControlNumber == 8) { DemX--; DemY++; }
+                /*if(ControlNumber == 1) { DemX+=2; DemY+=2; }
+                if(ControlNumber == 2) { DemX--; DemY-=2; }
+                if(ControlNumber == 3) { DemX--; DemY+=2; }
+                if(ControlNumber == 4) { DemX-=2; DemY+=2; }
+                if(ControlNumber == 5) { DemX++; DemY--; }
+                if(ControlNumber == 6) { DemY--; }
+                if(ControlNumber == 7) { DemY+=2; }
+                if(ControlNumber == 8) { DemX++; DemY--; }*/
+                ControlNumber++;
             }
             return candidate;
         }
@@ -53,6 +72,15 @@ namespace Sudoku
                 }
             }
             return result;
+        }
+
+        public override int CheckNumber(int candidate)
+        {
+            if(candidate > 9)
+            {
+                candidate = 1;
+            }
+            return candidate;
         }
     }
 }

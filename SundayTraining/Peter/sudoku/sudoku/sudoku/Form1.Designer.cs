@@ -1,16 +1,16 @@
-﻿namespace Sudoku
+﻿namespace sudoku
 {
     partial class Form1
     {
         /// <summary>
-        /// Wymagana zmienna projektanta.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Wyczyść wszystkie używane zasoby.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">prawda, jeżeli zarządzane zasoby powinny zostać zlikwidowane; Fałsz w przeciwnym wypadku.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Kod generowany przez Projektanta formularzy systemu Windows
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Wymagana metoda obsługi projektanta — nie należy modyfikować 
-        /// zawartość tej metody z edytorem kodu.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 261);
+            this.ClientSize = new System.Drawing.Size(470, 414);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
