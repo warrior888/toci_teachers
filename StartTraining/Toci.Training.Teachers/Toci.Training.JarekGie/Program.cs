@@ -127,7 +127,7 @@ namespace Toci.Training.JarekGie
 
 
             Console.Write("Suma elementów tablicy, wynosi :" + wynik);
-             */
+            
 
             //Zadanie 1.5 - zliczanie wystąpień elementów w tablicy
 
@@ -153,9 +153,28 @@ namespace Toci.Training.JarekGie
             }
             Console.WriteLine();
             Console.Write("Liczba " + seek + " pojawia się w tablicy " + count + " razy.");
+             */
+
+            //string userInput = Console.ReadLine();
+            //int userInputNumber = 0;
+            //int.TryParse(userInput, out userInputNumber);
 
 
+            //Zadanie 2.1 - Sortowanie bąbelkowe
 
+            int[] tablica = new int[] { 2, 32, 12, 43, 23, 456, 34, 36 };
+
+            for(int i = 0; i < tablica.Length; i++)
+            {
+                if (tablica[i] > tablica[i + 1])
+                {
+                    int tmp = tablica[i];
+                    tablica[i] = tablica[i + 1];
+                    tablica[i + 1] = tmp;
+                }
+                Console.Write(tablica[i] + " ");
+            }
+          
 
             Console.ReadKey();
 
