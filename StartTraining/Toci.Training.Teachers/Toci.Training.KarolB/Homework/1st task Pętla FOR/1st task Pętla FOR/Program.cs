@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zadanie_domowe__Pętle_
+namespace _1st_task_Pętla_FOR
 {
     class Program
     {
         static void Main(string[] args)
         {
+            
+
+
             string[] fish = new string[10];
             for (int i = 0; i < fish.Length; i++)
             {
@@ -22,8 +25,6 @@ namespace Zadanie_domowe__Pętle_
                 {
                     Console.WriteLine("Dziekuje za uzupełnienie tabeli");
                 }
-
-
             }
             Console.ReadKey();
             Console.WriteLine("\n");

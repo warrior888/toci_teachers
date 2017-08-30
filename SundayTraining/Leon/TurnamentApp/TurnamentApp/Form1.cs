@@ -13,6 +13,7 @@ namespace TurnamentApp
     public partial class Form1 : Form
     {
         public string[] ParticipantTable = new string[20];
+        List<string> PartisipantList = new List<string>();
         public string[][] Groups = new string[4][];
         public int[] GroupScoreTable = new int[4];
         public int[] FightNum = new int[4];
