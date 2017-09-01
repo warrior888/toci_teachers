@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.Teachers", "Toci.Training.Teachers\Toci.Training.Teachers.csproj", "{3CA7CA40-2437-4BEC-84C5-1A6455D5E0BA}"
 EndProject
@@ -164,6 +164,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minimalnaWartoscTablica", "ConsoleApp3\minimalnaWartoscTablica.csproj", "{F15F8D42-E0C9-4270-A78B-463A8FB2BAFD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ile wystapila dana liczba tablica", "ile wystapila dana liczba tablica\ile wystapila dana liczba tablica.csproj", "{44A7FDC2-D0FA-4990-BC14-C8E144DE0F9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LukaszLucz", "LukaszLucz", "{390A477B-A226-4A41-9D0A-5DCBC62CA224}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Training.LukaszLucz", "Toci.Training.LukaszLucz\Toci.Training.LukaszLucz.csproj", "{14558482-F17E-4632-A4BA-FAB0F4343265}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -415,6 +419,10 @@ Global
 		{44A7FDC2-D0FA-4990-BC14-C8E144DE0F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44A7FDC2-D0FA-4990-BC14-C8E144DE0F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44A7FDC2-D0FA-4990-BC14-C8E144DE0F9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14558482-F17E-4632-A4BA-FAB0F4343265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14558482-F17E-4632-A4BA-FAB0F4343265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14558482-F17E-4632-A4BA-FAB0F4343265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14558482-F17E-4632-A4BA-FAB0F4343265}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -489,5 +497,10 @@ Global
 		{327F43EE-D980-4700-9F31-D2A8739AC2B3} = {5DAA0992-984B-4DFF-9012-C8990F603A8F}
 		{F15F8D42-E0C9-4270-A78B-463A8FB2BAFD} = {74D6A84E-924D-455A-AF43-F300ABA410F8}
 		{44A7FDC2-D0FA-4990-BC14-C8E144DE0F9F} = {74D6A84E-924D-455A-AF43-F300ABA410F8}
+		{390A477B-A226-4A41-9D0A-5DCBC62CA224} = {9F328D05-7232-443C-8B00-25B6580C5569}
+		{14558482-F17E-4632-A4BA-FAB0F4343265} = {390A477B-A226-4A41-9D0A-5DCBC62CA224}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A71E5B7C-485E-4140-8081-BCF1222A5D69}
 	EndGlobalSection
 EndGlobal
