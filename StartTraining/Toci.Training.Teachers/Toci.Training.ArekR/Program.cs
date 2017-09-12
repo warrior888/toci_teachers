@@ -12,6 +12,8 @@ namespace Toci.Training.ArekR
         static void Main(string[] args)
         {
             new Quiz();
+
+            
         }
     }
 }
