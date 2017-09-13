@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    public class SudokuTable
+    public class SudokuTable : SudokuFillingOptions
     {
         public int[,] TableOfSudoku = new int[9, 9];
         public void CreatSudokuTable()
         {
             Random IntForTable = new Random();
+            Random IntForFillingTable = new Random();
+            int ForFill = IntForFillingTable.Next(0,10);
             int number;
             int ControlNumber = 1;
             number = IntForTable.Next(1, 10);
@@ -28,14 +30,27 @@ namespace WindowsFormsApp1
                 }
                 number = CheckNumber(number);
                 number++;
-                if (ControlNumber == 1) { DemX += 2; DemY += 2; }
+
+                if (ForFill < 5) 
+                {
+                    DemX = FillTheXTable_Option1(ControlNumber, DemX);
+                    DemY = FillTheYTable_Option1(ControlNumber, DemY);
+                }
+                else
+                {
+                    DemX = FillTheXTable_Option2(ControlNumber, DemX);
+                    DemY = FillTheYTable_Option2(ControlNumber, DemY);
+                }
+                
+
+                /*if (ControlNumber == 1) { DemX += 2; DemY += 2; }
                 if (ControlNumber == 2) { DemX--; DemY -= 2; }
                 if (ControlNumber == 3) { DemX--; DemY++; }
                 if (ControlNumber == 4) { DemX += 2; DemY--; }
                 if (ControlNumber == 5) { DemX--; DemY++; }
                 if (ControlNumber == 6) { DemX--; DemY++; }
                 if (ControlNumber == 7) { DemX += 2; DemY--; }
-                if (ControlNumber == 8) { DemX--; DemY++; }
+                if (ControlNumber == 8) { DemX--; DemY++; }*/
                 /*if(ControlNumber == 1) { DemX+=2; DemY+=2; }
                 if(ControlNumber == 2) { DemX--; DemY-=2; }
                 if(ControlNumber == 3) { DemX--; DemY+=2; }
