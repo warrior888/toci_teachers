@@ -16,14 +16,14 @@
 
 // [START speech_quickstart]
 
-using Google.Cloud.Speech.V1;
 using System;
 using System.IO;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Cloud.Speech.V1;
 
-namespace GoogleCloudSamples
+namespace QuickStart
 {
     public class QuickStart
     {
@@ -32,13 +32,26 @@ namespace GoogleCloudSamples
 
         public static void Main(string[] args)
         {
+
+            //rozpoznanie tekstu z pliku audio
+
+            RecognizeFromAudioFile("audio.raw");
+
+            // nasluch mikrofonu przez 60 sekund
+
+            var test = StreamingMicRecognizeAsync(60); 
+            Console.ReadLine();
+        }
+
+        private static void RecognizeFromAudioFile(string fileName)
+        {
             var speech = SpeechClient.Create();
             var response = speech.Recognize(new RecognitionConfig()
             {
                 Encoding = RecognitionConfig.Types.AudioEncoding.Linear16,
                 SampleRateHertz = 16000,
                 LanguageCode = "en",
-            }, RecognitionAudio.FromFile("audio.raw"));
+            }, RecognitionAudio.FromFile(fileName));
 
             Console.WriteLine("Recognized text:");
 
@@ -51,10 +64,7 @@ namespace GoogleCloudSamples
                     Console.WriteLine("****");
                 }
                 Console.ReadLine();
-                
             }
-            var test = StreamingMicRecognizeAsync(60); // nasluch mikrofonu przez 60 sekund
-            Console.ReadLine();
         }
 
         private static async Task<object> StreamingMicRecognizeAsync(int seconds)
