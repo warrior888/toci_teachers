@@ -15,6 +15,7 @@ namespace MineSweeper
         public int FieldSize;
         public int MinesNumber;
         Button FieldBox = new Button();
+        // 2 dim tablica
 
         public Form1()
         {
@@ -166,6 +167,7 @@ namespace MineSweeper
                         FieldBox.Text = Convert.ToString(SupperField[i, j]);
                     }
                     Controls.Add(FieldBox);
+                    //FieldBox.Click += (s, evt) => ((Button)s).BackColor = Color.White;
                     FieldBox.Click += FieldBox_Click;
                 }
             }
@@ -173,7 +175,7 @@ namespace MineSweeper
 
         private void FieldBox_Click(object sender, EventArgs e)
         {
-            FieldBox.BackColor = Color.White;
+            ((Button)sender).BackColor = Color.White;
         }
     }
 }
