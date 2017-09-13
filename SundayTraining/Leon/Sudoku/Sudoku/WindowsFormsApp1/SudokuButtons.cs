@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
                     BackGroundButton = new Button();
                     BackGroundButton.SetBounds(50, 50, 119, 119);
                     BackGroundButton.Location = new Point((113 * i) + 19, (113 * j) + 53);
-                    BackGroundButton.BackColor = Color.Black;
+                    BackGroundButton.BackColor = Color.LightSteelBlue;
                     form.Controls.Add(BackGroundButton);
                 }
             }
