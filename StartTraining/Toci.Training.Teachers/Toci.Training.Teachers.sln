@@ -173,11 +173,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minimalnaWartoscTablica", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ile wystapila dana liczba tablica", "ile wystapila dana liczba tablica\ile wystapila dana liczba tablica.csproj", "{44A7FDC2-D0FA-4990-BC14-C8E144DE0F9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recognize", "..\..\..\..\Source\Repos\google speech api test\Recognize\Recognize.csproj", "{D55D5892-7813-42D9-A1E1-676F8F53AF8E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recognize", "..\..\..\..\Downloads\dotnet-docs-samples-master\speech\api\Recognize\Recognize.csproj", "{D55D5892-7813-42D9-A1E1-676F8F53AF8E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GSpeech", "GSpeech", "{62C5A219-A38B-4F23-A3CB-7FC5DE987EF6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickStart", "..\..\..\..\Source\Repos\google speech api test\QuickStart\QuickStart.csproj", "{FCC55D41-1D56-4EF6-801D-6E0BFD0E3086}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickStart", "..\..\..\..\Downloads\dotnet-docs-samples-master\speech\api\QuickStart\QuickStart.csproj", "{FCC55D41-1D56-4EF6-801D-6E0BFD0E3086}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -527,7 +525,5 @@ Global
 		{327F43EE-D980-4700-9F31-D2A8739AC2B3} = {5DAA0992-984B-4DFF-9012-C8990F603A8F}
 		{F15F8D42-E0C9-4270-A78B-463A8FB2BAFD} = {74D6A84E-924D-455A-AF43-F300ABA410F8}
 		{44A7FDC2-D0FA-4990-BC14-C8E144DE0F9F} = {74D6A84E-924D-455A-AF43-F300ABA410F8}
-		{D55D5892-7813-42D9-A1E1-676F8F53AF8E} = {62C5A219-A38B-4F23-A3CB-7FC5DE987EF6}
-		{FCC55D41-1D56-4EF6-801D-6E0BFD0E3086} = {62C5A219-A38B-4F23-A3CB-7FC5DE987EF6}
 	EndGlobalSection
 EndGlobal
