@@ -125,13 +125,13 @@ namespace Toci.Treining.Leon
             int ToReplace = 0;
             for(int i = 0; i < BabbleSortTable.Length; i++)
             {
-                for(int j = 0; j < BabbleSortTable.Length; j++)
+                for(int k = 0; k < BabbleSortTable.Length; k++)
                 {
-                    if(BabbleSortTable[i] < BabbleSortTable[j])
+                    if(BabbleSortTable[i] < BabbleSortTable[k])
                     {
                         ToReplace = BabbleSortTable[i];
-                        BabbleSortTable[i] = BabbleSortTable[j];
-                        BabbleSortTable[j] = ToReplace;
+                        BabbleSortTable[i] = BabbleSortTable[k];
+                        BabbleSortTable[k] = ToReplace;
                     }
                 }
             }

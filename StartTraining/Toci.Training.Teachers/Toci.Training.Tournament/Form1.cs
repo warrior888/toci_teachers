@@ -70,5 +70,16 @@ namespace Toci.Training.Tournament
             Participants[counter] = participantNameTextBox.Text;
             counter++;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        /*
+private void Form1_Load(object sender, EventArgs e)
+{
+
+}
+*/
     }
 }

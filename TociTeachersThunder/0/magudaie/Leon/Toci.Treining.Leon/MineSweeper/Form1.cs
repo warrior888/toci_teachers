@@ -15,7 +15,6 @@ namespace MineSweeper
         public int FieldSize;
         public int MinesNumber;
         Button FieldBox = new Button();
-        // 2 dim tablica
 
         public Form1()
         {
@@ -151,6 +150,7 @@ namespace MineSweeper
         private void StartGame_Click(object sender, EventArgs e)
         {
             int[,] SupperField = new int[FieldSize, FieldSize];
+            string[] number = new string[FieldSize * FieldSize];
             
             BombIngection(SupperField);
             BombCounter(SupperField);
@@ -161,21 +161,20 @@ namespace MineSweeper
                 {
                     FieldBox = new Button();
                     FieldBox.SetBounds(10 + (20 * i), 100 + (20 * j), 20, 20);
-                    FieldBox.BackColor = Color.Yellow;
+                    FieldBox.BackColor = Color.Black;
                     if (SupperField[i, j] != 0)
                     {
                         FieldBox.Text = Convert.ToString(SupperField[i, j]);
                     }
                     Controls.Add(FieldBox);
-                    //FieldBox.Click += (s, evt) => ((Button)s).BackColor = Color.White;
-                    FieldBox.Click += FieldBox_Click;
+                    FieldBox.Click += Form1_Click;
                 }
             }
         }
 
-        private void FieldBox_Click(object sender, EventArgs e)
+        private void Form1_Click(object sender, EventArgs e)
         {
-            ((Button)sender).BackColor = Color.White;
+                ((Button)sender).BackColor = Color.White;
         }
     }
 }
