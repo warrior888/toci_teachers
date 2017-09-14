@@ -20,10 +20,11 @@ namespace VoiceRecognition
         SpeechSynthesizer ss = new SpeechSynthesizer();
         PromptBuilder pb = new PromptBuilder();
         SpeechRecognitionEngine sre = new SpeechRecognitionEngine();
-        //ChoiceList cl = new ChoiceList();
-        Choices cList;
+        //Choices cList = new Choices(/*new string[] { "hello", "how are you", "start chrome", "close" }*/);
 
-        public object Aplication { get; private set; }
+        // test
+        LIstOfChoices loc = new LIstOfChoices();
+        SwitchCasesForListOfChices blabla = new SwitchCasesForListOfChices();
 
         public Form1()
         {
@@ -41,8 +42,9 @@ namespace VoiceRecognition
             btnStart.Enabled = false;
             btnStop.Enabled = true;
 
-            cList.Add(new string[] { "hello", "how are you", "start chrome", "close"});
-            Grammar gr = new Grammar( new GrammarBuilder(cList));
+            loc.CreateAList();
+            //cList.Add(new string[] { "hello", "how are you", "start chrome", "close"});
+            Grammar gr = new Grammar( new GrammarBuilder(loc.clist));
 
             try
             {
@@ -60,7 +62,8 @@ namespace VoiceRecognition
 
         private void Sre_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            switch(e.Result.Text.ToString())
+            ss.SpeakAsync(blabla.CheckTheCase(e.Result.Text.ToString()));
+            /*switch(e.Result.Text.ToString())
             {
                 case "hello":
                     ss.SpeakAsync("Hello World!");
@@ -74,7 +77,7 @@ namespace VoiceRecognition
                 case "close":
                     Application.Exit();
                     break;
-            }
+            }*/
             textBoxForContents.Text += e.Result.Text.ToString() + Environment.NewLine;
         }
 
