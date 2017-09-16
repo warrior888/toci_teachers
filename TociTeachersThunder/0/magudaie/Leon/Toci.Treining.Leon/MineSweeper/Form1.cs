@@ -175,6 +175,12 @@ namespace MineSweeper
         private void Form1_Click(object sender, EventArgs e)
         {
                 ((Button)sender).BackColor = Color.White;
+            if(((Button)sender).Text == "-1")
+            {
+                ((Button)sender).BackColor = Color.Red;
+                MessageBox.Show("You die!");
+                Application.Exit();
+            }
         }
     }
 }
