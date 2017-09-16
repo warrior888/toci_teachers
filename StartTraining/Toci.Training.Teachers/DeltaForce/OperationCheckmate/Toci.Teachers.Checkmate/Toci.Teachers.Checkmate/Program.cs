@@ -11,13 +11,12 @@ namespace Toci.Teachers.Checkmate
     {
         static void Main(string[] args)
         {
-            Graph gr; 
+            Graph gr = new Graph(); ; 
 
             for (int i = 0; i < 100; i++)
             {
-               gr = new Graph();
                 gr.Name = "GR" + i;
-
+                
                 gr.AddNeighbour(gr);
             }
 
