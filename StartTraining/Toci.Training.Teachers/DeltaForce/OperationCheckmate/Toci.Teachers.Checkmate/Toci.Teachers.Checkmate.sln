@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Teachers.Checkmate", "Toci.Teachers.Checkmate\Toci.Teachers.Checkmate.csproj", "{734DC262-1C09-42BE-A1E9-571809AD56E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci Games", "Toci Games\Toci Games.csproj", "{D4A03CB5-1665-467C-8771-9306A514EA96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toci.Common", "Toci.Common\Toci.Common.csproj", "{50D18C12-8A11-4CD1-9552-3B8B1874F49B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{734DC262-1C09-42BE-A1E9-571809AD56E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{734DC262-1C09-42BE-A1E9-571809AD56E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{734DC262-1C09-42BE-A1E9-571809AD56E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4A03CB5-1665-467C-8771-9306A514EA96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A03CB5-1665-467C-8771-9306A514EA96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A03CB5-1665-467C-8771-9306A514EA96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A03CB5-1665-467C-8771-9306A514EA96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50D18C12-8A11-4CD1-9552-3B8B1874F49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D18C12-8A11-4CD1-9552-3B8B1874F49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D18C12-8A11-4CD1-9552-3B8B1874F49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D18C12-8A11-4CD1-9552-3B8B1874F49B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
