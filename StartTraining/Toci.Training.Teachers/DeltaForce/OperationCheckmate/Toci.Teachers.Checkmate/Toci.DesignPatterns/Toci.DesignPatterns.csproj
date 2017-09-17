@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50D18C12-8A11-4CD1-9552-3B8B1874F49B}</ProjectGuid>
+    <ProjectGuid>{7A564A5B-4A24-44A0-8E55-245ADD537634}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Toci.Common</RootNamespace>
-    <AssemblyName>Toci.Common</AssemblyName>
+    <RootNamespace>Toci.DesignPatterns</RootNamespace>
+    <AssemblyName>Toci.DesignPatterns</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,27 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\Games\IChecssInterfaces\IFigure.cs" />
-    <Compile Include="Interfaces\Games\IGame.cs" />
-    <Compile Include="Interfaces\Games\IGameBase.cs" />
-    <Compile Include="Interfaces\Games\IGameItem.cs" />
-    <Compile Include="Interfaces\Games\IGameType.cs" />
-    <Compile Include="Interfaces\Games\Types\Logical\Nail.cs" />
-    <Compile Include="Interfaces\Games\Types\Strategy\Figure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\Games\IMastermindInterfaces\" />
-    <Folder Include="Interfaces\Games\IMinesweeperInterfaces\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Toci.DesignPatterns\Toci.DesignPatterns.csproj">
-      <Project>{7a564a5b-4a24-44a0-8e55-245add537634}</Project>
-      <Name>Toci.DesignPatterns</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
