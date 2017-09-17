@@ -126,7 +126,7 @@ namespace Toci.Training.WojciechSeweryn
 
             result = textMilions + textTousands + textHundreds + " złotych";
 
-            return string.Empty;
+            return result;
         }
     }
 }

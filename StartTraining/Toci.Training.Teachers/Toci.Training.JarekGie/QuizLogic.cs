@@ -9,7 +9,6 @@ namespace Toci.Training.JarekGie
    public class QuizLogic
     {
 
-        string test = "test";
-        return 
+        
     }//class
 }//namespace
