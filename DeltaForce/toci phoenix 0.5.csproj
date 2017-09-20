@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{808DC54D-3977-413E-8354-E9156ECD4C6B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\animate.css" />
+    <Content Include="css\faq-style.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\jquery.fancybox.css" />
+    <Content Include="css\magic-bootstrap.css" />
+    <Content Include="css\owl.carousel.min.css" />
+    <Content Include="css\owl.theme.default.min.css" />
+    <Content Include="css\school-icons.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\superslides.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\school-education.svg" />
+    <Content Include="images\.net logo.png" />
+    <Content Include="images\3d_php-logo.jpg" />
+    <Content Include="images\arrow-down.png" />
+    <Content Include="images\arrow-left.png" />
+    <Content Include="images\arrow-right.png" />
+    <Content Include="images\Bartek.png" />
+    <Content Include="images\companies arrows\left-down.jpg" />
+    <Content Include="images\companies arrows\left.jpg" />
+    <Content Include="images\companies arrows\right-down.jpg" />
+    <Content Include="images\companies arrows\right-up.jpg" />
+    <Content Include="images\companies arrows\right.jpg" />
+    <Content Include="images\contact.png" />
+    <Content Include="images\dots-line-small.png" />
+    <Content Include="images\dots-line.png" />
+    <Content Include="images\fancybox_loading%402x.gif" />
+    <Content Include="images\fancybox_loading.gif" />
+    <Content Include="images\fancybox_overlay.png" />
+    <Content Include="images\fancybox_sprite%402x.png" />
+    <Content Include="images\fancybox_sprite.png" />
+    <Content Include="images\gg-logo-small.png" />
+    <Content Include="images\GG.png" />
+    <Content Include="images\header.png" />
+    <Content Include="images\javascript-logo-bez-napisu.jpg" />
+    <Content Include="images\layout_propozycja\layoutpsd 960x3000.jpg" />
+    <Content Include="images\logo%402x.png" />
+    <Content Include="images\logo-c#-asp-net_0.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\meteor-logo-small.jpg" />
+    <Content Include="images\meteor-logo.jpg" />
+    <Content Include="images\microsoft-logo.png" />
+    <Content Include="images\ms-logo-small.png" />
+    <Content Include="images\MSFT_logo_png.png" />
+    <Content Include="images\PHP-logo small.png" />
+    <Content Include="images\PHP-logo.BIG.png" />
+    <Content Include="images\power-media-logo.jpg" />
+    <Content Include="images\slide1.jpg" />
+    <Content Include="images\slide2.jpg" />
+    <Content Include="images\slide3.jpg" />
+    <Content Include="images\slider1.jpg" />
+    <Content Include="images\slider2.jpg" />
+    <Content Include="images\slider3.jpg" />
+    <Content Include="images\SMT-logo.png" />
+    <Content Include="images\sygnity-logo.jpg" />
+    <Content Include="images\toci-logo.png" />
+    <Content Include="images\toci.jpg" />
+    <Content Include="images\unit4-business-software-logo.png" />
+    <Content Include="images\unit4-logo-small.png" />
+    <Content Include="images\unit4-logo_partner-page_b.png" />
+    <Content Include="images\Vazco.png" />
+    <Content Include="images\vazco_bez_tla-small.png" />
+    <Content Include="index.html" />
+    <Content Include="js\applyValid.js" />
+    <Content Include="js\bootstrap-progressbar.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\contactValid.js" />
+    <Content Include="js\DocumentReady.js" />
+    <Content Include="js\faq\FormUtils.js" />
+    <Content Include="js\faq\main.js" />
+    <Content Include="js\html5shiv.js" />
+    <Content Include="js\imagesloaded.pkgd.min.js" />
+    <Content Include="js\jquery-1.11.1.min.js" />
+    <Content Include="js\jquery.animate-enhanced.min.js" />
+    <Content Include="js\jquery.easing.1.3.js" />
+    <Content Include="js\jquery.easing.min.js" />
+    <Content Include="js\jquery.fancybox.js" />
+    <Content Include="js\jquery.parallax-1.1.3.js" />
+    <Content Include="js\jquery.superslides.js" />
+    <Content Include="js\magic.js" />
+    <Content Include="js\masonry.pkgd.min.js" />
+    <Content Include="js\modernizr.custom.97074.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\respond.min.js" />
+    <Content Include="js\retina-1.1.0.min.js" />
+    <Content Include="js\scrolling-nav.js" />
+    <Content Include="js\scrollReveal.js" />
+    <Content Include="js\settings.js" />
+    <Content Include="js\training3.js" />
+    <Content Include="js\utils.js" />
+    <Content Include="opisy.html" />
+    <Content Include="organizatorzy-robocza.html" />
+    <Content Include="sln\jupiter.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\fontawesome-webfont.woff" />
+    <None Include="fonts\FontAwesome.otf" />
+    <None Include="fonts\PeaxWebdesignarrows.ttf" />
+    <None Include="fonts\school-education.eot" />
+    <None Include="fonts\school-education.ttf" />
+    <None Include="fonts\school-education.woff" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="server\apply.php" />
+    <None Include="server\confirm.php" />
+    <None Include="server\contact.php" />
+    <None Include="server\Db.php" />
+    <None Include="server\DbHandle.php" />
+    <None Include="server\MailConfirm.php" />
+    <None Include="server\Mailer\.scrutinizer.yml" />
+    <None Include="server\Mailer\.travis.yml" />
+    <None Include="server\Mailer\class.phpmailer.php" />
+    <None Include="server\Mailer\class.pop3.php" />
+    <None Include="server\Mailer\class.smtp.php" />
+    <None Include="server\Mailer\composer.json" />
+    <None Include="server\Mailer\language\phpmailer.lang-pl.php" />
+    <None Include="server\Mailer\PHPMailerAutoload.php" />
+    <None Include="server\Mailer\travis.phpunit.xml.dist" />
+    <None Include="server\Mailer\VERSION" />
+    <None Include="server\SendMail.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

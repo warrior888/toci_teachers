@@ -20,6 +20,13 @@ namespace PhoneBookApp
             test.AddAButtons(this);
         }
         AddTheButton test = new AddTheButton();
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            RegisterNewUser rnu = new RegisterNewUser();
+
+            rnu.Show();
+        }
     }
 
 }

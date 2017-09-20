@@ -1,0 +1,1543 @@
+@import url("magic-bootstrap.css");
+@import url("superslides.css");
+@import url("owl.carousel.min.css");
+@import url("owl.theme.default.min.css");
+@import url("animate.css");
+@import url("jquery.fancybox.css");
+@import url("animate.css");
+@import url("http://fonts.googleapis.com/css?family=Lato:400,900,400italic,900italic.css");
+
+@import url("font-awesome.min.css");
+@import url("school-icons.css");
+@import url("iframe-rwd.css");
+
+/*------------------------------------------------------------------
+
+
+
+[Color codes]
+
+Body background:		#fff (white)
+Brand color:			#8fb488 (green)
+Text:					#888 (gray)
+Header h1-h6:			#222 (dark gray)
+Top tools background:	#323438 (darker graphite)
+Main nav background:	#373a3e (graphite)
+Footer background 1:	#373a3e (graphite)
+Footer background 2:	#323438 (darker graphite)
+Footer background 3:	#2c2f33 (dark graphite)
+Course search:			#726253 (brown)
+Reviews:				#8fb488 (green)
+Newsletter background:	#89909a (blue)
+
+a (standard):			#8fb488 (green)
+a (visited):			#8fb488 (green)
+a (active):				#8fb488 (green)
+a (hover):				#81a27b (darker green)
+
+------------------------------------------------------------------
+
+/* 1. GLOBAL STYLES
+-------------------------------------------------------------------*/
+
+@font-face {
+	font-family: Arrows;
+    
+	src: url('../fonts/PeaxWebdesignarrows.ttf');
+
+}
+
+
+@font-face {
+	font-family: 'Glyphicons Halflings';
+
+	src: url('../fonts/glyphicons-halflings-regular.eot');
+	src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+
+
+
+body {
+    /*ukryte zanim strona siê za³aduje*/
+	overflow-y: hidden;
+}
+
+#mapa{
+
+	height:600px;
+	padding:0;
+}
+
+
+#video-carousel .item, h3{
+	margin: 10px;
+font-size:20px;
+}
+#video-carousel .item img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.welcome-text{
+	position:absolute;
+	bottom:40%;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+
+
+}
+
+.inline-block{
+	display:inline-block;
+
+}
+
+.inline{
+
+	display:inline;
+}
+
+.text-transform-none{
+text-transform: none;
+}
+
+
+#welcome-text h1,h2{
+	color:white;
+}
+
+
+.headers {
+	font-size: 40px;
+    font-family: 'Verdana', sans-serif;
+}
+
+.whiteColor {
+	color:white;
+
+}
+
+.blackColor { color:black;
+}
+
+.brownColorTemplate{
+rgba(114,98,83,0.97)
+}
+
+.greenTemplateColor{
+
+	color: #8fb488;
+}
+
+.grayTemplateColor{
+
+color: rgba(137,144,154,0.97);
+}
+
+.backgroundGreenTemplate{
+
+    background-color: rgba(143, 130, 136, 0.97);
+}
+
+.yellowColorTemplate{
+	color:#fbcd53;
+}
+
+
+body {
+	overflow-x: hidden;
+	padding-top: 118px;
+    font-family: 'Exo', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.6153em;
+}
+
+h1,h2 {
+	font-weight: 900;
+	margin: 0 0 30px 0;
+}
+
+h3 {
+	margin: 30px 0;
+}
+
+h2,h3,h4,h5,h6 {
+	line-height: 1.74em;
+}
+
+b, strong {
+	font-weight: 900;
+}
+
+a,
+button {
+	cursor: pointer;
+	transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+section {
+	padding: 80px 0;
+}
+
+blockquote {
+	border: 0;
+	color: #bbb;
+	font-size: 1.3846em;
+	font-style: italic;
+	padding-left: 70px;
+	position: relative;
+}
+
+label {
+	font-weight: normal;
+	margin-left: 1px;
+}
+
+iframe {
+	border: 0;
+}
+
+.quote {
+	font-size: 3em;
+	left: 0;
+	line-height: 1.5em;
+	position: absolute;
+	top: 0;
+}
+
+.btn,
+.pagination > li > a {
+	border-width: 2px;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.pagination > li > a {
+	border-radius: 3px;
+	color: #fff;
+	font-weight: 900;
+	margin: 0 2px;
+	text-transform: uppercase;
+}
+
+.alt-background {
+	background: #f7f6f2;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.icon {
+	position: relative;
+	top: 2px;
+}
+
+.lead .icon {
+	display: inline-block;
+	font-size: 1.5em;
+	margin: 0 30px 30px 0;
+}
+
+.primary-color {
+	color: #8fb488;
+}
+
+.caret {
+	position: relative;
+	top: -2px;
+}
+a:link {              
+            outline: none;
+        }
+p {
+    font-size: 20px;
+}
+/* 2. HEADER
+-------------------------------------------------------------------*/
+
+header {
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+	header .nav .open > a,
+	header .nav .open > a:hover,
+	header .nav .open > a:focus {
+		background: none;
+		border: 0;
+	}
+
+	.fixed {
+		position: fixed;
+		top: -35px;
+	}
+
+	/* 2.1. TOOLS
+	-------------------------------------------------------------------*/
+
+	.tools {
+		background: #313438;
+		padding: 5px 0;
+	}
+
+		#homepage .tools {
+			background: rgba(0,0,0,0.75);
+		}
+
+		.tools ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.tools li {
+			display: inline;
+		}
+
+		.tools a {
+			color: #777;
+            font-size: 14px;
+		}
+
+		.tools a:hover {
+			color: #fff;
+		}
+
+		.tools .pull-left a {
+			margin-right: 20px;
+		}
+
+		.tools .pull-right a {
+			margin-left: 20px;
+		}
+
+		.tools i {
+			margin-right: 10px;
+		}
+
+	/* 2.2. NAVIGATION
+	-------------------------------------------------------------------*/
+
+	.navbar-brand {
+		padding: 0 15px;
+	}
+
+	.nav > li > a {
+		font-weight: bold;
+		padding-left: 10px;
+		padding-right: 10px;
+		text-transform: uppercase;
+        font-size: 14px;
+        font-family: 'Verdana', sans-serif;
+	}
+
+	#homepage .navbar-default {
+		background: url(../images/header.png) repeat-x top;
+		
+		/* Transparent CSS gradient doesn't work in IE9 and below. */
+
+		/* Remove this line if you want to use CSS gradient in stead of background image
+
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,0)));
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
+		background: -o-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
+		background: -ms-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
+		background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#00000000',GradientType=0 );
+
+		Remove this line if you want to use CSS gradient in stead of background image */
+		
+		border: 0;
+		display: block;
+		min-height: 200px;
+	}
+
+	#homepage .fixed .navbar-default {
+		background: #373a3e;
+		min-height: 85px;
+	}
+
+	.navbar-nav .dropdown-menu {
+		background: #2c2f33;
+		border: 0;
+		top: 75%;
+	}
+
+		.navbar-nav .dropdown-menu:before {
+			background: #2c2f33;
+			content: "";
+			display: block;
+			height: 10px;
+			position: absolute;
+			right: 30px;
+			top: -5px;
+			width: 10px;
+			-ms-transform: rotate(45deg); /* IE 9 */
+			-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+			transform: rotate(45deg);
+		}
+
+		.navbar-nav .dropdown-menu a {
+			color: #89909a;
+		}
+
+			.navbar-nav .dropdown-menu a:hover,
+			.navbar-nav .dropdown-menu > .active > a,
+			.navbar-nav .dropdown-menu > .active > a:hover,
+			.navbar-nav .dropdown-menu > .active > a:focus {
+				background: none;
+				color: #fff;
+			}
+
+		.navbar-nav .dropdown-menu .divider {
+			background-color: #4b4e52;
+		}
+
+/* 3. TITLE
+-------------------------------------------------------------------*/
+
+.title {
+	background: #89909a;
+	color: #fff;
+	font-size: 320%;
+	font-weight: 900;
+	position: relative;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+	.title .title-image {
+		background: url(http://placehold.it/1920x1920.gif) no-repeat center top;
+		height: 100%;
+		left: 0;
+		opacity: 0.03;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	.title .container {
+		padding: 30px 0;
+	}
+
+/* 4. HOME PAGE BANNER
+-------------------------------------------------------------------*/
+
+#slides {
+	height: 100%;
+	left: 0;
+	position: absolute !important;
+	top: 0;
+	width: 100%;
+}
+
+	#slides .tint {
+		background: rgba(0,0,0,0.2);
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+	}
+
+	.arrow {
+		border-radius: 50%;
+		background: #fff;
+		bottom: 30px;
+		display: block;
+		height: 50px;
+		left: 50%;
+		line-height: 62px;
+		margin-left: -25px;
+		position: absolute;
+		text-align: center;
+		width: 50px;
+		z-index: 100;
+	}
+
+	/* 4.1. SLIDER OFFERS
+	-------------------------------------------------------------------*/
+
+	.slider-offers {
+		left: 0;
+		position: absolute;
+		text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+		top: 50%;
+		width: 100%;
+		z-index: 100;
+		transform: translateY(-50%);
+	}
+
+		.slider-offers ul,
+		.slider-offers li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.slider-offers h3,
+		.slider-offers h4 {
+			color: #fff;
+			line-height: 1.2em;
+			margin: 0 30px;
+		}
+
+		.slider-offers h3 {
+			font-size: 42px;
+			font-weight: 900;
+		}
+
+		.slider-offers h4 {
+			font-size: 21px;
+			margin-bottom: 30px;
+			text-transform: none;
+		}
+
+/* 5. CONTENT
+-------------------------------------------------------------------*/
+
+	/* 5.1. SIDEBAR WIDGETS
+	-------------------------------------------------------------------*/
+
+	.widget {
+		background: #f7f6f2;
+		margin-bottom: 30px;
+		padding: 30px;
+	}
+
+		.widget h3 {
+			margin: 0 0 30px;
+		}
+
+		.widget ul {
+			list-style: none;
+			margin: 0 0 30px;
+			padding: 0;
+		}
+
+		.widget li {
+			border-bottom: 1px solid #deddd9;
+		}
+
+		.widget li a {
+			display: block;
+			padding: 5px 0;
+		}
+
+		.widget li a:hover {
+			background: rgba(0,0,0,0.015);
+		}
+
+		.widget li a span {
+			color: #777;
+			margin-left: 10px;
+		}
+
+		.widget .tag {
+			background: #222;
+			border-radius: 3px;
+			color: #fff;
+			display: inline-block;
+			margin: 0 5px 7px 0;
+			padding: 2px 10px;
+			text-transform: uppercase;
+		}
+
+		.widget .post {
+			border: 0;
+			margin-bottom: 15px;
+			padding: 0;
+		}
+
+		.widget .post h5 {
+			margin: 0;
+		}
+
+		.widget .post h5 a {
+			color: #222;
+			display: block;
+		}
+
+		.widget .post h5 a:hover {
+			text-decoration: underline;
+		}
+
+		.widget .price {
+			color: #222;
+			font-size: 1.5em;
+			font-weight: 900;
+			padding-bottom: 15px;
+		}
+
+		.widget .icon {
+			color: #8fb488;
+		}
+
+		.widget .fa-star {
+			color: #fbcd53;
+		}
+
+		.widget .course-data {
+			padding: 5px 0;
+		}
+
+		.widget .share a {
+			margin: 0 7px;
+		}
+
+		.widget .take-course {
+			padding: 15px 0;
+			text-align: center;
+			width: 100%;
+		}
+
+	/* 5.2. BLOG
+	-------------------------------------------------------------------*/
+
+	.post h1 {
+		margin-bottom: 5px;
+	}
+
+	.post h3 {
+		margin: 0;
+	}
+
+		.post h3 a {
+			color: #222;
+		}
+
+		.post h3 a:hover {
+			text-decoration: underline;
+		}
+
+		.post-cover {
+			margin-bottom: 30px;
+		}
+
+		.meta {
+			color: #bbb;
+			margin-bottom: 20px;
+		}
+
+		.meta span {
+			margin-right: 15px;
+		}
+
+		.meta i {
+			margin-right: 5px;
+		}
+
+		.post-date {
+			background: #222;
+			color: #fff;
+			font-weight: 900;
+			left: 30px;
+			line-height: 1.74em;
+			padding: 15px 0;
+			position: absolute;
+			text-align: center;
+			text-transform: uppercase;
+			top: 0;
+			width: 50px;
+		}
+
+		.post-day {
+			font-size: 200%;
+		}
+
+		.post-month {
+			color: #8fb488;
+		}
+
+	.media, .media .media {
+		border-top: 1px solid #e8e8e8;
+		margin-top: 30px;
+		padding-top: 30px;
+	}
+
+	.fa-reply {
+		margin-right: 5px;
+	}
+
+	#recent-posts .item h3 {
+		margin: 0;
+	}
+
+	#recent-posts .item .meta {
+		padding: 0;
+	}
+
+	/* 5.3. CAROUSELS
+	-------------------------------------------------------------------*/
+
+#video-carousel .item{
+	margin: 3px;
+}
+#video-carousel .item img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+
+	/*.carousel-title {*/
+		/*margin-left: 35px;*/
+		/*margin-right: 35px;*/
+		/*position: relative;*/
+		/*z-index: 100;*/
+	/*}*/
+
+		/*.carousel-title a {*/
+			/*display: block;*/
+			/*font-size: 13px;*/
+			/*font-weight: normal;*/
+			/*line-height: 1.74em;*/
+			/*text-transform: none;*/
+		/*}*/
+
+	/*.owl-carousel .item {*/
+		/*background: #fff;*/
+	/*}*/
+
+
+		/*.owl-carousel .item h3 {*/
+			/*margin: 30px 30px 0;*/
+		/*}*/
+
+		/*.owl-carousel .item h3 a {*/
+			/*color: #222;*/
+		/*}*/
+
+		/*.owl-carousel .item h3 a:hover {*/
+			/*text-decoration: underline;*/
+		/*}*/
+
+		/*.owl-carousel .item .meta {*/
+			/*color: #bbb;*/
+			/*display: block;*/
+			/*padding: 0 30px 30px;*/
+		/*}*/
+
+			/*.owl-carousel .item .meta p {*/
+				/*margin: 0;*/
+			/*}*/
+
+			/*.owl-carousel .item .meta .fa-star {*/
+				/*color: #fbcd53;*/
+			/*}*/
+
+		/*.owl-carousel .item .price {*/
+			/*background: rgba(0,0,0,0.8);*/
+			/*border-radius: 0 0 4px 4px;*/
+			/*color: #fff;*/
+			/*display: block;*/
+			/*font-size: 1.5em;*/
+			/*padding: 30px 15px;*/
+			/*position: absolute;*/
+			/*right: 30px;*/
+			/*top: 0;*/
+		/*}*/
+
+	/*.owl-theme .owl-controls {*/
+		/*margin: 0 !important;*/
+		/*padding: 0;*/
+		/*position: absolute;*/
+		/*top: -80px;*/
+		/*width: 100%;*/
+	/*}*/
+
+		/*.owl-theme .owl-controls .owl-nav [class*=owl-] {*/
+			/*font-size: 14px !important;*/
+			/*margin: 0 !important;*/
+		/*}*/
+
+		/*.owl-theme .owl-controls .owl-nav .owl-prev {*/
+			/*float: left;*/
+		/*}*/
+
+		/*.owl-theme .owl-controls .owl-nav .owl-next {*/
+			/*float: right;*/
+		/*}*/
+
+	/* 5.4. MASONRY
+	-------------------------------------------------------------------*/
+
+	.masonry .item {
+		padding: 0 15px;
+	}
+
+		.masonry .item .masonry-container {
+			background: #f7f6f2;
+			margin-bottom: 30px;
+			position: relative;
+			width: 100%;
+		}
+
+		.masonry .item img {
+			width: 100%;
+		}
+
+		.masonry .item h3 {
+			margin: 30px 30px 0;
+		}
+
+		.masonry .item h3 a {
+			color: #222;
+		}
+
+		.masonry .item h3 a:hover {
+			text-decoration: underline;
+		}
+
+		.masonry .item .meta {
+			color: #bbb;
+			display: block;
+			margin: 0;
+			padding: 0 30px 30px;
+		}
+
+		.masonry .item .meta span {
+			margin-right: 20px;
+		}
+
+		.masonry .item .meta i {
+			margin-right: 5px;
+		}
+
+		.masonry .item p {
+			margin: 0;
+			overflow: hidden;
+			padding: 0 30px 30px;
+		}
+
+	#masonry-2-columns .item {
+		width: 50%;
+	}
+
+	#masonry-3-columns .item {
+		width: 33.333333%;
+	}
+
+	#masonry-4-columns .item {
+		width: 25%;
+	}
+
+	/* 5.5. COURSES
+	-------------------------------------------------------------------*/
+
+	.course img {
+		width: 100%;
+	}
+
+	.course h3 {
+		margin: 0;
+	}
+
+	.course h3 a {
+		color: #222;
+	}
+
+	.course .price {
+		color: #222;
+		font-size: 1.5em;
+		font-weight: 900;
+		padding-bottom: 15px;
+		text-align: right;
+	}
+
+	.course-title {
+		margin: 0 0 5px;
+	}
+
+	.lesson-title {
+		margin: 0;
+	}
+
+	li.checkbox label {
+		display: block;
+		padding: 3px 0;
+	}
+
+	/* 5.6. GALLERY
+	-------------------------------------------------------------------*/
+
+	.gallery {
+		list-style: none;
+		margin: 0 -15px;
+		padding: 0;
+	}
+
+		.gallery li {
+			padding: 15px;
+		}
+
+	/* 5.7. MAP
+	-------------------------------------------------------------------*/
+
+	#map-canvas {
+		height: 500px;
+	}
+
+		.map-address {
+			white-space: nowrap;
+		}
+
+		.gm-style .gm-style-iw {
+			white-space: nowrap;
+			width: auto !important;
+			height: auto !important;
+		}
+
+	/* 5.8. TEACHERS
+	-------------------------------------------------------------------*/
+
+	.teachers {
+		list-style: none;
+		margin: 0 -15px;
+		padding: 0;
+	}
+
+		.teachers .description,
+		#featured-teachers .description {
+			background: #fff;
+			margin-bottom: 30px;
+			padding: 1px 30px 30px;
+		}
+
+		#featured-teachers .description h3 {
+			margin: 30px 0;
+		}
+
+		.teachers .description p,
+		#featured-teachers .description p {
+			height: 5em;
+			overflow: hidden;
+		}
+
+	.teacher img {
+		margin: 0 15px 15px 0;
+	}
+
+	.teacher h5,
+	.teacher p {
+		margin: 0;
+	}
+
+	/* 5.9. UPCOMING EXAMS
+	-------------------------------------------------------------------*/
+
+	.exams-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+		.exams-list li {
+			position: relative;
+		}
+
+			.exams-list li h3 {
+				margin: 0 0 1em;
+			}
+
+			.exams-list li ul {
+				list-style: none;
+				margin: 0 0 1em 0;
+				padding: 0;
+			}
+
+				.exams-list li ul li {
+					display: inline;
+					margin-right: 20px;
+				}
+
+					.exams-list li ul li i {
+						margin-right: 7px;
+					}
+
+	.exams-grid {
+		list-style: none;
+		margin: 0 -15px;
+		padding: 0;
+	}
+
+		.exams-grid li .description {
+			background: #fff;
+			margin-bottom: 30px;
+			padding: 1px 30px 30px;
+		}
+
+			.exams-grid li .description p {
+				height: 5em;
+				overflow: hidden;
+			}
+
+			.exams-grid li ul {
+				border-top: 1px dashed #ddd;
+				list-style: none;
+				margin: 0 0 1em 0;
+				padding: 0;
+			}
+
+				.exams-grid li ul li {
+					border-bottom: 1px dashed #ddd;
+					overflow: hidden;
+					padding: 10px 0;
+				}
+
+					.exams-grid li ul li i {
+						width: 20px;
+					}
+
+		.exams-grid li a {
+			background: rgba(143,180,136,0.9);
+			bottom: 30px;
+			left: 15px;
+			opacity: 0;
+			position: absolute;
+			right: 15px;
+			top: 0;
+		}
+
+			.exams-grid li a:hover {
+				opacity: 1;
+			}
+
+			.exams-grid li a span {
+				border: 2px solid #fff;
+				border-radius: 4px;
+				color: #fff;
+				font-weight: bold;
+				left: 50%;
+				margin: -20px 0 0 -70px;
+				padding: 7px 15px;
+				position: absolute;
+				text-transform: uppercase;
+				top: 50%;
+			}
+
+	/* 5.10. PROGRESS BARS
+	-------------------------------------------------------------------*/
+
+	.progress {
+		height: 30px;
+		margin-bottom: 10px;
+	}
+
+	.progress-bar {
+		line-height: 30px;
+		text-align: left;
+		text-transform: uppercase;
+	}
+
+	.progress-bar span {
+		padding: 0 10px;
+	}
+
+	.progress-bar .pull-right {
+		background: #222;
+		border-radius: 3px;
+		color: #fff;
+	}
+
+	/* 5.11. REVIEWS
+	-------------------------------------------------------------------*/
+
+	#teachers-reviews {
+		background: url(http://placehold.it/1200x800.jpg) no-repeat center top;
+		background-size: cover;
+		position: relative;
+	}
+
+		#teachers-reviews .tint {
+			background: rgba(247,246,242,0.9);
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		#teachers-reviews .item {
+			background: none;
+		}
+
+		#teachers-reviews blockquote {
+			color: #222;
+			margin: 0;
+		}
+
+			#teachers-reviews blockquote .fa-quote-right {
+				color: #fbcd53;
+			}
+
+	#about-reviews {
+		background: url(http://placehold.it/1920x1920.gif) no-repeat center top;
+		position: relative;
+	}
+
+		#about-reviews .tint {
+			background: rgba(143,180,136,0.97);
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		#about-reviews .item {
+			background: none;
+		}
+
+		#about-reviews h2,
+		#about-reviews small {
+			color: #fff;
+		}
+
+		#about-reviews blockquote {
+			color: #fff;
+			margin: 0;
+		}
+
+			#about-reviews blockquote .fa-quote-right {
+				color: #fbcd53;
+			}
+
+	/* 5.12. SEARCH
+	-------------------------------------------------------------------*/
+
+	#search {
+		background: url(http://placehold.it/1920x1920.gif) no-repeat center top;
+		position: relative;
+	}
+
+		#search .tint {
+			background: rgba(114,98,83,0.97);
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		#search h2 {
+			color: #fff;
+		}
+
+		#search a {
+			color: #fbcd53;
+		}
+
+			#search a:hover {
+				color: #e2b94b;
+			}
+
+		#search .btn {
+			background: #fbcd53;
+			border-color: #e1b84b;
+		}
+
+			#search .btn:hover {
+				background: #e2b94b;
+				border-color: #cca848;
+			}
+
+		#search #input-keywords {
+			width: 400px;
+		}
+
+	/* 5.13. NEWSLETTER
+	-------------------------------------------------------------------*/
+
+	#newsletter {
+		background: url(http://placehold.it/1920x1920.gif) no-repeat center top;
+		position: relative;
+	}
+
+		#newsletter .tint {
+			background: rgba(137,144,154,0.97);
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		#newsletter h2 {
+			color: #fff;
+		}
+
+		#newsletter .btn {
+			text-align: center;
+			width: 100%;
+		}
+
+		#newsletter-name-group,
+		#newsletter-email-group,
+		#newsletter .input-group {
+			width: 100%;
+		}
+
+	/* 5.14. SERVICES
+	-------------------------------------------------------------------*/
+
+	.service {
+		margin: 15px 0;
+	}
+
+	/* 5.15. RESPONSIVE VIDEO WRAPPER
+	-------------------------------------------------------------------*/
+
+	.video-wrapper {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+	}
+
+		.video-wrapper iframe,
+		.video-wrapper object,
+		.video-wrapper embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+/* 6. LINKS
+-------------------------------------------------------------------*/
+
+#links {
+	background: #373a3e;
+	color: #767c84;
+}
+
+	#links .col-sm-3 {
+		margin: 80px 0;
+	}
+
+	#links h3 {
+		color: #8fb488;
+		margin: 0 0 30px;
+	}
+
+	#links h5 {
+		margin: 0;
+		text-transform: none;
+	}
+
+	#links p {
+		margin: 0;
+	}
+
+	#links a {
+		color: #fff;
+	}
+
+		#links a:hover {
+			color: #fbcd53;
+		}
+
+	#links ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+		#links ul li {
+			border-bottom: 1px solid #4b4e52;
+			display: table;
+			padding: 5px 0;
+			width: 100%;
+		}
+
+			#links ul li a i {
+				color: #8fb488;
+				margin-right: 10px;
+			}
+
+	#links img {
+		margin: 0 15px 5px 0;
+	}
+
+	#links .author a {
+		color: #767c84;
+	}
+
+/* 7. PREFOOTER
+-------------------------------------------------------------------*/
+
+#prefooter {
+	background: #323438;
+	color: #767c84;
+}
+
+	#prefooter .col-sm-3,
+	#prefooter .col-sm-6 {
+		margin: 80px 0;
+	}
+
+	#prefooter h3 {
+		color: #8fb488;
+		margin: 0 0 30px;
+	}
+
+	#prefooter a {
+		color: #fff;
+	}
+
+		#prefooter a:hover {
+			color: #fbcd53;
+		}
+
+/* 8. FOOTER
+-------------------------------------------------------------------*/
+
+footer {
+	background: #2c2f33;
+	color: #fff;
+	padding: 20px 0;
+}
+
+	footer a {
+		margin-left: 10px;
+	}
+
+/* 9. RESPONSIVE STYLES
+-------------------------------------------------------------------*/
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+	/* 9.1. Regular Tablets
+	-------------------------------------------------------------------*/
+	@media (max-width: 991px) {
+
+		.post h3,
+		.widget .post h5 {
+			margin-top: 15px;
+		}
+
+		.sorting {
+			margin-top: 30px;
+			text-align: left;
+		}
+	}
+
+	/* 9.2. Small Tablets
+	-------------------------------------------------------------------*/
+	@media (max-width: 767px) {
+
+		section {
+			padding: 30px 0;
+		}
+
+		h1,h2 {
+			margin-top: 30px;
+		}
+
+		blockquote {
+			font-size: 1em;
+			padding-left: 40px;
+		}
+
+		.quote {
+			font-size: 2em;
+			line-height: 2em;
+		}
+
+		.tools span {
+			display: none;
+		}
+
+		.navbar-nav .dropdown-menu:before {
+			display: none;
+		}
+
+		#masonry-2-columns .item,
+		#masonry-3-columns .item,
+		#masonry-4-columns .item {
+			padding: 0;
+			width: 100%;
+		}
+
+		.media img, .media .media img {
+			width: 30px;
+		}
+
+		.course h3 {
+			margin-top: 30px;
+		}
+
+		.course .price {
+			text-align: left;
+		}
+
+		.course-title {
+			margin: 30px 0 5px;
+		}
+
+		.exams-grid li a {
+			bottom: 0;
+		}
+
+		.exams-list li h3 {
+			margin: 1em 0;
+		}
+
+			.exams-list li ul {
+				border-top: 1px dashed #ddd;
+			}
+
+			.exams-list li ul li {
+				border-bottom: 1px dashed #ddd;
+				display: block;
+				margin-right: 0;
+				padding: 10px 0;
+			}
+
+				.exams-list li ul li i {
+					margin-right: 0;
+					width: 20px;
+				}
+
+		.lesson-title {
+			margin: 30px 0 0;
+		}
+
+		.lesson-prev,
+		.lesson-next {
+			display: block;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+
+		.lesson-next {
+			margin-bottom: 30px;
+		}
+
+		.service {
+			text-align: center;
+		}
+
+		.service h3 {
+			margin-top: 15px;
+		}
+
+		#recent-posts .item h3 {
+			margin-top: 30px;
+		}
+
+		#search #input-keywords {
+			width: auto;
+		}
+
+	}
+
+	/* 9.3. Smartphones
+	-------------------------------------------------------------------*/
+	@media (max-width: 480px) {
+
+		.slider-offers h3 {
+			font-size: 24px;
+		}
+
+		.slider-offers h4 {
+			font-size: 14px;
+		}
+
+		#homepage .tools {
+			background: #090909;
+		}
+
+		#homepage .navbar-default {
+			background: #222;
+			border: 0;
+			min-height: 85px;
+		}
+
+	}
+
+#howItWorks-section h3{
+    font-size: 18px;
+}
+#howItWorks-section ul li{
+    font-size: 16px;
+}
+
+.etapy h2{
+    margin:10px;
+}
+.etapy h3{
+    margin:10px;
+    font-size:22px;
+    font-family: 'Verdana', sans-serif;
+}
+
+
+#organisers-section h3{
+    font-size: 22px;
+}
+
+#contact-section label{
+    font-size: 18px;
+}
+
+#contact-section{   
+    /* background-color: rgba(114,98,83,0.97);*/   
+   
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 1;       
+    background:  url("../images/contact.png");
+	background-attachment: fixed;
+
+
+    opacity: 1; 
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#about-section h3{
+    font-size: 18px;
+}
+#about-section ul li{
+    font-size: 16px;   
+}
+

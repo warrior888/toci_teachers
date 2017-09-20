@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBookApp
 {
-    public abstract class AllButtonsAbstractClass : Form1
+    public abstract class AllButtonsAbstractClass //: Form1
     {
         public abstract void AddAButtons(Form1 form);
     }
