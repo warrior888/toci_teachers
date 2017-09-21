@@ -164,16 +164,7 @@ namespace Toci.Training.JarekGie
 
             int[] tablica = new int[] { 2, 32, 12, 43, 23, 456, 34, 36 };
 
-            for(int i = 0; i < tablica.Length; i++)
-            {
-                if (tablica[i] > tablica[i + 1])
-                {
-                    int tmp = tablica[i];
-                    tablica[i] = tablica[i + 1];
-                    tablica[i + 1] = tmp;
-                }
-                Console.Write(tablica[i] + " ");
-            }
+            
           
 
             Console.ReadKey();
