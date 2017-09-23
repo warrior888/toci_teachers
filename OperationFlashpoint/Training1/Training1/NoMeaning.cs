@@ -28,9 +28,15 @@
 
     public class ForcedBlowjob : UnrecognizedBlowjob
     {
+        private bool IsJudoAndKarateFigther;
+
         public override bool IsInAction()
         {
-            //if () ? 
+            if (IsJudoAndKarateFigther)
+            {
+                return false;
+            }
+
             return base.IsInAction();
         }
     }
@@ -47,7 +53,8 @@
     {
         public void TheyWerePunishedForMadonaBlowJobForcing()
         {
-            //Blowjob bj = 
+            Blowjob bj = new UnexpectedBlowjob();
+            bj.IsInAction();
         }
     }
 }

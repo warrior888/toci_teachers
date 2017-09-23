@@ -10,6 +10,7 @@ namespace Training1
     {
         static void Main(string[] args)
         {
+
         }
     }
 }

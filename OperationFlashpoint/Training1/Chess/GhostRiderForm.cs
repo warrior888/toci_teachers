@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Training1;
+
+namespace Chess
+{
+    public partial class GhostRiderForm : Form
+    {
+        public GhostRiderForm()
+        {
+            InitializeComponent();
+            ChessBoard cb = new ChessBoard();
+
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    Button b = new Button();
+
+                    b.Location = new Point(cb.Board[i, j].XCoordinate, cb.Board[i, j].YCoordinate);
+                    b.Size = new Size(20, 20);
+                    b.BackColor = cb.Board[i, j].Colour == 0 ? Color.AliceBlue : Color.Azure;
+
+                    Controls.Add(b);
+                }
+            }
+            
+        }
+    }
+}
