@@ -35,6 +35,12 @@ namespace Chess
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ChessboardByLeon cbl = new ChessboardByLeon();
+            cbl.Show();
+        }
+
         // szachownica
     }
 }
