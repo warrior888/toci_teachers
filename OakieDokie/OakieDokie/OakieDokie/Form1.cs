@@ -21,7 +21,7 @@ namespace OakieDokie
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Factory.
+            Factory.instalationDictionary[whatToInstalEnum.JoinMe]();
         }
     }
 }
