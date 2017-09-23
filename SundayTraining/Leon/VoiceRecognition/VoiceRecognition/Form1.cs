@@ -37,7 +37,7 @@ namespace VoiceRecognition
             
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        /*private void btnStart_Click(object sender, EventArgs e)
         {
             btnStart.Enabled = false;
             btnStop.Enabled = true;
@@ -58,7 +58,7 @@ namespace VoiceRecognition
             {
                 MessageBox.Show(ex.Message, "something went wrong");
             }
-        }
+        }*/
 
         private void Sre_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {

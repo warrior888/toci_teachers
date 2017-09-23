@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PhoneBookApp.Properties
+namespace SzachyMichalK.Properties
 {
 
 
