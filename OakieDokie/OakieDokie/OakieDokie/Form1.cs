@@ -8,6 +8,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OakieDokie.dab;
 
 namespace OakieDokie
 {
@@ -20,8 +21,7 @@ namespace OakieDokie
 
         private void button1_Click(object sender, EventArgs e)
         {
-            WebClient wc = new WebClient();
-            wc.DownloadFile("http://vps458649.ovh.net/join.me.toci.msi", "C:\\xampp\\test.join.me.msi");
+            Factory.
         }
     }
 }
