@@ -19,6 +19,7 @@ namespace Chess
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             GhostRiderForm f = new GhostRiderForm();
 
             f.Show();

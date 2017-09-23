@@ -22,16 +22,21 @@ namespace Chess
             {
                 for (int j = 0; j < 8; j++)
                 {
-                    Button b = new Button();
-
-                    b.Location = new Point(cb.Board[i, j].XCoordinate, cb.Board[i, j].YCoordinate);
-                    b.Size = new Size(20, 20);
-                    b.BackColor = cb.Board[i, j].Colour == 0 ? Color.AliceBlue : Color.Azure;
-
-                    Controls.Add(b);
+                    AddControl(cb, i, j);
                 }
             }
             
+        }
+
+        public virtual void AddControl(ChessBoard cb, int i, int j)
+        {
+            Button b = new Button();
+
+            b.Location = new Point(cb.Board[i, j].XCoordinate, cb.Board[i, j].YCoordinate);
+            b.Size = new Size(20, 20);
+            b.BackColor = cb.Board[i, j].Colour == 0 ? Color.Blue : Color.Azure;
+
+            Controls.Add(b);
         }
     }
 }
