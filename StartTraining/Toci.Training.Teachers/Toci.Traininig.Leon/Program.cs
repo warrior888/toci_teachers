@@ -9,7 +9,17 @@ namespace Toci.Treining.Leon
     class Program
     {
         static void Main(string[] args)
-        {/*
+        {
+            // down
+            // down
+            // mumble.ini
+            // join.me.xml
+
+            //Environment.UserDomainName
+
+            // uruchumic
+            
+            /*
             ASCIIEncoding ascii = new ASCIIEncoding();
             string text = "TO CI dopiero";
 

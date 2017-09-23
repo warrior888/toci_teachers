@@ -16,8 +16,8 @@ class MailSender{
 		$this->mail->Host = "smtp.gmail.com";
 		$this->mail->Port = 465; // or 587
 		$this->mail->IsHTML(true);
-		$this->mail->Username = 'tociszkolenia@gmail.com';
-		$this->mail->Password = 'T0CIszkolenia';
+		$this->mail->Username = 'tociprogramowanie@gmail.com';
+		$this->mail->Password = 'aby83beatka';
 		//$this->mail->SetFrom("example@gmail.com");
 		//$this->mail->Subject = "Test";
 	}
