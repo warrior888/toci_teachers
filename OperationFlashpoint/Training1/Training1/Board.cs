@@ -25,6 +25,7 @@ namespace Training1
             f.XCoordinate = (i * 20) + 20;
             f.YCoordinate = (j * 20) + 20;
 
+
             return f;
         }
     }

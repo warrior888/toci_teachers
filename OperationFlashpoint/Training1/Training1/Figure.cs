@@ -6,7 +6,7 @@ namespace Training1
     {
         /////////////
 
-        public bool Move(IField source, IField destination, bool testCanMove = true)
+        public bool Move(IField source, IField destination, bool testCanMove)
         {
             throw new System.NotImplementedException();
         }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,9 +21,18 @@ namespace Chess
         private void button1_Click(object sender, EventArgs e)
         {
 
-            GhostRiderForm f = new GhostRiderForm();
+            //GhostRiderForm f = new GhostRiderForm();
 
-            f.Show();
+            //f.Show();
+
+            List<Type> lst = Assembly.GetCallingAssembly().GetTypes().Where(t => t.IsSubclassOf(typeof(GhostRiderForm))).Select(m => m).ToList();
+
+            foreach (var item in lst)
+            {
+                GhostRiderForm gf = (GhostRiderForm) Activator.CreateInstance(item);
+
+                gf.Show();
+            }
         }
 
         // szachownica
