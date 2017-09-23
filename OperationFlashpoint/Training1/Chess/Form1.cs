@@ -21,9 +21,9 @@ namespace Chess
         private void button1_Click(object sender, EventArgs e)
         {
 
-            //GhostRiderForm f = new GhostRiderForm();
+            GhostRiderForm f = new GhostRiderForm();
 
-            //f.Show();
+            f.Show();
 
             List<Type> lst = Assembly.GetCallingAssembly().GetTypes().Where(t => t.IsSubclassOf(typeof(GhostRiderForm))).Select(m => m).ToList();
 

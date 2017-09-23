@@ -1,4 +1,5 @@
-﻿using Training1.Interfaces;
+﻿using System.Drawing;
+using Training1.Interfaces;
 
 namespace Training1
 {
@@ -22,9 +23,10 @@ namespace Training1
         public virtual IField GetField(int i, int j)
         {
             Field f = new Field();
-            f.XCoordinate = (i * 21) + 21;
-            f.YCoordinate = (j * 21) + 21;
+            f.XCoordinate = (i * 60) + 60;
+            f.YCoordinate = (j * 60) + 60;
 
+	        f.color = (i + j) % 2 == 1 ? Color.Black : Color.White;
 
             return f;
         }

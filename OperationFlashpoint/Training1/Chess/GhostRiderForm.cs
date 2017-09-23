@@ -16,6 +16,9 @@ namespace Chess
         public GhostRiderForm()
         {
             InitializeComponent();
+
+	        this.MinimumSize = new  Size(620, 640);
+
             ChessBoard cb = new ChessBoard();
 
             for (int i = 0; i < 8; i++)
@@ -33,8 +36,8 @@ namespace Chess
             Button b = new Button();
 
             b.Location = new Point(cb.Board[i, j].XCoordinate, cb.Board[i, j].YCoordinate);
-            b.Size = new Size(20, 20);
-            b.BackColor = cb.Board[i, j].Colour == 0 ? Color.Blue : Color.Azure;
+            b.Size = new Size(60, 60);
+	        b.BackColor = cb.Board[i, j].color;
 
             Controls.Add(b);
         }
