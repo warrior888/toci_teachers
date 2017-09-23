@@ -51,6 +51,12 @@
     <Compile Include="ChessboardByGr.Designer.cs">
       <DependentUpon>ChessboardByGr.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChessboardByLeon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChessboardByLeon.Designer.cs">
+      <DependentUpon>ChessboardByLeon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

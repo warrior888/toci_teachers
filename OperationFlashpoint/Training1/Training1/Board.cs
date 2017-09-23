@@ -22,8 +22,8 @@ namespace Training1
         public virtual IField GetField(int i, int j)
         {
             Field f = new Field();
-            f.XCoordinate = (i * 20) + 20;
-            f.YCoordinate = (j * 20) + 20;
+            f.XCoordinate = (i * 21) + 21;
+            f.YCoordinate = (j * 21) + 21;
 
 
             return f;
