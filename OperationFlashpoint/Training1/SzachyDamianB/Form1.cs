@@ -25,5 +25,10 @@ private void button1_Click(object sender, EventArgs e)
             Chess.GhostRiderForm gf = new Chess.GhostRiderForm();
             gf.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
