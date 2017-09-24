@@ -21,9 +21,9 @@ namespace Downloader
             InitializeComponent();
             app.Add("joinMe", new JoinMe());
             app.Add("mumble", new Mumble());
+
             _manage.ComplateDownload += _wc_DownloadFileCompleted;
             _manage.Progress += _wc_DownloadProgressChanged;
-            //Fact.AcceptPath(Directory.GetCurrentDirectory());
         }
 
         private void button1_Click(object sender, EventArgs e)
