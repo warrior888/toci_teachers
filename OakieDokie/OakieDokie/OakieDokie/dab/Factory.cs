@@ -8,6 +8,7 @@ namespace OakieDokie.dab
         public static Dictionary<whatToInstalEnum, Func<Iinstal>> instalationDictionary = new Dictionary<whatToInstalEnum, Func<Iinstal>>()
         {
             {whatToInstalEnum.JoinMe , () => new JoinMe().instal()},
+            {whatToInstalEnum.Mumble , () => new Mumble().instal()},
         };
     }
 }

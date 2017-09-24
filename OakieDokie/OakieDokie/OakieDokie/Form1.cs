@@ -23,5 +23,10 @@ namespace OakieDokie
         {
             Factory.instalationDictionary[whatToInstalEnum.JoinMe]();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Factory.instalationDictionary[whatToInstalEnum.Mumble]();
+        }
     }
 }

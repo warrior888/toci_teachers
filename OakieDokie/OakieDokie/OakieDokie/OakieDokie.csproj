@@ -48,6 +48,7 @@
     <Compile Include="dab\Factory.cs" />
     <Compile Include="dab\Iinstal.cs" />
     <Compile Include="dab\JoinMe.cs" />
+    <Compile Include="dab\Mumble.cs" />
     <Compile Include="dab\whatToInstalEnum.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
