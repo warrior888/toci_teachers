@@ -5,10 +5,25 @@ namespace OakieDokie.dab
 {
     public class Factory
     {
-        public static Dictionary<whatToInstalEnum, Func<Iinstal>> instalationDictionary = new Dictionary<whatToInstalEnum, Func<Iinstal>>()
+        public string ChosenPath;
+
+        public void AcceptPath(string path)
         {
-            {whatToInstalEnum.JoinMe , () => new JoinMe().instal()},
-            {whatToInstalEnum.Mumble , () => new Mumble().instal()},
-        };
+            // if not exist create
+
+            ChosenPath = path;
+        }
+
+        public Dictionary<whatToInstalEnum, Func<bool>> GetElements()
+        {
+            InstallBase jm = new JoinMe { TociInstallsDirectory = ChosenPath};
+            InstallBase mm = new Mumble { TociInstallsDirectory = ChosenPath};
+
+            return new Dictionary<whatToInstalEnum, Func<bool>>
+            {
+                {whatToInstalEnum.JoinMe , () => jm.Install()},
+                {whatToInstalEnum.Mumble , () => mm.Install()},
+            };
+        }
     }
 }

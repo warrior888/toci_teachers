@@ -4,20 +4,13 @@ using System.Net;
 
 namespace OakieDokie.dab
 {
-    public class Mumble : Iinstal
+    public class Mumble : InstallBase
     {
-        public Iinstal instal()
+        protected override void SetNames()
         {
-            string path = "c:\\TOCI\\mumble";
-
-            Directory.CreateDirectory(path);
-            WebClient wc = new WebClient();
-            wc.DownloadFile("http://vps458649.ovh.net/mumble-1.2.19.msi", "c:\\TOCI\\mumble\\mumble-1.2.19.msi");
-
-
-            Process.Start("c:\\TOCI\\mumble\\mumble-1.2.19.msi");
-
-            return null;
+            DirectoryName = "Mumble";
+            FileName = "mumble.exe";
+            FileDwnlName = "mumble-1.2.19.exe";
         }
     }
 }

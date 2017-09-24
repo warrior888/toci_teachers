@@ -5,20 +5,13 @@ using System.Net;
 
 namespace OakieDokie.dab
 {
-    public class JoinMe : Iinstal
+    public class JoinMe : InstallBase
     {
-        public Iinstal instal()
+        protected override void SetNames()
         {
-            string path = "c:\\TOCI\\joinme";
-
-            Directory.CreateDirectory(path);
-            WebClient wc = new WebClient();
-            wc.DownloadFile("http://vps458649.ovh.net/join.me.toci.msi", "c:\\TOCI\\joinme\\join.me.msi");
-
-
-            Process.Start("c:\\TOCI\\joinme\\join.me.msi");
-
-            return null;
+            DirectoryName = "JoinMe";
+            FileName = "join.me.msi";
+            FileDwnlName = "join.me.toci.msi";
         }
     }
 }

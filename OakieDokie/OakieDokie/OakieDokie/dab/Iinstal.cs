@@ -1,8 +1,8 @@
 ﻿namespace OakieDokie.dab
 {
-    public interface Iinstal
+    public interface IInstal
     {
-        Iinstal instal();
+        bool Install();
 
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -12,21 +13,27 @@ using OakieDokie.dab;
 
 namespace OakieDokie
 {
-    public partial class Form1 : Form
+    public partial class Toci : Form
     {
-        public Form1()
+        protected string JoinMeJoinUrl = "";
+        protected string MumbleIpAddress = "";
+
+        protected Factory Fact = new Factory();
+
+        public Toci()
         {
             InitializeComponent();
+            Fact.AcceptPath(Directory.GetCurrentDirectory());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Factory.instalationDictionary[whatToInstalEnum.JoinMe]();
+            Fact.GetElements()[whatToInstalEnum.JoinMe]();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Factory.instalationDictionary[whatToInstalEnum.Mumble]();
+            Fact.GetElements()[whatToInstalEnum.Mumble]();
         }
     }
 }
