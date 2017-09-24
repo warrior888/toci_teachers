@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OakieDokie", "OakieDokie\OakieDokie.csproj", "{4AA11C37-9B82-4E72-8B5B-F8D3EB1F2887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Downloader", "Downloader\Downloader.csproj", "{8AEE5140-2DF1-46FC-A741-3A6186825149}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4AA11C37-9B82-4E72-8B5B-F8D3EB1F2887}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AA11C37-9B82-4E72-8B5B-F8D3EB1F2887}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AA11C37-9B82-4E72-8B5B-F8D3EB1F2887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AEE5140-2DF1-46FC-A741-3A6186825149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AEE5140-2DF1-46FC-A741-3A6186825149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AEE5140-2DF1-46FC-A741-3A6186825149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AEE5140-2DF1-46FC-A741-3A6186825149}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
