@@ -9,8 +9,8 @@ namespace OakieDokie.dab
         protected override void SetNames()
         {
             DirectoryName = "Mumble";
-            FileName = "mumble.exe";
-            FileDwnlName = "mumble-1.2.19.exe";
+            FileName = "mumble.msi";
+            FileDwnlName = "mumble.toci.msi";
         }
     }
 }

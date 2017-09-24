@@ -23,7 +23,7 @@ namespace OakieDokie.dab
             WebClient wc = new WebClient();
             wc.DownloadFile("http://vps458649.ovh.net/" + FileDwnlName, TociInstallsDirectory + "\\" + FileName); 
 
-            Process.Start(path);
+            Process.Start(TociInstallsDirectory + "\\" + FileName);
 
             return true;
         }
