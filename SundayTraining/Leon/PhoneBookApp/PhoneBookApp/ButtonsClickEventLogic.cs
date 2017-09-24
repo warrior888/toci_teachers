@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,11 +8,12 @@ using System.Windows.Forms;
 
 namespace PhoneBookApp
 {
-    public partial class RegisterNewUser : Form
+    public class ButtonsClickEventLogic : ButtonsClass
     {
-        public RegisterNewUser()
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
+            ((Button)sender).BackColor = Color.Yellow;
         }
+
     }
 }

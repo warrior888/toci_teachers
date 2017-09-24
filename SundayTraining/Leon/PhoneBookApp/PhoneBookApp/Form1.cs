@@ -12,21 +12,16 @@ namespace PhoneBookApp
 {
     public partial class Form1 : Form
     {
-        
+        ButtonsClass bc = new ButtonsClass();
+        LableClass lc = new LableClass();
+        TextBoxClass tbc = new TextBoxClass();
 
         public Form1()
         {
             InitializeComponent();
-            test.AddAButtons(this);
-        }
-        AddTheButton test = new AddTheButton();
-
-        private void AddButton_Click(object sender, EventArgs e)
-        {
-            RegisterNewUser rnu = new RegisterNewUser();
-
-            rnu.Show();
+            bc.AddButtons(this, "Add person");
+            lc.AddLablesForMainWindow(this);
+            tbc.CreateATextBoxForMainWindow(this);
         }
     }
-
 }
