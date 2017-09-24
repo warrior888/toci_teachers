@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace PhoneBookApp
 {
-    public abstract class AllButtonsAbstractClass //: Form1
+    public class PhoneBookDictionary//<TPhoneBook>
     {
-        public abstract void AddAButtons(Form1 form);
+        public Dictionary<string, string> PhoneDict = new Dictionary<string, string>();
     }
 }
