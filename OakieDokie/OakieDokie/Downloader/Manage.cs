@@ -21,6 +21,7 @@ namespace Downloader
             if (!String.IsNullOrEmpty(path))
             {
                 DownloadDirectory = path;
+                app.DownloadDirectory = path;
 
                 _downloadFile.progress += Progress;
                 _downloadFile.complate += ComplateDownload;

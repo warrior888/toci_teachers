@@ -4,6 +4,7 @@ using System.IO;
 using System.Net;
 using System.Windows.Forms;
 using Downloader.AppToInstall;
+using Downloader.MumbleConf;
 
 namespace Downloader
 {
@@ -59,6 +60,19 @@ namespace Downloader
             _manage.DownloadFile(folderBrowserDialog1.SelectedPath, app["mumble"]);
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _manage.AppInstall(app["mumble"]);
+            }
+            catch (FileNotFoundException exception)
+            {
+                Console.WriteLine(exception);
+                MessageBox.Show("Nie odnaleziono pliku");
+            }
+        }
+
         private void _wc_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
         {
             complateLabel.Visible = true;
@@ -73,17 +87,15 @@ namespace Downloader
             progressBar1.Value = e.ProgressPercentage;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                _manage.AppInstall(app["mumble"]);
-            }
-            catch (FileNotFoundException exception)
-            {
-                Console.WriteLine(exception);
-                MessageBox.Show("Nie odnaleziono pliku");
-            }
+            groupBox1.Visible = true;
+        }
+
+        private void saveMumbleDataButton_Click(object sender, EventArgs e)
+        {
+            ConnectSqlite connect = new ConnectSqlite(windowsUserNameTextBox.Text);
+            connect.AddServerToMumble(mumbleUserNameTextBox.Text);
         }
     }
 }
