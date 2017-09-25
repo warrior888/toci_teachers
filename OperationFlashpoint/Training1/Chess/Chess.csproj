@@ -69,6 +69,7 @@
     <Compile Include="GhostRiderForm.Designer.cs">
       <DependentUpon>GhostRiderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IAlekBogucinski.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
