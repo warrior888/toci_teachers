@@ -46,16 +46,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bll\ComboUtils.cs" />
+    <Compile Include="Bll\MaserMind.cs" />
+    <Compile Include="Bll\MasterMindBase.cs" />
+    <Compile Include="Bll\MasterMindPoint.cs" />
+    <Compile Include="Bll\MasterMindPointsCollection.cs" />
+    <Compile Include="Bll\TossMastermindBll.cs" />
     <Compile Include="GamesCombo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GamesCombo.Designer.cs">
       <DependentUpon>GamesCombo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GhostRiderMasterMind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GhostRiderMasterMind.Designer.cs">
+      <DependentUpon>GhostRiderMasterMind.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GamesCombo.resx">
       <DependentUpon>GamesCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GhostRiderMasterMind.resx">
+      <DependentUpon>GhostRiderMasterMind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
