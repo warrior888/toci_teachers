@@ -17,6 +17,7 @@ namespace Toci.Training.JarekGie
     {
         static void Main(string[] args)
         {
+
             //Zadanie 1.1 - Dodawanie stringów do tablicy
             /*
                        string[] tablica = new string[10];
@@ -162,10 +163,27 @@ namespace Toci.Training.JarekGie
 
             //Zadanie 2.1 - Sortowanie bąbelkowe
 
-            int[] tablica = new int[] { 2, 32, 12, 43, 23, 456, 34, 36 };
+            // int[] tablica = new int[] { 2, 32, 12, 43, 23, 456, 34, 36 };
 
+
+            int[,] sudokuArray = new int[9, 9];
+            Random line = new Random();
             
-          
+            for (int i = 0; i < sudokuArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < sudokuArray.GetLength(1); j++)
+                {
+                    sudokuArray[i, j] = line.Next(9);
+                }
+            }
+            for (int i = 0; i < sudokuArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < sudokuArray.GetLength(1); j++)
+                {
+                    Console.Write(sudokuArray[i, j] + " | ");
+                }
+                Console.WriteLine();
+            }
 
             Console.ReadKey();
 

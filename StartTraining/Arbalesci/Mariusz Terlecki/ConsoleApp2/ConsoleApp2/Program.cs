@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Toci.Training.JarekGie
+namespace ConsoleApp2
 {
-   public class QuizLogic
+    class Program
     {
-
-        
-    }//class
-}//namespace
+        static void Main(string[] args)
+        {
+        }
+    }
+}
