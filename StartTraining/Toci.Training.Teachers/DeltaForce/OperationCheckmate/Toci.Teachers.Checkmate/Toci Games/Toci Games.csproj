@@ -46,6 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bll\ComboUtils.cs" />
+    <Compile Include="Bll\MaserMind.cs" />
+    <Compile Include="Bll\MasterMindBase.cs" />
+    <Compile Include="Bll\MasterMindPoint.cs" />
+    <Compile Include="Bll\MasterMindPointsCollection.cs" />
+    <Compile Include="Bll\TossMastermindBll.cs" />
     <Compile Include="GamesCombo.cs">
       <SubType>Form</SubType>
     </Compile>
