@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OakieDokie.dab;
+using System.Threading;
 
 namespace OakieDokie
 {
@@ -28,11 +29,16 @@ namespace OakieDokie
 
         private void button1_Click(object sender, EventArgs e)
         {
+            toolStripStatusLabel3.Text = button1.Text;
+            Thread.Sleep(5000);
             Fact.GetElements()[whatToInstalEnum.JoinMe]();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            toolStripStatusLabel3.Text = button2.Text;
+            Thread.Sleep(5000);
+            
             Fact.GetElements()[whatToInstalEnum.Mumble]();
         }
 
