@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheesboardByLukaszLu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheesboardByLukaszLu.Designer.cs">
+      <DependentUpon>CheesboardByLukaszLu.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChessboardByGr.cs">
       <SubType>Form</SubType>
     </Compile>
