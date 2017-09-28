@@ -7,14 +7,16 @@ namespace Quiz
 {
     public class Group
     {
-        public int GroupId { get; private set; }
+        public static int GroupId { get; private set; }
         public List<User> GroupMember { get; private set; }
         public int GroupPoints { get; private set; }
+        public string GroupName { get; private set; }
 
         private const int MaxMembersInGroup = 4;
 
-        public Group()
+        public Group(string name)
         {
+            GroupName = name;
             ++GroupId;
             GroupMember = new List<User>();
         }

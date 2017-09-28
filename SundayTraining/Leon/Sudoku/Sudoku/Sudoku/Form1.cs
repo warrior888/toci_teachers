@@ -31,7 +31,7 @@ namespace Sudoku
                     AddFields(x, y, SudokuTable[x,y]);
                 }
             }
-            AddButton();
+            //AddButton();
         }
 
         public void AddFields(int x, int y, int name)
@@ -39,10 +39,10 @@ namespace Sudoku
             int increment = 1;
             TextBox SudokuField = new TextBox();
             switcherNumber = Switcher.Next(0,2);
-            if (switcherNumber != 0)
-            {
+            //if (switcherNumber != 0)
+            //{
                 SudokuField.Text = Convert.ToString(name);
-            }
+            //}
             SudokuField.SetBounds(20,20,20,20);
             //SudokuField.BorderStyle = Color.Red;
             SudokuField.Location = new Point(20*(1+x),20*(1+y));
@@ -50,7 +50,7 @@ namespace Sudoku
             increment++;
         }
 
-        public void AddButton()
+        /*public void AddButton()
         {
             for (int x = 0; x < 9; x++)
             {
@@ -64,9 +64,9 @@ namespace Sudoku
                     someButtone[x, y].Click += SomeButtone_Click;
                 }
             }
-        }
+        }*/
 
-        private void SomeButtone_Click(object sender, EventArgs e)
+        /*private void SomeButtone_Click(object sender, EventArgs e)
         {
             string button = "";
             string table = "";
@@ -88,6 +88,6 @@ namespace Sudoku
             {
                 MessageBox.Show("Correct");
             }
-        }
+        }*/
     }
 }

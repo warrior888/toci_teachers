@@ -29,8 +29,9 @@ namespace Toci.Training.WojciechSeweryn
 
             QuizLogic exampleQuiz = new QuizLogic();
             exampleQuiz.Load();
-                 
-            
+
+
+
             int[] exampleTable = new[] { 3, 56, 3, 5, 78, 9, 78, 4, 3, 567, 8 };
             
             TableOperations tableOp = new TableOperations();

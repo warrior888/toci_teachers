@@ -21,7 +21,7 @@ namespace sundayApp
                 AddButoonToShowPlayersList();
                 //AddButoonToCreateRandomPlayers();
                 AddButoonToMakeGroups();
-                AddButoonToAddPoints();
+                AddButoonToAddPoints();1    
                 AddButoonToChooseSecondStage();
                 AddButoonToChooseTheWinners();
 

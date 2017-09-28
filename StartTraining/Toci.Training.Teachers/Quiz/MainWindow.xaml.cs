@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Input;
 
@@ -19,42 +20,35 @@ namespace Quiz
             _quizManager = FindResource("QuizManager") as QuizManager;
         }
 
-
-        private void ButtonBase_OnClick(object sender, EventArgs e)
+        private void AddUser()
         {
-            var pushEnter = (KeyEventArgs) e;       // Dodać obsługę kliknięcia. Zrobić z tego funkcje wywoływaną w na enter i kliknięcie ?
-
-            if (pushEnter.Key == Key.Enter)
-            {
-                if (_quizManager.AddUser(UserNameTextBox.Text))
-                {
-                    ConfirmedTextBlock.Text = "Added";
-                    ConfirmedTextBlock.Visibility = Visibility.Visible;
-                    UserNameTextBox.Clear();
-                }
-                else
-                {
-
-                    ConfirmedTextBlock.Text = "Empty box or name exist";
-                    ConfirmedTextBlock.Visibility = Visibility.Visible;
-                }
-            }
-        }
-
-        private void UIElement_OnDrop(object sender, DragEventArgs e)
-        {
-            // TODO: Pomyśleć nad zaimplementowaniem przeciągania i upuszcania elementów!!!
-            /*if (_quizManager.AddUser(UserNameTextBox.Text))
+            if (_quizManager.AddUser(UserNameTextBox.Text))
             {
                 ConfirmedTextBlock.Text = "Added";
                 ConfirmedTextBlock.Visibility = Visibility.Visible;
+                UserNameTextBox.Clear();
             }
             else
             {
 
                 ConfirmedTextBlock.Text = "Empty box or name exist";
                 ConfirmedTextBlock.Visibility = Visibility.Visible;
-            }*/
+            }
+        }
+
+        private void ButtonBase_OnClick(object sender, EventArgs e)
+        {
+            if (e is KeyEventArgs)
+            {
+                var keyEvents = e as KeyEventArgs;
+                if (keyEvents.Key == Key.Enter)
+                    AddUser();
+            }
+            else if (e is RoutedEventArgs)
+            {
+                var mouseEvents = e as MouseEventArgs;
+                AddUser();
+            }
         }
 
         private void AddGroupButton_OnClick(object sender, RoutedEventArgs e)

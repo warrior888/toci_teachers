@@ -19,25 +19,25 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void StartButton_Click(object sender, EventArgs e)
         {
             stbl.CreatSudokuTable();
             sbtn.CreatSudocuButtons(this, stbl.TableOfSudoku);
             sbtn.BackGroundButtons(this);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void NewGameButton_Click(object sender, EventArgs e)
         {
             stbl.CreatSudokuTable();
             sbtn.RemButtons(this, stbl.TableOfSudoku);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void EndGameButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void CheckButton_Click(object sender, EventArgs e)
         {
             bool checking = true;
             for (int x = 0; x < 9; x++)
