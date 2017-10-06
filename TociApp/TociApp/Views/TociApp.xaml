@@ -1,0 +1,88 @@
+﻿<Window x:Class="TociApp.Views.TociApp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TociApp.Views"
+        xmlns:cefSharp="clr-namespace:CefSharp;assembly=CefSharp.Wpf"
+        xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        mc:Ignorable="d"
+        Title="TociApp" MinHeight="600" MaxHeight="1000" MinWidth="400" MaxWidth="600" Height="600" Width="400">
+    <Grid Loaded="TociApp_OnLoaded">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <!--<ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>-->
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="195*"></RowDefinition>
+            <RowDefinition Height="42"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="217*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--Mumble-->
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0">
+                    <Image Source="../Icon/400px-Icons_mumble.svg.png" Height="100" Width="100"></Image>
+                    <TextBlock Text="Mumble" TextAlignment="Center" Margin="3"></TextBlock>
+                </StackPanel>
+                <Button x:Name="InstallMumbleButton" Grid.Row="1" Width="70" Height="20" Content="Pobierz" Click="DownloadButton_Click"></Button>
+                <Button x:Name="RunMumbleApp" Click="RunMumbleApp_OnClick" Grid.Row="2" Width="70" Height="20" Margin="3" Content="Uruchom" IsEnabled="False"></Button>
+                <StackPanel Grid.Row="3" Grid.Column="0">
+                    <Button x:Name="AddMumbleConfig" Content="Dodaj server Toci" Width="120" Height="20" Margin="3" Click="AddMumbleConfig_OnClick"></Button>
+                    <TextBox x:Name="MumbleNickTextBox" Text="Nick w Mumble" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="20" TextAlignment="Center"></TextBox>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">
+            <Label x:Name="MumbleDownloadCompleted" Content="Pobieranie zakończone" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Hidden"></Label>
+            <ProgressBar x:Name="MumbleInstallProgresBar" Height="10" Width="190" Margin="1" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden"/>
+            <Separator></Separator>
+        </StackPanel>
+        <!--End-->
+        <!--JoinMe-->
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0">
+                    <Image Source="../Icon/joinMe_200x200.png" Height="100" Width="100"></Image>
+                    <TextBlock Text="JoinMe" TextAlignment="Center" Margin="3"></TextBlock>
+                </StackPanel>
+                <Button x:Name="InstallJoinMeButton" Grid.Row="1" Width="70" Height="20" Margin="3" Content="Pobierz" Click="DownloadButton_Click"></Button>
+                <Button x:Name="RunJoinMeApp" Click="RunJoinMeApp_OnClick" Grid.Row="2" Width="70" Height="20" Margin="3" Content="Uruchom" IsEnabled="False"></Button>
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
+            <Label x:Name="JoinMeDownloadCompleted" Content="Pobieranie zakończone" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Hidden"></Label>
+            <ProgressBar x:Name="JoinMeDownloadProgresBar" Height="10" Width="190" Margin="1" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden"/>
+            <Separator></Separator>
+        </StackPanel>
+        <!--End-->
+        <!--Dropbox-->
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="DropBoxBeginerButton" Content="DropBox - Początkujący" Click="DropBoxButton_OnClick" Height="20" Margin="1"></Button>
+            <Button x:Name="DropBoxAdvancedButton" Content="DropBox - Średnio zawansowane" Click="DropBoxButton_OnClick" Height="20" Margin="1"></Button>
+        </StackPanel>
+        <!---->
+        
+        <!--Facebook-->
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Width="Auto" Height="Auto">
+            <Separator></Separator>
+            <!--<WebBrowser x:Name="Facebook" MinHeight="200" Width="auto" Loaded="Facebook_OnLoaded"></WebBrowser>-->
+            <wpf:ChromiumWebBrowser x:Name="WebBrowserChromium" MinHeight="200" Height="640" Width="Auto" Loaded="ChromiumWebBrowser_Loaded"/>
+        </StackPanel>
+        <!--End-->
+    </Grid>
+</Window>

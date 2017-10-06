@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TociApp", "TociApp\TociApp.csproj", "{0DA4B4E7-AE85-4247-BB90-D1DC9ADEAB6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DA4B4E7-AE85-4247-BB90-D1DC9ADEAB6E}.Debug|x64.ActiveCfg = Debug|x64
+		{0DA4B4E7-AE85-4247-BB90-D1DC9ADEAB6E}.Debug|x64.Build.0 = Debug|x64
+		{0DA4B4E7-AE85-4247-BB90-D1DC9ADEAB6E}.Debug|x86.ActiveCfg = Debug|x86
+		{0DA4B4E7-AE85-4247-BB90-D1DC9ADEAB6E}.Debug|x86.Build.0 = Debug|x86
+		{0DA4B4E7-AE85-4247-BB90-D1DC9ADEAB6E}.Release|x64.ActiveCfg = Release|x64
+		{0DA4B4E7-AE85-4247-BB90-D1DC9ADEAB6E}.Release|x64.Build.0 = Release|x64
+		{0DA4B4E7-AE85-4247-BB90-D1DC9ADEAB6E}.Release|x86.ActiveCfg = Release|x86
+		{0DA4B4E7-AE85-4247-BB90-D1DC9ADEAB6E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58005EFD-7151-43AD-A552-6AEDA61BB285}
+	EndGlobalSection
+EndGlobal
