@@ -10,12 +10,10 @@
     <Grid Loaded="TociApp_OnLoaded">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
-            <!--<ColumnDefinition Width="1*"></ColumnDefinition>
-            <ColumnDefinition Width="1*"></ColumnDefinition>-->
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="195*"></RowDefinition>
+            <RowDefinition Height="220"></RowDefinition>
             <RowDefinition Height="42"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="217*"></RowDefinition>
@@ -78,8 +76,20 @@
         
         <!--Facebook-->
         <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Width="Auto" Height="Auto">
+            <StackPanel.CommandBindings>
+                <CommandBinding Command="NavigationCommands.BrowseBack" CanExecute="BrowseBack_CanExecute" Executed="BrowseBack_Executed" />
+                <CommandBinding Command="NavigationCommands.BrowseForward" CanExecute="BrowseForward_CanExecute" Executed="BrowseForward_Executed" />
+            </StackPanel.CommandBindings>
             <Separator></Separator>
-            <!--<WebBrowser x:Name="Facebook" MinHeight="200" Width="auto" Loaded="Facebook_OnLoaded"></WebBrowser>-->
+            <ToolBar DockPanel.Dock="Top" Height="23">
+                <Button Command="NavigationCommands.BrowseBack">
+                    <Image Source="/Icon/navigation_left_button.png" Width="16" Height="16" />
+                </Button>
+                <Button Command="NavigationCommands.BrowseForward">
+                    <Image Source="/Icon/navigation_right_button.png" Width="16" Height="16" />
+                </Button>
+                <Separator />
+            </ToolBar>
             <wpf:ChromiumWebBrowser x:Name="WebBrowserChromium" MinHeight="200" Height="640" Width="Auto" Loaded="ChromiumWebBrowser_Loaded"/>
         </StackPanel>
         <!--End-->

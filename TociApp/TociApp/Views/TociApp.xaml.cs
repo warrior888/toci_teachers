@@ -3,6 +3,7 @@ using System.IO;
 using System.Net;
 using System.Windows;
 using System.Windows.Forms;
+using System.Windows.Input;
 using CefSharp;
 using TociApp.Interface;
 using TociApp.Managed;
@@ -197,6 +198,26 @@ namespace TociApp.Views
             WebBrowserChromium.BrowserSettings.WebSecurity = CefState.Enabled;
             WebBrowserChromium.Address =
                 "https://m.facebook.com/ttooccii/?locale2=pl_PL&__nodl&refsrc=http%3A%2F%2Fwww.google.pl%2F&ref=external%3Awww.google.pl&_rdr";
+        }
+
+        private void BrowseBack_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = ((WebBrowserChromium != null) && (WebBrowserChromium.CanGoBack));
+        }
+
+        private void BrowseBack_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            WebBrowserChromium.Back();
+        }
+
+        private void BrowseForward_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = ((WebBrowserChromium != null) && (WebBrowserChromium.CanGoForward));
+        }
+
+        private void BrowseForward_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            WebBrowserChromium.Forward();
         }
     }
 }
