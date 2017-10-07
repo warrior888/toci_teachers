@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:TociApp.Views"
         xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         mc:Ignorable="d"
-        Title="TociApp" MinHeight="600" MaxHeight="1000" MinWidth="400" MaxWidth="600" Height="600" Width="400">
-    <Grid Loaded="TociApp_OnLoaded">
+        Title="TociApp" MinHeight="600" MaxHeight="1000" MinWidth="400" MaxWidth="600" Height="600" Width="400" Background="DarkKhaki">
+    <Grid Loaded="TociApp_OnLoaded" Margin="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>
