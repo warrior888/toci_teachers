@@ -30,21 +30,22 @@ namespace TociApp.ViewModels
         /// <summary>
         /// Check that the application is installed on the host.
         /// </summary>
-        /// <param name="app">Class implemented IAppToInstall</param>
-        /// <returns>Return true if application is installed.</returns>
+        /// <param name="app">Enumeration type <see cref="TociApp.Managed.AppToInstall"/> representing applications.</param>
+        /// <returns>Return true if application is installed, otherwise false.</returns>
         public bool AppIsIntaled(AppToInstall app)
         {
             return InstallApp.IsAppInstalled(App[app]);
         }
 
         /// <summary>
-        /// 
+        /// Gets the file and assign methods to events.
         /// </summary>
         /// <param name="path">Specifies the absolute path where the file will be saved</param>
         /// <param name="app">Enumeration type <see cref="TociApp.Managed.AppToInstall"/> representing applications</param>
         /// <param name="completedDownload">Represents the method that will handle the MethodName<see langword="Completed" /> event of an asynchronous operation.</param>
         /// <param name="progress">Represents the method that will handle the <see cref="E:System.Net.WebClient.DownloadProgressChanged" /> event of a <see cref="T:System.Net.WebClient" /></param>
-        public void DownloadFile(string path, AppToInstall app, 
+        /// <exception cref="System.IO.DirectoryNotFoundException">The specified path was not found.</exception>
+        public void DownloadFile(string path, AppToInstall app,
             AsyncCompletedEventHandler completedDownload = null, DownloadProgressChangedEventHandler progress = null)
         {
             if (String.IsNullOrEmpty(path) && !Directory.Exists(path))
@@ -83,6 +84,7 @@ namespace TociApp.ViewModels
             ConnectSqlite.AddServerToMumble(userName);
         }
 
+        #region Serializacja
         public void SerializeModels(IAppToInstall app)
         {
             using (var write = File.OpenWrite(_appConfigPath + $"\\{app.AppName}.bin"))  // ANOTHER_POSSIBILITY: Pobierać dane z serwera - nazwe pliku instalacyjnego  
@@ -115,6 +117,7 @@ namespace TociApp.ViewModels
                 throw;
             }
         }
+        #endregion
 
         private void CreateConfigDirectory()
         {

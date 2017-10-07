@@ -22,9 +22,6 @@ namespace TociApp.Views
         private const string RootPath = @"C:\";
         private const string TociBeginer = @"";     // TODO: Uzupełnic adresy www do dropboxa
         private const string Tociintermediate = @"";
-        private bool _downloadComplete;
-
-        // TODO: Zmienić wszystkie typy IAppToInstall na enuma ???
 
         public TociApp()
         {
@@ -100,7 +97,7 @@ namespace TociApp.Views
         }
 
         private void _wc_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
-        {
+        {   //TODO: DO zmiany???
             if (!(sender is IAppToInstall app)) return;
             switch (app.AppName)
             {

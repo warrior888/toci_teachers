@@ -13,13 +13,11 @@ namespace TociApp.Managed
         private const string RegistryPath =
             @"S-1-5-21-110281386-2591742775-2335758308-1001\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Store";
 
-        public static bool Install(IAppToInstall app)       //TODO: Dokonać zmian, aby metoda zwracała  enuma InstalledStatus
+        public static bool Install(IAppToInstall app)       //TODO: Typ zwracany zmienić enuma InstalledStatus ?
         {
             try
             {
                 string path = app.DownloadDirectory + "\\" + app.FileDwnlName;
-
-                //var pinfo = new ProcessStartInfo(path, "/qn");       // TODO: Dodać argumety nienadzorowanej instalacji
 
                 using (var process = Process.Start(path))
                 {
@@ -44,10 +42,11 @@ namespace TociApp.Managed
         {
             Process.Start(app.InstalledAppPath);
         }
+        
         /// <summary>
         /// Checks whether the application is installed in system.
         /// </summary>
-        /// <param name="app">Class implemented IAppToInstall</param>
+        /// <param name="app">Class implemented interface IAppToInstall</param>
         /// <returns>If is installed return true otherwise return false.</returns>
         public static bool IsAppInstalled(IAppToInstall app)
         {
