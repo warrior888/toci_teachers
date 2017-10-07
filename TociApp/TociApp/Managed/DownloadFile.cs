@@ -16,7 +16,7 @@ namespace TociApp.Managed
             using (WebClient wc = new WebClient())
             {
                 wc.DownloadFileCompleted += (sender, e) =>
-                {       // TODO: Czy to dobra praktyka ;-) ?
+                {
                     Complate?.Invoke(app, e);
                 };
                 wc.DownloadProgressChanged += Progress;

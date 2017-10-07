@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TociApp.Views"
-        xmlns:cefSharp="clr-namespace:CefSharp;assembly=CefSharp.Wpf"
         xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         mc:Ignorable="d"
         Title="TociApp" MinHeight="600" MaxHeight="1000" MinWidth="400" MaxWidth="600" Height="600" Width="400">

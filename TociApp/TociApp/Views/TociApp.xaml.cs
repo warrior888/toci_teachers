@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Windows;
@@ -25,6 +24,7 @@ namespace TociApp.Views
         private const string Tociintermediate = @"";
         private bool _downloadComplete;
 
+        // TODO: Zmienić wszystkie typy IAppToInstall na enuma ???
 
         public TociApp()
         {
@@ -32,7 +32,7 @@ namespace TociApp.Views
             _manage = new Manage();
         }
 
-        private void DownloadFile(AppToInstall appName,
+        private void DownloadFile(AppToInstall app,
             System.ComponentModel.AsyncCompletedEventHandler completedDownload, DownloadProgressChangedEventHandler progress, ProgressBar progressBar)
         {
             using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog() { SelectedPath = RootPath, ShowNewFolderButton = true })
@@ -41,19 +41,24 @@ namespace TociApp.Views
                 if (result != System.Windows.Forms.DialogResult.OK) return;
 
                 progressBar.Visibility = Visibility.Visible;
-                _manage.DownloadFile(folderBrowserDialog.SelectedPath, _manage.App[appName], completedDownload, progress);
+
+                string path = folderBrowserDialog.SelectedPath;
+
+                _manage.DownloadFile(path, app, completedDownload, progress);
             }
         }
 
-        private void InstallApp(IAppToInstall app, Button btn)
+
+        private void InstallApp(AppToInstall app)
         {
             try
             {
-                if (_manage.AppInstall(app))
-                {
-                    btn.IsEnabled = false;
+                if (!_manage.AppInstall(app)) return;
+                if (app is AppToInstall.JoinMe)
                     RunJoinMeApp.IsEnabled = true;
-                }
+                else if (app is AppToInstall.Mumble)
+                    RunMumbleApp.IsEnabled = true;
+
             }
             catch (FileNotFoundException exception)
             {
@@ -66,24 +71,12 @@ namespace TociApp.Views
         private void DownloadButton_Click(object sender, RoutedEventArgs e)
         {
             if (!(sender is Button button)) return;
-
-            bool isInstalled;
             if (button.Name == InstallJoinMeButton.Name)
             {
-                isInstalled = _manage.AppIsIntaled(_manage.App[AppToInstall.JoinMe]);
+                bool isInstalled = _manage.AppIsIntaled(AppToInstall.JoinMe);
                 if (!isInstalled)
                 {
-                    if (!_downloadComplete)
-                    {
-                        DownloadFile(AppToInstall.JoinMe, _wc_DownloadFileCompleted, _wc_JoinMeDownloadProgressChange, JoinMeDownloadProgresBar);
-                    }
-                    else
-                    {
-                        button.Content = @"Instaluj";
-                        button.Click -= DownloadButton_Click;
-                        button.Click += InstalButton_Click;
-                    }
-
+                    DownloadFile(AppToInstall.JoinMe, _wc_DownloadFileCompleted, _wc_JoinMeDownloadProgressChange, JoinMeDownloadProgresBar);
                 }
                 else
                 {
@@ -93,19 +86,10 @@ namespace TociApp.Views
             }
             else if (button.Name == InstallMumbleButton.Name)
             {
-                isInstalled = _manage.AppIsIntaled(_manage.App[AppToInstall.Mumble]);
+                bool isInstalled = _manage.AppIsIntaled(AppToInstall.Mumble);
                 if (!isInstalled)
                 {
-                    if (!_downloadComplete)
-                    {
-                        DownloadFile(AppToInstall.Mumble, _wc_DownloadFileCompleted, _wc_MumbleDownloadProgressChanged, MumbleInstallProgresBar);
-                    }
-                    else
-                    {
-                        button.Content = @"Instaluj";
-                        button.Click -= DownloadButton_Click;
-                        button.Click += InstalButton_Click;
-                    }
+                    DownloadFile(AppToInstall.Mumble, _wc_DownloadFileCompleted, _wc_MumbleDownloadProgressChanged, MumbleInstallProgresBar);
                 }
                 else
                 {
@@ -121,12 +105,21 @@ namespace TociApp.Views
             switch (app.AppName)
             {
                 case "join.me":
-                    JoinMeDownloadCompleted.Visibility = Visibility.Visible;
+                    {
+                        JoinMeDownloadCompleted.Visibility = Visibility.Visible;
+                        InstallJoinMeButton.Content = @"Instaluj";
+                        InstallJoinMeButton.Click -= DownloadButton_Click;
+                        InstallJoinMeButton.Click += InstalButton_Click;
+                    }
+
                     break;
                 case "mumble":
-                    MumbleDownloadCompleted.Visibility = Visibility.Visible;
-                    break;
-                default:
+                    {
+                        MumbleDownloadCompleted.Visibility = Visibility.Visible;
+                        InstallMumbleButton.Content = @"Instaluj";
+                        InstallMumbleButton.Click -= DownloadButton_Click;
+                        InstallMumbleButton.Click += InstalButton_Click;
+                    }
                     break;
             }
 #if DEBUG
@@ -148,21 +141,21 @@ namespace TociApp.Views
         {
             if (!(sender is Button button)) return;
             if (button.Name == InstallMumbleButton.Name)
-                InstallApp(_manage.App[AppToInstall.Mumble], button);
+                InstallApp(AppToInstall.Mumble);
             else if (button.Name == InstallJoinMeButton.Name)
-                InstallApp(_manage.App[AppToInstall.JoinMe], button);
+                InstallApp(AppToInstall.JoinMe);
         }
 
         private void RunJoinMeApp_OnClick(object sender, RoutedEventArgs e)
         {
-            _manage.RunApplication(_manage.App[AppToInstall.JoinMe]);
+            _manage.RunApplication(AppToInstall.JoinMe);
             JoinMeDownloadCompleted.Visibility = Visibility.Hidden;
             JoinMeDownloadProgresBar.Visibility = Visibility.Hidden;
         }
 
         private void RunMumbleApp_OnClick(object sender, RoutedEventArgs e)
         {
-            _manage.RunApplication(_manage.App[AppToInstall.Mumble]);
+            _manage.RunApplication(AppToInstall.Mumble);
             MumbleDownloadCompleted.Visibility = Visibility.Hidden;
             MumbleInstallProgresBar.Visibility = Visibility.Hidden;
         }
@@ -188,16 +181,18 @@ namespace TociApp.Views
 
         private void TociApp_OnLoaded(object sender, RoutedEventArgs e)
         {
-            if (_manage.AppIsIntaled(_manage.App[AppToInstall.JoinMe]))
+            //#if !DEBUG
+            if (_manage.AppIsIntaled(AppToInstall.JoinMe))
             {
                 InstallJoinMeButton.IsEnabled = false;
                 RunJoinMeApp.IsEnabled = true;
             }
-            if (_manage.AppIsIntaled(_manage.App[AppToInstall.Mumble]))
+            if (_manage.AppIsIntaled(AppToInstall.Mumble))
             {
                 InstallMumbleButton.IsEnabled = false;
                 RunMumbleApp.IsEnabled = true;
             }
+            //#endif
         }
 
         private void ChromiumWebBrowser_Loaded(object sender, RoutedEventArgs e)

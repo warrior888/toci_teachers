@@ -14,9 +14,7 @@ namespace TociApp.ViewModels
 {
     public class Manage
     {
-        public string DownloadDirectory { get; set; }
-        public Dictionary<AppToInstall, IAppToInstall> App { get; }
-
+        private Dictionary<AppToInstall, IAppToInstall> App { get; }
         private string _appConfigPath;
 
         public Manage()
@@ -26,7 +24,7 @@ namespace TociApp.ViewModels
                 [AppToInstall.JoinMe] = new JoinMe(),
                 [AppToInstall.Mumble] = new Mumble()
             };
-            CreateDirectory();
+            CreateConfigDirectory();
         }
 
         /// <summary>
@@ -34,32 +32,39 @@ namespace TociApp.ViewModels
         /// </summary>
         /// <param name="app">Class implemented IAppToInstall</param>
         /// <returns>Return true if application is installed.</returns>
-        public bool AppIsIntaled(IAppToInstall app)
+        public bool AppIsIntaled(AppToInstall app)
         {
-            return InstallApp.IsAppInstalled(app);
+            return InstallApp.IsAppInstalled(App[app]);
         }
 
-        public void DownloadFile(string path, IAppToInstall app, 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path">Specifies the absolute path where the file will be saved</param>
+        /// <param name="app">Enumeration type <see cref="TociApp.Managed.AppToInstall"/> representing applications</param>
+        /// <param name="completedDownload">Represents the method that will handle the MethodName<see langword="Completed" /> event of an asynchronous operation.</param>
+        /// <param name="progress">Represents the method that will handle the <see cref="E:System.Net.WebClient.DownloadProgressChanged" /> event of a <see cref="T:System.Net.WebClient" /></param>
+        public void DownloadFile(string path, AppToInstall app, 
             AsyncCompletedEventHandler completedDownload = null, DownloadProgressChangedEventHandler progress = null)
         {
-            if (!String.IsNullOrEmpty(path))
+            if (String.IsNullOrEmpty(path) && !Directory.Exists(path))
             {
-                DownloadFile downloadFile = new DownloadFile();
-
-                DownloadDirectory = path;
-                app.DownloadDirectory = path;
-
-                downloadFile.Progress += progress;
-                downloadFile.Complate += completedDownload;
-                downloadFile.DwnloadFile(path, app);
+                throw new DirectoryNotFoundException("Directory not found or not exist");
             }
+            DownloadFile downloadFile = new DownloadFile();
+
+            App[app].DownloadDirectory = path;
+
+            downloadFile.Progress += progress;
+            downloadFile.Complate += completedDownload;
+            downloadFile.DwnloadFile(path, App[app]);
         }
 
-        public bool AppInstall(IAppToInstall app)
+        public bool AppInstall(AppToInstall app)
         {
             try
             {
-                return InstallApp.Install(app);
+                return InstallApp.Install(App[app]);
             }
             catch (FileNotFoundException e)
             {
@@ -68,9 +73,9 @@ namespace TociApp.ViewModels
             }
         }
 
-        public void RunApplication(IAppToInstall app)
+        public void RunApplication(AppToInstall app)
         {
-            InstallApp.RunApp(app);
+            InstallApp.RunApp(App[app]);
         }
 
         public void SetMumbleConf(string userName)
@@ -111,7 +116,7 @@ namespace TociApp.ViewModels
             }
         }
 
-        private void CreateDirectory()
+        private void CreateConfigDirectory()
         {
             if (Directory.Exists(Environment.SpecialFolder.LocalApplicationData + "\\TociApp"))
             {

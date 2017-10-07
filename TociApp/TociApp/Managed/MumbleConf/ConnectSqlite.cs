@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Data.SQLite;
+using System.Windows.Shapes;
 
 namespace TociApp.Managed.MumbleConf
 {
     public static class ConnectSqlite
     {
-        private static readonly SQLiteConnection Connect = new SQLiteConnection(@"Data Source=%APPDATA%\Mumble\mumble.sqlite");
+        private static readonly string ConnectionString =
+            Environment.GetEnvironmentVariable("APPDATA") + "\\Mumble\\mumble.sqlite";
+
+        private static readonly SQLiteConnection Connect = new SQLiteConnection($"Data Source={ConnectionString}");
 
         public static void AddServerToMumble(string userNameInServer)
         {

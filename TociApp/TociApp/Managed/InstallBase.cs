@@ -19,7 +19,7 @@ namespace TociApp.Managed
             {
                 string path = app.DownloadDirectory + "\\" + app.FileDwnlName;
 
-                //var pinfo = new ProcessStartInfo(path, "/qn");
+                //var pinfo = new ProcessStartInfo(path, "/qn");       // TODO: Dodać argumety nienadzorowanej instalacji
 
                 using (var process = Process.Start(path))
                 {
@@ -40,6 +40,10 @@ namespace TociApp.Managed
             return false;
         }
 
+        public static void RunApp(IAppToInstall app)
+        {
+            Process.Start(app.InstalledAppPath);
+        }
         /// <summary>
         /// Checks whether the application is installed in system.
         /// </summary>
@@ -82,11 +86,6 @@ namespace TociApp.Managed
             return found;*/
 
             #endregion
-        }
-
-        public static void RunApp(IAppToInstall app)
-        {
-            Process.Start(app.InstalledAppPath);
         }
 
         #region Check windows registry
